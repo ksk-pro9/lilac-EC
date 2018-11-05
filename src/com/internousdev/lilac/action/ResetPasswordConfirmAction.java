@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+//import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,7 +16,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	private String password;
 	private String newPassword;
 	private String reConfirmationPassword;
-	private String categoryId;
+//	private String categoryId;
 
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
 	private List<String> passwordErrorMessageList = new ArrayList<String>();
@@ -52,8 +53,8 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				&& reConfirmationNewPasswordErrorMessageList.size()==0
 				&& newPasswordIncorrectErrorMessageList.size()==0){
 
-			UserInfoDAO userInfoDAO=new UserInfoDAo();
-			if(userInfoDAO.isExistsUserzInfo(loginId,password)){
+			UserInfoDAO userInfoDAO=new UserInfoDAO();
+			if(userInfoDAO.isExistsUserInfo(loginId,password)){
 				String concealedPassword = userInfoDAO.concealPassword(password);
 				session.put("loginId", loginId);
 				session.put("newPassword", newPassword);
@@ -64,13 +65,120 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				session.put("passwordIncorrectErrorMessageList", passwordIncorrectErrorMessageList);
 
 			}
+		}else{
+			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
+			session.put("passwordErrorMessageList", passwordErrorMessageList);
+			session.put("reConfirmationNewPasswordErrorMessageList", reConfirmationNewPasswordErrorMessageList);
+			session.put("newPasswordIncorrectErrorMessageList", newPasswordIncorrectErrorMessageList);
+			session.put("newPasswordErrorMessageList", newPasswordErrorMessageList);
+
+		}
+		return result;
 
 
-
-								}
 
 
 	}
 
+	public String getLoginId() {
+		return loginId;
+	}
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getNewPassword() {
+		return newPassword;
+	}
+
+	public void setNewPassword(String newPassword) {
+		this.newPassword = newPassword;
+	}
+
+	public String getReConfirmationPassword() {
+		return reConfirmationPassword;
+	}
+
+	public void setReConfirmationPassword(String reConfirmationPassword) {
+		this.reConfirmationPassword = reConfirmationPassword;
+	}
+
+/*	public String getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
+	}*/
+
+	public List<String> getLoginIdErrorMessageList() {
+		return loginIdErrorMessageList;
+	}
+
+	public void setLoginIdErrorMessageList(List<String> loginIdErrorMessageList) {
+		this.loginIdErrorMessageList = loginIdErrorMessageList;
+	}
+
+	public List<String> getPasswordErrorMessageList() {
+		return passwordErrorMessageList;
+	}
+
+	public void setPasswordErrorMessageList(List<String> passwordErrorMessageList) {
+		this.passwordErrorMessageList = passwordErrorMessageList;
+	}
+
+	public List<String> getPasswordIncorrectErrorMessageList() {
+		return passwordIncorrectErrorMessageList;
+	}
+
+	public void setPasswordIncorrectErrorMessageList(List<String> passwordIncorrectErrorMessageList) {
+		this.passwordIncorrectErrorMessageList = passwordIncorrectErrorMessageList;
+	}
+
+	public List<String> getNewPasswordErrorMessageList() {
+		return newPasswordErrorMessageList;
+	}
+
+	public void setNewPasswordErrorMessageList(List<String> newPasswordErrorMessageList) {
+		this.newPasswordErrorMessageList = newPasswordErrorMessageList;
+	}
+
+	public List<String> getReConfirmationNewPasswordErrorMessageList() {
+		return reConfirmationNewPasswordErrorMessageList;
+	}
+
+	public void setReConfirmationNewPasswordErrorMessageList(List<String> reConfirmationNewPasswordErrorMessageList) {
+		this.reConfirmationNewPasswordErrorMessageList = reConfirmationNewPasswordErrorMessageList;
+	}
+
+	public List<String> getNewPasswordIncorrectErrorMessageList() {
+		return newPasswordIncorrectErrorMessageList;
+	}
+
+	public void setNewPasswordIncorrectErrorMessageList(List<String> newPasswordIncorrectErrorMessageList) {
+		this.newPasswordIncorrectErrorMessageList = newPasswordIncorrectErrorMessageList;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
 
 }
+
+
+

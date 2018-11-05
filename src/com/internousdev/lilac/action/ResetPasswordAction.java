@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ResetPasswordAction extends ActionSupport implements SessionAware{
 
-	private String categotyId;
+/*	private String categotyId;*/
 	private Map<String,Object>session;
 
 
@@ -32,14 +32,14 @@ public class ResetPasswordAction extends ActionSupport implements SessionAware{
 	}
 
 
-	public String getCategotyId() {
+/*	public String getCategotyId() {
 		return categotyId;
 	}
 
 
 	public void setCategotyId(String categotyId) {
 		this.categotyId = categotyId;
-	}
+	}*/
 
 
 	public Map<String, Object> getSession() {
