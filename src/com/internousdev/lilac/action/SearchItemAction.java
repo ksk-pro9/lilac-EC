@@ -16,7 +16,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 //success→productList.jsp
 //error→productList.jsp
-
 public class SearchItemAction extends ActionSupport implements SessionAware{
 
 	private String categoryId;///カテゴリーID
@@ -46,7 +45,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
 		//全角スペースを半角スペースに置き換える
 		//String型変数名.split("区切り文字", 分割後の要素数)
-		//半角スペースで文字を区切っている
+		//半角スペースで文字を分ける
 		switch (categoryId) {
 			case "1":
 				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.replaceAll("　", " ").split(" "));
