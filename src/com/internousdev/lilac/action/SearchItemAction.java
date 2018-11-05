@@ -16,6 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 //success→productList.jsp
 //error→productList.jsp
+
 public class SearchItemAction extends ActionSupport implements SessionAware{
 
 	private String categoryId;///カテゴリーID
