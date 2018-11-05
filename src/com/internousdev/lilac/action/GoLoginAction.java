@@ -47,4 +47,5 @@ public class GoLoginAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 
+
 }
