@@ -18,7 +18,9 @@
 <jsp:include page="header.jsp" />
 
 <div id="contents">
+
 <h1>登録内容確認画面</h1>
+
 <s:form action="CreateUserCompleteAction">
 
 <table class="CreateUserCompleteAction">
