@@ -12,8 +12,8 @@ import com.internousdev.lilac.util.DBConnector;
 
 public class ProductInfoDAO {
 
-	/*「商品一覧」ボタンを押下するとこのメソッドが呼び出される（全てのカテゴリー/検索ワードは空欄）
-	商品情報テーブル(product_info)に格納されている値を全てProductInfoDTOに格納し、productInfoDtoListにProductInfoDTOを格納*/
+	/*商品情報テーブル(product_info)に格納されている値を全てProductInfoDTOに格納し、productInfoDtoListにProductInfoDTOを格納
+	「商品一覧」ボタンを押下するとこのメソッドが呼び出される（全てのカテゴリー/検索ワード空欄）*/
 	public List<ProductInfoDTO> getProductInfoList() {
 
 		DBConnector dbConnector = new DBConnector();
@@ -27,22 +27,23 @@ public class ProductInfoDAO {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
-				ProductInfoDTO productInfoDto = new ProductInfoDTO();
-				productInfoDto.setId(resultSet.getInt("id"));
-				productInfoDto.setProductId(resultSet.getInt("product_id"));
-				productInfoDto.setProductName(resultSet.getString("product_name"));
-				productInfoDto.setProductNameKana(resultSet.getString("product_name_kana"));
-				productInfoDto.setProductDescription(resultSet.getString("product_description"));
-				productInfoDto.setCategoryId(resultSet.getInt("category_id"));
-				productInfoDto.setPrice(resultSet.getInt("price"));
-				productInfoDto.setImageFilePath(resultSet.getString("image_file_path"));
-				productInfoDto.setImageFileName(resultSet.getString("image_file_name"));
-				productInfoDto.setReleaseDate(resultSet.getDate("release_date"));
-				productInfoDto.setReleaseCompany(resultSet.getString("release_company"));
-				productInfoDto.setStatus(resultSet.getInt("status"));
-				productInfoDto.setUpdateDate(resultSet.getDate("regist_date"));
-				productInfoDto.setUpdateDate(resultSet.getDate("update_date"));
-				productInfoDtoList.add(productInfoDto);
+				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
+				productInfoDTO.setId(resultSet.getInt("id"));
+				productInfoDTO.setProductId(resultSet.getInt("product_id"));
+				productInfoDTO.setProductName(resultSet.getString("product_name"));
+				productInfoDTO.setProductNameKana(resultSet.getString("product_name_kana"));
+				productInfoDTO.setProductDescription(resultSet.getString("product_description"));
+				productInfoDTO.setCategoryId(resultSet.getInt("category_id"));
+				productInfoDTO.setPrice(resultSet.getInt("price"));
+				productInfoDTO.setImageFilePath(resultSet.getString("image_file_path"));
+				productInfoDTO.setImageFileName(resultSet.getString("image_file_name"));
+				productInfoDTO.setReleaseDate(resultSet.getDate("release_date"));
+				productInfoDTO.setReleaseCompany(resultSet.getString("release_company"));
+				productInfoDTO.setStatus(resultSet.getInt("status"));
+				productInfoDTO.setUpdateDate(resultSet.getDate("regist_date"));
+				productInfoDTO.setUpdateDate(resultSet.getDate("update_date"));
+				productInfoDtoList.add(productInfoDTO);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -56,59 +57,22 @@ public class ProductInfoDAO {
 	}
 
 
-	//プルダウンで選択されたカテゴリーのみを検索した場合
-	public ProductInfoDTO getProductInfo(int productId) {
+	//プルダウンで選択されたカテゴリーのみを検索した場合（検索ワードは空欄）
+	public List<ProductInfoDTO> getProductInfo(int productId) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
-		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
+		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
+
 		String sql = "select * from product_info where product_id=?";
+
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, productId);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
-				productInfoDTO.setId(resultSet.getInt("id"));
-				productInfoDTO.setProductId(resultSet.getInt("product_id"));
-				productInfoDTO.setProductName(resultSet.getString("product_name"));
-				productInfoDTO.setProductNameKana(resultSet.getString("product_name_kana"));
-				productInfoDTO.setProductDescription(resultSet.getString("product_description"));
-				productInfoDTO.setCategoryId(resultSet.getInt("category_id"));
-				productInfoDTO.setPrice(resultSet.getInt("price"));
-				productInfoDTO.setImageFilePath(resultSet.getString("image_file_path"));
-				productInfoDTO.setImageFileName(resultSet.getString("image_file_name"));
-				productInfoDTO.setReleaseDate(resultSet.getDate("release_date"));
-				productInfoDTO.setReleaseCompany(resultSet.getString("release_company"));
-				productInfoDTO.setStatus(resultSet.getInt("status"));
-				productInfoDTO.setUpdateDate(resultSet.getDate("regist_date"));
-				productInfoDTO.setUpdateDate(resultSet.getDate("update_date"));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return productInfoDTO;
-	}
-
-	
-	public List<ProductInfoDTO> getProductInfoListByCategoryId(int categoryId, int productId, int limitOffset,
-			int limitRowCount) {
-		DBConnector dbConnector = new DBConnector();
-		Connection connection = dbConnector.getConnection();
-		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
-		String sql = "select * from product_info where category_id=? and product_id not in(?) order by rand() limit ?,?";
-		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, categoryId);
-			preparedStatement.setInt(2, productId);
-			preparedStatement.setInt(3, limitOffset);
-			preparedStatement.setInt(4, limitRowCount);
-			ResultSet resultSet = preparedStatement.executeQuery();
-			while (resultSet.next()) {
 				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
 				productInfoDTO.setId(resultSet.getInt("id"));
 				productInfoDTO.setProductId(resultSet.getInt("product_id"));
 				productInfoDTO.setProductName(resultSet.getString("product_name"));
@@ -136,28 +100,36 @@ public class ProductInfoDAO {
 		return productInfoDtoList;
 	}
 
-	//全てのカテゴリーで検索ワードを入力した場合
+
+	//検索ワードを入力した場合（全てのカテゴリー）
 	public List<ProductInfoDTO> getProductInfoListAll(String[] keywordsList) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
+
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
-		
-		//部分検索：keywordの値が
+
+		//部分検索：keywordの値が'商品名'または'商品名かな'の一部と一致するか
 		String sql = "select * from product_info where";
+
+
 		boolean initializeFlag = true;
 		for (String keyword : keywordsList) {
 			if (initializeFlag) {
+				//第一検索ワード
 				sql += " (product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
 				initializeFlag = false;
 			} else {
+				//第二検索ワード以降（OR検索）
 				sql += " or (product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
 			}
 		}
+
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
 				productInfoDTO.setId(resultSet.getInt("id"));
 				productInfoDTO.setProductId(resultSet.getInt("product_id"));
 				productInfoDTO.setProductName(resultSet.getString("product_name"));
@@ -185,26 +157,34 @@ public class ProductInfoDAO {
 		return productInfoDtoList;
 	}
 
+
+	//カテゴリーを選択、且つ、検索ワードを入力した場合
 	public List<ProductInfoDTO> getProductInfoListByKeywords(String[] keywordsList, String categoryId) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
+
 		String sql = "select * from product_info where";
+
 		boolean initializeFlag = true;
 		for (String keyword : keywordsList) {
 			if (initializeFlag) {
-				sql += " category_id=" + categoryId + " and ((product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
+				//第一検索ワード
+				sql += "category_id=" + categoryId + "and ((product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
 				initializeFlag = false;
 			} else {
+				//第二検索ワード以降(OR検索）
 				sql += " or (product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
 			}
 		}
 		sql += ")";
+
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
 				productInfoDTO.setId(resultSet.getInt("id"));
 				productInfoDTO.setProductId(resultSet.getInt("product_id"));
 				productInfoDTO.setProductName(resultSet.getString("product_name"));

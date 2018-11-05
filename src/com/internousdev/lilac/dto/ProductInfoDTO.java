@@ -3,7 +3,8 @@ package com.internousdev.lilac.dto;
 import java.util.Date;
 
 public class ProductInfoDTO {
-	//データベース'product_info'の値
+
+	//データベース'product_info'のカラム名を全て宣言
 	private int id;
 	private int productId;
 	private String productName;
@@ -18,6 +19,8 @@ public class ProductInfoDTO {
 	private int status;
 	private Date registDate;
 	private Date updateDate;
+
+	//ゲッターとセッター
 	public int getId() {
 		return id;
 	}

@@ -1,4 +1,4 @@
-package src.com.internousdev.lilac.action;
+package com.internousdev.lilac.action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,7 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 	private String productNameKana;
 	private int price;
 
+	//検索ワード = keywords
 	private String keywords;
 
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
@@ -32,12 +33,12 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 	public String execute() {
 		String result = ERROR;
 
-		ProductInfoDAO productInfoDao = new ProductInfoDAO();
-		productInfoDtoList = productInfoDao.getProductInfoList();
+		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
+		productInfoDtoList = productInfoDAO.getProductInfoList();
 
 		if(!session.containsKey("mCategoryList")) {
-			MCategoryDAO mCategoryDao = new MCategoryDAO();
-			mCategoryDtoList = mCategoryDao.getMCategoryList();
+			MCategoryDAO mCategoryDAO = new MCategoryDAO();
+			mCategoryDtoList = mCategoryDAO.getMCategoryList();
 			session.put("mCategoryDtoList", mCategoryDtoList);
 		}
 
