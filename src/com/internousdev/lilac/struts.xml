@@ -71,17 +71,17 @@
     <result name="error">productList.jsp</result>
     </action>
 -->
-<!--SearchItemAction
+<!--SearchItemAction-->
 <action name="SearchItemAction" class="com.internousdev.bread.action.SearchItemAction" method="execute">
     <result name="success">productList.jsp</result>
     <result name="error">productList.jsp</result>
     </action>
--->
-<!--HomeAction
+
+<!--HomeAction-->
 <action name="HomeAction" class="com.internousdev.bread.action.HomeAction" method="execute">
     <result name="success">home.jsp</result>
     </action>
--->
+
 <!--AddCartAction
 <action name="AddCartAction" class="com.internousdev.bread.action.AddCartAction" method="execute">
     <result name="success">cart.jsp</result>
