@@ -1,15 +1,13 @@
 package com.internousdev.lilac.action;
 
-import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.opensymphony.xwork2.ActionSupport;
-
-import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.util.InputChecker;
+import com.opensymphony.xwork2.ActionSupport;
 
 public class ResetPasswordConfirmAction extends ActionSupport implements SessionAware{
 
@@ -51,11 +49,19 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 		if(loginIdErrorMessageList.size()==0
 				&& passwordErrorMessageList.size()==0
 				&& newPasswordErrorMessageList.size()==0
-				&& reConfirmationNewPasswordErrorMessageList.size()==0){
+				&& reConfirmationNewPasswordErrorMessageList.size()==0
+				&& newPasswordIncorrectErrorMessageList.size()==0){
 
 			UserInfoDAO userInfoDAO=new UserInfoDAo();
-			userInfoDAo.isExistsUserzInfo(String loginId,String password){
-				String concealed
+			if(userInfoDAO.isExistsUserzInfo(loginId,password)){
+				String concealedPassword = userInfoDAO.concealPassword(password);
+				session.put("loginId", loginId);
+				session.put("newPassword", newPassword);
+				session.put("concealedPassword", concealedPassword);
+				result = SUCCESS;
+			}else{
+				passwordIncorrectErrorMessageList.add("入力されたパスワードが異なります。");
+				session.put("passwordIncorrectErrorMessageList", passwordIncorrectErrorMessageList);
 
 			}
 
