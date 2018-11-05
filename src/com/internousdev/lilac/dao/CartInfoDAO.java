@@ -135,4 +135,70 @@ public class CartInfoDAO {
 		return count;
 	}
 
+	public int delete(String id){
+		DBConnector dbConnector = new DBConnector();
+		Connection con = dbConnector.getConnection();
+		int count = 0;
+		String sql ="delete from cart_info where id=?";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+
+			count = ps.executeUpdate();
+		}catch (SQLException e){
+			e.printStackTrace();
+		}
+		try{
+			con.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return count;
+	}
+
+	public int deleteAll(String userId){
+		DBConnector dbConnector = new DBConnector();
+		Connection con = dbConnector.getConnection();
+		int count = 0;
+		String sql ="delete from cart_info where user_id=?";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, userId);
+
+			count = ps.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		try{
+			con.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return count;
+	}
+
+	public int linkToLoginId(String tempUserId, String loginId){
+		DBConnector dbConnector = new DBConnector();
+		Connection con = dbConnector.getConnection();
+		int count = 0;
+		String sql = "update cart_info set user_id=?, temp_user_id = null where temp_user_id=?";
+
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, loginId);
+			ps.setString(2, tempUserId);
+			count = ps.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		try{
+			con.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return count;
+	}
+
 }
