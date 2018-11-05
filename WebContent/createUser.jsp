@@ -123,7 +123,7 @@
 </div>
 
 </s:form>
-</div><!-- /div id="contents" -->
+</div>
 
 <div id="footer">
 	<jsp:include page="footer.jsp" />
