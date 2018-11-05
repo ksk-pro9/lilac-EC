@@ -7,7 +7,7 @@
   <constant name="struts.devMode" value="true" />
 
 
-        <package name="com.internousdev.ecsite.lilac.action" extends="struts-default">
+        <package name="com.internousdev.lilac.action" extends="struts-default">
 
 
       <!--CreateUserAction
