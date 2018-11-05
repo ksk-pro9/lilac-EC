@@ -8,9 +8,9 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.MCategoryDAO;
+import com.internousdev.lilac.dao.ProductInfoDAO;
 import com.internousdev.lilac.dto.MCategoryDTO;
-//import com.internousdev.lilac.dao.ProductInfoDAO;
-//import com.internousdev.lilac.dto.ProductInfoDTO;
+import com.internousdev.lilac.dto.ProductInfoDTO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -52,11 +52,15 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			case "1":
 				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.replaceAll("　", " ").split(" "));
 				result = SUCCESS;
+				session.put("categoryId", categoryId);
+				session.put("keywords", keywords);
 				break;
 
 			default:
 				productInfoDtoList = productInfoDAO.getProductInfoListByKeywords(keywords.replaceAll("　", " ").split(" "), categoryId);
 				result = SUCCESS;
+				session.put("categoryId", categoryId);
+				session.put("keywords", keywords);
 				break;
 		}
 
