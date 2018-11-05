@@ -21,7 +21,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 	private String categoryId;///カテゴリーID
 	private String keywords;//検索キーワード
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト
-	private List<String> keywordsErrorMessageList = new ArrayList<String>();//キーワードのエラーリスト
+	private List<String> keywordsErrorMessageList = new ArrayList<String>();//キーワードの文字エラーリスト
 	private List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();//商品のリスト
 	private Map<String, Object> session;
 
@@ -31,17 +31,19 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		InputChecker inputChecker = new InputChecker();
 
-		//検索ワードに何も入っていない場合keywordsには何も入れない
+		//検索ワードに何も入っていない場合keywordsはストリングの指定が無い状態
 		if(keywords == null) {
 			keywords = "";
 		}
+
 		//検索ワードの文字チェックを行いMessageListにエラーメッセージを入れている
-		//商品一覧画面でエラーメッセージを表示させないなら↓は不要
+		//商品一覧画面でエラーメッセージを表示させないなら↓いらない気がする
 		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true);
 		session.put("keywordsErrorMessageList", keywordsErrorMessageList);
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 
+		//カテゴリーIDと検索ワードによる商品リストの生成
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
 		//全角スペースを半角スペースに置き換える
 		//String型変数名.split("区切り文字", 分割後の要素数)
@@ -50,13 +52,11 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			case "1":
 				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.replaceAll("　", " ").split(" "));
 				result = SUCCESS;
-				session.put("keywords", keywords);
 				break;
 
 			default:
 				productInfoDtoList = productInfoDAO.getProductInfoListByKeywords(keywords.replaceAll("　", " ").split(" "), categoryId);
 				result = SUCCESS;
-				session.put("keywords", keywords);
 				break;
 		}
 
@@ -76,7 +76,6 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			mCategoryDtoList = mCategoryDao.getMCategoryList();
 			session.put("mCategoryDtoList", mCategoryDtoList);
 		}
-
 			return result;
 	}
 

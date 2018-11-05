@@ -7,149 +7,149 @@
   <constant name="struts.devMode" value="true" />
 
 
-        <package name="com.internousdev.ecsite.bread.action" extends="struts-default">
+        <package name="com.internousdev.ecsite.lilac.action" extends="struts-default">
 
 
       <!--CreateUserAction
-<action name="CreateUserAction" class="com.internousdev.bread.action.CreateUserAction" method="execute">
+<action name="CreateUserAction" class="com.internousdev.lilac.action.CreateUserAction" method="execute">
     <result name="success">createUser.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
     <!--CreateUserConfirmAction
-<action name="CreateUserConfirmAction" class="com.internousdev.bread.action.CreateUserConfirmAction" method="execute">
+<action name="CreateUserConfirmAction" class="com.internousdev.lilac.action.CreateUserConfirmAction" method="execute">
     <result name="success">createUserConfirm.jsp</result>
     <result name="error">createUser.jsp</result>
     </action>
 -->
     <!--CreateUserCompleteAction
-<action name="CreateUserCompleteAction" class="com.internousdev.bread.action.CreateUserCompleteAction" method="execute">
+<action name="CreateUserCompleteAction" class="com.internousdev.lilac.action.CreateUserCompleteAction" method="execute">
     <result name="success">createUserComplete.jsp</result>
     <result name="error">createUser.jsp</result>
     </action>
 -->
     <!--GoLoginAction
-<action name="GoLoginAction" class="com.internousdev.bread.action.GoLoginAction" method="execute">
+<action name="GoLoginAction" class="com.internousdev.lilac.action.GoLoginAction" method="execute">
     <result name="success">login.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
     <!--LoginAction
-<action name="LoginAction" class="com.internousdev.bread.action.LoginAction" method="execute">
+<action name="LoginAction" class="com.internousdev.lilac.action.LoginAction" method="execute">
     <result name="success">home.jsp</result>
     <result name="settlement">settlementConfirm.jsp</result>
     <result name="error">login.jsp</result>
     </action>
 -->
 <!--ResetPasswordAction
-<action name="ResetPasswordAction" class="com.internousdev.bread.action.ResetPasswordAction" method="execute">
+<action name="ResetPasswordAction" class="com.internousdev.lilac.action.ResetPasswordAction" method="execute">
     <result name="success">resetPassword.jsp</result>
     <result name="error">login.jsp</result>
     </action>
 -->
 <!--ResetPasswordConfirmAction
-<action name="ResetPasswordConfirmAction" class="com.internousdev.bread.action.ResetPasswordConfirmAction" method="execute">
+<action name="ResetPasswordConfirmAction" class="com.internousdev.lilac.action.ResetPasswordConfirmAction" method="execute">
     <result name="success">resetPasswordConfirm.jsp</result>
     <result name="error">resetPassword.jsp</result>
     </action>
 -->
 <!--ResetPasswordCompleteAction
-<action name="ResetPasswordCompleteAction" class="com.internousdev.bread.action.ResetPasswordCompleteAction" method="execute">
+<action name="ResetPasswordCompleteAction" class="com.internousdev.lilac.action.ResetPasswordCompleteAction" method="execute">
     <result name="success">resetPasswordComplete.jsp</result>
     <result name="error">resetPassword.jsp</result>
     </action>
 -->
 <!--ProductListAction
-<action name="ProductListAction" class="com.internousdev.bread.action.ProductListAction" method="execute">
+<action name="ProductListAction" class="com.internousdev.lilac.action.ProductListAction" method="execute">
     <result name="success">productList.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
 <!--ProductDetailsAction
-<action name="ProductDetailsAction" class="com.internousdev.bread.action.ProductDetailsAction" method="execute">
+<action name="ProductDetailsAction" class="com.internousdev.lilac.action.ProductDetailsAction" method="execute">
     <result name="success">productDetails.jsp</result>
     <result name="error">productList.jsp</result>
     </action>
 -->
-<!--SearchItemAction
-<action name="SearchItemAction" class="com.internousdev.bread.action.SearchItemAction" method="execute">
+<!--SearchItemAction-->
+<action name="SearchItemAction" class="com.internousdev.lilac.action.SearchItemAction" method="execute">
     <result name="success">productList.jsp</result>
     <result name="error">productList.jsp</result>
     </action>
--->
-<!--HomeAction
-<action name="HomeAction" class="com.internousdev.bread.action.HomeAction" method="execute">
+
+<!--HomeAction-->
+<action name="HomeAction" class="com.internousdev.lilac.action.HomeAction" method="execute">
     <result name="success">home.jsp</result>
     </action>
--->
+
 <!--AddCartAction
-<action name="AddCartAction" class="com.internousdev.bread.action.AddCartAction" method="execute">
+<action name="AddCartAction" class="com.internousdev.lilac.action.AddCartAction" method="execute">
     <result name="success">cart.jsp</result>
     <result name="error">home.jsp</result>
     <kai-result name="input">cart.jsp</input>
     </action>
 -->
 <!--CartAction
-<action name="CartAction" class="com.internousdev.bread.action.CartAction" method="execute">
+<action name="CartAction" class="com.internousdev.lilacaction.CartAction" method="execute">
     <result name="success">cart.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
 <!--DeleteCartAction
-<action name="DeleteCartAction" class="com.internousdev.bread.action.DeleteCartAction" method="execute">
+<action name="DeleteCartAction" class="com.internousdev.lilac.action.DeleteCartAction" method="execute">
     <result name="success">cart.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
 <!--SettlementConfirmAction
-<action name="SettlementConfirmAction" class="com.internousdev.bread.action.SettlementConfirmAction" method="execute">
+<action name="SettlementConfirmAction" class="com.internousdev.lilac.action.SettlementConfirmAction" method="execute">
     <result name="success">settlementConfirm.jsp</result>
     <result name="error">login.jsp</result>
     </action>
 -->
 <!--CreateDestinationAction
-<action name="CreateDestinationAction" class="com.internousdev.bread.action.CreateDestinationAction" method="execute">
+<action name="CreateDestinationAction" class="com.internousdev.lilac.action.CreateDestinationAction" method="execute">
     <result name="success">createDestination.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
 <!--CreateDestinationCofirmAction
-<action name="CreateDestinationConfirmAction" class="com.internousdev.bread.action.CreateDestinationConfirmAction" method="execute">
+<action name="CreateDestinationConfirmAction" class="com.internousdev.lilac.action.CreateDestinationConfirmAction" method="execute">
     <result name="success">createDestinationConfirm.jsp</result>
     <result name="error">createDestination.jsp</result>
     </action>
 -->
 <!--CreateDestinationCompleteAction
-<action name="CreateDestinationCompleteAction" class="com.internousdev.bread.action.CreateDestinationCompleteAction" method="execute">
+<action name="CreateDestinationCompleteAction" class="com.internousdev.lilac.action.CreateDestinationCompleteAction" method="execute">
     <result name="success">createDestinationComplete.jsp</result>
     <result name="error">createDestination.jsp</result>
     </action>
 -->
 <!--SettlementCompleteAction
-<action name="SettlementCompleteAction" class="com.internousdev.bread.action.SettlementCompleteAction" method="execute">
+<action name="SettlementCompleteAction" class="com.internousdev.lilac.action.SettlementCompleteAction" method="execute">
     <result name="success">SettlementComplete.jsp</result>
     <result name="error">settlementConfirm.jsp</result>
     </action>
 -->
 <!--MyPageAction
-<action name="MyPageAction" class="com.internousdev.bread.action.MyPageAction" method="execute">
+<action name="MyPageAction" class="com.internousdev.lilac.action.MyPageAction" method="execute">
     <result name="success">mypage.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
 <!--PurchaseHistoryAction
-<action name="PurchaseHistoryAction" class="com.internousdev.bread.action.PurchaseHistoryAction" method="execute">
+<action name="PurchaseHistoryAction" class="com.internousdev.lilac.action.PurchaseHistoryAction" method="execute">
     <result name="success">purchaseHistory.jsp</result>
     </action>
 -->
 <!--DeletePurchaseHistoryAction
-<action name="DeletePurchaseHistoryAction" class="com.internousdev.bread.action.DeletePurchaseHistoryAction" method="execute">
+<action name="DeletePurchaseHistoryAction" class="com.internousdev.lilac.action.DeletePurchaseHistoryAction" method="execute">
     <result name="success">purchaseHistory.jsp</result>
     <result name="error">home.jsp</result>
     </action>
 -->
 <!--LogoutAction
-<action name="LogoutAction" class="com.internousdev.bread.action.LogoutAction" method="execute">
+<action name="LogoutAction" class="com.internousdev.lilac.action.LogoutAction" method="execute">
     <result name="success">index.jsp</result>
     <kai-result name="error">index.jsp</result>
     </action>
