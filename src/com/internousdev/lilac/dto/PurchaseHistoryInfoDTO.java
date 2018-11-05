@@ -19,7 +19,7 @@ public class PurchaseHistoryInfoDTO{
 	private String productDescription;
 	private int categoryId;
 	private String imageFileName;
-	private String imageFIlePath;
+	private String imageFilePath;
 	private String releaseCompany;
 	private Date releaseDate;
 
@@ -151,11 +151,11 @@ public void setImageFileName(String imageFileName){
 	this.imageFileName=imageFileName;
 }
 public String getImageFilePath(){
-	return imageFIlePath;
+	return imageFilePath;
 }
 
-public void setImageFIlePath(String imageFIlePath){
-	this.imageFIlePath=imageFIlePath;
+public void setImageFilePath(String imageFilePath){
+	this.imageFilePath=imageFilePath;
 }
 
 public String getReleaseCompany(){
@@ -219,7 +219,7 @@ public String getTelNumber(){
 	return telNumber;
 }
 
-public void setTelNumbet(String telNumber){
+public void setTelNumber(String telNumber){
 	this.telNumber=telNumber;
 }
 
