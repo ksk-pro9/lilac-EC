@@ -3,13 +3,14 @@ package com.internousdev.lilac.action;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 //import com.internousdev.lilac.dao.UserInfoDAO;
 
 
 public class ResetPasswordCompleteAction extends ActionSupport implements SessionAware{
 
-/*	private String categoryId;*/
+	/*	private String categoryId;*/
 	private String loginId;
 	private String password;
 	private Map<String,Object>session;
@@ -17,17 +18,46 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 	public String execute(){
 		String result=ERROR;
 
-		int count=userInfoDAO.resetPassword(String.valueOf(session.get("loginId")),String.valueOf(session.get("newPassword")){
+		UserInfoDAO userInfoDAo=new UserInfoDAO();
+
+		int count=userInfoDAO.resetPassword(String.valueOf(session.get("loginId")),String.valueOf(session.get("newPassword")));
 
 			if(count>0){
 				result=SUCCESS;
 			}else{
 				result=ERROR;
-			}return result;
-
 			}
+			return result;
+
 		}
+
+
+	public String getLoginId() {
+		return loginId;
 	}
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
+}
 
 
 

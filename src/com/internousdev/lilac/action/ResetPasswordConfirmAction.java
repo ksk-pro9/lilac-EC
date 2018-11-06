@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-//import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
