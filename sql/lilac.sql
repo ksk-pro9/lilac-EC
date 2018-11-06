@@ -3,7 +3,7 @@ set foreign_key_checks = 0;
 
 drop database if exists lilac;
 create database if not exists lilac;
-use bread;
+use lilac;
 
 drop table if exists user_info;
 
