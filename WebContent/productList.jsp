@@ -21,11 +21,12 @@
 </s:if>
 
 <s:else>
+	<%-----商品一覧全体div-- ------%>
 	<div id="product-list">
 	<s:iterator value="#session.productInfoDtoList">
-	<div class="product-list-box">
-	<ul>
-		<li>
+		<%-----１つの商品に対するdiv ------%>
+		<div class="product-list-box">
+
 			<%--画像をクリックするとProductDetailsActionが実行される --%>
 			<a href='<s:url action="ProductDetailsAction">
 			<s:param name="productId" value="%{productId}"/>
@@ -36,9 +37,8 @@
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>
-	  </li>
-	</ul>
-	</div>
+
+	 	</div>
 	</s:iterator>
 	</div>
 </s:else>

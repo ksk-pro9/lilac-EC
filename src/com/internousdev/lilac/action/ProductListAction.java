@@ -6,11 +6,12 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.lilac.dao.MCategoryDAO;
-import com.internousdev.lilac.dao.ProductInfoDAO;
-import com.internousdev.lilac.dto.MCategoryDTO;
-import com.internousdev.lilac.dto.ProductInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
+
+import src.com.internousdev.lilac.dao.MCategoryDAO;
+import src.com.internousdev.lilac.dao.ProductInfoDAO;
+import src.com.internousdev.lilac.dto.MCategoryDTO;
+import src.com.internousdev.lilac.dto.ProductInfoDTO;
 
 
 public class ProductListAction extends ActionSupport implements SessionAware{
@@ -23,7 +24,7 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 	private String productNameKana;
 	private int price;
 
-	//検索ワード = keywords
+	//検索ワードで入力された文字列が変数keywordsに入ります。
 	private String keywords;
 
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
