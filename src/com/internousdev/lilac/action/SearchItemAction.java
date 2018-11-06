@@ -29,15 +29,17 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
-		InputChecker inputChecker = new InputChecker();
+		MCategoryDAO mCategoryDao = new MCategoryDAO();
+		mCategoryDtoList = mCategoryDao.getMCategoryList();
+		session.put("mCategoryDtoList", mCategoryDtoList);
 
-		//検索ワードに何も入っていない場合keywordsはストリングの指定が無い状態
+		//検索ワードに何も入っていない場合、keywordsは何も入れない
 		if(keywords == null) {
 			keywords = "";
 		}
 
 		//検索ワードの文字チェックを行いMessageListにエラーメッセージを入れている
-		//商品一覧画面でエラーメッセージを表示させないなら↓いらない気がする
+		InputChecker inputChecker = new InputChecker();
 		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true);
 		session.put("keywordsErrorMessageList", keywordsErrorMessageList);
 
@@ -45,40 +47,27 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		//カテゴリーIDと検索ワードによる商品リストの生成
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
-		//全角スペースを半角スペースに置き換える
+		//→全角スペースを半角スペースに置き換える
 		//String型変数名.split("区切り文字", 分割後の要素数)
-		//半角スペースで文字を分ける
+		//→半角スペースでキーワードを区切る
 		switch (categoryId) {
 			case "1":
 				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.replaceAll("　", " ").split(" "));
 				result = SUCCESS;
-				session.put("categoryId", categoryId);
-				session.put("keywords", keywords);
 				break;
 
 			default:
 				productInfoDtoList = productInfoDAO.getProductInfoListByKeywords(keywords.replaceAll("　", " ").split(" "), categoryId);
 				result = SUCCESS;
-				session.put("categoryId", categoryId);
-				session.put("keywords", keywords);
 				break;
 		}
 
 		//iterator→コレクション内の要素に順番にアクセスする
 		//hasNext→繰り返し処理において、次の要素がある場合にtrueを返す
-		//↓の場合、productDtoListにiteratorメソッドを実行し、次の要素がない場合、nullを入れている
 		Iterator<ProductInfoDTO> iterator = productInfoDtoList.iterator();
 
 		if(!(iterator.hasNext())) {
 			productInfoDtoList = null;
-		}
-
-		//containsKeyは指定した要素があればtrueを返す
-		//↓の場合mCategoryDtoListが存在しない場合sessionにmCategoryDtolistを作って入れている
-		if(!session.containsKey("mCategoryDtoList")) {
-			MCategoryDAO mCategoryDao = new MCategoryDAO();
-			mCategoryDtoList = mCategoryDao.getMCategoryList();
-			session.put("mCategoryDtoList", mCategoryDtoList);
 		}
 			return result;
 	}

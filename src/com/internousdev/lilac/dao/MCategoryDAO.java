@@ -13,14 +13,13 @@ import com.internousdev.lilac.util.DBConnector;
 
 public class MCategoryDAO {
 
-	//カテゴリー情報を取得するメソッド
+	//全てのカテゴリー情報を取得するメソッド
 	public List<MCategoryDTO> getMCategoryList(){
 
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
 		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 
-		//全てのカテゴリー情報を取得するsql
 		String sql = "select * from m_category";
 
 		try {
@@ -41,7 +40,6 @@ public class MCategoryDAO {
 
 			//iterator→コレクション内の要素に順番にアクセスする
 			//hasNext→繰り返し処理において、次の要素がある場合にtrueを返す
-			//↓の場合、mCategoryListにiteratorメソッドを実行し、次の要素がない場合、nullを入れている
 			Iterator<MCategoryDTO> iterator = mCategoryDtoList.iterator();
 
 			if(!(iterator.hasNext())) {

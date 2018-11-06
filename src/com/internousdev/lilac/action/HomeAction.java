@@ -22,23 +22,21 @@ public class HomeAction extends ActionSupport implements SessionAware{
 
 		//ログインしていない状態かつ、仮のユーザーIDが発行されていない場合、
 		//ランダムメソッドを使って仮のユーザーIDを発行してセッションに入れる
-		 if (!(session.containsKey("loginId")) && !(session.containsKey("tempUserId"))) {
-			 CommonUtility commonUtility = new CommonUtility();
-			 session.put("tempUserId", commonUtility.getRamdomValue());
+		if (!(session.containsKey("loginId")) && !(session.containsKey("tempUserId"))) {
+			CommonUtility commonUtility = new CommonUtility();
+			session.put("tempUserId", commonUtility.getRamdomValue());
 		}
 
-		 //sessionにloginedが無ければ(ログインしていなければ)、loginedを0にセットする
+		//sessionにloginedが無ければ(ログインしていなければ)、loginedを0にセットする
 		if(!session.containsKey("logined")) {
 			session.put("logined", 0);
 		}
 
-		//containsKeyは指定した要素があればtrueを返す
-		//↓の場合mCategoryDtoListが存在しない場合sessionにmCategoryDtolistを作って入れている
-		if(!session.containsKey("mCategoryDtoList")) {
-			MCategoryDAO mCategoryDao = new MCategoryDAO();
-			mCategoryDtoList = mCategoryDao.getMCategoryList();
-			session.put("mCategoryDtoList", mCategoryDtoList);
-		}
+		//sessionにmCategoryDtolistを作って入れている
+		MCategoryDAO mCategoryDao = new MCategoryDAO();
+		mCategoryDtoList = mCategoryDao.getMCategoryList();
+		session.put("mCategoryDtoList", mCategoryDtoList);
+
 		return SUCCESS;
 	}
 

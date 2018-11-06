@@ -11,7 +11,6 @@
 
 	<title>ヘッダー</title>
 
-<%--
 	<script>
 		function goLoginAction(){
 			document.getElementById("form").action="GoLoginAction";
@@ -33,14 +32,7 @@
 			document.getElementById("form").action="SearchItemAction";
 		}
 	</script>
- --%>
 
-	<script type="text/javascript">
-		function submitAction(url){
-			$('form').attr('action',url);
-			$('form').submit();
-		}
-	</script>
 </head>
 
 <body>
@@ -51,14 +43,7 @@
 				B.read
 			</div>
 
-<%-- 		formの書き方予備
-			<s:form action="ItemListAction">
-				<s:submit value="一覧"/>
-			</s:form>
- --%>
-
-<%--
-			予備
+			パターン１
 			<div id="">
 				<s:form id="form" name="form">
 					<ul>
@@ -93,39 +78,45 @@
 					</ul>
 				</s:form>
 			</div>
---%>
 
-			<div>
-				<ul>
-					<s:if test='#session.containsKey("mCategoryDtoList")'>
-						<!-- categoryIdという名前で保存する(1～5) list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
-						<li><s:select name="categoryId" list="#session.mCategoryDtoList" listValue="categoryName" listKey="categoryId" selected="%{#session.categoryId}"/></li>
-					</s:if>
+			パターン２
+			<div id="">
+				<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
 
-					<s:form action="SearchItemAction">
-						<li><s:textfield name="keywords" placeholder="検索ワード" value="%{#session.keywords}"/></li>
-						<li><s:submit value="商品検索"/></li>
+				<s:form action="SearchItemAction">
+					<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName"/>
+					<s:textfield name="keywords" placeholder="検索ワード"/>
+					<s:submit value="商品検索"/>
+				</s:form>
+
+				<!-- ログイン状態のときに表示されるもの -->
+				<s:if test="#session.logined == 1">
+					<s:form action="LogoutAction">
+						<s:submit value="ログアウト"/>
 					</s:form>
+				</s:if>
 
-					<!-- ログイン状態のときに表示されるもの -->
-					<s:if test="#session.logined == 1">
-						<li><input type="button" value="ログアウト" onclick="submitAction('LogoutAction')"/></li>
-					</s:if>
+				<!-- 未ログイン状態のときに表示されるもの -->
+				<s:else>
+					<s:form action="GoLoginAction">
+						<s:submit value="ログイン"/>
+					</s:form>
+				</s:else>
 
-					<!-- 未ログイン状態のときに表示されるもの -->
-					<s:else>
-						<li><input type="button" value="ログイン" onclick="submitAction('GoLoginAction')"/></li>
-					</s:else>
+				<s:form action="CartAction">
+					<s:submit value="カート"/>
+				</s:form>
 
-					<li><input type="button" value="カート" onclick="submitAction('CartAction')"/></li>
+				<s:form action="ProductListAction">
+					<s:submit value="商品一覧"/>
+				</s:form>
 
-					<li><input type="button" value="商品一覧" onclick="submitAction('ProductListAction')"/></li>
-
-					<!-- ログイン状態のときに表示されるもの -->
-					<s:if test="#session.logined == 1">
-						<li><input type="button" value="マイページ" onclick="submitAction('MyPageAction')"/></li>
-					</s:if>
-				</ul>
+				<!-- ログイン状態のときに表示されるもの -->
+				<s:if test="#session.logined == 1">
+					<s:form action="MyPageAction">
+						<s:submit value="マイページ"/>
+					</s:form>
+				</s:if>
 			</div>
 		</div>
 	</header>

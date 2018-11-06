@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class MCategoryDTO {
 
-	private int id; //ID
-	private int categoryId; //カテゴリーID
-	private String categoryName; //カテゴリーの名前
-	private String categoryDescription; //カテゴリーの詳細
-	private Date insertDate; //作成日
-	private Date updateDate; //変更日
+	private int id;
+	private int categoryId;
+	private String categoryName;
+	private String categoryDescription;
+	private Date insertDate;
+	private Date updateDate;
 
 	public int getId() {
 		return id;
