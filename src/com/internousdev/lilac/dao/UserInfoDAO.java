@@ -213,18 +213,17 @@ public class UserInfoDAO {
 		return result;
 	}
 
-	public int userLogin(String loginId) {
+	public void userLogin(String loginId) {
 
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
-		int result=0;
 
 		String sql = "update user_info set logined=1 where user_id=?";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, loginId);
-			result = preparedStatement.executeUpdate();
+			preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -235,7 +234,6 @@ public class UserInfoDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return result;
 	}
 
 	public int logout(String loginId) {
