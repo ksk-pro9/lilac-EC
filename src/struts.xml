@@ -34,13 +34,13 @@
     <result name="error">home.jsp</result>
     </action>
 
-   <!--LoginAction-->
+   <!--LoginAction
 <action name="LoginAction" class="com.internousdev.lilac.action.LoginAction" method="execute">
     <result name="success">home.jsp</result>
     <result name="settlement">settlementConfirm.jsp</result>
     <result name="error">login.jsp</result>
     </action>
-
+-->
 <!--ResetPasswordAction-->
 <action name="ResetPasswordAction" class="com.internousdev.lilac.action.ResetPasswordAction" method="execute">
     <result name="success">resetPassword.jsp</result>
