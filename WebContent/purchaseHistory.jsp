@@ -1,12 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css">
+<title>商品購入履歴</title>
+
 </head>
 <body>
+<jsp:include page="header.jsp"/>
+<div id="contents">
+
+<h1>商品購入履歴画面</h1>
+	<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
+		<table class="horizontal-list-table">
+			<thead>
+				<tr>
+						<th><s:label value="商品名"/></th>
+						<th><s:label value="ふりがな"/></th>
+						<th><s:label value="商品画像"/></th>
+						<th><s:label value="値段"/></th>
+						<th><s:label value="販売会社名"/></th>
+						<th><s:label value="販売年月日"/></th>
+				</tr>
+
+
+
+
+</table>
+<s:if test=
+
+</div>
+
+
 
 </body>
 </html>
