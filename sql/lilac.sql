@@ -1,8 +1,8 @@
 set names utf8;
 set foreign_key_checks = 0;
 
-drop database if exists bread;
-create database if not exists bread;
+drop database if exists lilac;
+create database if not exists lilac;
 use bread;
 
 drop table if exists user_info;
