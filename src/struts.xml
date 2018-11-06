@@ -10,67 +10,67 @@
         <package name="com.internousdev.lilac.action" extends="struts-default">
 
 
-      <!--CreateUserAction
+      <!--CreateUserAction-->
 <action name="CreateUserAction" class="com.internousdev.lilac.action.CreateUserAction" method="execute">
     <result name="success">createUser.jsp</result>
     <result name="error">home.jsp</result>
     </action>
--->
-    <!--CreateUserConfirmAction
+
+    <!--CreateUserConfirmAction-->
 <action name="CreateUserConfirmAction" class="com.internousdev.lilac.action.CreateUserConfirmAction" method="execute">
     <result name="success">createUserConfirm.jsp</result>
     <result name="error">createUser.jsp</result>
     </action>
--->
+
     <!--CreateUserCompleteAction
 <action name="CreateUserCompleteAction" class="com.internousdev.lilac.action.CreateUserCompleteAction" method="execute">
     <result name="success">createUserComplete.jsp</result>
     <result name="error">createUser.jsp</result>
     </action>
 -->
-    <!--GoLoginAction
+    <!--GoLoginAction-->
 <action name="GoLoginAction" class="com.internousdev.lilac.action.GoLoginAction" method="execute">
     <result name="success">login.jsp</result>
     <result name="error">home.jsp</result>
     </action>
--->
-    <!--LoginAction
+
+   <!--LoginAction-->
 <action name="LoginAction" class="com.internousdev.lilac.action.LoginAction" method="execute">
     <result name="success">home.jsp</result>
     <result name="settlement">settlementConfirm.jsp</result>
     <result name="error">login.jsp</result>
     </action>
--->
-<!--ResetPasswordAction
+
+<!--ResetPasswordAction-->
 <action name="ResetPasswordAction" class="com.internousdev.lilac.action.ResetPasswordAction" method="execute">
     <result name="success">resetPassword.jsp</result>
     <result name="error">login.jsp</result>
     </action>
--->
-<!--ResetPasswordConfirmAction
+
+<!--ResetPasswordConfirmAction-->
 <action name="ResetPasswordConfirmAction" class="com.internousdev.lilac.action.ResetPasswordConfirmAction" method="execute">
     <result name="success">resetPasswordConfirm.jsp</result>
     <result name="error">resetPassword.jsp</result>
     </action>
--->
+
 <!--ResetPasswordCompleteAction
 <action name="ResetPasswordCompleteAction" class="com.internousdev.lilac.action.ResetPasswordCompleteAction" method="execute">
     <result name="success">resetPasswordComplete.jsp</result>
     <result name="error">resetPassword.jsp</result>
     </action>
 -->
-<!--ProductListAction
+<!--ProductListAction-->
 <action name="ProductListAction" class="com.internousdev.lilac.action.ProductListAction" method="execute">
     <result name="success">productList.jsp</result>
     <result name="error">home.jsp</result>
     </action>
--->
-<!--ProductDetailsAction
+
+<!--ProductDetailsAction-->
 <action name="ProductDetailsAction" class="com.internousdev.lilac.action.ProductDetailsAction" method="execute">
     <result name="success">productDetails.jsp</result>
     <result name="error">productList.jsp</result>
     </action>
--->
+
 <!--SearchItemAction-->
 <action name="SearchItemAction" class="com.internousdev.lilac.action.SearchItemAction" method="execute">
     <result name="success">productList.jsp</result>
@@ -82,13 +82,12 @@
     <result name="success">home.jsp</result>
     </action>
 
-<!--AddCartAction
+<!--AddCartAction-->
 <action name="AddCartAction" class="com.internousdev.lilac.action.AddCartAction" method="execute">
     <result name="success">cart.jsp</result>
     <result name="error">home.jsp</result>
-    <kai-result name="input">cart.jsp</input>
     </action>
--->
+
 <!--CartAction-->
 <action name="CartAction" class="com.internousdev.lilac.action.CartAction" method="execute">
     <result name="success">cart.jsp</result>
