@@ -6,12 +6,11 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.lilac.dao.MCategoryDAO;
+import com.internousdev.lilac.dao.ProductInfoDAO;
+import com.internousdev.lilac.dto.MCategoryDTO;
+import com.internousdev.lilac.dto.ProductInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
-
-import src.com.internousdev.lilac.dao.MCategoryDAO;
-import src.com.internousdev.lilac.dao.ProductInfoDAO;
-import src.com.internousdev.lilac.dto.MCategoryDTO;
-import src.com.internousdev.lilac.dto.ProductInfoDTO;
 
 
 public class ProductListAction extends ActionSupport implements SessionAware{
