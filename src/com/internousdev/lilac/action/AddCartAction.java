@@ -45,6 +45,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 			tempUserId = String.valueOf(session.get("tempUserId"));
 		}
 		productCount = String.valueOf((productCount.split(" ,",0))[0]);
+				//splitの部分が謎!!
 
 		CartInfoDAO cartInfoDao = new CartInfoDAO();
 		int count = cartInfoDao.regist(userId, tempUserId, productId, productCount, price);
