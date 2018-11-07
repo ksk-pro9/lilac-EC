@@ -18,41 +18,40 @@
 		<table class="vertical-list-table">
 
 			<tr>
-					<th scope="row"><s:label value="姓"/></th>
-					<td><s:property value="#session.familyName"/></td>
+				<th scope="row"><s:label value="姓"/></th>
+				<td><s:property value="#session.familyName"/></td>
 			</tr>
 
 			<tr>
 
-					<th scope="row"><s:label value="姓"/></th>
-					<td><s:property value="#sesion.familyName"/></td>
+				<th scope="row"><s:label value="姓"/></th>
+				<td><s:property value="#sesion.familyName"/></td>
 			</tr>
 
 			<tr>
-					<th scope="row"><s:label value="ふりがな"/></th>
-					<td><s:property value="#session.familyNameKana"/><span>
-					</span><s:property value="#session.firstNameKana"/></td>
-
-			</tr>
-
-			<tr>
-					<th scope="row"><s:label value="性別"/></th>
-					<td><s:if test="#session.sex==0">男性</s:if><s:if test="session.sex==1">女性</s:if></td>
+				<th scope="row"><s:label value="ふりがな"/></th>
+				<td><s:property value="#session.familyNameKana"/><span>
+				</span><s:property value="#session.firstNameKana"/></td>
 
 			</tr>
 
 			<tr>
-					<th scope="row"><s:label value="メールアドレス"/></th>
-					<td><s:property value="#session.email"/></td>
+				<th scope="row"><s:label value="性別"/></th>
+				<td><s:if test="#session.sex==0">男性</s:if><s:if test="session.sex==1">女性</s:if></td>
+
+			</tr>
+
+			<tr>
+				<th scope="row"><s:label value="メールアドレス"/></th>
+				<td><s:property value="#session.email"/></td>
 			</tr>
 		</table>
-
 		<div class="submit_btn_box">
-			<s:submit value="購入履歴" class="submit_btn"/>
+		<s:submit value="購入履歴" class="submit_btn"/>
 		</div>
-	</s:form>
+		</s:form>
 </div>
-	<s:include value="footer.jsp"/>
+		<s:include value="footer.jsp"/>
 
 </body>
 </html>

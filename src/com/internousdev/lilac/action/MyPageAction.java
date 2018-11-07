@@ -34,7 +34,6 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 			session.put("email", userInfoDTO.getEmail());
 			System.out.println(session.get("familyName"));
 			result=SUCCESS;
-
 		}
 
 		return result;
