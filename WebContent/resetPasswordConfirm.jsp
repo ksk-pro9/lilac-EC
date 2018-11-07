@@ -9,6 +9,8 @@
 </head>
 <body>
 
+	<jsp:include page="header.jsp"/>
+
 	<h1>パスワード再設定確認画面</h1>
 
 	<s:form action="ResetPasswordCompleteAction">
@@ -16,6 +18,8 @@
 		<s:property value="#session.concealedPassword" />
 		<s:submit value="再設定" class="submit_btn" />
 	</s:form>
+
+	<s:include value="footer.jsp" />
 
 </body>
 </html>

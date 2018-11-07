@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.lilac.dao.UserInfoDAO;
 import com.opensymphony.xwork2.ActionSupport;
 //import com.internousdev.lilac.dao.UserInfoDAO;
 
@@ -18,19 +19,26 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 	public String execute(){
 		String result=ERROR;
 
-		UserInfoDAO userInfoDAo=new UserInfoDAO();
+		UserInfoDAO userInfoDAO=new UserInfoDAO();
 
 		int count=userInfoDAO.resetPassword(String.valueOf(session.get("loginId")),String.valueOf(session.get("newPassword")));
 
-			if(count>0){
-				result=SUCCESS;
-			}else{
-				result=ERROR;
-			}
-			return result;
-
+		if(count>0){
+			result=SUCCESS;
+		}else{
+			result=ERROR;
 		}
+		return result;
 
+	}
+
+/*	public String getCategoryId(){
+		return categoryId;
+	}
+
+	public void setCategoryId(String categoryId){
+		this.categoryId=categoryId;*/
+	/*}*/
 
 	public String getLoginId() {
 		return loginId;

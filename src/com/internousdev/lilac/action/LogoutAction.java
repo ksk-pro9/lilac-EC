@@ -20,21 +20,21 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 
 		String loginId=String.valueOf(session.get("loginId"));
-		boolean savedLoginId=boolean,valueOf(session.get("savedLoginId"));
+		boolean savedLoginId=Boolean.valueOf(String.valueOf(session.get("savedLoginId")));
 
 		int count=userInfoDAO.logout(loginId);
 		if(count>0){
 			session.clear();
-			session.put("savedLoginId"savedLoginId);
-			session.put("loginId"LoginId);
+			session.put("savedLoginId",savedLoginId);
+			session.put("loginId",loginId);
 
 			result=SUCCESS;
 		}
-			return result;
+		return result;
 
-		}
+	}
 
-		/*		public String getCategoryId() {
+	/*		public String getCategoryId() {
 			return categoryId;
 		}
 
@@ -42,16 +42,16 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 			this.categoryId = categoryId;
 		}*/
 
-		public Map<String, Object> getSession() {
-			return session;
-		}
-
-		public void setSession(Map<String, Object> session) {
-			this.session = session;
-		}
-
-
-
+	public Map<String, Object> getSession() {
+		return session;
 	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
+
+}
 
 

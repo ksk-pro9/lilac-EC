@@ -10,6 +10,9 @@
 <title>パスワード再設定</title>
 </head>
 <body>
+
+	<jsp:include page="header.jsp" />
+
 	<h1>パスワード再設定画面</h1>
 
 	<s:if test="!#session.loginIdErrorMessageList.isEmpty()">
@@ -53,7 +56,8 @@
 
 		<tr>
 			<th scope="row"><s:label value="ログインID" /></th>
-			<td><s:textfield name="loginId" placeholder="ログインID" class="txt" value="session.get('loginId')" /></td>
+			<td><s:textfield name="loginId" placeholder="ログインID" class="txt"
+					value=%{#session.loginId}/></td>
 		</tr>
 
 		<tr>
@@ -77,6 +81,8 @@
 		<s:submit value="パスワード設定" class="submit_btm" />
 
 	</s:form>
+
+	<s:include value="footer.jsp" />
 
 </body>
 </html>
