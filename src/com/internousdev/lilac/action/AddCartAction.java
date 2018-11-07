@@ -51,7 +51,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 			tempUserId = String.valueOf(session.get("tempUserId"));
 		}
 
-		//splitの部分が謎!!
+		//splitの部分が謎!!  ([0]は配列の0番目を意味している)
 		productCount = String.valueOf((productCount.split(" ,",0))[0]);
 
 		//cart_infoテーブルにカート情報を入れる

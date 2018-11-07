@@ -45,7 +45,7 @@ public class CartInfoDAO {
 				+ "group by product_id";
 				try{
 					PreparedStatement ps = con.prepareStatement(sql);
-					//ここはなぜ system.out.println？
+					//ここはなぜ system.out.println？(どうでもいいらしい)
 					System.out.println("cartinfodao-getcartinfodtolist:"+loginId);
 					ps.setString(1, loginId);
 					ResultSet rs = ps.executeQuery();
@@ -187,6 +187,7 @@ public class CartInfoDAO {
 		return count;
 	}
 
+	//cart_infoテーブルでtempUserIdとloginIdを紐づける
 	public int linkToLoginId(String tempUserId, String loginId){
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
