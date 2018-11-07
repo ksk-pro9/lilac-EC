@@ -64,6 +64,7 @@ public class ProductInfoDAO {
 
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 
+		//選択された商品のproductIdから、商品情報を取得します。
 		String sql = "select * from product_info where product_id=?";
 
 		try {
