@@ -14,7 +14,7 @@ public class DestinationInfoDAO {
 	public int insert(String userId,String familyName,
 			String firstName,String familyNameKana,String firstNameKana,
 					String email,String telNumber,String userAddress){
-		DBConnector dbConnector=new DBConnection();
+		DBConnector dbConnector=new DBConnector();
 		Connection connection=dbConnector.getConnection();
 		int count=0;
 		String sql="insert into destination_info(user_id,family_name,first_name,family_name_kana,first_name_kana,"
@@ -34,31 +34,37 @@ public class DestinationInfoDAO {
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
+		try{
+			connection.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
 		return count;
 	}
-	public List<DestinationInfoDAO> getDestinationInfo(String loginId)throws SQLException{
+	public List<DestinationInfoDTO> getDestinationInfo(String loginId)throws SQLException{
 		DBConnector dbConnector=new DBConnector();
 		Connection connection=dbConnector.getConnection();
 		List<DestinationInfoDTO> destinationInfoDtoList=new ArrayList<DestinationInfoDTO>();
 
-		String sql="SELECT id,family_name,first_name,family_name_kana,first_name_kana,user_adress"
+		String sql="SELECT id,family_name,first_name,family_name_kana,first_name_kana,user_address"
 				+ "tel_number,email FROM destination_info WHERE user_id=?";
 		try{
 			connection=dbConnector.getConnection();
 			PreparedStatement ps=connection.prepareStatement(sql);
-			ps.setString(1,loginId)
+			ps.setString(1,loginId);
 			ResultSet rs=ps.executeQuery();
 
 			while(rs.next()){
 				DestinationInfoDTO destinationInfoDTO=new DestinationInfoDTO();
 				destinationInfoDTO.setId(rs.getInt("id"));
 				destinationInfoDTO.setFamilyName(rs.getString("family_name"));
-				destinationInfoDTO(rs.getString("first_name"));
-				destinationInfoDTO(rs.getString("family_name_kana"));
-				destinationInfoDTO(rs.getString("first_name_kana"));
-				destinationInfoDTO(rs.getString("user_adress"));
-				destinationInfoDTO(rs.getString("email"));
-				destinationInfoDTOList.add("destinationInfoDTO");
+				destinationInfoDTO.setFirstName(rs.getString("first_name"));
+				destinationInfoDTO.setFamilyNameKana(rs.getString("family_name_kana"));
+				destinationInfoDTO.setFirstNameKana(rs.getString("first_name_kana"));
+				destinationInfoDTO.setUserAddress(rs.getString("user_address"));
+				destinationInfoDTO.setEmail(rs.getString("email"));
+				destinationInfoDTO.setTelNumber(rs.getString("tel_number"));
+				destinationInfoDtoList.add(destinationInfoDTO);
 			}
 
 		}catch(SQLException e){
