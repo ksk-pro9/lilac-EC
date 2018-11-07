@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 
 	<title>ヘッダー</title>
-
+<%--
 	<script>
 		function goLoginAction(){
 			document.getElementById("form").action="GoLoginAction";
@@ -32,16 +32,17 @@
 			document.getElementById("form").action="SearchItemAction";
 		}
 	</script>
-
+ --%>
 </head>
 
 <body>
 	<header>
-		<%-- 編集中 --%>
 		<div id="">
-			B.read
-		</div>
+			<div id="">
+				B.read
+			</div>
 
+<%--
 			パターン１
 			<div id="">
 				<s:form id="form" name="form">
@@ -73,12 +74,13 @@
 						<s:if test="#session.logined == 1">
 							<li><s:submit value="マイページ" onclick="goMyPageAction();"/></li>
 						</s:if>
-
 					</ul>
 				</s:form>
 			</div>
+--%>
 
-			パターン２
+
+			パターン２(こっちで行く予定)
 			<div id="">
 				<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
 
@@ -119,7 +121,7 @@
 					</s:form>
 				</s:if>
 			</div>
-
+		</div>
 	</header>
 </body>
 
