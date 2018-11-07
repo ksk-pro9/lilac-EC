@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.lilac.dto.ProductInfoDTO;
-import com.internousdev.lilac.util.DBConnector;
+import src.com.internousdev.lilac.dto.ProductInfoDTO;
+import src.com.internousdev.lilac.util.DBConnector;
 
 public class ProductInfoDAO {
 
@@ -57,13 +57,14 @@ public class ProductInfoDAO {
 	}
 
 
-	//プルダウンで選択されたカテゴリーのみを検索した場合（検索ワードは空欄）
+	//プルダウンで選択されたカテゴリーのみを検索した場合（検索ワードは空欄）もしくは、商品一覧から画像をクリックした場合
 	public List<ProductInfoDTO> getProductInfo(int productId) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
 
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 
+		//選択された商品のproductIdから、商品情報を取得します。
 		String sql = "select * from product_info where product_id=?";
 
 		try {

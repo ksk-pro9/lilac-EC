@@ -2,11 +2,13 @@ package com.internousdev.lilac.action;
 
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.internousdev.lilac.dao.UserInfoDAO;
-import com.internousdev.lilac.dto.UserInfoDTO;
+import com.opensymphony.xwork2.ActionSupport;
 
 
-public class CreateUserCompleteAction {
+public class CreateUserCompleteAction extends ActionSupport implements SessionAware{
 
 	private String familyName;
 	private String firstName;
@@ -21,95 +23,82 @@ public class CreateUserCompleteAction {
 
 	public String execute(){
 
+		String result = ERROR;
 
+		UserInfoDAO UserInfoDao = new UserInfoDAO();
 
+		int count = UserInfoDao.createUser(familyName,firstName,familyNameKana,firstNameKana,sex,email,loginId,password);
 
-		UserInfoDAO userInfoDAO = new UserInfoDAO();
-				UserInfoDTO userInfoDTO = UserInfoDAO.userLogin(loginId);
-				session.put("loginId", userInfoDTO,getLoginId());
-			}
-			session.put("logined", 1);
+		if(count > 0) {
+			result = SUCCESS;
 		}
+
+		session.put("loginId", loginId);
+		session.put("logined", 1);
+
+		UserInfoDao.userLogin(session.get("loginId").toString());
+
+		return result;
 	}
 
 	public String getFamilyName() {
 		return familyName;
 	}
-
 	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
 	}
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
 	public String getFamilyNameKana() {
 		return familyNameKana;
 	}
-
 	public void setFamilyNameKana(String familyNameKana) {
 		this.familyNameKana = familyNameKana;
 	}
-
 	public String getFirstNameKana() {
 		return firstNameKana;
 	}
-
 	public void setFirstNameKana(String firstNameKana) {
 		this.firstNameKana = firstNameKana;
 	}
-
 	public String getSex() {
 		return sex;
 	}
-
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public String getLoginId() {
 		return loginId;
 	}
-
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	public String getCategoryId() {
 		return categoryId;
 	}
-
 	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
 	}
-
 	public Map<String, Object> getSession() {
 		return session;
 	}
-
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
 }

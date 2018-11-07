@@ -16,7 +16,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class CartAction extends ActionSupport implements SessionAware{
 	private String categoryId;
-	private String keywords;
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private Map<String, Object> session;
 
@@ -44,7 +43,7 @@ public class CartAction extends ActionSupport implements SessionAware{
 		session.put("totalPrice", totalPrice);
 		result = SUCCESS;
 
-		if(!session.containsKey("mCategoryList")){
+		if(!session.containsKey("mCategoryDtoList")){
 			MCategoryDAO mCategoryDao = new MCategoryDAO();
 			mCategoryDtoList = mCategoryDao.getMCategoryList();
 			session.put("mCategoryDtoList", mCategoryDtoList);
@@ -60,13 +59,6 @@ public class CartAction extends ActionSupport implements SessionAware{
 		this.categoryId = categoryId;
 	}
 
-	public String getKeywords() {
-		return keywords;
-	}
-
-	public void setKeywords(String keywords) {
-		this.keywords = keywords;
-	}
 
 	public Map<String, Object> getSession() {
 		return session;

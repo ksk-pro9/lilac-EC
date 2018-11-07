@@ -48,7 +48,7 @@
 <s:iterator value="#session.cartInfoDtoList">
 <tr>
 	<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td>
-	<s:hidden name="productId" value="%{productId}" />
+		<s:hidden name="productId" value="%{productId}" />
 	<td><s:property value="productName" /></td>
 	<td><s:property value="productNameKana" /></td>
 	<td><img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' /></td>

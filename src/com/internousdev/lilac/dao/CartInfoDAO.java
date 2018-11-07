@@ -43,6 +43,7 @@ public class CartInfoDAO {
 				+ "group by product_id";
 				try{
 					PreparedStatement ps = con.prepareStatement(sql);
+					//ここはなぜ system.out.println？
 					System.out.println("cartinfodao-getcartinfodtolist:"+loginId);
 					ps.setString(1, loginId);
 					ResultSet rs = ps.executeQuery();
@@ -86,7 +87,7 @@ public class CartInfoDAO {
 		Connection con = dbConnector.getConnection();
 		String sql = "select sum(product_count * price) as total_price from cart_info where user_id=? "
 				+ "group by user_id";
-
+				//ここはuser_idで集めてるのにgroup by するのはなぜ？
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
