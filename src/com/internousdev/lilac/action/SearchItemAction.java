@@ -39,7 +39,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		//検索ワードの文字チェックを行いMessageListにエラーメッセージを入れている
 		InputChecker inputChecker = new InputChecker();
-		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true,true,true);
+		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true, true, false);
 		session.put("keywordsErrorMessageList", keywordsErrorMessageList);
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
