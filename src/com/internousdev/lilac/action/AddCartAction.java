@@ -33,25 +33,36 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		String userId = null;
 		String tempUserId = null;
 
+		//ログイン後、もしくはカート追加して再度CartAction実行した際cart.jspで
+		//最初からエラーが表示されるので消しておく
 		session.remove("checkListErrorMessageList");
 
+		//loginIdもしくはtempUserIdがあるかないか判断
+		//なければtempUserIdを作成、セッションにput
 		if(!(session.containsKey("loginId"))&& !(session.containsKey("tempUserId"))){
 			CommonUtility commonUtility = new CommonUtility();
 			session.put("tempUserId", commonUtility.getRamdomValue());
 		}
 
+		//loginIdがある場合、
+		//セッションにあるloginId,tempUserIdをuserId,tempUserIdにセット
 		if(session.containsKey("loginId")){
 			userId = String.valueOf(session.get("loginId"));
 			tempUserId = String.valueOf(session.get("tempUserId"));
 		}
-		productCount = String.valueOf((productCount.split(" ,",0))[0]);
-				//splitの部分が謎!!
 
+		//splitの部分が謎!!
+		productCount = String.valueOf((productCount.split(" ,",0))[0]);
+
+		//cart_infoテーブルにカート情報を入れる
 		CartInfoDAO cartInfoDao = new CartInfoDAO();
 		int count = cartInfoDao.regist(userId, tempUserId, productId, productCount, price);
 		if(count > 0){
 			result = SUCCESS;
 		}
+
+		//カート情報を入れた後、テーブルから格納されてた値をリストで取得して
+		//セッションにput
 		List<CartInfoDTO> cartInfoDtoList = new ArrayList<CartInfoDTO>();
 		cartInfoDtoList = cartInfoDao.getCartInfoDtoList(userId);
 		Iterator<CartInfoDTO>iterator = cartInfoDtoList.iterator();
@@ -60,6 +71,9 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 			cartInfoDtoList = null;
 		}
 		session.put("cartInfoDtoList", cartInfoDtoList);
+
+		//cart_infoテーブルでは合計金額はないので各商品（値段×個数）
+		//の合わせた合計をセッションにput
 		int totalPrice = Integer.parseInt(String.valueOf(cartInfoDao.getTotalPrice(userId)));
 		session.put("totalPrice", totalPrice);
 		return result;

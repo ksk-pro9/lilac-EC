@@ -36,6 +36,8 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 		int count = 0;
 		List<String> checkListErrorMessageList = new ArrayList<String>();
 
+		//cart.jspでチェックされた購入IDでcart_infoテーブルから削除
+		//その数が0ならエラーメッセージをセッションにput
 		for(String id:checkList) {
 			System.out.println(id);
 			count += cartInfoDAO.delete(id);
@@ -52,6 +54,8 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 			}else if (session.containsKey("tempUserId")) {
 				userId = String.valueOf(session.get("tempUserId"));
 			}
+
+			//削除後のカート情報を取得、セッションにput
 			cartInfoDtoList = cartInfoDAO.getCartInfoDtoList(userId);
 			Iterator<CartInfoDTO> iterator = cartInfoDtoList.iterator();
 			if(!(iterator.hasNext())) {
@@ -59,6 +63,8 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 			}
 			session.put("cartInfoDtoList", cartInfoDtoList);
 
+			//cart_infoテーブルでは合計金額はないので各商品（値段×個数）
+			//の合わせた合計をセッションにput
 			int totalPrice = Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(userId)));
 			session.put("totalPrice", totalPrice);
 
