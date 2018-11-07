@@ -84,7 +84,9 @@
 				<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
 
 				<s:form action="SearchItemAction">
-					<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName"/>
+					<s:if test='#session.containsKey("mCategoryDtoList")'>
+						<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName"/>
+					</s:if>
 					<s:textfield name="keywords" placeholder="検索ワード"/>
 					<s:submit value="商品検索"/>
 				</s:form>
