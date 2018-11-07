@@ -16,7 +16,7 @@
 
 <s:if test="productInfoDtoList==null">
 	<div class="info">
-	検索結果がありません。
+	<s:property value="keywordsErrorMessageList"/>
 	</div>
 </s:if>
 
@@ -27,13 +27,13 @@
 		<%-----１つの商品に対するdiv ------%>
 		<div class="product-list-box">
 
-			<%----画像をクリックするとProductDetailsActionが実行される ----%>
+			<%------　画像をクリックするとProductDetailsActionが実行される ------%>
 			<a href='<s:url action="ProductDetailsAction">
 			<s:param name="productId" value="%{productId}"/>
 			</s:url>'>
 			<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/>
 			</a><br>
-			<%----画像の下に商品名、商品名かな、価額が表示される ----%>
+			<%------　画像の下に商品名、商品名かな、価額が表示される -------%>
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>

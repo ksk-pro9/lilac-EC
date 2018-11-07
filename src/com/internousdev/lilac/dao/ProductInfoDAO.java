@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import src.com.internousdev.lilac.dto.ProductInfoDTO;
-import src.com.internousdev.lilac.util.DBConnector;
+import com.internousdev.lilac.dto.ProductInfoDTO;
+import com.internousdev.lilac.util.DBConnector;
 
 public class ProductInfoDAO {
 
@@ -57,23 +57,22 @@ public class ProductInfoDAO {
 	}
 
 
-	//プルダウンで選択されたカテゴリーのみを検索した場合（検索ワードは空欄）もしくは、商品一覧から画像をクリックした場合
-	public List<ProductInfoDTO> getProductInfo(int productId) {
+	//商品一覧から画像をクリックした場合
+	public ProductInfoDTO getProductInfo(int productId) {
+
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
 
-		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
+		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
-		//選択された商品のproductIdから、商品情報を取得します。
 		String sql = "select * from product_info where product_id=?";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, productId);
 			ResultSet resultSet = preparedStatement.executeQuery();
-			while (resultSet.next()) {
-				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
+			while (resultSet.next()) {
 				productInfoDTO.setId(resultSet.getInt("id"));
 				productInfoDTO.setProductId(resultSet.getInt("product_id"));
 				productInfoDTO.setProductName(resultSet.getString("product_name"));
@@ -88,7 +87,6 @@ public class ProductInfoDAO {
 				productInfoDTO.setStatus(resultSet.getInt("status"));
 				productInfoDTO.setUpdateDate(resultSet.getDate("regist_date"));
 				productInfoDTO.setUpdateDate(resultSet.getDate("update_date"));
-				productInfoDtoList.add(productInfoDTO);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -98,7 +96,7 @@ public class ProductInfoDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return productInfoDtoList;
+		return productInfoDTO;
 	}
 
 
@@ -183,6 +181,54 @@ public class ProductInfoDAO {
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+
+				productInfoDTO.setId(resultSet.getInt("id"));
+				productInfoDTO.setProductId(resultSet.getInt("product_id"));
+				productInfoDTO.setProductName(resultSet.getString("product_name"));
+				productInfoDTO.setProductNameKana(resultSet.getString("product_name_kana"));
+				productInfoDTO.setProductDescription(resultSet.getString("product_description"));
+				productInfoDTO.setCategoryId(resultSet.getInt("category_id"));
+				productInfoDTO.setPrice(resultSet.getInt("price"));
+				productInfoDTO.setImageFilePath(resultSet.getString("image_file_path"));
+				productInfoDTO.setImageFileName(resultSet.getString("image_file_name"));
+				productInfoDTO.setReleaseDate(resultSet.getDate("release_date"));
+				productInfoDTO.setReleaseCompany(resultSet.getString("release_company"));
+				productInfoDTO.setStatus(resultSet.getInt("status"));
+				productInfoDTO.setUpdateDate(resultSet.getDate("regist_date"));
+				productInfoDTO.setUpdateDate(resultSet.getDate("update_date"));
+				productInfoDtoList.add(productInfoDTO);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return productInfoDtoList;
+	}
+
+	//商品詳細の下部に関連した商品を表示させるため。
+	public List<ProductInfoDTO> getProductInfoListByCategoryId(int categoryId, int productId, int limitOffset,int limitRowCount) {
+
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+
+		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
+
+		String sql = "select * from product_info where category_id=? and product_id not in(?) order by rand() limit ?,?";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, categoryId);
+			preparedStatement.setInt(2, productId);
+			preparedStatement.setInt(3, limitOffset);
+			preparedStatement.setInt(4, limitRowCount);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
 			while (resultSet.next()) {
 				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 

@@ -1,4 +1,4 @@
-package src.com.internousdev.lilac.action;
+package com.internousdev.lilac.action;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,11 +8,10 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.lilac.dao.ProductInfoDAO;
+import com.internousdev.lilac.dto.MCategoryDTO;
+import com.internousdev.lilac.dto.ProductInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
-
-import src.com.internousdev.lilac.dao.ProductInfoDAO;
-import src.com.internousdev.lilac.dto.MCategoryDTO;
-import src.com.internousdev.lilac.dto.ProductInfoDTO;
 
 public class ProductDetailsAction extends ActionSupport implements SessionAware{
 
@@ -29,7 +28,7 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
-		//商品一覧(productList.jsp)の商品画像をクリックするとproductIdが渡され、商品情報をproductInfoDTOに格納
+		//商品一覧(productList.jsp)の商品画像をクリックするとproductIdが渡され、そのクリックされた商品情報をproductInfoDTOに格納
 		productInfoDTO = productInfoDAO.getProductInfo(productId);
 
 		//sessionにクリックされた商品の情報を格納
@@ -61,6 +60,7 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		}
 		return result;
 	}
+
 
 	public List<MCategoryDTO> getmCategoryDtoList() {
 		return mCategoryDtoList;
