@@ -5,20 +5,20 @@ import java.util.Date;
 public class ProductInfoDTO {
 
 	//データベース'product_info'のカラム名を全て宣言
-	private int id;
-	private int productId;
-	private String productName;
-	private String productNameKana;
-	private String productDescription;
-	private int categoryId;
-	private int price;
-	private String imageFilePath;
-	private String imageFileName;
-	private Date releaseDate;
-	private String releaseCompany;
-	private int status;
-	private Date registDate;
-	private Date updateDate;
+	private int id;//ID
+	private int productId;//商品ID
+	private String productName;//商品名
+	private String productNameKana;//商品名かな
+	private String productDescription;//商品詳細
+	private int categoryId;//カテゴリID
+	private int price;//価格
+	private String imageFilePath;//画像ファイルパス
+	private String imageFileName;//画像ファイル名
+	private Date releaseDate;//発売年月
+	private String releaseCompany;//発売会社
+	private int status;//ステータス
+	private Date registDate;//登録日
+	private Date updateDate;//更新日
 
 	//ゲッターとセッター
 	public int getId() {

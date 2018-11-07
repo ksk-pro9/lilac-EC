@@ -10,10 +10,10 @@
 <title>商品詳細</title>
 </head>
 <body>
-<%------- ヘッダー ----------%>
-<jsp:include page="header.jsp" />
+<%--------- ヘッダー ----------%>
+<s:include value="header.jsp" />
 
-<%-------- メイン -----------%>
+<%---------- メイン -----------%>
 <div id="contents">
 <h1>商品詳細画面</h1>
 
@@ -22,15 +22,16 @@
 	<div class="box">
 	<div class="2column-container">
 
-	<%----------　右カラム（商品画像） --------%>
-	<div class="right">
+	<%----------　カラム（商品画像） --------%>
+	<div class="colum1">
 		<img src='<s:property value="%{#session.imageFilePath}"/>/<s:property value="%{#session.imageFileName}"/>' class="item-image-box-320"/><br>
 	</div>
 
-	<%----------　左カラム（商品情報）---------%>
-	<div class="left">
+	<%----------　カラム（商品情報）---------%>
+	<div class="colum2">
 	<table class="vertical-list-table-mini">
 		<tr>
+			<%--　scope="row"：見出しに対応するデータは行方向（右方向）です。 --%>
 			<th scope="row"><s:label value="商品名"/></th>
 			<td><s:property value="%{#session.productName}"/></td>
 		</tr>
@@ -63,7 +64,7 @@
 	</div>
 	</div>
 
-	<%--　カートテーブルに商品情報を追加するため --%>
+	<%--　選択された商品の情報を送ります。 --%>
 	<s:hidden name="productId" value="%{#session.productId}"/>
 	<s:hidden name="productName" value="%{#session.productName}"/>
 	<s:hidden name="productNameKana" value="%{#session.productNameKana}"/>
@@ -81,21 +82,22 @@
 	</div>
 	</s:form>
 
-	<%--下部に同じカテゴリーの別商品を３件まで表示（商品画像と商品名） --%>
+	<%--ページ下部に同じカテゴリーの別商品を３件表示（商品画像と商品名）します。 --%>
 	<div class="box">
-	<%--画像押下で商品詳細画面に遷移します。 --%>
+	<%-----画像押下で商品詳細画面に遷移します。----%>
 	<s:iterator value="#session.productInfoDtoList">
 		<div class="recommend-box">
 		<a href='<s:url action="ProductDetailsAction">
 		<s:param name="productId" value="%{productId}"/>
-		</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/>
+		</s:url>'>
+		<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/>
 		</a>
 		<s:property value="productName"/><br>
 		</div>
 	</s:iterator>
 	</div>
 </div>
-</div>
+
 <s:include value="footer.jsp"/>
 </body>
 </html>

@@ -12,8 +12,8 @@ import com.internousdev.lilac.util.DBConnector;
 
 public class ProductInfoDAO {
 
-	/*商品情報テーブル(product_info)に格納されている値を全てProductInfoDTOに格納し、productInfoDtoListにProductInfoDTOを格納
-	「商品一覧」ボタンを押下するとこのメソッドが呼び出される（全てのカテゴリー/検索ワード空欄）*/
+
+//商品一覧」ボタンを押下するとこのメソッドが呼び出される。
 	public List<ProductInfoDTO> getProductInfoList() {
 
 		DBConnector dbConnector = new DBConnector();
@@ -21,6 +21,7 @@ public class ProductInfoDAO {
 
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 
+		//DBに格納されている商品情報を全て選択する。
 		String sql = "select * from product_info";
 
 		try {
@@ -57,7 +58,7 @@ public class ProductInfoDAO {
 	}
 
 
-	//商品一覧から画像をクリックした場合
+//商品一覧画面から任意の画像をクリックした場合。（ProductDetailsAction → productDetails.jsp)
 	public ProductInfoDTO getProductInfo(int productId) {
 
 		DBConnector dbConnector = new DBConnector();
@@ -65,6 +66,7 @@ public class ProductInfoDAO {
 
 		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
+		//クリックされた商品の商品情報のみを選択します。
 		String sql = "select * from product_info where product_id=?";
 
 		try {
@@ -100,7 +102,7 @@ public class ProductInfoDAO {
 	}
 
 
-	//検索ワードを入力した場合（全てのカテゴリー）
+//検索ワードを入力した場合（カテゴリー：全てのカテゴリー）
 	public List<ProductInfoDTO> getProductInfoListAll(String[] keywordsList) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
@@ -110,11 +112,11 @@ public class ProductInfoDAO {
 		//部分検索：keywordの値が'商品名'または'商品名かな'の一部と一致するか
 		String sql = "select * from product_info where";
 
-
 		boolean initializeFlag = true;
+
 		for (String keyword : keywordsList) {
 			if (initializeFlag) {
-				//第一検索ワード
+				//第一検索ワード（lile '%xxx%'：部分一致）
 				sql += " (product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
 				initializeFlag = false;
 			} else {
@@ -126,6 +128,7 @@ public class ProductInfoDAO {
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
+
 			while (resultSet.next()) {
 				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
@@ -157,7 +160,7 @@ public class ProductInfoDAO {
 	}
 
 
-	//カテゴリーを選択、且つ、検索ワードを入力した場合
+//カテゴリーを選択、且つ、検索ワードを入力した場合
 	public List<ProductInfoDTO> getProductInfoListByKeywords(String[] keywordsList, String categoryId) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
@@ -211,7 +214,7 @@ public class ProductInfoDAO {
 		return productInfoDtoList;
 	}
 
-	//商品詳細の下部に関連した商品を表示させるため。
+//商品詳細の下部に関連した商品３つ表示させる
 	public List<ProductInfoDTO> getProductInfoListByCategoryId(int categoryId, int productId, int limitOffset,int limitRowCount) {
 
 		DBConnector dbConnector = new DBConnector();
@@ -219,6 +222,7 @@ public class ProductInfoDAO {
 
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 
+		//同じカテゴリー and 選択された商品は除く and ランダムで３件選択します。（not in()：〜以外　　order by rand()：ランダムでデータを取得します。　　limit 0,3：0件飛ばして3件取得します。）
 		String sql = "select * from product_info where category_id=? and product_id not in(?) order by rand() limit ?,?";
 
 		try {

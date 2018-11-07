@@ -17,6 +17,7 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 
 	private int productId;
 	private String categoryId;
+
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 	private Map<String, Object> session;
@@ -48,12 +49,15 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		List<Integer> productCountList = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
 		session.put("productCountList", productCountList);
 
-
+		//下部に関連した（選択された商品と同じカテゴリー）商品をランダムで３つ並べる。
 		productInfoDtoList = productInfoDAO.getProductInfoListByCategoryId(productInfoDTO.getCategoryId(), productInfoDTO.getProductId(), 0, 3);
 		Iterator<ProductInfoDTO> iterator = productInfoDtoList.iterator();
+
+		//エラーすると参照型変数のproductCountListがメモリ上に残るので、参照を切ります。
 		if(!(iterator.hasNext())) {
 			productCountList = null;
 		}
+
 		if(!productInfoDtoList.isEmpty() || productCountList==null) {
 			session.put("productInfoDtoList", productInfoDtoList);
 			result = SUCCESS;
