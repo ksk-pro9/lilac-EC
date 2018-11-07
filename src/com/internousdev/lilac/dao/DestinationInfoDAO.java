@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.lilac.dto.DestinationInfoDTO;
 import com.internousdev.lilac.util.DBConnector;
 public class DestinationInfoDAO {
 
@@ -75,6 +74,6 @@ public class DestinationInfoDAO {
 		return destinationInfoDtoList;
 	}
 
-
+}
 
 
