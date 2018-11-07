@@ -12,6 +12,7 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.DestinationInfoDAO;
+import com.internousdev.lilac.dto.DestinationInfoDTO;
 import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.internousdev.lilac.util.CommonUtility;
 import com.opensymphony.xwork2.ActionSupport;
