@@ -37,11 +37,10 @@
 
 <body>
 	<header>
-	<%-- 編集中 --%>
-		<div id="header">
-			<div id="header-title">
-				B.read
-			</div>
+		<%-- 編集中 --%>
+		<div id="">
+			B.read
+		</div>
 
 			パターン１
 			<div id="">
@@ -49,7 +48,7 @@
 					<ul>
 						<s:if test='#session.containsKey("mCategoryDtoList")'>
 							<!-- categoryIdという名前で保存する(1～5) list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
-							<li><s:select name="categoryId" list="#session.mCategoryDtoList" listValue="categoryName" listKey="categoryId"/></li>
+							<li><s:select name="categoryId" list="#session.mCategoryDtoList" listValue="categoryName" listKey="categoryId" selected="categoryId"/></li>
 						</s:if>
 
 						<li><s:textfield name="keywords"  placeholder="検索ワード"/></li>
@@ -85,7 +84,7 @@
 
 				<s:form action="SearchItemAction">
 					<s:if test='#session.containsKey("mCategoryDtoList")'>
-						<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName"/>
+						<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/>
 					</s:if>
 					<s:textfield name="keywords" placeholder="検索ワード"/>
 					<s:submit value="商品検索"/>
@@ -120,7 +119,7 @@
 					</s:form>
 				</s:if>
 			</div>
-		</div>
+
 	</header>
 </body>
 
