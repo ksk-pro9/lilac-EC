@@ -54,10 +54,13 @@
 
 	<s:form action="ResetPasswordConfirmAction">
 
+
+		<!-- ↓条件「ログインID保存未チェックならログイン画面からの遷移で未入力状態」→valueにsessionの値入れた。 -->
+
 		<tr>
 			<th scope="row"><s:label value="ログインID" /></th>
 			<td><s:textfield name="loginId" placeholder="ログインID" class="txt"
-					value=%{#session.loginId}/></td>
+					value=%{#session.loginId} /></td>
 		</tr>
 
 		<tr>

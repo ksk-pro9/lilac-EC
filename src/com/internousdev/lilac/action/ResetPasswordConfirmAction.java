@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,7 +16,8 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	private String password;
 	private String newPassword;
 	private String reConfirmationPassword;
-//	private String categoryId;
+	//	private String categoryId;
+	/*	いらない、たぶん*/
 
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
 	private List<String> passwordErrorMessageList = new ArrayList<String>();
@@ -30,6 +32,8 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 		String result=ERROR;
 
+		/*↓エラーメッセージの上書き時にエラーが起きないようリムーブ*/
+
 		session.remove("loginIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
 		session.remove("passwordIncorrectErrorMessageList");
@@ -39,19 +43,23 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 		InputChecker inputChecker=new InputChecker();
 
+		/*↓インプットチェッカーで出力されたエラーメッセージをリストにいれる*/
 		loginIdErrorMessageList = inputChecker.doCheck("ログインID", loginId, 1, 8, true, false, false, true, false, false, false);
 		passwordErrorMessageList = inputChecker.doCheck("現在のパスワード", password, 1, 16, true, false, false, true, false, false, false);
 		newPasswordErrorMessageList = inputChecker.doCheck("新しいパスワード", newPassword, 1, 16, true, false, false, true, false, false, false);
 		reConfirmationNewPasswordErrorMessageList = inputChecker.doCheck("新しいパスワード（再確認）", reConfirmationPassword, 1, 16, true, false, false, true, false, false, false);
-
 		newPasswordIncorrectErrorMessageList = inputChecker.doPasswordCheck(newPassword, reConfirmationPassword);
 
+
+		/*↓エラーメッセージがでなくて、かつ*/
 		if(loginIdErrorMessageList.size()==0
 				&& passwordErrorMessageList.size()==0
 				&& newPasswordErrorMessageList.size()==0
 				&& reConfirmationNewPasswordErrorMessageList.size()==0
 				&& newPasswordIncorrectErrorMessageList.size()==0){
 
+
+			/*↓ログインIDとパスワードがBDにあれば、loginId,newPassword,concealedPasswordをセッションに入れる*/
 			UserInfoDAO userInfoDAO=new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId,password)){
 				String concealedPassword = userInfoDAO.concealPassword(password);
@@ -59,11 +67,14 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
 				result = SUCCESS;
+
+		/*↓ログインIDとパスワードがBDがなければ、エラーメッセージをセッションに入れる*/
 			}else{
 				passwordIncorrectErrorMessageList.add("入力されたパスワードが異なります。");
 				session.put("passwordIncorrectErrorMessageList", passwordIncorrectErrorMessageList);
 
 			}
+		/*↓セッションにエラーメッセージを追加*/
 		}else{
 			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
@@ -110,8 +121,8 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	public void setReConfirmationPassword(String reConfirmationPassword) {
 		this.reConfirmationPassword = reConfirmationPassword;
 	}
-
-/*	public String getCategoryId() {
+	/*いらない、たぶん*/
+	/*	public String getCategoryId() {
 		return categoryId;
 	}
 

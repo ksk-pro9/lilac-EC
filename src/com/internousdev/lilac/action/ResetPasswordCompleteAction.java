@@ -6,11 +6,11 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.UserInfoDAO;
 import com.opensymphony.xwork2.ActionSupport;
-//import com.internousdev.lilac.dao.UserInfoDAO;
 
 
 public class ResetPasswordCompleteAction extends ActionSupport implements SessionAware{
 
+	/*↓いらない、たぶん*/
 	/*	private String categoryId;*/
 	private String loginId;
 	private String password;
@@ -20,7 +20,7 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 		String result=ERROR;
 
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
-
+		/*↓セッションからとってきたloginIdとnewpasswordをDBで上書きする*/
 		int count=userInfoDAO.resetPassword(String.valueOf(session.get("loginId")),String.valueOf(session.get("newPassword")));
 
 		if(count>0){
@@ -31,8 +31,8 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 		return result;
 
 	}
-
-/*	public String getCategoryId(){
+	/*いらない、たぶん*/
+	/*	public String getCategoryId(){
 		return categoryId;
 	}
 

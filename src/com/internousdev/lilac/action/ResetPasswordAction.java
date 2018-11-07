@@ -10,13 +10,16 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ResetPasswordAction extends ActionSupport implements SessionAware{
 
-/*	private String categotyId;*/
+	/*	private String categotyId;*/
+	/*	いらない気がするからコメント化*/
 	private Map<String,Object>session;
 
 
 	public String execute(){
 
 		String result=ERROR;
+
+		/*↓他のページから遷移してきたときにエラーメッセージを表示させないためにリムーブ*/
 
 		session.remove("loginIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
@@ -31,8 +34,8 @@ public class ResetPasswordAction extends ActionSupport implements SessionAware{
 
 	}
 
-
-/*	public String getCategotyId() {
+	/*いらない気がするからコメント化*/
+	/*	public String getCategotyId() {
 		return categotyId;
 	}
 

@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class LogoutAction extends ActionSupport implements SessionAware{
 
-
+	/*↓いらない、たぶん*/
 	/*	private String categoryId;*/
 	private Map<String,Object>session;
 
@@ -20,9 +20,13 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 
 		String loginId=String.valueOf(session.get("loginId"));
+		/*↓セッションsavedLoginIdの値をtrueかfaulseで判定する*/
 		boolean savedLoginId=Boolean.valueOf(String.valueOf(session.get("savedLoginId")));
-
+		/*↓DBに接続して、データがあればloginedを0にして1を返す、なければ0を返す*/
 		int count=userInfoDAO.logout(loginId);
+		/*		↓1ならセッションクリアして、条件「ログイン認証の際、ID保存チェックが有の場合は、
+		ログインIDとID保持機能チェックを保持してください。」のためにセッションに入れる*/
+		/*※login.jspのチェックボックスあたりのメソッドで実行される*/
 		if(count>0){
 			session.clear();
 			session.put("savedLoginId",savedLoginId);
@@ -33,7 +37,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		return result;
 
 	}
-
+	/*↓いらない、たぶん*/
 	/*		public String getCategoryId() {
 			return categoryId;
 		}
