@@ -263,14 +263,14 @@ public class UserInfoDAO {
 
 	public String concealPassword(String password) {
 
-		int beginIndex = 0;
+		int beginIndex = 1;
 		int endIndex = 1;
 
-		if(password.length() > 1) {
-			endIndex = 2;
-		}
+//		if(password.length() > 1) {
+//			endIndex = 2;
+//		}
 
-		StringBuilder stringBuilder = new StringBuilder("****************");
+		StringBuilder stringBuilder = new StringBuilder("***************");
 		String concealPassword = stringBuilder.replace(beginIndex, endIndex, password.substring(beginIndex,endIndex)).toString();
 
 		return concealPassword;
