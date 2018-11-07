@@ -1,7 +1,6 @@
 package com.internousdev.lilac.action;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -67,11 +66,11 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		//iterator→コレクション内の要素に順番にアクセスする
 		//hasNext→繰り返し処理において、次の要素がある場合にtrueを返す
-		Iterator<ProductInfoDTO> iterator = productInfoDtoList.iterator();
+		//Iterator<ProductInfoDTO> iterator = productInfoDtoList.iterator();
 
-		if(!(iterator.hasNext())) {
-			productInfoDtoList = null;
-		}
+		//if(!(iterator.hasNext())) {
+			//productInfoDtoList = null;
+		//}
 			return result;
 	}
 
