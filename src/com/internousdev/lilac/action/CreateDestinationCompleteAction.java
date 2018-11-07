@@ -1,4 +1,4 @@
-package src.com.internousdev.lilac.action;
+package com.internousdev.lilac.action;
 
 public class CreateDestinationCompleteAction {
 
