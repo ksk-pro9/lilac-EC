@@ -40,7 +40,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		//検索ワードの文字チェックを行いMessageListにエラーメッセージを入れている
 		InputChecker inputChecker = new InputChecker();
-		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true);
+		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true,true,true);
 		session.put("keywordsErrorMessageList", keywordsErrorMessageList);
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
@@ -50,14 +50,17 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		//→全角スペースを半角スペースに置き換える
 		//String型変数名.split("区切り文字", 分割後の要素数)
 		//→半角スペースでキーワードを区切る
+		keywords = keywords.replaceAll("　", " ");
+		keywords = keywords.replaceAll("\\s+", " ").trim();
+
 		switch (categoryId) {
 			case "1":
-				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.replaceAll("　", " ").split(" "));
+				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.split(" "));
 				result = SUCCESS;
 				break;
 
 			default:
-				productInfoDtoList = productInfoDAO.getProductInfoListByKeywords(keywords.replaceAll("　", " ").split(" "), categoryId);
+				productInfoDtoList = productInfoDAO.getProductInfoListByKeywords(keywords.split(" "), categoryId);
 				result = SUCCESS;
 				break;
 		}
