@@ -12,6 +12,8 @@ import com.internousdev.lilac.util.DBConnector;
 
 public class CartInfoDAO {
 
+
+	//カート情報を取得
 	public List<CartInfoDTO> getCartInfoDtoList(String loginId){
 		com.internousdev.lilac.util.DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
@@ -43,6 +45,7 @@ public class CartInfoDAO {
 				+ "group by product_id";
 				try{
 					PreparedStatement ps = con.prepareStatement(sql);
+					//ここはなぜ system.out.println？
 					System.out.println("cartinfodao-getcartinfodtolist:"+loginId);
 					ps.setString(1, loginId);
 					ResultSet rs = ps.executeQuery();
@@ -80,13 +83,14 @@ public class CartInfoDAO {
 
 	}
 
+	//合計金額を出すために各商品の値段×個数の合計金額を取得
 	public int getTotalPrice(String userId){
 		int totalPrice = 0;
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
 		String sql = "select sum(product_count * price) as total_price from cart_info where user_id=? "
 				+ "group by user_id";
-
+				//ここはuser_idで集めてるのにgroup by するのはなぜ？
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
@@ -108,6 +112,8 @@ public class CartInfoDAO {
 		return totalPrice;
 	}
 
+
+	//カート情報を登録
 	public int regist(String userId, String tempUserId, int productId, String productCount, int price){
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
@@ -135,6 +141,7 @@ public class CartInfoDAO {
 		return count;
 	}
 
+	//購入IDに紐づいているカート情報を削除
 	public int delete(String id){
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
@@ -157,6 +164,7 @@ public class CartInfoDAO {
 		return count;
 	}
 
+	//userIdに紐づいているカート情報を削除
 	public int deleteAll(String userId){
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();

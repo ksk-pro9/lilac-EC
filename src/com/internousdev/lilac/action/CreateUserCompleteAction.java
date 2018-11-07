@@ -36,7 +36,7 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 		session.put("loginId", loginId);
 		session.put("logined", 1);
 
-		UserInfoDao.userLogin(session.get("loginId").toString());
+		UserInfoDao.userLogin(loginId);
 
 		return result;
 	}
