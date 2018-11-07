@@ -23,7 +23,7 @@
 <s:else>
 	<%-----商品一覧全体div-- ------%>
 	<div id="product-list">
-	<s:iterator value="#session.productInfoDtoList">
+	<s:iterator value="productInfoDtoList">
 		<%-----１つの商品に対するdiv ------%>
 		<div class="product-list-box">
 
