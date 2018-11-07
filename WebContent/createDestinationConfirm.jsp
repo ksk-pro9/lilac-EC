@@ -36,7 +36,7 @@
 
 <tr>
 	<th scope="row"><s:label value="名ふりがな"/></th>
-	<td><s:property value="firstNameKana"/><s:hidden name="familyNameKana" value="%{familyNameKana}"/></td>
+	<td><s:property value="firstNameKana"/><s:hidden name="firstNameKana" value="%{firstNameKana}"/></td>
 </tr>
 
 <tr>
