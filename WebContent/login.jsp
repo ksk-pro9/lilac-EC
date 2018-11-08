@@ -57,7 +57,7 @@ function goResetPasswordAction(){
 			<td><s:password name="password" class="txt" placeholder="パスワード" autocomplete="off"/></td>
 		</tr>
 	</table>
-	<div class="box">
+	<div >
 		<s:if test="#session.savedLoginId==true">
 			<s:checkbox name="savedLoginId" checked="checked"/>
 		</s:if>
@@ -66,20 +66,20 @@ function goResetPasswordAction(){
 		</s:else>
 		<s:label value="ログインID保存"/><br>
 	</div>
-	<div class="submit_btn_box">
+	<div>
 		<s:submit value="ログイン" class="submit_btn" onclick="goLoginAction();"/>
 	</div>
 </s:form>
 <br>
-<div class="submit_btn_box">
-	<div id=".contents-btn-set">
+<div >
+	<div >
 		<s:form action="CreateUserAction">
 			<s:submit value="新規ユーザー登録" class="submit_btn" />
 		</s:form>
 	</div>
 </div>
-<div class="submit_btn_box">
-<div id=".contents-btn-set">
+<div >
+<div >
 <s:form action="ResetPasswordAction">
 	<s:submit value="パスワード再設定" class="submit_btn" />
 </s:form>
