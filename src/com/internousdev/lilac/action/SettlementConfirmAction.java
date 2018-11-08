@@ -17,7 +17,8 @@ import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.internousdev.lilac.util.CommonUtility;
 import com.opensymphony.xwork2.ActionSupport;
 
-
+//success="settlementConfirm.jsp"
+//error="login.jsp"
 public class SettlementConfirmAction extends ActionSupport implements SessionAware{
 
 	private String categoryId;
@@ -32,8 +33,13 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	private String releaseDate;
 	private String productCount;
 	private String subtotal;
+	private Object logined;
 	private Map<String,Object> session;
-//sessionにloginIdがあればgetDestinationInfoメソッド
+//sessionにloginIdがあればgetDestinationInfoメソッドを使って
+//DestinationInfoDtoにDAOを使って宛先情報をセットする
+//nullを使いメモリ確保 sessionに宛先情報を入れる
+//
+
 	public String execute(){
 		String result=ERROR;
 
@@ -51,6 +57,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 				e.printStackTrace();
 			}
 		}
+
 	List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
 
 	CommonUtility commonUtility=new CommonUtility();
@@ -88,7 +95,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	}
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-	if(!session.containsKey("loginId")){
+	if(session.get("logined") == "0"){
 		result=ERROR;
 	}else{
 		result=SUCCESS;
@@ -198,6 +205,12 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+	public Object getLogined() {
+		return logined;
+	}
+	public void setLogined(Object logined) {
+		this.logined = logined;
 	}
 
 }

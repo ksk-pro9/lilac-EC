@@ -32,6 +32,8 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 			session.put("savedLoginId",savedLoginId);
 			session.put("loginId",loginId);
 
+			session.put("logined","0");
+
 			result=SUCCESS;
 		}
 		return result;
