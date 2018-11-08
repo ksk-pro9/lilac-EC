@@ -62,7 +62,7 @@
 		<tr>
 			<th scope="row"><s:label value="ログインID" /></th>
 			<td><s:textfield name="loginId" placeholder="ログインID" class="txt"
-					value=%{#session.loginId} /></td>
+					value='%{#session.loginId}' /></td>
 		</tr>
 
 		<tr>
