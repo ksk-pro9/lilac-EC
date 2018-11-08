@@ -38,7 +38,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 //DestinationInfoDtoにDAOを使って宛先情報をセットする
 //nullを使いメモリ確保 sessionに宛先情報を入れる
 //
-	
+
 	public String execute(){
 		String result=ERROR;
 
@@ -56,7 +56,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 				e.printStackTrace();
 			}
 		}
-		
+
 	List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
 
 	CommonUtility commonUtility=new CommonUtility();
@@ -94,7 +94,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	}
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-	if(!session.containsKey("loginId")){
+	if(session.logined == 0){
 		result=ERROR;
 	}else{
 		result=SUCCESS;
