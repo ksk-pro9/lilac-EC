@@ -24,32 +24,32 @@
 	</s:if>
 
 	<s:if test="!#session.passwordErrorMessageList.isEmpty()">
-		<s:iterator value="#session.paaswordErrorMessageList">
+		<s:iterator value="#session.passwordErrorMessageList">
 			<s:property />
 		</s:iterator>
 	</s:if>
 
 	<s:if test="!#session.paswordIncorrectErrorMessageList.isEmpty()">
-		<s:iterator value="#session.loginIdErrorMessageList">
+		<s:iterator value="#session.paswordIncorrectErrorMessageList">
 			<s:property />
 		</s:iterator>
 	</s:if>
 
 	<s:if test="!#session.newPasswordErrorMessageList.isEmpty()">
-		<s:iterator value="#session.loginIdErrorMessageList">
+		<s:iterator value="#session.newPasswordErrorMessageList">
 			<s:property />
 		</s:iterator>
 	</s:if>
 
 	<s:if
 		test="!#session.reConfirmationNewPasswordErrorMessageList.isEmpty()">
-		<s:iterator value="#session.loginIdErrorMessageList">
+		<s:iterator value="#session.reConfirmationNewPasswordErrorMessageList">
 			<s:property />
 		</s:iterator>
 	</s:if>
 
 	<s:if test="!#session.newPasswordIncorrectErrorMessageList.isEmpty()">
-		<s:iterator value="#session.loginIdErrorMessageList">
+		<s:iterator value="#session.newPasswordIncorrectErrorMessageList">
 			<s:property />
 		</s:iterator>
 	</s:if>
