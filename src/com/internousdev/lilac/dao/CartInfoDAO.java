@@ -19,30 +19,30 @@ public class CartInfoDAO {
 		Connection con = dbConnector.getConnection();
 		List<CartInfoDTO>cartInfoDtoList = new ArrayList<CartInfoDTO>();
 
-		String sql = "select "
-				+ "ci.id as id,"
-				+ "ci.user_id as user_id,"
-				+ "ci.temp_user_id as temp_user_id,"
-				+ "ci.product_id as product_id,"
-				+ "sum(ci.product_count) as product_count,"
-				+ "pi.price as price,"
-				+ "pi.regist_date as regist_date,"
-				+ "pi.update_date as update_date,"
-				+ "pi.product_name as product_name,"
-				+ "pi.product_name_kana as product_name_kana,"
-				+ "pi.product_description as product_description,"
-				+ "pi.category_id as category_id,"
-				+ "pi.image_file_path as image_file_path,"
-				+ "pi.image_file_name as image_file_name,"
-				+ "pi.release_date as release_date,"
-				+ "pi.release_company as release_company,"
-				+ "pi.status as status,"
-				+ "(sum(ci.product_count) * pi.price) as subtotal "
-				+ "FROM cart_info as ci "
-				+ "LEFT JOIN product_info as pi "
-				+ "ON ci.product_id = pi.product_id "
-				+ "WHERE ci.user_id = ? "
-				+ "group by product_id";
+		String sql = "select"
+				+ " ci.id as id,"
+				+ " ci.user_id as user_id,"
+				+ " ci.temp_user_id as temp_user_id,"
+				+ " ci.product_id as product_id,"
+				+ " sum(ci.product_count) as product_count,"
+				+ " pi.price as price,"
+				+ " pi.regist_date as regist_date,"
+				+ " pi.update_date as update_date,"
+				+ " pi.product_name as product_name,"
+				+ " pi.product_name_kana as product_name_kana,"
+				+ " pi.product_description as product_description,"
+				+ " pi.category_id as category_id,"
+				+ " pi.image_file_path as image_file_path,"
+				+ " pi.image_file_name as image_file_name,"
+				+ " pi.release_date as release_date,"
+				+ " pi.release_company as release_company,"
+				+ " pi.status as status,"
+				+ " (sum(ci.product_count) * pi.price) as subtotal"
+				+ " FROM cart_info as ci"
+				+ " LEFT JOIN product_info as pi"
+				+ " ON ci.product_id = pi.product_id"
+				+ " WHERE ci.user_id = ?"
+				+ " group by product_id";
 				try{
 					PreparedStatement ps = con.prepareStatement(sql);
 					//ここはなぜ system.out.println？(どうでもいいらしい)
@@ -61,7 +61,7 @@ public class CartInfoDAO {
 						cartInfoDTO.setUpdateDate(rs.getDate("update_date"));
 						cartInfoDTO.setProductName(rs.getString("product_name"));
 						cartInfoDTO.setProductNameKana(rs.getString("product_name_kana"));
-						cartInfoDTO.setProductDescription(rs.getString("product_desctiprion"));
+						cartInfoDTO.setProductDescription(rs.getString("product_description"));
 						cartInfoDTO.setCategoryId(rs.getInt("category_id"));
 						cartInfoDTO.setImageFilePath(rs.getString("image_file_path"));
 						cartInfoDTO.setImageFileName(rs.getString("image_file_name"));
