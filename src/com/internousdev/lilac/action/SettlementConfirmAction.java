@@ -95,7 +95,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	}
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-	if(session.get(logined) == "0"){
+	if(session.get("logined") == "0"){
 		result=ERROR;
 	}else{
 		result=SUCCESS;
