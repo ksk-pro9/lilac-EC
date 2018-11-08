@@ -26,7 +26,7 @@
 	</s:iterator>
 </s:if>
 
-<s:if test="#session.cartInfoDtoList.size()>0">
+<s:if test="#session.cartInfoDtoList.size() > 0">
 <s:form id="form" action="SettlementConfirmAction">
 
 <table>

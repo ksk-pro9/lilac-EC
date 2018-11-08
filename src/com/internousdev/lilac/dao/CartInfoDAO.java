@@ -141,6 +141,7 @@ public class CartInfoDAO {
 		return count;
 	}
 
+
 	//購入IDに紐づいているカート情報を削除
 	public int delete(String id){
 		DBConnector dbConnector = new DBConnector();

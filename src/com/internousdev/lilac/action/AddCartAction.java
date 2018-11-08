@@ -49,6 +49,10 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		//セッションにあるloginId,tempUserIdをuserId,tempUserIdにセット
 		if(session.containsKey("loginId")){
 			userId = String.valueOf(session.get("loginId"));
+		}
+
+		if (!(session.containsKey("loginId")) && session.containsKey("tempUserId")) {
+			userId = String.valueOf(session.get("tempUserId"));
 			tempUserId = String.valueOf(session.get("tempUserId"));
 		}
 
