@@ -37,11 +37,11 @@ public class CartInfoDAO {
 				+ "pi.release_date as release_date,"
 				+ "pi.release_company as release_company,"
 				+ "pi.status as status,"
-				+ "(sum(ci.product_count) * pi.price) as subtotal"
-				+ "FROM cart_info as ci"
-				+ "LEFT JOIN product_info as pi"
-				+ "ON ci.product_id = pi.product_id"
-				+ "WHERE ci.user_id = ?"
+				+ "(sum(ci.product_count) * pi.price) as subtotal "
+				+ "FROM cart_info as ci "
+				+ "LEFT JOIN product_info as pi "
+				+ "ON ci.product_id = pi.product_id "
+				+ "WHERE ci.user_id = ? "
 				+ "group by product_id";
 				try{
 					PreparedStatement ps = con.prepareStatement(sql);
