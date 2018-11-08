@@ -14,6 +14,7 @@ import com.internousdev.lilac.dao.MCategoryDAO;
 import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.dto.DestinationInfoDTO;
 import com.internousdev.lilac.dto.MCategoryDTO;
+import com.internousdev.lilac.dto.UserInfoDTO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -22,17 +23,17 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginId;
 	private String password;
 	private boolean savedLoginId;
-	
+
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
 	private List<String> passwordErrorMessageList = new ArrayList<String>();
-	
+
 	private Map<String, Object> session;
-	
-	private String execute() {
-		
+
+	public String execute() {
+
 		String result = ERROR;
-		
+
 		if(savedLoginId==true) {
 			session.put("savedLoginId", true);
 			session.put("loginId", loginId);
@@ -40,23 +41,23 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("savedLoginId", false);
 			session.remove("loginId", loginId);
 		}
-		
+
 		InputChecker inputChecker = new InputChecker();
 		loginIdErrorMessageList = inputChecker.doCheck("ログインID", loginId, 1, 8, true, false, false, true, false, false, false, false, false);
 		passwordErrorMessageList = inputChecker.doCheck("パスワード", password, 1, 16, true, false, false, true, false, false, false, false, false);
-		
+
 		if(loginIdErrorMessageList.size()!=0 && passwordErrorMessageList.size()!=0) {
 			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
 			session.put("mCategoryDtoList", 0);
 		}
-		
+
 		if(!session.containsKey("mCategoryList")) {
 			MCategoryDAO mCategoryDao = new MCategoryDAO();
 			mCategoryDtoList = mCategoryDao.getMCategoryList();
 			session.put("mCategoryDtoList", mCategoryDtoList);
 		}
-		
+
 		UserInfoDAO userInfoDao = new UserInfoDAO();
 		if(userInfoDao.isExistsUserInfo(loginId, password)) {
 			if(userInfoDao.login(loginId, password) >0 ) {
@@ -64,7 +65,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				session.put("loginId", userInfoDTO.getUserId());
 				int count=0;
 				CartInfoDAO cartInfoDao = new CartInfoDAO();
-				
+
 				count = cartInfoDao.linkToLoginId(String.valueOf(session.get("tempUserId")), loginId);
 				if(count > 0) {
 					DestinationInfoDAO destinationInfoDao = new DestinationInfoDAO();
@@ -88,7 +89,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		}
 		return result;
 	}
-	
+
 	public String getCategoryId() {
 		return categoryId;
 	}
