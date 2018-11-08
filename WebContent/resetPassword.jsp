@@ -30,7 +30,7 @@
 	</s:if>
 
 	<s:if test="!#session.passwordIncorrectErrorMessageList.isEmpty()">
-		<s:iterator value="#session.paswordIncorrectErrorMessageList">
+		<s:iterator value="#session.passwordIncorrectErrorMessageList">
 			<s:property />
 		</s:iterator>
 	</s:if>
