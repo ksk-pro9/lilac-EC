@@ -25,7 +25,7 @@
 			<tr>
 
 				<th scope="row"><s:label value="名"/></th>
-				<td><s:property value="#sesion.firstName"/></td>
+				<td><s:property value="#session.firstName"/></td>
 			</tr>
 
 			<tr>

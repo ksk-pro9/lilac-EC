@@ -68,7 +68,7 @@
 <s:hidden name="loginId" value="%{loginId}"/>
 <s:hidden name="password" value="%{password}"/>
 <s:hidden name="familyName" value="%{familyName}"/>
-<s:hidden name="firsuName" value="%{firstName}"/>
+<s:hidden name="firstName" value="%{firstName}"/>
 <s:hidden name="familyNameKana" value="%{familyNameKana}"/>
 <s:hidden name="firstNameKana" value="%{firstNameKana}"/>
 <s:if test='sex.equals("男性")'>;
