@@ -14,8 +14,8 @@
 	<h1>パスワード再設定確認画面</h1>
 
 	<s:form action="ResetPasswordCompleteAction">
-		<s:property value="#session.loginId" />
-		<s:property value="#session.concealedPassword" />
+		<s:label value="ログインID"/><s:property value="#session.loginId" /><br>
+		<s:label value="再設定パスワード"/><s:property value="#session.concealedPassword" /><br>
 		<s:submit value="再設定" class="submit_btn" />
 	</s:form>
 

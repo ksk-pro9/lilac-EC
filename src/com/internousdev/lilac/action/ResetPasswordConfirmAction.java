@@ -62,7 +62,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			/*↓ログインIDとパスワードがBDにあれば、loginId,newPassword,concealedPasswordをセッションに入れる*/
 			UserInfoDAO userInfoDAO=new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId,password)){
-				String concealedPassword = userInfoDAO.concealPassword(password);
+				String concealedPassword = userInfoDAO.concealPassword(newPassword);
 				session.put("loginId", loginId);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
@@ -84,8 +84,6 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 		}
 		return result;
-
-
 
 
 	}
@@ -121,6 +119,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	public void setReConfirmationPassword(String reConfirmationPassword) {
 		this.reConfirmationPassword = reConfirmationPassword;
 	}
+
 	/*いらない、たぶん*/
 	/*	public String getCategoryId() {
 		return categoryId;
