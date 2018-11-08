@@ -25,6 +25,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 	private String releaseCompany;
 	private Date releaseDate;
 	private String categoryId;
+	private String productDescription;
 
 	private Map<String, Object> session;
 
@@ -37,7 +38,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		//最初からエラーが表示されるので消しておく
 		session.remove("checkListErrorMessageList");
 
-		//loginIdもしくはtempUserIdがあるかないか判断
+		//loginIdとtempUserIdがあるかないか判断
 		//なければtempUserIdを作成、セッションにput
 		if(!(session.containsKey("loginId"))&& !(session.containsKey("tempUserId"))){
 			CommonUtility commonUtility = new CommonUtility();
@@ -165,6 +166,14 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
 	}
 
 
