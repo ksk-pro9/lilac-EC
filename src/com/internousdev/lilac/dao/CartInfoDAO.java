@@ -19,7 +19,7 @@ public class CartInfoDAO {
 		Connection con = dbConnector.getConnection();
 		List<CartInfoDTO>cartInfoDtoList = new ArrayList<CartInfoDTO>();
 
-		String sql = "select"
+		String sql = "select "
 				+ "ci.id as id,"
 				+ "ci.user_id as user_id,"
 				+ "ci.temp_user_id as temp_user_id,"
