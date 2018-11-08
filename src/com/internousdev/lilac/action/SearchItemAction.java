@@ -1,9 +1,11 @@
 package com.internousdev.lilac.action;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.MCategoryDAO;
@@ -32,26 +34,35 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
 		session.put("mCategoryDtoList", mCategoryDtoList);
 
-		//検索ワードに何も入っていない場合、keywordsは何も入れない
-		if(keywords == null) {
+		session.remove("keywordsErrorMessageList");
+
+		//対象の文字列.replace(置換される文字列, 置換する文字列)
+		//→全角スペースを半角スペースに置き換える
+		if (StringUtils.isBlank(keywords)){
 			keywords = "";
+
+		}else{
+			keywords = keywords.replaceAll("　", " ").replaceAll("\\s{2,}", " ").trim();
 		}
 
-		//検索ワードの文字チェックを行いMessageListにエラーメッセージを入れている
-		InputChecker inputChecker = new InputChecker();
-		keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false,true,true, true, false);
-		session.put("keywordsErrorMessageList", keywordsErrorMessageList);
+		if(!(keywords.equals(""))){
+			InputChecker inputChecker = new InputChecker();
+			keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, false, false, true, false);
+
+			Iterator<String> iterator = keywordsErrorMessageList.iterator();
+
+			if(iterator.hasNext()) {
+				session.put("keywordsErrorMessageList", keywordsErrorMessageList);
+
+				return SUCCESS;
+			}
+		}
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 
 		//カテゴリーIDと検索ワードによる商品リストの生成
-		//対象の文字列.replace(置換される文字列, 置換する文字列)
-		//→全角スペースを半角スペースに置き換える
 		//String型変数名.split("区切り文字", 分割後の要素数)
 		//→半角スペースでキーワードを区切る
-		keywords = keywords.replaceAll("　", " ");
-		keywords = keywords.replaceAll("\\s+", " ").trim();
-
 		switch (categoryId) {
 			case "1":
 				productInfoDtoList = productInfoDAO.getProductInfoListAll(keywords.split(" "));
@@ -66,11 +77,11 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		//iterator→コレクション内の要素に順番にアクセスする
 		//hasNext→繰り返し処理において、次の要素がある場合にtrueを返す
-		//Iterator<ProductInfoDTO> iterator = productInfoDtoList.iterator();
+		Iterator<ProductInfoDTO> iterator = productInfoDtoList.iterator();
 
-		//if(!(iterator.hasNext())) {
-			//productInfoDtoList = null;
-		//}
+		if(!(iterator.hasNext())) {
+			productInfoDtoList = null;
+		}
 			return result;
 	}
 
