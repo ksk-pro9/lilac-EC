@@ -14,10 +14,12 @@
 <div id="contents">
 <h1>商品一覧画面</h1>
 
-<s:if test="productInfoDtoList == null">
-	なし
+<s:if test="productInfoDtoList == null && !#session.keywordsErrorMessageList.isEmpty()">
+	<s:iterator value="#session.keywordsErrorMessageList"><s:property /></s:iterator>
 </s:if>
-
+<s:elseif test="productInfoDtoList == null">
+	検索結果はありません。
+</s:elseif>
 <s:else>
 	<%-----商品一覧全体div-- ------%>
 	<div id="product-list">
