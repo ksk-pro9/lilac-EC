@@ -17,6 +17,7 @@
 
 	<!-- ↓セッションのloginIdErrorMessageListというキーの値が空でなければ、
 			セッションのloginIdErrorMessageListの値を表示する。 -->
+
 	<s:if test="!#session.loginIdErrorMessageList.isEmpty()">
 		<s:iterator value="#session.loginIdErrorMessageList">
 			<s:property />
