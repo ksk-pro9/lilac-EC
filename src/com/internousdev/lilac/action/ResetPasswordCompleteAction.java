@@ -15,10 +15,11 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 	private String loginId;
 	private String password;
 	private Map<String,Object>session;
+	private String cartflag;
 
 	public String execute(){
 		String result=ERROR;
-		String cartflag = "0";
+
 
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 		/*↓セッションからとってきたloginIdとnewpasswordをDBで上書きする*/
@@ -44,6 +45,15 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 	public void setCategoryId(String categoryId){
 		this.categoryId=categoryId;*/
 	/*}*/
+
+
+	public String getCartflag() {
+		return cartflag;
+	}
+
+	public void setCartflag(String cartflag) {
+		this.cartflag = cartflag;
+	}
 
 	public String getLoginId() {
 		return loginId;
