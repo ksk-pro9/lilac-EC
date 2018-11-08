@@ -33,6 +33,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 		String userId = null;
 		String tempUserId = null;
+		String cartflag = "1";
 
 		//ログイン後、もしくはカート追加して再度CartAction実行した際cart.jspで
 		//最初からエラーが表示されるので消しておく
@@ -63,6 +64,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		CartInfoDAO cartInfoDao = new CartInfoDAO();
 		int count = cartInfoDao.regist(userId, tempUserId, productId, productCount, price);
 		if(count > 0){
+			session.put("cartflag", cartflag);
 			result = SUCCESS;
 		}
 
