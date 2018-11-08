@@ -33,7 +33,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	private String releaseDate;
 	private String productCount;
 	private String subtotal;
-	private Object logined;
+	private String logined;
 	private Map<String,Object> session;
 //sessionにloginIdがあればgetDestinationInfoメソッドを使って
 //DestinationInfoDtoにDAOを使って宛先情報をセットする
@@ -95,7 +95,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	}
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-	if(session.get("logined") == "0"){
+	if(Integer.parseInt(session.get("logined").toString())==0){
 		result=ERROR;
 	}else{
 		result=SUCCESS;
@@ -206,10 +206,10 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-	public Object getLogined() {
+	public String getLogined() {
 		return logined;
 	}
-	public void setLogined(Object logined) {
+	public void setLogined(String logined) {
 		this.logined = logined;
 	}
 
