@@ -24,8 +24,8 @@
 
 			<tr>
 
-				<th scope="row"><s:label value="姓"/></th>
-				<td><s:property value="#sesion.familyName"/></td>
+				<th scope="row"><s:label value="名"/></th>
+				<td><s:property value="#sesion.firstName"/></td>
 			</tr>
 
 			<tr>

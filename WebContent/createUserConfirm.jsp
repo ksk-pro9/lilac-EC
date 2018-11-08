@@ -38,7 +38,7 @@
 	</tr>
 	<tr>
 		<th scope="row"><s:label value="名ふりがな"/></th>
-		<td><s:property value="firstName"/></td>
+		<td><s:property value="firstNameKana"/></td>
 	</tr>
 	<tr>
 		<th scope="row"><s:label value="性別"/></th>
@@ -72,6 +72,7 @@
 <s:hidden name="familyNameKana" value="%{familyNameKana}"/>
 <s:hidden name="firstNameKana" value="%{firstNameKana}"/>
 <s:if test='sex.equals("男性")'>;
+<s:hidden name="sex" value="0"/>
 </s:if>
 <s:if test='sex.equals("女性")'>;
 <s:hidden name="sex" value="1"/>

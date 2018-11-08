@@ -33,7 +33,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	private String productCount;
 	private String subtotal;
 	private Map<String,Object> session;
-
+//sessionにloginIdがあればgetDestinationInfoメソッド
 	public String execute(){
 		String result=ERROR;
 

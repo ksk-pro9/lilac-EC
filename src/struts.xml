@@ -30,20 +30,20 @@
 	</action>
 
 
-<!--GoLoginAction
+<!--GoLoginAction-->
 <action name="GoLoginAction" class="com.internousdev.lilac.action.GoLoginAction" method="execute">
 	<result name="success">login.jsp</result>
 	<result name="error">home.jsp</result>
 	</action>
--->
 
-<!--LoginAction
+
+<!--LoginAction-->
 <action name="LoginAction" class="com.internousdev.lilac.action.LoginAction" method="execute">
 	<result name="success">home.jsp</result>
 	<result name="settlement">settlementConfirm.jsp</result>
 	<result name="error">login.jsp</result>
 	</action>
--->
+
 
 <!--ResetPasswordAction-->
 <action name="ResetPasswordAction" class="com.internousdev.lilac.action.ResetPasswordAction" method="execute">
@@ -59,12 +59,12 @@
 	</action>
 
 
-<!--ResetPasswordCompleteAction
+<!--ResetPasswordCompleteAction-->
 <action name="ResetPasswordCompleteAction" class="com.internousdev.lilac.action.ResetPasswordCompleteAction" method="execute">
 	<result name="success">resetPasswordComplete.jsp</result>
 	<result name="error">resetPassword.jsp</result>
 	</action>
--->
+
 
 <!--ProductListAction-->
 <action name="ProductListAction" class="com.internousdev.lilac.action.ProductListAction" method="execute">
@@ -121,26 +121,26 @@
 	</action>
 
 
-<!--CreateDestinationAction
+<!--CreateDestinationAction-->
 <action name="CreateDestinationAction" class="com.internousdev.lilac.action.CreateDestinationAction" method="execute">
 	<result name="success">createDestination.jsp</result>
 	<result name="error">home.jsp</result>
 	</action>
--->
 
-<!--CreateDestinationCofirmAction
+
+<!--CreateDestinationCofirmAction-->
 <action name="CreateDestinationConfirmAction" class="com.internousdev.lilac.action.CreateDestinationConfirmAction" method="execute">
 	<result name="success">createDestinationConfirm.jsp</result>
 	<result name="error">createDestination.jsp</result>
 	</action>
--->
 
-<!--CreateDestinationCompleteAction
+
+<!--CreateDestinationCompleteAction-->
 <action name="CreateDestinationCompleteAction" class="com.internousdev.lilac.action.CreateDestinationCompleteAction" method="execute">
 	<result name="success">createDestinationComplete.jsp</result>
 	<result name="error">createDestination.jsp</result>
 	</action>
--->
+
 
 <!--SettlementCompleteAction-->
 <action name="SettlementCompleteAction" class="com.internousdev.lilac.action.SettlementCompleteAction" method="execute">
@@ -169,12 +169,12 @@
 	</action>
 
 
-<!--LogoutAction
+<!--LogoutAction-->
 <action name="LogoutAction" class="com.internousdev.lilac.action.LogoutAction" method="execute">
 	<result name="success">index.jsp</result>
-	<kai-result name="error">index.jsp</result>
+	<result name="error">index.jsp</result>
 	</action>
--->
+
 
 		</package>
 </struts>
