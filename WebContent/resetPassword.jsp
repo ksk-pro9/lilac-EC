@@ -29,7 +29,7 @@
 		</s:iterator>
 	</s:if>
 
-	<s:if test="!#session.paswordIncorrectErrorMessageList.isEmpty()">
+	<s:if test="!#session.passwordIncorrectErrorMessageList.isEmpty()">
 		<s:iterator value="#session.paswordIncorrectErrorMessageList">
 			<s:property />
 		</s:iterator>

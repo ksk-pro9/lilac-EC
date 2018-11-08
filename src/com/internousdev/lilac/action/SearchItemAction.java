@@ -34,10 +34,13 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
 		session.put("mCategoryDtoList", mCategoryDtoList);
 
+		//キーワードのエラーを毎回消す
 		session.remove("keywordsErrorMessageList");
 
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
 		//→全角スペースを半角スペースに置き換える
+		//2つ以上の空白を1つの空白に置き換える
+		//trim()で前後の空白を削除
 		if (StringUtils.isBlank(keywords)){
 			keywords = "";
 
@@ -45,6 +48,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			keywords = keywords.replaceAll("　", " ").replaceAll("\\s{2,}", " ").trim();
 		}
 
+		//キーワードの文字チェック
 		if(!(keywords.equals(""))){
 			InputChecker inputChecker = new InputChecker();
 			keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, false, false, true, false);
