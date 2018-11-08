@@ -39,7 +39,7 @@
 	<header>
 		<div id="">
 			<div id="">
-				B.read
+				<a href='<s:url action="HomeAction"/>'>B.read</a>
 			</div>
 
 <%--
