@@ -172,7 +172,7 @@ public class ProductInfoDAO {
 		for (String keyword : keywordsList) {
 			if (initializeFlag) {
 				//第一検索ワード
-				sql += " category_id= categoryId and ((product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
+				sql += " category_id =" + categoryId + " and ((product_name like '%" + keyword + "%' or product_name_kana like '%" + keyword + "%')";
 				initializeFlag = false;
 			} else {
 				//第二検索ワード以降(OR検索）
