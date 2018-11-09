@@ -59,7 +59,7 @@ function goResetPasswordAction(){
 	</table>
 	<div >
 		<s:if test="#session.savedLoginId==true">
-			<s:checkbox name="savedLoginId" checked="checked"/>
+			<s:checkbox name="savedLoginId"  checked="checked"/>
 		</s:if>
 		<s:else>
 			<s:checkbox name="savedLoginId"/>
