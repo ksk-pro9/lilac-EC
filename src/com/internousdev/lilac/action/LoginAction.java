@@ -84,10 +84,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 							destinationInfoDtoList = null;
 						}
 						session.put("destinationInfoDtoList", destinationInfoDtoList);
+						result = "settlement";
 					}catch(SQLException e) {
 						e.printStackTrace();
 					}
-					result = "settlement";
+
 				}else {
 					result = SUCCESS;
 				}
