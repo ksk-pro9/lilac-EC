@@ -16,7 +16,7 @@ import com.internousdev.lilac.dto.DestinationInfoDTO;
 import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.internousdev.lilac.util.CommonUtility;
 import com.opensymphony.xwork2.ActionSupport;
-
+//追記希望
 //success="settlementConfirm.jsp"
 //error="login.jsp"
 public class SettlementConfirmAction extends ActionSupport implements SessionAware{
@@ -93,6 +93,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		purchaseHistoryInfoDTO.setSubtotal(Integer.parseInt(String.valueOf(subtotalList[i])));
 		purchaseHistoryInfoDtoList.add(purchaseHistoryInfoDTO);
 	}
+	//sessionにセットした後のDTOをセット
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
 	if(Integer.parseInt(session.get("logined").toString())==0){
