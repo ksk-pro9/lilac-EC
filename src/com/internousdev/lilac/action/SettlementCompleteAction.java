@@ -18,6 +18,7 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	private String id;
 	private String categoryId;
 	private Map<String,Object> session;
+	private String cartflag;
 
 	public String execute(){
 		String result=ERROR;
@@ -57,6 +58,9 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 				if(!(iterator.hasNext())){
 					cartInfoDtoList=null;
 				}
+
+				cartflag = "0";
+				session.put("cartflag",cartflag);
 				session.put("cartInfoDtoList",cartInfoDtoList);
 
 				int totalPrice=Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(String.valueOf(session.get("loginId")))));
@@ -92,4 +96,17 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
+
+
+	public String getCartflag() {
+		return cartflag;
+	}
+
+
+
+	public void setCartflag(String cartflag) {
+		this.cartflag = cartflag;
+	}
+
 }
