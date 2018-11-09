@@ -25,20 +25,23 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private boolean savedLoginId;
 	private String cartflag;
 
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
-	private List<String> loginIdErrorMessageList = new ArrayList<String>();
-	private List<String> passwordErrorMessageList = new ArrayList<String>();
+
 
 	private Map<String, Object> session;
 
 	public String execute() {
+		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
+		List<String> loginIdErrorMessageList = new ArrayList<String>();
+		List<String> passwordErrorMessageList = new ArrayList<String>();
 
 		String result = ERROR;
 
 		if(savedLoginId == true) {
 			session.put("savedLoginId", true);
+			session.put("loginId", loginId);
 		}else {
 			session.put("savedLoginId", false);
+			session.remove("loginId");
 		}
 
 		InputChecker inputChecker = new InputChecker();
@@ -97,34 +100,40 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public String getCategoryId() {
 		return categoryId;
 	}
-	public void setCtegoryId(String categoryId) {
-		this.categoryId= categoryId;
+
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
 	}
+
 	public String getLoginId() {
 		return loginId;
 	}
+
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Map<String, Object> getSession(){
+
+	public boolean isSavedLoginId() {
+		return savedLoginId;
+	}
+
+	public void setSavedLoginId(boolean savedLoginId) {
+		this.savedLoginId = savedLoginId;
+	}
+
+	public Map<String, Object> getSession() {
 		return session;
 	}
+
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
-	public String getCartflag() {
-		return cartflag;
-	}
-
-	public void setCartflag(String cartflag) {
-		this.cartflag = cartflag;
-	}
-
 }
