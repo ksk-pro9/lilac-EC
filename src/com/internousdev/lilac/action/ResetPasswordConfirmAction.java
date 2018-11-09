@@ -19,16 +19,17 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	//	private String categoryId;
 	/*	いらない、たぶん*/
 
-	private List<String> loginIdErrorMessageList = new ArrayList<String>();
-	private List<String> passwordErrorMessageList = new ArrayList<String>();
-	private List<String> passwordIncorrectErrorMessageList = new ArrayList<String>();
-	private List<String> newPasswordErrorMessageList = new ArrayList<String>();
-	private List<String> reConfirmationNewPasswordErrorMessageList = new ArrayList<String>();
-	private List<String> newPasswordIncorrectErrorMessageList = new ArrayList<String>();
 
 	private Map<String,Object>session;
 
 	public String execute(){
+
+		List<String> loginIdErrorMessageList = new ArrayList<String>();
+		List<String> passwordErrorMessageList = new ArrayList<String>();
+		List<String> passwordIncorrectErrorMessageList = new ArrayList<String>();
+		List<String> newPasswordErrorMessageList = new ArrayList<String>();
+		List<String> reConfirmationNewPasswordErrorMessageList = new ArrayList<String>();
+		List<String> newPasswordIncorrectErrorMessageList = new ArrayList<String>();
 
 		String result=ERROR;
 
@@ -129,53 +130,6 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 		this.categoryId = categoryId;
 	}*/
 
-	public List<String> getLoginIdErrorMessageList() {
-		return loginIdErrorMessageList;
-	}
-
-	public void setLoginIdErrorMessageList(List<String> loginIdErrorMessageList) {
-		this.loginIdErrorMessageList = loginIdErrorMessageList;
-	}
-
-	public List<String> getPasswordErrorMessageList() {
-		return passwordErrorMessageList;
-	}
-
-	public void setPasswordErrorMessageList(List<String> passwordErrorMessageList) {
-		this.passwordErrorMessageList = passwordErrorMessageList;
-	}
-
-	public List<String> getPasswordIncorrectErrorMessageList() {
-		return passwordIncorrectErrorMessageList;
-	}
-
-	public void setPasswordIncorrectErrorMessageList(List<String> passwordIncorrectErrorMessageList) {
-		this.passwordIncorrectErrorMessageList = passwordIncorrectErrorMessageList;
-	}
-
-	public List<String> getNewPasswordErrorMessageList() {
-		return newPasswordErrorMessageList;
-	}
-
-	public void setNewPasswordErrorMessageList(List<String> newPasswordErrorMessageList) {
-		this.newPasswordErrorMessageList = newPasswordErrorMessageList;
-	}
-
-	public List<String> getReConfirmationNewPasswordErrorMessageList() {
-		return reConfirmationNewPasswordErrorMessageList;
-	}
-
-	public void setReConfirmationNewPasswordErrorMessageList(List<String> reConfirmationNewPasswordErrorMessageList) {
-		this.reConfirmationNewPasswordErrorMessageList = reConfirmationNewPasswordErrorMessageList;
-	}
-
-	public List<String> getNewPasswordIncorrectErrorMessageList() {
-		return newPasswordIncorrectErrorMessageList;
-	}
-
-	public void setNewPasswordIncorrectErrorMessageList(List<String> newPasswordIncorrectErrorMessageList) {
-		this.newPasswordIncorrectErrorMessageList = newPasswordIncorrectErrorMessageList;
-	}
 
 	public Map<String, Object> getSession() {
 		return session;
