@@ -72,6 +72,7 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 					}else {
 						result = SUCCESS;
 					}
+
 				}
 				session.put("loginId", loginId);
 				session.put("logined", 1);

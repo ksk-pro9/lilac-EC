@@ -24,20 +24,21 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 	private String telNumber;
 	private String userAddress;
 
-	private List<String> familyNameErrorMessageList = new ArrayList<String>();
-	private List<String> firstNameErrorMessageList = new ArrayList<String>();
-	private List<String> familyNameKanaErrorMessageList = new ArrayList<String>();
-	private List<String> firstNameKanaErrorMessageList = new ArrayList<String>();
-	private List<String> emailErrorMessageList = new ArrayList<String>();
-	private List<String> telNumberErrorMessageList = new ArrayList<String>();
-	private List<String> userAddressErrorMessageList = new ArrayList<String>();
-
 	private String categoryId;
 	private Map<String, Object> session;
 
 	public String execute(){
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
+
+		List<String> familyNameErrorMessageList = new ArrayList<String>();
+		List<String> firstNameErrorMessageList = new ArrayList<String>();
+		List<String> familyNameKanaErrorMessageList = new ArrayList<String>();
+		List<String> firstNameKanaErrorMessageList = new ArrayList<String>();
+		List<String> emailErrorMessageList = new ArrayList<String>();
+		List<String> telNumberErrorMessageList = new ArrayList<String>();
+		List<String> userAddressErrorMessageList = new ArrayList<String>();
+
 
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, true, false, false);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, true, false, false);
@@ -158,62 +159,6 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
-	}
-
-	public List<String> getFamilyNameErrorMessageList() {
-		return familyNameErrorMessageList;
-	}
-
-	public void setFamilyNameErrorMessageList(List<String> familyNameErrorMessageList) {
-		this.familyNameErrorMessageList = familyNameErrorMessageList;
-	}
-
-	public List<String> getFirstNameErrorMessageList() {
-		return firstNameErrorMessageList;
-	}
-
-	public void setFirstNameErrorMessageList(List<String> firstNameErrorMessageList) {
-		this.firstNameErrorMessageList = firstNameErrorMessageList;
-	}
-
-	public List<String> getFamilyNameKanaErrorMessageList() {
-		return familyNameKanaErrorMessageList;
-	}
-
-	public void setFamilyNameKanaErrorMessageList(List<String> familyNameKanaErrorMessageList) {
-		this.familyNameKanaErrorMessageList = familyNameKanaErrorMessageList;
-	}
-
-	public List<String> getFirstNameKanaErrorMessageList() {
-		return firstNameKanaErrorMessageList;
-	}
-
-	public void setFirstNameKanaErrorMessageList(List<String> firstNameKanaErrorMessageList) {
-		this.firstNameKanaErrorMessageList = firstNameKanaErrorMessageList;
-	}
-
-	public List<String> getEmailErrorMessageList() {
-		return emailErrorMessageList;
-	}
-
-	public void setEmailErrorMessageList(List<String> emailErrorMessageList) {
-		this.emailErrorMessageList = emailErrorMessageList;
-	}
-
-	public List<String> getTelNumberErrorMessageList() {
-		return telNumberErrorMessageList;
-	}
-
-	public void setTelNumberErrorMessageList(List<String> telNumberErrorMessageList) {
-		this.telNumberErrorMessageList = telNumberErrorMessageList;
-	}
-
-	public List<String> getUserAddressErrorMessageList() {
-		return userAddressErrorMessageList;
-	}
-
-	public void setUserAddressErrorMessageList(List<String> userAddressErrorMessageList) {
-		this.userAddressErrorMessageList = userAddressErrorMessageList;
 	}
 
 	public Map<String, Object> getSession() {
