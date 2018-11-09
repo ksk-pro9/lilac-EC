@@ -70,7 +70,7 @@ public class PurchaseHistoryInfoDAO {
 				purchaseHistoryInfoDto.setProductName(resultSet.getString("product_name"));
 				purchaseHistoryInfoDto.setProductNameKana(resultSet.getString("product_name_kana"));
 				purchaseHistoryInfoDto.setProductDescription(resultSet.getString("product_description"));
-				purchaseHistoryInfoDto.setCategoryId(resultSet.getInt("caategory_id"));
+				purchaseHistoryInfoDto.setCategoryId(resultSet.getInt("category_id"));
 				purchaseHistoryInfoDto.setImageFileName(resultSet.getString("image_file_name"));
 				purchaseHistoryInfoDto.setImageFilePath(resultSet.getString("image_file_path"));
 				purchaseHistoryInfoDto.setReleaseCompany(resultSet.getString("release_company"));
@@ -81,7 +81,6 @@ public class PurchaseHistoryInfoDAO {
 				purchaseHistoryInfoDto.setFirstName(resultSet.getString("first_name_kana"));
 				purchaseHistoryInfoDto.setEmail(resultSet.getString("email"));
 				purchaseHistoryInfoDto.setTelNumber(resultSet.getString("tel_number"));
-				purchaseHistoryInfoDto.setUserAddress(resultSet.getString("tel_number"));
 				purchaseHistoryInfoDto.setUserAddress(resultSet.getString("user_address"));
 				purchaseHistoryInfoDTOList.add(purchaseHistoryInfoDto);
 
@@ -107,8 +106,7 @@ return purchaseHistoryInfoDTOList;
 	public int regist(String loginId,int productId,int productCount,int destinationId,int price){
 		DBConnector dbConnector =new DBConnector();
 		Connection connection=dbConnector.getConnection();
-		String sql="Insert into purchase_history_info(user_id,product_id,product_count,price,destination_id,regist_date,update_date) "
-				+ "values(?,?,?,?,?, now(),'0000-01-01')";
+		String sql="Insert into purchase_history_info(user_id,product_id,product_count,price,destination_id,regist_date,update_date) values(?,?,?,?,?, now(),'0000-01-01')";
 		int count=0;
 
 		try{
