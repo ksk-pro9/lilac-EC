@@ -63,7 +63,6 @@
 <!--ResetPasswordCompleteAction-->
 <action name="ResetPasswordCompleteAction" class="com.internousdev.lilac.action.ResetPasswordCompleteAction" method="execute">
 	<result name="success">resetPasswordComplete.jsp</result>
-	<result name="cart">cart.jsp</result>
 	<result name="error">resetPassword.jsp</result>
 	</action>
 
