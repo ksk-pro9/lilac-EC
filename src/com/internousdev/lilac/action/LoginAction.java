@@ -23,13 +23,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginId;
 	private String password;
 	private boolean savedLoginId;
-	private String cartflag;
 
 
 
 	private Map<String, Object> session;
 
 	public String execute() {
+		String cartflag;
 		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 		List<String> loginIdErrorMessageList = new ArrayList<String>();
 		List<String> passwordErrorMessageList = new ArrayList<String>();
@@ -74,6 +74,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				}else{
 					cartflag = "0";
 				}
+				session.remove("cartflag");
 				if(cartflag.equals("1")&& count > 0) {
 					DestinationInfoDAO destinationInfoDao = new DestinationInfoDAO();
 					try {

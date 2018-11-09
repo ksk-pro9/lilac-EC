@@ -26,7 +26,7 @@
 <!--CreateUserCompleteAction-->
 <action name="CreateUserCompleteAction" class="com.internousdev.lilac.action.CreateUserCompleteAction" method="execute">
 	<result name="success">createUserComplete.jsp</result>
-	<result name="cart">cart.jsp</result>
+	<result name="settlement">settlementConfirm.jsp</result>
 	<result name="error">createUser.jsp</result>
 	</action>
 

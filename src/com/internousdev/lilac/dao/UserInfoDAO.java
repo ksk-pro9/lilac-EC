@@ -213,29 +213,6 @@ public class UserInfoDAO {
 		return result;
 	}
 
-	public void userLogin(String loginId) {
-
-		DBConnector dbConnector = new DBConnector();
-		Connection connection = dbConnector.getConnection();
-
-		String sql = "update user_info set logined=1 where user_id=?";
-
-		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, loginId);
-			preparedStatement.executeUpdate();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
 	public int logout(String loginId) {
 
 		DBConnector dbConnector = new DBConnector();
