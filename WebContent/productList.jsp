@@ -14,8 +14,8 @@
 <div id="contents">
 <h1>商品一覧画面</h1>
 <%-------エラーメッセージ --------%>
-<s:if test="!#session.keywordsErrorMessageList.isEmpty()">
-		<s:iterator value="#session.keywordsErrorMessageList"><s:property /><br></s:iterator>
+<s:if test="!keywordsErrorMessageList.isEmpty()">
+		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
 
