@@ -34,12 +34,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
-		if(savedLoginId==true) {
+		if(savedLoginId == true) {
 			session.put("savedLoginId", true);
-			session.put("loginId", loginId);
 		}else {
 			session.put("savedLoginId", false);
-			session.remove("loginId", loginId);
 		}
 
 		InputChecker inputChecker = new InputChecker();
