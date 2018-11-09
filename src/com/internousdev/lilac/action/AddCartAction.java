@@ -64,7 +64,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		CartInfoDAO cartInfoDao = new CartInfoDAO();
 		int count = cartInfoDao.regist(userId, tempUserId, productId, productCount, price);
 		if(count > 0){
-			session.put("cartflag", cartflag);
+
 			result = SUCCESS;
 		}
 
@@ -77,6 +77,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		if(!(iterator.hasNext())){
 			cartInfoDtoList = null;
 		}
+		session.put("cartflag", cartflag);
 		session.put("cartInfoDtoList", cartInfoDtoList);
 
 		//cart_infoテーブルでは合計金額はないので各商品（値段×個数）
