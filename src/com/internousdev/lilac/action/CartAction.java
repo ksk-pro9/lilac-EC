@@ -15,7 +15,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 
 public class CartAction extends ActionSupport implements SessionAware{
-	private String categoryId;
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private Map<String, Object> session;
 
@@ -57,14 +56,6 @@ public class CartAction extends ActionSupport implements SessionAware{
 			session.put("mCategoryDtoList", mCategoryDtoList);
 		}
 		return result;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 
