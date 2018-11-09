@@ -15,6 +15,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class PurchaseHistoryAction extends ActionSupport implements SessionAware{
 	private String categoryId;
 	private Map<String, Object> session;
+	
+	
 	public String execute(){
 
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDao=new PurchaseHistoryInfoDAO();
