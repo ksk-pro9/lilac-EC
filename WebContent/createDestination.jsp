@@ -12,8 +12,8 @@
 
 <body>
 
-<jsp:include page="header.jsp">
-<div id="contents">
+<jsp:include page="header.jsp"/>
+<div id="">
 <h1>宛先情報入力画面</h1>
 
 <s:if test="!#session.familyNameErrorMessageList.isEmpty()">
