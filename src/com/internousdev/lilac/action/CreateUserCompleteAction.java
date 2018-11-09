@@ -151,6 +151,4 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 	public void setCartflag(String cartflag) {
 		this.cartflag = cartflag;
 	}
-
-
 }
