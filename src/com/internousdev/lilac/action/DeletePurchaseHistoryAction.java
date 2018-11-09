@@ -19,6 +19,7 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 	private Map<String,Object>session;
 	public String execute(){
 		String result=ERROR;
+
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDAO=new PurchaseHistoryInfoDAO();
 		int count =purchaseHistoryInfoDAO.deleteAll(String.valueOf(session.get("loginId")));
 		if(count>0){
@@ -28,7 +29,7 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 			if(!(iterator.hasNext())){
 				purchaseHistoryInfoDtoList=null;
 			}
-		session.put("purchaseHistoryInfoDtoLIst",purchaseHistoryInfoDtoList);
+		session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 		result=SUCCESS;
 		}
 		return result;
