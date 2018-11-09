@@ -5,8 +5,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<%-- 	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> --%>
 	<link rel="stylesheet" href="./css/style.css">
 
 	<title>ヘッダー</title>

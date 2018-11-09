@@ -97,7 +97,7 @@
 
 <tr>
 	<th scope="row"><s:label value="性別"/></th>
-	<td><s:textfield name="sexList" value="defaultSexValue" label="性別" placeholder="性別" /></td>
+	<td><s:radio name="sex" list="sexList" value="defaultSexValue" label="性別" placeholder="性別"/></td>
 </tr>
 
 <tr>
@@ -126,7 +126,7 @@
 </s:form>
 </div>
 
-<jsp:include page="footer.jsp"/>
+<s:include value="footer.jsp"/>
 
 </body>
 </html>
