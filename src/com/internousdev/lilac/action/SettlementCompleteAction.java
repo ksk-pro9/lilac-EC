@@ -18,10 +18,15 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	private String id;
 	private String categoryId;
 	private Map<String,Object> session;
+	private String cartflag;
 
 	public String execute(){
 		String result=ERROR;
 
+		//success="SettlementComplete.jsp"
+		//error="SettlementConfirm.jsp"
+		//@SuppressWarnings("unchecked")を使いList<>のキャストをうまいことやっている
+		//1.キャストしてsessionの値から購入情報と宛先情報のDTOListをセット
 		@SuppressWarnings("unchecked")
 		ArrayList<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=(ArrayList<PurchaseHistoryInfoDTO>)session.get("purchaseHistoryInfoDtoList");
 
@@ -30,7 +35,7 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 		for(int i=0;i<purchaseHistoryInfoDtoList.size();i++){
 			purchaseHistoryInfoDtoList.get(i).setDestinationId(destinationInfoDtoList.get(0).getId());
 		}
-
+		//購入情報 DTOからDAOを使い登録
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDAO=new PurchaseHistoryInfoDAO();
 		int count=0;
 		for(int i=0;i<purchaseHistoryInfoDtoList.size();i++){
@@ -42,6 +47,7 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 				purchaseHistoryInfoDtoList.get(i).getSubtotal()
 				);
 			}
+		//0のときCartInfoDAOのカート情報を消してDTOにセット
 		if(count>0){
 			CartInfoDAO cartInfoDAO=new CartInfoDAO();
 			count=cartInfoDAO.deleteAll(String.valueOf(session.get("loginId")));
@@ -52,6 +58,9 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 				if(!(iterator.hasNext())){
 					cartInfoDtoList=null;
 				}
+
+				cartflag = "0";
+				session.put("cartflag",cartflag);
 				session.put("cartInfoDtoList",cartInfoDtoList);
 
 				int totalPrice=Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPrice(String.valueOf(session.get("loginId")))));
@@ -87,4 +96,17 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
+
+
+	public String getCartflag() {
+		return cartflag;
+	}
+
+
+
+	public void setCartflag(String cartflag) {
+		this.cartflag = cartflag;
+	}
+
 }

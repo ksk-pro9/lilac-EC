@@ -1,10 +1,18 @@
 package com.internousdev.lilac.action;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.lilac.dao.CartInfoDAO;
+import com.internousdev.lilac.dao.DestinationInfoDAO;
 import com.internousdev.lilac.dao.UserInfoDAO;
+import com.internousdev.lilac.dto.DestinationInfoDTO;
+import com.internousdev.lilac.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -20,11 +28,11 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 	private String password;
 	private String categoryId;
 	private Map<String, Object> session;
+	private String cartflag;
 
 	public String execute(){
 
 		String result = ERROR;
-
 
 		UserInfoDAO UserInfoDao = new UserInfoDAO();
 
@@ -32,16 +40,49 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 
 		if(count > 0) {
 
-			session.put("loginId", loginId);
-			session.put("logined", 1);
+			UserInfoDAO userInfoDao = new UserInfoDAO();
+			if(userInfoDao.isExistsUserInfo(loginId, password)) {
+				if(userInfoDao.login(loginId, password) >0 ) {
+					UserInfoDTO userInfoDTO = userInfoDao.getUserInfo(loginId, password);
+					session.put("loginId", userInfoDTO.getUserId());
+					int cartCount=0;
+					CartInfoDAO cartInfoDao = new CartInfoDAO();
 
+					cartCount = cartInfoDao.linkToLoginId(String.valueOf(session.get("tempUserId")), loginId);
+					if(session.containsKey("cartflag")){
+						cartflag = session.get("cartflag").toString();
+					}else{
+						cartflag = "0";
+					}
+
+					if(cartflag.equals("1")&& cartCount > 0) {
+						DestinationInfoDAO destinationInfoDao = new DestinationInfoDAO();
+						try {
+							List<DestinationInfoDTO> destinationInfoDtoList = new ArrayList<DestinationInfoDTO>();
+							destinationInfoDtoList = destinationInfoDao.getDestinationInfo(loginId);
+							Iterator<DestinationInfoDTO> iterator = destinationInfoDtoList.iterator();
+							if(!(iterator.hasNext())) {
+								destinationInfoDtoList = null;
+							}
+							session.put("destinationInfoDtoList", destinationInfoDtoList);
+						}catch(SQLException e) {
+							e.printStackTrace();
+						}
+						result = "cart";
+					}else {
+						result = SUCCESS;
+					}
+				}
+				session.put("loginId", loginId);
+				session.put("logined", 1);
+			}
 
 			UserInfoDao.userLogin(loginId);
 
 			result = SUCCESS;
 		}
 
-		return result;
+	return result;
 	}
 
 	public String getFamilyName() {
@@ -103,5 +144,11 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 	}
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+	public String getCartflag() {
+		return cartflag;
+	}
+	public void setCartflag(String cartflag) {
+		this.cartflag = cartflag;
 	}
 }

@@ -23,23 +23,25 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginId;
 	private String password;
 	private boolean savedLoginId;
+	private String cartflag;
 
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
-	private List<String> loginIdErrorMessageList = new ArrayList<String>();
-	private List<String> passwordErrorMessageList = new ArrayList<String>();
+
 
 	private Map<String, Object> session;
 
 	public String execute() {
+		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
+		List<String> loginIdErrorMessageList = new ArrayList<String>();
+		List<String> passwordErrorMessageList = new ArrayList<String>();
 
 		String result = ERROR;
 
-		if(savedLoginId==true) {
+		if(savedLoginId == true) {
 			session.put("savedLoginId", true);
 			session.put("loginId", loginId);
 		}else {
 			session.put("savedLoginId", false);
-			session.remove("loginId", loginId);
+			session.remove("loginId");
 		}
 
 		InputChecker inputChecker = new InputChecker();
@@ -67,7 +69,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				CartInfoDAO cartInfoDao = new CartInfoDAO();
 
 				count = cartInfoDao.linkToLoginId(String.valueOf(session.get("tempUserId")), loginId);
-				if(count > 0) {
+				if(session.containsKey("cartflag")){
+					cartflag = session.get("cartflag").toString();
+				}else{
+					cartflag = "0";
+				}
+				if(cartflag.equals("1")&& count > 0) {
 					DestinationInfoDAO destinationInfoDao = new DestinationInfoDAO();
 					try {
 						List<DestinationInfoDTO> destinationInfoDtoList = new ArrayList<DestinationInfoDTO>();
@@ -93,26 +100,40 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public String getCategoryId() {
 		return categoryId;
 	}
-	public void setCtegoryId(String categoryId) {
-		this.categoryId= categoryId;
+
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
 	}
+
 	public String getLoginId() {
 		return loginId;
 	}
+
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Map<String, Object> getSession(){
+
+	public boolean isSavedLoginId() {
+		return savedLoginId;
+	}
+
+	public void setSavedLoginId(boolean savedLoginId) {
+		this.savedLoginId = savedLoginId;
+	}
+
+	public Map<String, Object> getSession() {
 		return session;
 	}
+
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
 }

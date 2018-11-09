@@ -95,7 +95,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	}
 	//sessionにセットした後のDTOをセット
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
-
+	//loginedで判断
 	if(Integer.parseInt(session.get("logined").toString())==0){
 		result=ERROR;
 	}else{
