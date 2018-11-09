@@ -23,6 +23,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginId;
 	private String password;
 	private boolean savedLoginId;
+	private String cartflag;
 
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private List<String> loginIdErrorMessageList = new ArrayList<String>();
@@ -65,7 +66,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				CartInfoDAO cartInfoDao = new CartInfoDAO();
 
 				count = cartInfoDao.linkToLoginId(String.valueOf(session.get("tempUserId")), loginId);
-				if(count > 0) {
+				if(session.containsKey("cartflag")){
+					cartflag = session.get("cartflag").toString();
+				}else{
+					cartflag = "0";
+				}
+				if(cartflag.equals("1")&& count > 0) {
 					DestinationInfoDAO destinationInfoDao = new DestinationInfoDAO();
 					try {
 						List<DestinationInfoDTO> destinationInfoDtoList = new ArrayList<DestinationInfoDTO>();
@@ -111,6 +117,14 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	}
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+
+	public String getCartflag() {
+		return cartflag;
+	}
+
+	public void setCartflag(String cartflag) {
+		this.cartflag = cartflag;
 	}
 
 }
