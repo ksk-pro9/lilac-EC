@@ -14,7 +14,6 @@ import com.opensymphony.xwork2.ActionSupport;
 //success→home.jsp
 public class HomeAction extends ActionSupport implements SessionAware{
 
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private String categoryId;
 	private Map<String, Object> session;
 
@@ -32,6 +31,7 @@ public class HomeAction extends ActionSupport implements SessionAware{
 			session.put("logined", 0);
 		}
 
+		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 		//sessionにmCategoryDtolistを作って入れている
 		MCategoryDAO mCategoryDao = new MCategoryDAO();
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
@@ -45,12 +45,6 @@ public class HomeAction extends ActionSupport implements SessionAware{
 	}
 	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
-	}
-	public List<MCategoryDTO> getmCategoryDtoList() {
-		return mCategoryDtoList;
-	}
-	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
-		this.mCategoryDtoList = mCategoryDtoList;
 	}
 	public Map<String, Object> getSession() {
 		return session;
