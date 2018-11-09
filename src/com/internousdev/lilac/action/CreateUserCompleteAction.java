@@ -24,22 +24,13 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 	public String execute(){
 
 		String result = ERROR;
-		String cartflag = "0";
+
 
 		UserInfoDAO UserInfoDao = new UserInfoDAO();
 
 		int count = UserInfoDao.createUser(familyName,firstName,familyNameKana,firstNameKana,sex,email,loginId,password);
 
-		if(cartflag.equals("1")&& count > 0){
-			session.put("loginId", loginId);
-			session.put("logined", 1);
-			session.put("cartflag", cartflag);
-
-			UserInfoDao.userLogin(loginId);
-
-			result = "cart";
-
-		}else if(count > 0) {
+		if(count > 0) {
 
 			session.put("loginId", loginId);
 			session.put("logined", 1);

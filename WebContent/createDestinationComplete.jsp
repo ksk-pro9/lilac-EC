@@ -21,7 +21,7 @@
 <div id="contents">
 <h1>宛先情報完了画面</h1>
 <div class="success">
-宛先情報の登録画完了しました。
+宛先情報の登録が完了しました。
 <s:form action="SettlementConfirmAction" name="back">
 	<s:iterator value="session.cartInfoDtoList">
 		<s:hidden name="productName" value="%{productName}"/>

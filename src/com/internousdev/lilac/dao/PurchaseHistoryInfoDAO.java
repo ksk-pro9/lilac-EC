@@ -22,36 +22,35 @@ public class PurchaseHistoryInfoDAO {
 		List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDTOList=new ArrayList<PurchaseHistoryInfoDTO>();
 
 		String sql="select"
-				+"phi.id as id,"/* ID */
-				+"phi.user_id as user_id," /* ユーザーID*/
-				+"phi.product_count as product_count," /* 個数 */
-				+"pi.product_id as product_id," /* 商品ID */
-				+"pi.product_name as product_name," /* 商品名 */
-				+"pi.product_name_kana as product_name_kana," /* 商品名かな */
-				+"pi.product_description as product_description," /* 商品詳細 */
-				+"pi.category_id as category_id," /* カテゴリID */
-				+"pi.price," /* 価格 */
-				+"pi.image_file_name as image_file_name," /* 画像ファイル名 */
-				+"pi.image_file_path as image_file_path." /* 画像ファイルパス */
-				+"pi.release_company," /* 販売会社名 */
-				+"pi.release_date," /* 販売年月日 */
-				+"phi.price as price," /* 値段 */
-				+"phi.regist_date as regist_date," /* 登録日 */
-				+"phi.update_date as update_date," /* 更新日 */
-				+"di.family_name as family_name," /* 姓 */
-				+"di.first_name as first_name," /* 姓 */
-				+"di.family_name_kana as family_name_kana," /* 姓かな */
-				+"di.first_name_kana as first_name_kana," /* 名かな */
-				+"di.email as email," /* メールアドレス */
-				+"di.tel_number as tel_number," /* 電話番号 */
-				+"di.user_address as user_address,"  /* 住所 */
-				+"FROM purchase_history_info as phi"
-				+"LEFT JOIN product_info as pi"
-				+"ON phi.product_id=pi.product_id"
-				+"LEFT JOIN destination_info as di"
-				+"ON phi.destination_id=di.id"
-				+"WHERE phi.user_id=?"
-				+"ORDER BY regist_date DESC";
+				+ "phi.id as id,"/* ID */
+				+ "phi.user_id as user_id," /* ユーザーID*/
+				+ "phi.product_count as product_count," /* 個数 */
+				+ "pi.product_id as product_id," /* 商品ID */
+				+ "pi.product_name as product_name," /* 商品名 */
+				+ "pi.product_name_kana as product_name_kana," /* 商品名かな */
+				+ "pi.product_description as product_description," /* 商品詳細 */
+				+ "pi.price," /* 価格 */
+				+ "pi.image_file_name as image_file_name," /* 画像ファイル名 */
+				+ "pi.image_file_path as image_file_path," /* 画像ファイルパス */
+				+ "pi.release_company," /* 販売会社名 */
+				+ "pi.release_date," /* 販売年月日 */
+				+ "phi.price as price," /* 値段 */
+				+ "phi.regist_date as regist_date," /* 登録日 */
+				+ "phi.update_date as update_date," /* 更新日 */
+				+ "di.family_name as family_name," /* 姓 */
+				+ "di.first_name as first_name," /* 姓 */
+				+ "di.family_name_kana as family_name_kana," /* 姓かな */
+				+ "di.first_name_kana as first_name_kana," /* 名かな */
+				+ "di.email as email," /* メールアドレス */
+				+ "di.tel_number as tel_number," /* 電話番号 */
+				+ "di.user_address as user_address,"  /* 住所 */
+				+ "FROM purchase_history_info as phi"
+				+ "LEFT JOIN product_info as pi"
+				+ " ON phi.product_id=pi.product_id"
+				+ "LEFT JOIN destination_info as di"
+				+ "ON phi.destination_id=di.id"
+				+ "WHERE phi.user_id=?"
+				+ "ORDER BY regist_date DESC";
 
 		try{
 			PreparedStatement preparedStatement=connection.prepareStatement(sql);
@@ -70,7 +69,7 @@ public class PurchaseHistoryInfoDAO {
 				purchaseHistoryInfoDto.setProductName(resultSet.getString("product_name"));
 				purchaseHistoryInfoDto.setProductNameKana(resultSet.getString("product_name_kana"));
 				purchaseHistoryInfoDto.setProductDescription(resultSet.getString("product_description"));
-				purchaseHistoryInfoDto.setCategoryId(resultSet.getInt("caategory_id"));
+				purchaseHistoryInfoDto.setCategoryId(resultSet.getInt("category_id"));
 				purchaseHistoryInfoDto.setImageFileName(resultSet.getString("image_file_name"));
 				purchaseHistoryInfoDto.setImageFilePath(resultSet.getString("image_file_path"));
 				purchaseHistoryInfoDto.setReleaseCompany(resultSet.getString("release_company"));
@@ -81,7 +80,6 @@ public class PurchaseHistoryInfoDAO {
 				purchaseHistoryInfoDto.setFirstName(resultSet.getString("first_name_kana"));
 				purchaseHistoryInfoDto.setEmail(resultSet.getString("email"));
 				purchaseHistoryInfoDto.setTelNumber(resultSet.getString("tel_number"));
-				purchaseHistoryInfoDto.setUserAddress(resultSet.getString("tel_number"));
 				purchaseHistoryInfoDto.setUserAddress(resultSet.getString("user_address"));
 				purchaseHistoryInfoDTOList.add(purchaseHistoryInfoDto);
 
@@ -107,8 +105,7 @@ return purchaseHistoryInfoDTOList;
 	public int regist(String loginId,int productId,int productCount,int destinationId,int price){
 		DBConnector dbConnector =new DBConnector();
 		Connection connection=dbConnector.getConnection();
-		String sql="Insert into purchase_history_info(user_id,product_id,product_count,price,destination_id,regist_date,update_date) "
-				+ "values(?,?,?,?,?, now(),'0000-01-01')";
+		String sql="Insert into purchase_history_info(user_id,product_id,product_count,price,destination_id,regist_date,update_date) values(?,?,?,?,?, now(),'0000-01-01')";
 		int count=0;
 
 		try{

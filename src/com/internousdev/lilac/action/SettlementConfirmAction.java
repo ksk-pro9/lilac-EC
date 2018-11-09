@@ -16,7 +16,7 @@ import com.internousdev.lilac.dto.DestinationInfoDTO;
 import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.internousdev.lilac.util.CommonUtility;
 import com.opensymphony.xwork2.ActionSupport;
-
+//追記希望
 //success="settlementConfirm.jsp"
 //error="login.jsp"
 public class SettlementConfirmAction extends ActionSupport implements SessionAware{
@@ -57,7 +57,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 				e.printStackTrace();
 			}
 		}
-
+//CommonUtilityで間違えチェックして配列に？
 	List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
 
 	CommonUtility commonUtility=new CommonUtility();
@@ -71,7 +71,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	String[] releaseDateList=commonUtility.parseArrayList(releaseDate);
 	String[] productCountList=commonUtility.parseArrayList(productCount);
 	String[] subtotalList=commonUtility.parseArrayList(subtotal);
-
+//purchaseHistoryDTOにセットしてadd
 	for(int i=0;i<productIdList.length;i++){
 		PurchaseHistoryInfoDTO purchaseHistoryInfoDTO=new PurchaseHistoryInfoDTO();
 		purchaseHistoryInfoDTO.setUserId(String.valueOf(session.get("loginId")));
@@ -93,8 +93,9 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		purchaseHistoryInfoDTO.setSubtotal(Integer.parseInt(String.valueOf(subtotalList[i])));
 		purchaseHistoryInfoDtoList.add(purchaseHistoryInfoDTO);
 	}
+	//sessionにセットした後のDTOをセット
 	session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
-
+	//loginedで判断
 	if(Integer.parseInt(session.get("logined").toString())==0){
 		result=ERROR;
 	}else{
