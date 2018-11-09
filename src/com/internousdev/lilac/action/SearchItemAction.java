@@ -21,21 +21,19 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 	private String categoryId;///カテゴリーID
 	private String keywords;//検索キーワード
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト
-	private List<String> keywordsErrorMessageList = new ArrayList<String>();//キーワードの文字エラーリスト
 	private List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();//商品のリスト
+	private List<String> keywordsErrorMessageList = new ArrayList<String>();//キーワードの文字エラーリスト
 	private Map<String, Object> session;
 
 	public String execute() {
 
 		String result = ERROR;
 
+		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト
+
 		MCategoryDAO mCategoryDao = new MCategoryDAO();
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
 		session.put("mCategoryDtoList", mCategoryDtoList);
-
-		//キーワードのエラーを毎回消す
-		session.remove("keywordsErrorMessageList");
 
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
 		//→全角スペースを半角スペースに置き換える
@@ -53,13 +51,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			InputChecker inputChecker = new InputChecker();
 			keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, false, false, true, false);
 
-			Iterator<String> iterator = keywordsErrorMessageList.iterator();
-
-			if(iterator.hasNext()) {
-				session.put("keywordsErrorMessageList", keywordsErrorMessageList);
-
-				return SUCCESS;
-			}
+			return SUCCESS;
 		}
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
@@ -89,12 +81,6 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 			return result;
 	}
 
-	public List<MCategoryDTO> getmCategoryDtoList() {
-		return mCategoryDtoList;
-	}
-	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
-		this.mCategoryDtoList = mCategoryDtoList;
-	}
 	public String getCategoryId() {
 		return categoryId;
 	}
@@ -107,12 +93,6 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 	public void setKeywords(String keywords) {
 		this.keywords = keywords;
 	}
-	public List<String> getKeywordsErrorMessageList() {
-		return keywordsErrorMessageList;
-	}
-	public void setKeywordsErrorMessageList(List<String> keywordsErrorMessageList) {
-		this.keywordsErrorMessageList = keywordsErrorMessageList;
-	}
 	public List<ProductInfoDTO> getProductInfoDtoList() {
 		return productInfoDtoList;
 	}
@@ -124,5 +104,12 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 	}
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+	public List<String> getKeywordsErrorMessageList() {
+		return keywordsErrorMessageList;
+	}
+
+	public void setKeywordsErrorMessageList(List<String> keywordsErrorMessageList) {
+		this.keywordsErrorMessageList = keywordsErrorMessageList;
 	}
 }

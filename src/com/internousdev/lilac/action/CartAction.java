@@ -30,10 +30,10 @@ public class CartAction extends ActionSupport implements SessionAware{
 		session.remove("checkListErrorMessageList");
 
 		//ログインしているかどうかでuserIdにいれるIdを判断
-		if(session.containsKey("loginId")){
-			userId = String.valueOf(session.get("loginId"));
-		}else if(session.containsKey("tempUserId")){
+		if(Integer.parseInt(String.valueOf(session.get("logined")))==0){
 			userId = String.valueOf(session.get("tempUserId"));
+		}else{
+			userId = String.valueOf(session.get("loginId"));
 		}
 
 		//cart_infoテーブルからカート情報をゲット、そしてセッションにput
