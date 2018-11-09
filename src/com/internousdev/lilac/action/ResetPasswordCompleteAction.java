@@ -25,16 +25,11 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 		/*↓セッションからとってきたloginIdとnewpasswordをDBで上書きする*/
 		int count=userInfoDAO.resetPassword(String.valueOf(session.get("loginId")),String.valueOf(session.get("newPassword")));
 
-		if(cartflag.equals("1")&& count > 0){
-			session.put("cartflag", cartflag);
-			result ="cart";
-		}else if(count>0){
-
+		if(count>0){
 			result=SUCCESS;
-		}else{
-			result=ERROR;
 		}
 		return result;
+
 
 	}
 	/*いらない、たぶん*/
