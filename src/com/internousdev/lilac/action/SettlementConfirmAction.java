@@ -57,7 +57,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 				e.printStackTrace();
 			}
 		}
-
+//CommonUtilityで間違えチェックして配列に？
 	List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
 
 	CommonUtility commonUtility=new CommonUtility();
@@ -71,7 +71,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	String[] releaseDateList=commonUtility.parseArrayList(releaseDate);
 	String[] productCountList=commonUtility.parseArrayList(productCount);
 	String[] subtotalList=commonUtility.parseArrayList(subtotal);
-
+//purchaseHistoryDTOにセットしてadd
 	for(int i=0;i<productIdList.length;i++){
 		PurchaseHistoryInfoDTO purchaseHistoryInfoDTO=new PurchaseHistoryInfoDTO();
 		purchaseHistoryInfoDTO.setUserId(String.valueOf(session.get("loginId")));
