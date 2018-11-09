@@ -22,7 +22,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		String loginId=String.valueOf(session.get("loginId"));
 		/*↓セッションsavedLoginIdの値をtrueかfaulseで判定する*/
 		boolean savedLoginId=Boolean.valueOf(String.valueOf(session.get("savedLoginId")));
-		/*↓DBに接続して、データがあればloginedを0にして1を返す、なければ0を返す*/
+		/*↓DBに接続してloginedを0にして返す*/
 		int count=userInfoDAO.logout(loginId);
 		/*		↓1ならセッションクリアして、条件「ログイン認証の際、ID保存チェックが有の場合は、
 		ログインIDとID保持機能チェックを保持してください。」のためにセッションに入れる*/
