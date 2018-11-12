@@ -27,6 +27,7 @@ public class ProductInfoDAO {
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
+
 			while (resultSet.next()) {
 				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
@@ -104,6 +105,7 @@ public class ProductInfoDAO {
 
 //検索ワードを入力した場合（カテゴリー：全てのカテゴリー）
 	public List<ProductInfoDTO> getProductInfoListAll(String[] keywordsList) {
+
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
 
@@ -162,8 +164,10 @@ public class ProductInfoDAO {
 
 //カテゴリーを選択、且つ、検索ワードを入力した場合
 	public List<ProductInfoDTO> getProductInfoListByKeywords(String[] keywordsList, String categoryId) {
+
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();
+
 		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 
 		String sql = "select * from product_info where";

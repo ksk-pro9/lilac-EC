@@ -2,76 +2,71 @@ package com.internousdev.lilac.action;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.struts2.interceptor.SessionAware;
-
-import com.internousdev.lilac.dao.MCategoryDAO;
 import com.internousdev.lilac.dao.ProductInfoDAO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.internousdev.lilac.dto.ProductInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
-public class ProductListAction extends ActionSupport implements SessionAware{
+public class ProductListAction extends ActionSupport{
 
-	//データベース'product_info'の値
-	private String categoryId;
-	private String imageFilePath;
+	//jspでは<s:iterator value="productInfoDtoList">で取り出しているため、以下のフィールドは定義しなくてもよい。
+	/*private String imageFilePath;
 	private String imageFileName;
 	private String productName;
 	private String productNameKana;
 	private int price;
+	//private String categoryId;
+	//private String keywords;
+	 */
 
-	//検索ワードで入力された文字列が変数keywordsに入ります。
-	private String keywords;
-
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
+	//private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
 
-	private Map<String, Object> session;
+	//private Map<String, Object> session;
+
 	public String execute() {
 		String result = ERROR;
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
+		//商品の商品情報を全て取得します。
 		productInfoDtoList = productInfoDAO.getProductInfoList();
 
-		if(!session.containsKey("mCategoryList")) {
+		/*if(!session.containsKey("mCategoryList")) {
 			MCategoryDAO mCategoryDAO = new MCategoryDAO();
 			mCategoryDtoList = mCategoryDAO.getMCategoryList();
 			session.put("mCategoryDtoList", mCategoryDtoList);
-		}
+		}*/
 
 		result = SUCCESS;
 		return result;
 	}
 
-
-	public List<MCategoryDTO> getmCategoryDtoList() {
-		return mCategoryDtoList;
-	}
-	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
-		this.mCategoryDtoList = mCategoryDtoList;
-	}
 	public List<ProductInfoDTO> getProductInfoDtoList() {
 		return productInfoDtoList;
 	}
 	public void setProductInfoDtoList(List<ProductInfoDTO> productInfoDtoList) {
 		this.productInfoDtoList = productInfoDtoList;
 	}
-	public Map<String, Object> getSession() {
+	/*public List<MCategoryDTO> getmCategoryDtoList() {
+		return mCategoryDtoList;
+	}
+	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
+		this.mCategoryDtoList = mCategoryDtoList;
+	}*/
+	/*public Map<String, Object> getSession() {
 		return session;
 	}
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
-	}
-	public String getCategoryId() {
+	}*/
+	/*public String getCategoryId() {
 		return categoryId;
 	}
 	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
-	}
-	public String getImageFilePath() {
+	}*/
+	/*public String getImageFilePath() {
 		return imageFilePath;
 	}
 	public void setImageFilePath(String imageFilePath) {
@@ -106,5 +101,5 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 	}
 	public void setKeywords(String keywords) {
 		this.keywords = keywords;
-	}
+	}*/
 }

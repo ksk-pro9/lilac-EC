@@ -20,9 +20,9 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 	private static final String MALE = "男性";
 	private static final String FEMALE = "女性";
 	private String defaultSexValue = MALE;
-	private String email;
 	private String telNumber;
 	private String userAddress;
+	private String email;
 
 	private String categoryId;
 	private Map<String, Object> session;
@@ -35,10 +35,9 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 		List<String> firstNameErrorMessageList = new ArrayList<String>();
 		List<String> familyNameKanaErrorMessageList = new ArrayList<String>();
 		List<String> firstNameKanaErrorMessageList = new ArrayList<String>();
-		List<String> emailErrorMessageList = new ArrayList<String>();
-		List<String> telNumberErrorMessageList = new ArrayList<String>();
 		List<String> userAddressErrorMessageList = new ArrayList<String>();
-
+		List<String> telNumberErrorMessageList = new ArrayList<String>();
+		List<String> emailErrorMessageList = new ArrayList<String>();
 
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, true, false, false);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, true, false, false);
@@ -61,7 +60,7 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 			session.put("firstNameErrorMessageList", firstNameErrorMessageList);
 			session.put("familyNameKanaErrorMessageList", familyNameKanaErrorMessageList);
 			session.put("firstNameKanaErrorMessageList", firstNameKanaErrorMessageList);
-			session.put("emailNameErrorMessageList", emailErrorMessageList);
+			session.put("emailErrorMessageList", emailErrorMessageList);
 			session.put("telNumberErrorMessageList", telNumberErrorMessageList);
 			session.put("userAddressErrorMessageList", userAddressErrorMessageList);
 			result = ERROR;
