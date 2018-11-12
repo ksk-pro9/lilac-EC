@@ -98,22 +98,23 @@
 			<!-- パターン２(こっちで行く予定) -->
 			<div id="head">
 				<ul>
-					<li id = "logo"><a href='<s:url action="HomeAction"/>'>B.read</a></li>
+					<li id = "logo">
+					<a href='<s:url action="HomeAction"/>'>B.read</a></li>
 
 					<s:form action="CartAction">
-						<li id = "cart">画像入れる
+						<li id = "cart"><img src='./images/cart.png' id="header-image" width="20px" height="20px" />
 						<s:submit value="カート"/></li>
 					</s:form>
 
 					<s:form action="ProductListAction">
-						<li id = "item">画像入れる
+						<li id = "item"><img src='./images/item.png' id="header-image" width="20px" height="20px" />
 						<s:submit value="商品一覧"/></li>
 					</s:form>
 
 					<!-- ログイン状態のときに表示されるもの -->
 					<s:if test="#session.logined == 1">
 						<s:form action="LogoutAction">
-							<li id = "logout">画像入れる
+							<li id = "logout"><img src='./images/logout.png' id="header-image" width="20px" height="20px" />
 							<s:submit value="ログアウト"/></li>
 						</s:form>
 					</s:if>
@@ -121,7 +122,7 @@
 					<!-- 未ログイン状態のときに表示されるもの -->
 					<s:else>
 						<s:form action="GoLoginAction">
-							<li id = "login">画像入れる
+							<li id = "login"><img src='./images/login.png' id="header-image" width="20px" height="20px" />
 							<s:submit value="ログイン"/></li>
 						</s:form>
 					</s:else>
@@ -129,7 +130,7 @@
 					<!-- ログイン状態のときに表示されるもの -->
 					<s:if test="#session.logined == 1">
 						<s:form action="MyPageAction">
-							<li id = "mypage">画像入れる
+							<li id = "mypage"><img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
 							<s:submit value="マイページ"/></li>
 						</s:form>
 					</s:if>
@@ -142,7 +143,7 @@
 						</s:if>
 						<li id = "keywords">
 						<s:textfield name="keywords" placeholder="検索ワード"/></li>
-						<li id = "search">
+						<li id = "search"><img src='./images/search.png' id="search-image" width="20px" height="20px" />
 						<s:submit value="商品検索"/></li>
 					</s:form>
 				</ul>
