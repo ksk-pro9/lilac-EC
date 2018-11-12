@@ -10,6 +10,25 @@
 	<link rel="stylesheet" href="./css/style.css">
 
 	<title>ヘッダー</title>
+
+	<style type="text/css">
+
+		body{
+		}
+
+		#head{
+		}
+
+		#head > ul{
+			list-style-type: none;
+		}
+
+		#head > ul > li{
+
+		}
+
+	</style>
+
 <%--
 	<script>
 		function goLoginAction(){
@@ -37,10 +56,6 @@
 
 <body>
 	<header>
-		<div id="">
-			<div id="">
-				<a href='<s:url action="HomeAction"/>'>B.read</a>
-			</div>
 
 <%--
 			パターン１
@@ -80,49 +95,58 @@
 
  --%>
 
-			パターン２(こっちで行く予定)
-			<div id="">
-				<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
+			<!-- パターン２(こっちで行く予定) -->
+			<div id="head">
 				<ul>
-					<s:form action="SearchItemAction">
-						<s:if test='#session.containsKey("mCategoryDtoList")'>
-							<li><s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></li>
-						</s:if>
-						<li><s:textfield name="keywords" placeholder="検索ワード"/></li>
-						<li><s:submit value="商品検索"/></li>
+					<li id = "logo"><a href='<s:url action="HomeAction"/>'>B.read</a></li>
+
+					<s:form action="CartAction">
+						<li id = "cart">画像入れる
+						<s:submit value="カート"/></li>
+					</s:form>
+
+					<s:form action="ProductListAction">
+						<li id = "item">画像入れる
+						<s:submit value="商品一覧"/></li>
 					</s:form>
 
 					<!-- ログイン状態のときに表示されるもの -->
 					<s:if test="#session.logined == 1">
 						<s:form action="LogoutAction">
-							<li><s:submit value="ログアウト"/></li>
+							<li id = "logout">画像入れる
+							<s:submit value="ログアウト"/></li>
 						</s:form>
 					</s:if>
 
 					<!-- 未ログイン状態のときに表示されるもの -->
 					<s:else>
 						<s:form action="GoLoginAction">
-							<li><s:submit value="ログイン"/></li>
+							<li id = "login">画像入れる
+							<s:submit value="ログイン"/></li>
 						</s:form>
 					</s:else>
-
-					<s:form action="CartAction">
-						<li><s:submit value="カート"/></li>
-					</s:form>
-
-					<s:form action="ProductListAction">
-						<li><s:submit value="商品一覧"/></li>
-					</s:form>
 
 					<!-- ログイン状態のときに表示されるもの -->
 					<s:if test="#session.logined == 1">
 						<s:form action="MyPageAction">
-							<li><s:submit value="マイページ"/></li>
+							<li id = "mypage">画像入れる
+							<s:submit value="マイページ"/></li>
 						</s:form>
 					</s:if>
+
+					<s:form action="SearchItemAction">
+						<s:if test='#session.containsKey("mCategoryDtoList")'>
+							<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
+							<li id = "category">
+							<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></li>
+						</s:if>
+						<li id = "keywords">
+						<s:textfield name="keywords" placeholder="検索ワード"/></li>
+						<li id = "search">
+						<s:submit value="商品検索"/></li>
+					</s:form>
 				</ul>
 			</div>
-		</div>
 	</header>
 </body>
 
