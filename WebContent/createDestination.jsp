@@ -48,10 +48,10 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.emailErrorMessageList.isEmpty()">
+<s:if test="!#session.userAddressErrorMessageList.isEmpty()">
 	<div class="error">
 		<div class="error-message">
-			<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
+			<s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
 		</div>
 	</div>
 </s:if>
@@ -64,10 +64,10 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.userAddressErrorMessageList.isEmpty()">
+<s:if test="!#session.emailErrorMessageList.isEmpty()">
 	<div class="error">
 		<div class="error-message">
-			<s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
+			<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
 		</div>
 	</div>
 </s:if>
