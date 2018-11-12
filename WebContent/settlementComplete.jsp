@@ -14,7 +14,7 @@
 		<s:include value="header.jsp" />
 					<div id="contents">
 						<h1>決済完了画面</h1>
-							<div class="success">
+							<div class="CompleteSuccess">
 								決済完了しました。
 							</div>
 					</div>
