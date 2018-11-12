@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./css/style.css">
 		<title>決済確認</title>
 	</head>
+
 		<body>
 			<s:include value="header.jsp" />
 				<div id="contents">
@@ -82,5 +83,6 @@
 	</div>
 	<s:include value="footer.jsp" />
 		</body>
+
 </html>
 

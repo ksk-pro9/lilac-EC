@@ -3,12 +3,13 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
-		<head>
-			<meta charset="UTF-8">
-			<link rel="stylesheet" href="./css/style.css">
-			<meta http-equiv="refresh" content="3;URL='HomeAction'" />
-			<title>決済完了</title>
-		</head>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./css/style.css">
+		<meta http-equiv="refresh" content="3;URL='HomeAction'" />
+		<title>決済完了</title>
+	</head>
+
 	<body>
 		<s:include value="header.jsp" />
 					<div id="contents">
