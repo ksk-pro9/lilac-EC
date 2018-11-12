@@ -13,7 +13,7 @@
 
 <body>
 
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
 
 <div id="contents">
 <h1>登録完了画面</h1>
@@ -23,7 +23,7 @@
 </div>
 
 <div id="footer">
-	<jsp:include page="footer.jsp"/>
+	<s:include value="footer.jsp"/>
 </div>
 
 </body>
