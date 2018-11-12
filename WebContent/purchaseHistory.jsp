@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
 <div id="contents">
 
 <h1>商品購入履歴画面</h1>
@@ -40,7 +40,7 @@
 </tbody>
 </table>
 <div class="submit_btn_box">
-<div id=".contents-btn-set">
+<div id="contents-btn-set">
 <s:form action="DeletePurchaseHistoryAction">
 <s:submit value="削除" class="submit_btn"/>
 </s:form>

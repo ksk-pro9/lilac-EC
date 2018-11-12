@@ -8,12 +8,13 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
+
 <title>マイページ</title>
 </head>
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
 <div id="contents">
 
-<h1>マイページ</h1>
+<h1>会員登録情報</h1>
 	<s:form action="PurchaseHistoryAction">
 		<table class="vertical-list-table">
 
@@ -46,6 +47,7 @@
 				<td><s:property value="#session.email"/></td>
 			</tr>
 		</table>
+
 		<div class="submit_btn_box">
 		<s:submit value="購入履歴" class="submit_btn"/>
 		</div>
