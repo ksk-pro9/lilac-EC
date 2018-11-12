@@ -131,7 +131,7 @@
 </table>
 
 <div class="submit_btn_box">
-<div id=".contens-btn-set">
+<div id="contens-btn-set">
 	<s:submit value="宛先情報確認" class="submit_btn"/>
 </div>
 </div>
