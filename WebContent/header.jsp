@@ -43,6 +43,7 @@
 			float: left;
 		}
 
+
 		#item{
 			float: left;
 		}
@@ -59,8 +60,12 @@
 			float: left;
 		}
 
-		#category{
+		#bottom{
 			clear: both;
+		}
+
+		#category{
+			float: left;
 		}
 
 		#keywords{
@@ -141,11 +146,11 @@
 
 				<div id = "top">
 
-					<h3 id = "logo">
-					<a href='<s:url action="HomeAction"/>'>B.read</a></h3>
-
-
 				<ul>
+					<li id = "logo">
+					<a href='<s:url action="HomeAction"/>'>B.read</a></li>
+
+
 					<li id = "cart">
 						<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
 					</li>
@@ -218,8 +223,8 @@
 							<div id = "keywords">
 								<s:textfield name="keywords" placeholder="検索ワード"/></div>
 
-							<p id = "search">
-								<input type="image" src="./images/search.png" id="search-image" width="20px" height="20px"/></p>
+							<div id = "search">
+								<input type="image" src="./images/search.png" id="search-image" width="20px" height="20px"/></div>
 					</s:form>
 				</div>
 
