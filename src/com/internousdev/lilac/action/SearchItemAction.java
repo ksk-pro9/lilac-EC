@@ -8,9 +8,7 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.lilac.dao.MCategoryDAO;
 import com.internousdev.lilac.dao.ProductInfoDAO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.internousdev.lilac.dto.ProductInfoDTO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
@@ -29,11 +27,11 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
-		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト
+/*		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト
 
 		MCategoryDAO mCategoryDao = new MCategoryDAO();
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
-		session.put("mCategoryDtoList", mCategoryDtoList);
+		session.put("mCategoryDtoList", mCategoryDtoList);*/
 
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
 		//→全角スペースを半角スペースに置き換える
