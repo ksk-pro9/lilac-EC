@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<jsp:include page="header.jsp"/>
+	<s:include value="header.jsp"/>
 
 	<h1>パスワード再設定確認画面</h1>
 
