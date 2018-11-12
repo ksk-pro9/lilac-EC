@@ -11,7 +11,7 @@
 
 <body>
 
-	<jsp:include page="header.jsp" />
+	<s:include value="header.jsp" />
 
 	<div id="contents">
 		<h1>ホーム画面</h1>

@@ -7,6 +7,19 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>フッター</title>
+
+	<style type="text/css">
+
+		#footer{
+		 	width: 100%;
+			position: fixed;
+			bottom: 0px;
+			right: 0px;
+			background-color: yellow;
+			text-align: center;
+		}
+
+	</style>
 </head>
 
 <body>
