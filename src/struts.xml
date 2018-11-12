@@ -5,6 +5,7 @@
 <!--Strutsの詳細設定-->
 <struts>
 <constant name="struts.devMode" value="true" />
+<constant name="struts.ui.theme" value="simple" />
 
 		<package name="com.internousdev.lilac.action" extends="struts-default">
 
