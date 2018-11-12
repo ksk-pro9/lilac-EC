@@ -17,7 +17,7 @@
 </script>
 </head>
 <body>
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
 <div id="contents">
 <h1>宛先情報完了画面</h1>
 <div class="success">
