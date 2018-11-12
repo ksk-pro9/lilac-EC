@@ -10,10 +10,8 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dao.DestinationInfoDAO;
-import com.internousdev.lilac.dao.MCategoryDAO;
 import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.dto.DestinationInfoDTO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.internousdev.lilac.dto.UserInfoDTO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
@@ -30,7 +28,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public String execute() {
 		String cartflag;
-		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
+//		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 		List<String> loginIdErrorMessageList = new ArrayList<String>();
 		List<String> passwordErrorMessageList = new ArrayList<String>();
 
@@ -54,11 +52,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("mCategoryDtoList", 0);
 		}
 
-		if(!session.containsKey("mCategoryList")) {
-			MCategoryDAO mCategoryDao = new MCategoryDAO();
-			mCategoryDtoList = mCategoryDao.getMCategoryList();
-			session.put("mCategoryDtoList", mCategoryDtoList);
-		}
+//		if(!session.containsKey("mCategoryList")) {
+//			MCategoryDAO mCategoryDao = new MCategoryDAO();
+//			mCategoryDtoList = mCategoryDao.getMCategoryList();
+//			session.put("mCategoryDtoList", mCategoryDtoList);
+//		}
 
 		UserInfoDAO userInfoDao = new UserInfoDAO();
 		if(userInfoDao.isExistsUserInfo(loginId, password)) {
