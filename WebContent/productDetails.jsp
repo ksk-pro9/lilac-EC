@@ -84,8 +84,11 @@
 
 	<%--ページ下部に同じカテゴリーの別商品を３件表示（商品画像と商品名）します。 --%>
 	<div class="box">
+	<div class="product-details-recommend-box">
 	<%-----画像押下で商品詳細画面に遷移します。----%>
 	<s:iterator value="#session.productInfoDtoList">
+	<div class="product-list">
+		<div class="product-list">
 		<div class="recommend-box">
 		<a href='<s:url action="ProductDetailsAction">
 		<s:param name="productId" value="%{productId}"/>
@@ -94,10 +97,12 @@
 		</a>
 		<s:property value="productName"/><br>
 		</div>
+		</div>
+		</div>
 	</s:iterator>
 	</div>
 </div>
-
+</div>
 <s:include value="footer.jsp"/>
 </body>
 </html>
