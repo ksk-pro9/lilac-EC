@@ -9,6 +9,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dto.CartInfoDTO;
+import com.internousdev.lilac.dto.MCategoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 

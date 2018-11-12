@@ -76,13 +76,13 @@
 					<h2><s:label value="カート合計金額:"/><s:property value="#session.totalPrice" />円</h2><br>
 
 					<div class="submit_btn_box">
-						<div class="submit_btn_set">
+						<div class="contents_btn_set">
 							<s:submit value="決済" class="submit_btn" />
 						</div>
 					</div>
 
 					<div class="submit_btn_box">
-						<div id=".contents-btn-set">
+						<div id="contents-btn-set">
 							<s:submit value="削除" onclick="this.form.action='DeleteCartAction';"/>
 						</div>
 					</div>
