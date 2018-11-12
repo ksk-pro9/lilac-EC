@@ -73,7 +73,7 @@
 				</div>
 			</s:else>
 				<div class="submit_btn_box">
-					<div id=".contents-btn-set">
+					<div id="contents-btn-set">
 						<s:form action="CreateDestinationAction">
 						<s:submit value="新規登録" class="submit_btn" />
 						</s:form>
