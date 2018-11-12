@@ -9,12 +9,10 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dto.CartInfoDTO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
 public class CartAction extends ActionSupport implements SessionAware{
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private Map<String, Object> session;
 
 	public String execute(){
