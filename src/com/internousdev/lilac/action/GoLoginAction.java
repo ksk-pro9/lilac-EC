@@ -14,10 +14,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class GoLoginAction extends ActionSupport implements SessionAware{
 	
 	private String categoryId;
-	private  List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private  Map<String, Object> session;
 	
 	public String execute() {
+		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
+		
 		if(!session.containsKey("mCatcategoryList")) {
 			MCategoryDAO mCategoryDao = new MCategoryDAO();
 			mCategoryDtoList = mCategoryDao.getMCategoryList();
@@ -34,12 +35,7 @@ public class GoLoginAction extends ActionSupport implements SessionAware{
 	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
 	}
-	public List<MCategoryDTO> getmCategoryDtoList(){
-		return mCategoryDtoList;
-	}
-	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
-		this.mCategoryDtoList = mCategoryDtoList;
-	}
+	
 	public Map<String, Object> getSession(){
 		return session;
 	}
