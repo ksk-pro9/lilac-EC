@@ -83,43 +83,44 @@
 			パターン２(こっちで行く予定)
 			<div id="">
 				<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
+				<ul>
+					<s:form action="SearchItemAction">
+						<s:if test='#session.containsKey("mCategoryDtoList")'>
+							<li><s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></li>
+						</s:if>
+						<li><s:textfield name="keywords" placeholder="検索ワード"/></li>
+						<li><s:submit value="商品検索"/></li>
+					</s:form>
 
-				<s:form action="SearchItemAction">
-					<s:if test='#session.containsKey("mCategoryDtoList")'>
-						<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/>
+					<!-- ログイン状態のときに表示されるもの -->
+					<s:if test="#session.logined == 1">
+						<s:form action="LogoutAction">
+							<li><s:submit value="ログアウト"/></li>
+						</s:form>
 					</s:if>
-					<s:textfield name="keywords" placeholder="検索ワード"/>
-					<s:submit value="商品検索"/>
-				</s:form>
 
-				<!-- ログイン状態のときに表示されるもの -->
-				<s:if test="#session.logined == 1">
-					<s:form action="LogoutAction">
-						<s:submit value="ログアウト"/>
+					<!-- 未ログイン状態のときに表示されるもの -->
+					<s:else>
+						<s:form action="GoLoginAction">
+							<li><s:submit value="ログイン"/></li>
+						</s:form>
+					</s:else>
+
+					<s:form action="CartAction">
+						<li><s:submit value="カート"/></li>
 					</s:form>
-				</s:if>
 
-				<!-- 未ログイン状態のときに表示されるもの -->
-				<s:else>
-					<s:form action="GoLoginAction">
-						<s:submit value="ログイン"/>
+					<s:form action="ProductListAction">
+						<li><s:submit value="商品一覧"/></li>
 					</s:form>
-				</s:else>
 
-				<s:form action="CartAction">
-					<s:submit value="カート"/>
-				</s:form>
-
-				<s:form action="ProductListAction">
-					<s:submit value="商品一覧"/>
-				</s:form>
-
-				<!-- ログイン状態のときに表示されるもの -->
-				<s:if test="#session.logined == 1">
-					<s:form action="MyPageAction">
-						<s:submit value="マイページ"/>
-					</s:form>
-				</s:if>
+					<!-- ログイン状態のときに表示されるもの -->
+					<s:if test="#session.logined == 1">
+						<s:form action="MyPageAction">
+							<li><s:submit value="マイページ"/></li>
+						</s:form>
+					</s:if>
+				</ul>
 			</div>
 		</div>
 	</header>
