@@ -15,7 +15,11 @@
 <h1>商品一覧画面</h1>
 <%-------エラーメッセージ --------%>
 <s:if test="!keywordsErrorMessageList.isEmpty()">
+	<div class="error">
+	<div class="error-message">
 		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
+	</div>
+	</div>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
 
