@@ -11,7 +11,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class MyPageAction extends ActionSupport implements SessionAware{
 	private String categoryId;
-	private String keywords;
+
 
 
 	private Map<String,Object> session;
@@ -19,7 +19,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	public String execute(){
 		String result=ERROR;
 		System.out.println(categoryId);
-		System.out.println(keywords);
+
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 		UserInfoDTO userInfoDTO=new UserInfoDTO();
 		userInfoDTO=userInfoDAO.getUserInfo(String.valueOf(session.get("loginId")));
@@ -47,13 +47,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		this.categoryId=categoryId;
 	}
 
-	public String getKeywords(){
-		return keywords;
-	}
 
-	public void setkeywords(String keywords){
-		this.keywords=keywords;
-	}
 
 	public Map<String,Object> getSession(){
 		return session;
