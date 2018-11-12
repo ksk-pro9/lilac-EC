@@ -10,7 +10,7 @@
 <title>商品一覧</title>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+<s:include value="header.jsp" />
 <div id="contents">
 <h1>商品一覧画面</h1>
 <%-------エラーメッセージ --------%>

@@ -16,6 +16,10 @@
 <div id="contents">
 
 <h1>宛先情報確認画面</h1>
+
+<!-- ======= ここから入力フォーム form ======= -->
+<div class="form-confirm">
+
 <s:form action="CreateDestinationCompleteAction">
 <table class="vertical-list-table">
 
@@ -68,6 +72,9 @@
 </div>
 
 </s:form>
+
+</div>
+<!-- ======= ここまで入力フォーム /form ======= -->
 
 </div>
 

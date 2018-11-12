@@ -20,6 +20,9 @@
 
 <h1>登録内容確認画面</h1>
 
+<!-- ======= ここから入力フォーム form ======= -->
+<div class="form-confirm">
+
 <s:form action="CreateUserCompleteAction">
 
 <table class="CreateUserCompleteAction">
@@ -80,6 +83,10 @@
 <s:hidden name="email" value="%{email}"/>
 
 </s:form>
+
+</div>
+<!-- ======= ここまで入力フォーム /form ======= -->
+
 </div>
 
 <div id="footer">

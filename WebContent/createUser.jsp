@@ -17,6 +17,8 @@
 
 <s:include value="header.jsp"/>
 
+<!-- ======= ここからcontents ======= -->
+
 <div id="contents">
 <h1>ユーザー情報入力画面</h1>
 
@@ -76,6 +78,13 @@
 	</div>
 </s:if>
 
+<!-- ======= ここまでエラーメッセージ /error-message ======= -->
+
+
+
+<!-- ======= ここから入力フォーム form ======= -->
+<div class="form">
+
 <s:form action="CreateUserConfirmAction">
 
 <table class="vertical-list-table">
@@ -129,7 +138,13 @@
 </div>
 
 </s:form>
+
 </div>
+<!-- ======= ここまで入力フォーム /form ======= -->
+
+</div>
+<!-- ======= ここまで /contents ======= -->
+
 
 <div id="footer">
 	<s:include value="footer.jsp"/>

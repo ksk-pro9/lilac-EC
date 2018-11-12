@@ -5,28 +5,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/style.css">
 <title>パスワード再設定確認</title>
 </head>
 <body>
 
-	<s:include value="header.jsp"/>
+	<s:include value="header.jsp" />
+	<div id="contents">
 
-	<h1>パスワード再設定確認画面</h1>
+		<h1>パスワード再設定確認画面</h1>
 
-	<s:form action="ResetPasswordCompleteAction">
-		<table>
-			<tr>
-				<th scope="row"><s:label value="ログインID"/></th>
-				<td><s:property value="#session.loginId" /></td>
-			</tr>
-			<tr>
-				<th scope="row"><s:label value="再設定パスワード"/></th>
-				<td><s:property value="#session.concealedPassword" /></td>
-			</tr>
-		</table>
-		<s:submit value="再設定" class="submit_btn" />
-	</s:form>
-
+		<s:form action="ResetPasswordCompleteAction">
+			<table>
+				<tr>
+					<th scope="row"><s:label value="ログインID" /></th>
+					<td><s:property value="#session.loginId" /></td>
+				</tr>
+				<tr>
+					<th scope="row"><s:label value="再設定パスワード" /></th>
+					<td><s:property value="#session.concealedPassword" /></td>
+				</tr>
+			</table>
+			<s:submit value="再設定" class="submit_btn" />
+		</s:form>
+	</div>
 	<s:include value="footer.jsp" />
 
 </body>
