@@ -14,64 +14,76 @@
 
 <s:include value="header.jsp"/>
 
-<div id="">
+<!-- ======= ここからcontents ======= -->
+<div id="contents">
+
 <h1>宛先情報入力画面</h1>
 
+<!-- ======= ここからエラーメッセージ error-message ======= -->
+
 <s:if test="!#session.familyNameErrorMessageList.isEmpty()">
-	<div class="error">
+		<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
 
 <s:if test="!#session.firstNameErrorMessageList.isEmpty()">
-	<div class="error">
+ 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.firstNameErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
 
 <s:if test="!#session.familyNameKanaErrorMessageList.isEmpty()">
-	<div class="error">
+< 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
 
 <s:if test="!#session.firstNameKanaErrorMessageList.isEmpty()">
-	<div class="error">
+ 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
 
 <s:if test="!#session.userAddressErrorMessageList.isEmpty()">
-	<div class="error">
+ 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
 
 <s:if test="!#session.telNumberErrorMessageList.isEmpty()">
-	<div class="error">
+ 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.telNumberErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
 
 <s:if test="!#session.emailErrorMessageList.isEmpty()">
-	<div class="error">
+ 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
-		</div>
+ 		</div>
 	</div>
 </s:if>
+
+<!-- ======= ここまでエラーメッセージ /error-message ======= -->
+
+
+
+<!-- ======= ここから入力フォーム form ======= -->
+<div class="form">
+
 
 <s:form action="CreateDestinationConfirmAction">
 <table class="vertical-list-table">
@@ -125,7 +137,13 @@
 </div>
 
 </s:form>
+
+
 </div>
+<!-- ======= ここまで入力フォーム /form ======= -->
+
+</div>
+<!-- ======= ここまで /contents ======= -->
 
 <s:include value="footer.jsp"/>
 
