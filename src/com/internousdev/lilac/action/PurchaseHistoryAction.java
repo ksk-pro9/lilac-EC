@@ -6,17 +6,15 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.lilac.dao.MCategoryDAO;
 import com.internousdev.lilac.dao.PurchaseHistoryInfoDAO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class PurchaseHistoryAction extends ActionSupport implements SessionAware{
 	private String categoryId;
 	private Map<String, Object> session;
-	
-	
+
+
 	public String execute(){
 
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDao=new PurchaseHistoryInfoDAO();
@@ -29,13 +27,9 @@ public class PurchaseHistoryAction extends ActionSupport implements SessionAware
 		}
 		session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-		List<MCategoryDTO> mCategoryDtoList=new ArrayList<MCategoryDTO>();
 
-		if(!session.containsKey("mCategoryDtoList")){
-			MCategoryDAO mCategoryDao=new MCategoryDAO();
-			mCategoryDtoList=mCategoryDao.getMCategoryList();
-			session.put("mCategoryDtoList",mCategoryDtoList);
-		}
+
+
 
 		return SUCCESS;
 
