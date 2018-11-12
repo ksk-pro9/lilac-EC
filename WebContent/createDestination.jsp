@@ -12,7 +12,8 @@
 
 <body>
 
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
+
 <div id="">
 <h1>宛先情報入力画面</h1>
 

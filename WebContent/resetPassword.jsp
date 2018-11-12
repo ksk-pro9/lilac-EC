@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<jsp:include page="header.jsp" />
+	<s:include value="header.jsp" />
 
 	<h1>パスワード再設定画面</h1>
 
@@ -84,7 +84,7 @@
 					placeholder="新しいパスワード（再確認用）" class="txt" /></td>
 		</tr>
 
-		<s:submit value="パスワード設定" class="submit_btm" />
+		<s:submit value="パスワード設定" class="submit_btn" />
 
 	</s:form>
 
