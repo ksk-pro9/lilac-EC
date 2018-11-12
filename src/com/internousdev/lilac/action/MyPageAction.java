@@ -1,13 +1,10 @@
 package com.internousdev.lilac.action;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.UserInfoDAO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.internousdev.lilac.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MyPageAction extends ActionSupport implements SessionAware{
 	private String categoryId;
 	private String keywords;
-	private List<MCategoryDTO> mCategoryDtoList=new ArrayList<MCategoryDTO>();
+
 
 	private Map<String,Object> session;
 
@@ -41,14 +38,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 	}
 
-	public List<MCategoryDTO> getmCategoryDtoList(){
-		return mCategoryDtoList;
 
-	}
-
-	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList){
-		this.mCategoryDtoList=mCategoryDtoList;
-	}
 	public String getCategoryId(){
 		return categoryId;
 	}
