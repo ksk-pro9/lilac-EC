@@ -13,18 +13,62 @@
 
 	<style type="text/css">
 
-		body{
+		input[type="submit"]{
+			border:none;background-color:transparent;
+		}
+
+		header{
+			background-color: yellow;
+			position : fixed;
+			width : 100%;
+			height : 100px;
 		}
 
 		#head{
+			padding: 10px;
 		}
 
-		#head > ul{
+		#head > #top > ul{
 			list-style-type: none;
 		}
 
 		#head > ul > li{
+		}
 
+		#logo{
+			float: left;
+		}
+
+		#cart{
+			float: left;
+		}
+
+		#item{
+			float: left;
+		}
+
+		#logout{
+			float: left;
+		}
+
+		#login{
+			float: left;
+		}
+
+		#mypage{
+			float: left;
+		}
+
+		#category{
+			clear: both;
+		}
+
+		#keywords{
+			float: left;
+		}
+
+		#search{
+			float: left;
 		}
 
 	</style>
@@ -58,8 +102,7 @@
 	<header>
 
 <%--
-			パターン１
-			<div id="">
+			Javascript使ってる方
 				<s:form id="form" name="form">
 					<ul>
 						<s:if test='#session.containsKey("mCategoryDtoList")'>
@@ -91,62 +134,95 @@
 						</s:if>
 					</ul>
 				</s:form>
-			</div>
 
  --%>
 
-			<!-- パターン２(こっちで行く予定) -->
 			<div id="head">
+
+				<div id = "top">
+
+					<h3 id = "logo">
+					<a href='<s:url action="HomeAction"/>'>B.read</a></h3>
+
+
 				<ul>
-					<li id = "logo">
-					<a href='<s:url action="HomeAction"/>'>B.read</a></li>
+					<li id = "cart">
+						<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
+					</li>
+					<li id = "cart">
+						<s:form action="CartAction">
+							<s:submit value="カート"/>
+						</s:form>
+					</li>
 
-					<s:form action="CartAction">
-						<li id = "cart"><img src='./images/cart.png' id="header-image" width="20px" height="20px" />
-						<s:submit value="カート"/></li>
-					</s:form>
 
-					<s:form action="ProductListAction">
-						<li id = "item"><img src='./images/item.png' id="header-image" width="20px" height="20px" />
-						<s:submit value="商品一覧"/></li>
-					</s:form>
+					<li id = "item">
+						<img src='./images/item.png' id="header-image" width="20px" height="20px" />
+					</li>
+					<li id = "item">
+						<s:form action="ProductListAction">
+							<s:submit value="商品一覧"/>
+						</s:form>
+					</li>
+
 
 					<!-- ログイン状態のときに表示されるもの -->
 					<s:if test="#session.logined == 1">
-						<s:form action="LogoutAction">
-							<li id = "logout"><img src='./images/logout.png' id="header-image" width="20px" height="20px" />
-							<s:submit value="ログアウト"/></li>
-						</s:form>
+						<li id = "logout">
+							<img src='./images/logout.png' id="header-image" width="20px" height="20px" />
+						</li>
+						<li id = "logout">
+							<s:form action="LogoutAction">
+								<s:submit value="ログアウト"/>
+							</s:form>
+						</li>
 					</s:if>
+
 
 					<!-- 未ログイン状態のときに表示されるもの -->
 					<s:else>
-						<s:form action="GoLoginAction">
-							<li id = "login"><img src='./images/login.png' id="header-image" width="20px" height="20px" />
-							<s:submit value="ログイン"/></li>
-						</s:form>
+						<li id = "login">
+							<img src='./images/login.png' id="header-image" width="20px" height="20px" />
+						</li>
+						<li id = "login">
+							<s:form action="GoLoginAction">
+								<s:submit value="ログイン"/>
+							</s:form>
+						</li>
 					</s:else>
+
 
 					<!-- ログイン状態のときに表示されるもの -->
 					<s:if test="#session.logined == 1">
-						<s:form action="MyPageAction">
-							<li id = "mypage"><img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
-							<s:submit value="マイページ"/></li>
-						</s:form>
+						<li id = "mypage">
+							<img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
+						</li>
+						<li id = "mypage">
+							<s:form action="MyPageAction">
+								<s:submit value="マイページ"/>
+							</s:form>
+						</li>
 					</s:if>
+				</ul>
+				</div>
 
+
+				<div id = "bottom">
 					<s:form action="SearchItemAction">
 						<s:if test='#session.containsKey("mCategoryDtoList")'>
 							<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
-							<li id = "category">
-							<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></li>
+							<div id = "category">
+								<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></div>
 						</s:if>
-						<li id = "keywords">
-						<s:textfield name="keywords" placeholder="検索ワード"/></li>
-						<li id = "search"><img src='./images/search.png' id="search-image" width="20px" height="20px" />
-						<s:submit value="商品検索"/></li>
+
+							<div id = "keywords">
+								<s:textfield name="keywords" placeholder="検索ワード"/></div>
+
+							<p id = "search">
+								<input type="image" src="./images/search.png" id="search-image" width="20px" height="20px"/></p>
 					</s:form>
-				</ul>
+				</div>
+
 			</div>
 	</header>
 </body>
