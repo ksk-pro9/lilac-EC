@@ -33,11 +33,12 @@ public class DestinationInfoDAO {
 			count=preparedStatement.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			connection.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				connection.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
