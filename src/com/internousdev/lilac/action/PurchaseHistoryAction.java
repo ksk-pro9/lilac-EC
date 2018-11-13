@@ -14,7 +14,6 @@ public class PurchaseHistoryAction extends ActionSupport implements SessionAware
 	private String categoryId;
 	private Map<String, Object> session;
 
-
 	public String execute(){
 
 		if(session == null){
@@ -32,14 +31,9 @@ public class PurchaseHistoryAction extends ActionSupport implements SessionAware
 		}
 		session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-
-
-
-
 		return SUCCESS;
 
 	}
-
 
 	public String getCategoryId(){
 		return categoryId;

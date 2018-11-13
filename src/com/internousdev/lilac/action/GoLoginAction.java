@@ -10,7 +10,6 @@ import com.internousdev.lilac.dao.MCategoryDAO;
 import com.internousdev.lilac.dto.MCategoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-
 public class GoLoginAction extends ActionSupport implements SessionAware{
 
 	private String categoryId;

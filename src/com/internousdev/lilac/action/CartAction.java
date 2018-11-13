@@ -11,7 +11,6 @@ import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dto.CartInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-
 public class CartAction extends ActionSupport implements SessionAware{
 	private Map<String, Object> session;
 
@@ -51,10 +50,8 @@ public class CartAction extends ActionSupport implements SessionAware{
 		session.put("totalPrice", totalPrice);
 		result = SUCCESS;
 
-
 		return result;
 	}
-
 
 	public Map<String, Object> getSession() {
 		return session;

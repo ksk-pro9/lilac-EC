@@ -9,8 +9,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class LogoutAction extends ActionSupport implements SessionAware{
 
-	/*↓いらない、たぶん*/
-	/*	private String categoryId;*/
 	private Map<String,Object>session;
 
 	public String execute(){
@@ -47,14 +45,6 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		return result;
 
 	}
-	/*↓いらない、たぶん*/
-	/*		public String getCategoryId() {
-			return categoryId;
-		}
-
-		public void setCategoryId(String categoryId) {
-			this.categoryId = categoryId;
-		}*/
 
 	public Map<String, Object> getSession() {
 		return session;
@@ -63,9 +53,4 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
-
-
 }
-
-

@@ -85,5 +85,4 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 
-
 }

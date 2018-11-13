@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./css/style.css">
 		<title>決済確認</title>
+		
 	</head>
 
 		<body>

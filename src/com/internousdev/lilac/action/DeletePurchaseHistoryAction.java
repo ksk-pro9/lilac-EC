@@ -1,6 +1,5 @@
 package com.internousdev.lilac.action;
 
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -10,8 +9,6 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.lilac.dao.PurchaseHistoryInfoDAO;
 import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
-
-
 
 public class DeletePurchaseHistoryAction extends ActionSupport implements SessionAware{
 	private String categoryId;

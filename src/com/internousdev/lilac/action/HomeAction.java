@@ -37,8 +37,6 @@ public class HomeAction extends ActionSupport implements SessionAware{
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
 		session.put("mCategoryDtoList", mCategoryDtoList);
 
-
-
 		return SUCCESS;
 	}
 

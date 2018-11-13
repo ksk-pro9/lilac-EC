@@ -22,8 +22,8 @@
 	<th><s:label value="ふりがな"/></th>
 	<th><s:label value="商品画像"/></th>
 	<th><s:label value="値段"/></th>
-	<th><s:label value="販売会社名"/></th>
-	<th><s:label value="販売年月日"/></th>
+	<th><s:label value="発売会社名"/></th>
+	<th><s:label value="発売年月日"/></th>
 </tr>
 
 <tbody>

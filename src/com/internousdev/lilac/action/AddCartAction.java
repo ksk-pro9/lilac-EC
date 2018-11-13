@@ -113,5 +113,4 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 
-
 }
