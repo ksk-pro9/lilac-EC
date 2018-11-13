@@ -39,6 +39,9 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			return result;
 		}
 
+		session.remove("loginIdErrorMessageList");
+		session.remove("passwordErrorMessageList");
+
 		if(savedLoginId == true) {
 			session.put("savedLoginId", true);
 			session.put("loginId", loginId);
@@ -98,6 +101,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				}
 			}
 			session.put("logined", 1);
+		}else {
+			session.put("passwordErrorMessageList", "パスワードが異なります。");
 		}
 		return result;
 	}
