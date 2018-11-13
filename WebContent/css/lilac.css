@@ -1,3 +1,11 @@
+body, html {
+	margin : 0; /* 余白の削除 */
+	padding : 0; /* 余白の削除 */
+	width : 100%;
+	height : 100%;
+}
+
+
 .error{}
 
 .error-message{}
@@ -17,6 +25,8 @@
 .CreateUserCompleteAction{}
 
 .box{}
+
+.vertical-list-table-mini{}
 
 .2column-container{}
 
@@ -50,6 +60,11 @@
 
 #product-list{}
 
-/* purchaseHistory.jsp 43行目 #.contents-btn-set{} */
+#contents-btn-set{}
 
+.form-confirm{}
+
+.SettlementCompleteAction{}
+
+.recommend-box{}
 
