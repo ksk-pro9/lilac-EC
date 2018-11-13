@@ -238,6 +238,31 @@ public class UserInfoDAO {
 		return result;
 	}
 
+	public boolean alreadyLoginId(String loginId){
 
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		boolean result = false;
+
+		String sql = "select * from user_info where user_id=?";
+
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, loginId);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()){
+				result = true;
+			}
+		} catch (SQLException e){
+			e.printStackTrace();
+		}
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+		}
 
 }

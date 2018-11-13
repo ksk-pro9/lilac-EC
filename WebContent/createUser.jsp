@@ -11,6 +11,12 @@
 <title>ユーザ情報入力</title>
 <link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
 
+<%--
+<style type="text/css">
+
+</style>
+ --%>
+
 </head>
 
 <body>
@@ -22,7 +28,16 @@
 <div id="contents">
 <h1>ユーザー情報入力画面</h1>
 
-<s:if test="!#session.familyNameErrorMessageList.isEmpty()">
+<%--エラーが出ている時の構文
+ <s:if test="!#session.familyNameErrorMessageList.isEmpty()">
+	<div class="error">
+	<div class="error-message">
+		<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
+	</div>
+	</div>
+</s:if> --%>
+
+ <s:if test='#session.containsKey("familyNameErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
@@ -30,7 +45,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.firstNameErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("firstNameErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.firstNameErrorMessageList"><s:property /><br></s:iterator>
@@ -38,7 +53,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.familyNameKanaErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("familyNameKanaErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
@@ -46,7 +61,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.firstNameKanaErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("firstNameKanaErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
@@ -54,7 +69,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.emailErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("emailErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
@@ -62,7 +77,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.loginIdErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("loginIdErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.loginIdErrorMessageList"><s:property /><br></s:iterator>
@@ -70,10 +85,18 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.passwordErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("passwordErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="#session.passwordErrorMessageList"><s:property /><br></s:iterator>
+	</div>
+	</div>
+</s:if>
+
+<s:if test='#session.containsKey("alreadyLoginIdErrorMessageList")'>
+	<div class="error">
+	<div class="error-message">
+		<s:iterator value="#session.alreadyLoginIdErrorMessageList"><s:property /><br></s:iterator>
 	</div>
 	</div>
 </s:if>
