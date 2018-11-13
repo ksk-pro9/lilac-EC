@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
 <title>ユーザ情報入力</title>
-<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+<link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
 
 </head>
 
@@ -83,53 +83,89 @@
 
 
 <!-- ======= ここから入力フォーム form ======= -->
-<div class="form">
+<div class="form-create">
 
 <s:form action="CreateUserConfirmAction">
 
-<table class="vertical-list-table">
+<!-- <table class="vertical-list-table"> -->
 
-	<tr>
-		<th scope="row">姓</th>
-		<td><s:textfield name="familyName" value="%{#session.familyName}" label="姓" placeholder="姓" class="txt" /></td>
-	</tr>
+<div class="form-create-set">
+<div class="form-create-title">姓<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:textfield name="familyName" value="%{#session.familyName}" placeholder="姓" class="txt" /></div>
+</div>
 
-	<tr>
+<div class="form-create-set">
+<div class="form-create-title">名<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:textfield name="firstName" value="%{#session.firstName}" placeholder="名" class="txt" /></div>
+</div>
+
+<div class="form-create-set">
+<div class="form-create-title">姓ひらがな<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:textfield name="familyNameKana" value="%{#session.familyNameKana}"  placeholder="姓ふりがな" class="txt" /></div>
+</div>
+
+<div class="form-create-set">
+<div class="form-create-title">名ひらがな<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:textfield name="firstNameKana" value="%{#session.firstNameKana}" placeholder="名ふりがな" class="txt" /></div>
+</div>
+
+<div class="form-create-set">
+<div class="form-create-title">性別<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" /></div>
+</div>
+
+<div class="form-create-set">
+<div class="form-create-title">メールアドレス<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:textfield name="email" value="%{#session.email}"  placeholder="メールアドレス" class="txt" /></div>
+</div>
+
+<div class="form-create-set">
+<div class="form-create-title">ログインID<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:textfield name="loginId" value="%{#session.loginId}" placeholder="ログインID" class="txt" /></div>
+</div>
+
+<div class="form-create-set">
+<div class="form-create-title">パスワード<span class="form-create-hissu">必須</span></div>
+<div class="form-create-textarea"><s:password name="password" value=""  placeholder="パスワード" class="txt" /></div>
+</div>
+
+<%-- 	<tr>
 		<th scope="row">名</th>
-		<td><s:textfield name="firstName" value="%{#session.firstName}" label="名" placeholder="名" class="txt" /></td>
+		<td><s:textfield name="firstName" value="%{#session.firstName}" placeholder="名" class="txt" /></td>
 	</tr>
 
 	<tr>
 		<th scope="row">姓ふりがな</th>
-		<td><s:textfield name="familyNameKana" value="%{#session.familyNameKana}" label="姓ふりがな" placeholder="姓ふりがな" class="txt" /></td>
+		<td><s:textfield name="familyNameKana" value="%{#session.familyNameKana}"  placeholder="姓ふりがな" class="txt" /></td>
 	</tr>
 
 	<tr>
 		<th scope="row">名ふりがな</th>
-		<td><s:textfield name="firstNameKana" value="%{#session.firstNameKana}" label="名ふりがな" placeholder="名ふりがな" class="txt" /></td>
+		<td><s:textfield name="firstNameKana" value="%{#session.firstNameKana}" placeholder="名ふりがな" class="txt" /></td>
 	</tr>
 
 	<tr>
 		<th scope="row">性別</th>
-		<td><s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" label="性別" placeholder="性別" /></td>
+		<td><s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" /></td>
 	</tr>
 
 	<tr>
 		<th scope="row">メールアドレス</th>
-		<td><s:textfield name="email" value="%{#session.email}" label="メールアドレス" placeholder="メールアドレス" class="txt" /></td>
+		<td><s:textfield name="email" value="%{#session.email}"  placeholder="メールアドレス" class="txt" /></td>
 	</tr>
 
 	<tr>
 		<th scope="row">ログインID</th>
-		<td><s:textfield name="loginId" value="%{#session.loginId}" label="ログインID" placeholder="ログインID" class="txt" /></td>
+		<td><s:textfield name="loginId" value="%{#session.loginId}" placeholder="ログインID" class="txt" /></td>
 	</tr>
 
 	<tr>
 		<th scope="row">パスワード</th>
-		<td><s:password name="password" value="" label="パスワード" placeholder="パスワード" class="txt" /></td>
+		<td><s:password name="password" value=""  placeholder="パスワード" class="txt" /></td>
 	</tr>
+--%>
 
-</table>
+<!-- </table> -->
 
 <div class="submit_btn_box">
 <div id="contents-btn-set">
