@@ -8,7 +8,6 @@ import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dao.UserInfoDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
-
 public class CreateUserCompleteAction extends ActionSupport implements SessionAware{
 
 	private String familyName;
@@ -55,8 +54,6 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 			} else {
 				result = SUCCESS;
 			}
-
-
 
 			session.put("loginId", loginId);
 			session.put("logined", 1);

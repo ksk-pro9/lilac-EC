@@ -21,7 +21,6 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	private String loginId;
 	private String password;
 
-/*	private String categoryId;*/
 	private List<String> sexList = new ArrayList<String>();
 	private Map<String, Object> session;
 	private List<String> alreadyLoginIdErrorMessageList = new ArrayList<String>();
@@ -57,7 +56,6 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		List<String> emailErrorMessageList = new ArrayList<String>();
 		List<String> loginIdErrorMessageList = new ArrayList<String>();
 		List<String> passwordErrorMessageList = new ArrayList<String>();
-
 
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, false, false, false);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, false, false, false);
