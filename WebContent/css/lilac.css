@@ -12,7 +12,18 @@ body, html {
 
 .vertical-list-table{}
 
-.txt{}
+.txt {
+	width : 99%;
+	height : 30px;
+	border: 0.5px solid #999;
+	font-size : 24px;
+}
+
+.txt:focus {
+	border: 1px solid #ff9900;
+	outline: 0;
+}
+
 
 .submit_btn_box{}
 
