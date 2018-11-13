@@ -110,19 +110,19 @@
 							<tr>
 								<th scope="row"><s:label value="現在のパスワード" /></th>
 								<td><s:textfield name="password" placeholder="現在のパスワード"
-										class="txt" /></td>
+										class="txt" value=""/></td>
 							</tr>
 
 							<tr>
 								<th scope="row"><s:label value="新しいパスワード" /></th>
 								<td><s:textfield name="newPassword" placeholder="新しいパスワード"
-										class="txt" /></td>
+										class="txt" value=""/></td>
 							</tr>
 
 							<tr>
 								<th scope="row"><s:label value="（再確認用）" /></th>
 								<td><s:textfield name="reConfirmationPassword"
-										placeholder="新しいパスワード（再確認用）" class="txt" /></td>
+										placeholder="新しいパスワード（再確認用）" class="txt" value=""/></td>
 							</tr>
 						</table>
 						<div class="btn_box">

@@ -69,7 +69,6 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			UserInfoDAO userInfoDAO=new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId,password)){
 				String concealedPassword = concealPassword(newPassword);
-				session.put("loginId", loginId);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
 				result = SUCCESS;
@@ -89,6 +88,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			session.put("newPasswordErrorMessageList", newPasswordErrorMessageList);
 
 		}
+		session.put("loginId", loginId);
 		return result;
 
 
