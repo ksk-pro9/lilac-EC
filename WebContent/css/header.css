@@ -18,22 +18,25 @@
 		}
 
 		#head{
-			margin-top: -10px;
 			padding: 10px;
 		}
 
 		#top{
 			width: 100%;
-			height: 30px;
-			background-color: yellow;
+			height: 35px;
+			background-color: white;
 		}
 
 		#left{
 			float:left;
-
+			line-height:35px;
 		}
 
 		#right{
+			position:relative;
+			top: -8px;
+			float:right;
+			margin-right: 50px;
 		}
 
 		#bottom{
@@ -41,12 +44,13 @@
 			align-items: center;
   			justify-content: center;
 			width: 100%;
-			height: 30px;
+			height: 35px;
 			background-color: white;
-
+			line-height: 10px;
 		}
 
 		#head > #top > #left > #logo > a{
+			color:red;
 			text-decoration: none;
 		}
 
@@ -55,17 +59,14 @@
 		}
 
 		#logo{
+			margin-left: 50px;
+			font-size:20px;
 			float:left;
 		}
 
-		#right{
-			float:right;
-
+		#right > ul > li:nth-child(odd){
+			margin-left: 50px;
 		}
-/* 		#logo{ */
-
-/* 			float: left; */
-/* 		} */
 
 		#cart{
 			float: left;
@@ -99,25 +100,24 @@
 			float: left;
 		}
 
-
-
 		#category-box{
 			height: 30px;
-			background-color: red;
+			background-color: white;
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
 		}
 
 		#keywords-box{
-			height: 23px;
-			background-color: red;
+			width: 300px;
+			height: 25px;
+			background-color: white;
 		}
 
 		#search-image{
-			height: 18px;
+			height: 20px;
 			width: 20px;
 			padding: 5px;
-			background-color: red;
+			background-color: grey;
 			border-top-right-radius: 5px;
 			border-bottom-right-radius: 5px;
 		}

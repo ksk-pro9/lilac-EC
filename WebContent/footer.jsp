@@ -16,7 +16,7 @@
 			position: fixed;
 			bottom: 0px;
 			right: 0px;
-			background-color: yellow;
+			background-color: brown;
 			text-align: center;
 			line-height: 40px;
 		}
