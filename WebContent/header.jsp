@@ -32,6 +32,26 @@
 
 		#head{
 			padding: 10px;
+
+		}
+
+		#top{
+			margin: auto;
+		}
+
+		#head > #top > #left{
+			width: 10%;
+			margin-right: auto;
+		}
+
+		#head > #top > #right{
+			width: 90%;
+			margin-left: auto;
+
+		}
+
+		#head > #top > #left > #logo > a{
+			text-decoration: none;
 		}
 
 		#head > #top > #right > ul{
@@ -171,72 +191,73 @@
 
 				<div id = "top">
 
-				<div id = "left">
-					<div id = "logo">
-					<a href='<s:url action="HomeAction"/>'>B.read</a></div>
-				</div>
-
-				<div id = "right">
-					<ul>
-						<li id = "cart">
-							<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
-						</li>
-						<li id = "cart">
-							<s:form action="CartAction">
-								<s:submit value="カート"/>
-							</s:form>
-						</li>
+					<div id = "left">
+						<div id = "logo">
+						<a href='<s:url action="HomeAction"/>'>B.read</a></div>
+					</div>
 
 
-						<li id = "item">
-							<img src='./images/item.png' id="header-image" width="20px" height="20px" />
-						</li>
-						<li id = "item">
-							<s:form action="ProductListAction">
-								<s:submit value="商品一覧"/>
-							</s:form>
-						</li>
-
-
-						<!-- ログイン状態のときに表示されるもの -->
-						<s:if test="#session.logined == 1">
-							<li id = "logout">
-								<img src='./images/logout.png' id="header-image" width="20px" height="20px" />
+					<div id = "right">
+						<ul>
+							<li id = "cart">
+								<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
 							</li>
-							<li id = "logout">
-								<s:form action="LogoutAction">
-									<s:submit value="ログアウト"/>
+							<li id = "cart">
+								<s:form action="CartAction">
+									<s:submit value="カート"/>
 								</s:form>
 							</li>
-						</s:if>
 
 
-						<!-- 未ログイン状態のときに表示されるもの -->
-						<s:else>
-							<li id = "login">
-								<img src='./images/login.png' id="header-image" width="20px" height="20px" />
+							<li id = "item">
+								<img src='./images/item.png' id="header-image" width="20px" height="20px" />
 							</li>
-							<li id = "login">
-								<s:form action="GoLoginAction">
-									<s:submit value="ログイン"/>
+							<li id = "item">
+								<s:form action="ProductListAction">
+									<s:submit value="商品一覧"/>
 								</s:form>
 							</li>
-						</s:else>
 
 
-						<!-- ログイン状態のときに表示されるもの -->
-						<s:if test="#session.logined == 1">
-							<li id = "mypage">
-								<img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
-							</li>
-							<li id = "mypage">
-								<s:form action="MyPageAction">
-									<s:submit value="マイページ"/>
-								</s:form>
-							</li>
-						</s:if>
-					</ul>
-				</div>
+							<!-- ログイン状態のときに表示されるもの -->
+							<s:if test="#session.logined == 1">
+								<li id = "logout">
+									<img src='./images/logout.png' id="header-image" width="20px" height="20px" />
+								</li>
+								<li id = "logout">
+									<s:form action="LogoutAction">
+										<s:submit value="ログアウト"/>
+									</s:form>
+								</li>
+							</s:if>
+
+
+							<!-- 未ログイン状態のときに表示されるもの -->
+							<s:else>
+								<li id = "login">
+									<img src='./images/login.png' id="header-image" width="20px" height="20px" />
+								</li>
+								<li id = "login">
+									<s:form action="GoLoginAction">
+										<s:submit value="ログイン"/>
+									</s:form>
+								</li>
+							</s:else>
+
+
+							<!-- ログイン状態のときに表示されるもの -->
+							<s:if test="#session.logined == 1">
+								<li id = "mypage">
+									<img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
+								</li>
+								<li id = "mypage">
+									<s:form action="MyPageAction">
+										<s:submit value="マイページ"/>
+									</s:form>
+								</li>
+							</s:if>
+						</ul>
+					</div>
 				</div>
 
 
