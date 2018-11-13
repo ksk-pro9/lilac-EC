@@ -16,7 +16,15 @@
 	padding-bottom : 10px;
 	margin-bottom : 100px;
 	overflow : auto; /* コンテンツの表示を自動に設定（スクロール）*/
-}
+	}
+
+	.gorigori {
+	float:left;
+	}
+
+	.horizontal-list-table {
+	display:block;
+	}
 	</style>
 	<title>カート</title>
 	<script type="text/javascript">
@@ -44,34 +52,35 @@
 			<s:if test="#session.cartInfoDtoList.size()>0">
 				<s:form id="form" action="SettlementConfirmAction">
 					<table class="horizontal-list-table">
+						<s:iterator value="#session.cartInfoDtoList">
+						<ul class="gorigori">
+							<li><img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
+						</ul>
 						<thead>
-							<tr>
-								<th><s:label value="#" /></th>
-								<th><s:label value="商品名" /></th>
-								<th><s:label value="ふりがな" /></th>
-								<th><s:label value="商品画像" /></th>
-								<th><s:label value="値段" /></th>
-								<th><s:label value="発売会社名" /></th>
-								<th><s:label value="発売年月日" /></th>
-								<th><s:label value="購入個数" /></th>
-								<th><s:label value="合計金額" /></th>
-							</tr>
+
+								<tr><th><s:label value="#" /></th></tr>
+								<tr><th><s:label value="商品名" /></th></tr>
+								<tr><th><s:label value="ふりがな" /></th></tr>
+								<tr><th><s:label value="商品画像" /></th></tr>
+								<tr><th><s:label value="値段" /></th></tr>
+								<tr><th><s:label value="発売会社名" /></th></tr>
+								<tr><th><s:label value="発売年月日" /></th></tr>
+								<tr><th><s:label value="購入個数" /></th></tr>
+								<tr><th><s:label value="合計金額" /></th></tr>
 						</thead>
 
 						<tbody>
-							<s:iterator value="#session.cartInfoDtoList">
-								<tr>
-									<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td>
+
+									<tr><td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td></tr>
 										<s:hidden name="productId" value="%{productId}" />
-									<td><s:property value="productName" /></td>
-									<td><s:property value="productNameKana" /></td>
-									<td><img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' /></td>
-									<td><s:property value="price" />円</td>
-									<td><s:property value="releaseCompany" /></td>
-									<td><s:property value="releaseDate" /></td>
-									<td><s:property value="productCount" /></td>
-									<td><s:property value="subtotal" />円</td>
-								</tr>
+									<tr><td><s:property value="productName" /></td></tr>
+									<tr><td><s:property value="productNameKana" /></td></tr>
+									<tr><td></td></tr>
+									<tr><td><s:property value="price" />円</td></tr>
+									<tr><td><s:property value="releaseCompany" /></td></tr>
+									<tr><td><s:property value="releaseDate" /></td></tr>
+									<tr><td><s:property value="productCount" /></td></tr>
+									<tr><td><s:property value="subtotal" />円</td></tr>
 
 								<s:hidden name="productName" value="%{productName}" />
 								<s:hidden name="productNameKana" value="%{productNameKana}" />
@@ -82,8 +91,9 @@
 								<s:hidden name="releaseDate" value="%{releaseDate}" />
 								<s:hidden name="productCount" value="%{productCount}" />
 								<s:hidden name="subtotal" value="%{subtotal}" />
-							</s:iterator>
-						</tbody>
+
+							</tbody>
+						</s:iterator>
 					</table>
 					<h2><s:label value="カート合計金額:"/><s:property value="#session.totalPrice" />円</h2><br>
 
