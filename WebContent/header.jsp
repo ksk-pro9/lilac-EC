@@ -18,6 +18,12 @@
 			background-color:transparent;
 		}
 
+
+		*{
+			margin:0px;
+			padding:0px;
+
+		}
 		header{
 			background-color: yellow;
 			position : fixed;
