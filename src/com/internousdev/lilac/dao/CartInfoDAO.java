@@ -73,11 +73,12 @@ public class CartInfoDAO {
 					}
 				}catch(SQLException e){
 					e.printStackTrace();
-				}
-				try{
-					con.close();
-				}catch(SQLException e){
-					e.printStackTrace();
+				}finally{
+					try{
+						con.close();
+					}catch(SQLException e){
+						e.printStackTrace();
+					}
 				}
 				return cartInfoDtoList;
 
@@ -102,11 +103,12 @@ public class CartInfoDAO {
 
 		}catch (SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 
 		return totalPrice;
@@ -132,12 +134,14 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
+
 		return count;
 	}
 
@@ -156,11 +160,12 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch (SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
@@ -179,11 +184,12 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
@@ -202,11 +208,12 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
