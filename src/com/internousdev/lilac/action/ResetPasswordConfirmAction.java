@@ -63,7 +63,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			/*↓ログインIDとパスワードがBDにあれば、loginId,newPassword,concealedPasswordをセッションに入れる*/
 			UserInfoDAO userInfoDAO=new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId,password)){
-				String concealedPassword = userInfoDAO.concealPassword(newPassword);
+				String concealedPassword = concealPassword(newPassword);
 				session.put("loginId", loginId);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
@@ -87,6 +87,17 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 		return result;
 
 
+	}
+
+	public String concealPassword(String password) {
+
+		int beginIndex = 0;
+		int endIndex = 1;
+
+		StringBuilder stringBuilder = new StringBuilder("***************");
+		String concealPassword = stringBuilder.replace(beginIndex, endIndex, password.substring(beginIndex,endIndex)).toString();
+
+		return concealPassword;
 	}
 
 	public String getLoginId() {

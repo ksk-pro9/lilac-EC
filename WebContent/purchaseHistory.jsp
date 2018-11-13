@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
 <div id="contents">
 
 <h1>商品購入履歴画面</h1>
