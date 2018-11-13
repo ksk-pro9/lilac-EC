@@ -25,7 +25,7 @@
 
 		header{
 			background-color: yellow;
-			position : fixed;
+			position : fixed
 			width : 100%;
 			height : 100px;
 		}
