@@ -1,20 +1,44 @@
 
+		body, html {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+		}
+
 		input[type="submit"]{
 			border:none;
 			background-color:transparent;
 		}
 
 		header{
-			background-color: yellow;
-			width : 100%;
-			height : 100px;
+			background-color: brown;
+			width: 100%;
+			height: 100px;
 		}
 
 		#head{
+			margin-top: -10px;
 			padding: 10px;
 		}
 
 		#top{
+			width: 100%;
+			height: 30px;
+			background-color: yellow;
+		}
+
+		#left{
+
+		}
+
+		#right{
+		}
+
+		#bottom{
+			width: 100%;
+			height: 30px;
+			background-color: white;
 		}
 
 		#head > #top > #left > #logo > a{
@@ -49,10 +73,6 @@
 			float: left;
 		}
 
-		#bottom{
-			clear: both;
-		}
-
 		#category{
 			float: left;
 		}
@@ -73,12 +93,13 @@
 		}
 
 		#keywords-box{
-			height: 25px;
+			height: 23px;
 			background-color: red;
 		}
 
 		#search-image{
-			height: 20px;
+			height: 18px;
+			width: 20px;
 			padding: 5px;
 			background-color: red;
 			border-top-right-radius: 5px;
