@@ -84,9 +84,7 @@ public class PurchaseHistoryInfoDAO {
 				purchaseHistoryInfoDto.setUserAddress(resultSet.getString("user_address"));
 				purchaseHistoryInfoDTOList.add(purchaseHistoryInfoDto);
 
-
 		}
-
 
 	}catch (SQLException e){
 		e.printStackTrace();
