@@ -14,7 +14,8 @@
 	<style type="text/css">
 
 		input[type="submit"]{
-			border:none;background-color:transparent;
+			border:none;
+			background-color:transparent;
 		}
 
 		header{
@@ -28,7 +29,7 @@
 			padding: 10px;
 		}
 
-		#head > #top > ul{
+		#head > #top > #right > ul{
 			list-style-type: none;
 		}
 
@@ -42,7 +43,6 @@
 		#cart{
 			float: left;
 		}
-
 
 		#item{
 			float: left;
@@ -74,6 +74,26 @@
 
 		#search{
 			float: left;
+		}
+
+		#category-box{
+			height: 30px;
+			background-color: red;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		#keywords-box{
+			height: 25px;
+			background-color: red;
+		}
+
+		#search-image{
+			height: 20px;
+			padding: 5px;
+			background-color: red;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
 		}
 
 	</style>
@@ -146,69 +166,72 @@
 
 				<div id = "top">
 
-				<ul>
-					<li id = "logo">
-					<a href='<s:url action="HomeAction"/>'>B.read</a></li>
+				<div id = "left">
+					<div id = "logo">
+					<a href='<s:url action="HomeAction"/>'>B.read</a></div>
+				</div>
 
-
-					<li id = "cart">
-						<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
-					</li>
-					<li id = "cart">
-						<s:form action="CartAction">
-							<s:submit value="カート"/>
-						</s:form>
-					</li>
-
-
-					<li id = "item">
-						<img src='./images/item.png' id="header-image" width="20px" height="20px" />
-					</li>
-					<li id = "item">
-						<s:form action="ProductListAction">
-							<s:submit value="商品一覧"/>
-						</s:form>
-					</li>
-
-
-					<!-- ログイン状態のときに表示されるもの -->
-					<s:if test="#session.logined == 1">
-						<li id = "logout">
-							<img src='./images/logout.png' id="header-image" width="20px" height="20px" />
+				<div id = "right">
+					<ul>
+						<li id = "cart">
+							<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
 						</li>
-						<li id = "logout">
-							<s:form action="LogoutAction">
-								<s:submit value="ログアウト"/>
+						<li id = "cart">
+							<s:form action="CartAction">
+								<s:submit value="カート"/>
 							</s:form>
 						</li>
-					</s:if>
 
 
-					<!-- 未ログイン状態のときに表示されるもの -->
-					<s:else>
-						<li id = "login">
-							<img src='./images/login.png' id="header-image" width="20px" height="20px" />
+						<li id = "item">
+							<img src='./images/item.png' id="header-image" width="20px" height="20px" />
 						</li>
-						<li id = "login">
-							<s:form action="GoLoginAction">
-								<s:submit value="ログイン"/>
+						<li id = "item">
+							<s:form action="ProductListAction">
+								<s:submit value="商品一覧"/>
 							</s:form>
 						</li>
-					</s:else>
 
 
-					<!-- ログイン状態のときに表示されるもの -->
-					<s:if test="#session.logined == 1">
-						<li id = "mypage">
-							<img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
-						</li>
-						<li id = "mypage">
-							<s:form action="MyPageAction">
-								<s:submit value="マイページ"/>
-							</s:form>
-						</li>
-					</s:if>
-				</ul>
+						<!-- ログイン状態のときに表示されるもの -->
+						<s:if test="#session.logined == 1">
+							<li id = "logout">
+								<img src='./images/logout.png' id="header-image" width="20px" height="20px" />
+							</li>
+							<li id = "logout">
+								<s:form action="LogoutAction">
+									<s:submit value="ログアウト"/>
+								</s:form>
+							</li>
+						</s:if>
+
+
+						<!-- 未ログイン状態のときに表示されるもの -->
+						<s:else>
+							<li id = "login">
+								<img src='./images/login.png' id="header-image" width="20px" height="20px" />
+							</li>
+							<li id = "login">
+								<s:form action="GoLoginAction">
+									<s:submit value="ログイン"/>
+								</s:form>
+							</li>
+						</s:else>
+
+
+						<!-- ログイン状態のときに表示されるもの -->
+						<s:if test="#session.logined == 1">
+							<li id = "mypage">
+								<img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
+							</li>
+							<li id = "mypage">
+								<s:form action="MyPageAction">
+									<s:submit value="マイページ"/>
+								</s:form>
+							</li>
+						</s:if>
+					</ul>
+				</div>
 				</div>
 
 
@@ -217,14 +240,14 @@
 						<s:if test='#session.containsKey("mCategoryDtoList")'>
 							<!-- list=表示するリスト listKey=Keyとなる項目 listValue=値となる項目 -->
 							<div id = "category">
-								<s:select name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></div>
+								<s:select id="category-box" name="categoryId" list="#session.mCategoryDtoList" listKey="categoryId" listValue="categoryName" selected="categoryId"/></div>
 						</s:if>
 
 							<div id = "keywords">
-								<s:textfield name="keywords" placeholder="検索ワード"/></div>
+								<s:textfield id="keywords-box" name="keywords" placeholder="検索ワード"/></div>
 
 							<div id = "search">
-								<input type="image" src="./images/search.png" id="search-image" width="20px" height="20px"/></div>
+								<input type="image" id="search-image" src="./images/search.png" width="15px" height="15px"/></div>
 					</s:form>
 				</div>
 
