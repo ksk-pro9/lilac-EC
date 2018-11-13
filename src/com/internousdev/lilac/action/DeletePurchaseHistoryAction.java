@@ -20,6 +20,11 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 	public String execute(){
 		String result=ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDAO=new PurchaseHistoryInfoDAO();
 		int count =purchaseHistoryInfoDAO.deleteAll(String.valueOf(session.get("loginId")));
 		if(count>0){

@@ -37,8 +37,7 @@ public class HomeAction extends ActionSupport implements SessionAware{
 		mCategoryDtoList = mCategoryDao.getMCategoryList();
 		session.put("mCategoryDtoList", mCategoryDtoList);
 
-		String timeOutFlg = "0";
-		session.put("timeOutFlg", timeOutFlg);
+
 
 		return SUCCESS;
 	}

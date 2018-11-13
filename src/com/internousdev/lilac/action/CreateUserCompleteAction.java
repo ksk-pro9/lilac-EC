@@ -29,6 +29,11 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 		int cartCount = 0;
 		UserInfoDAO UserInfoDao = new UserInfoDAO();
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		count = UserInfoDao.createUser(familyName,firstName,familyNameKana,firstNameKana,sex,email,loginId,password);
 
 		if(count > 0) {

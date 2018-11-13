@@ -17,6 +17,11 @@ public class PurchaseHistoryAction extends ActionSupport implements SessionAware
 
 	public String execute(){
 
+		if(session == null){
+			String result = "timeout";
+			return result;
+		}
+
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDao=new PurchaseHistoryInfoDAO();
 		List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
 		purchaseHistoryInfoDtoList=purchaseHistoryInfoDao.getPurchaseHistoryList(String.valueOf(session.get("loginId")));

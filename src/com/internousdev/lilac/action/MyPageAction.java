@@ -20,6 +20,11 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		String result=ERROR;
 		System.out.println(categoryId);
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 		UserInfoDTO userInfoDTO=new UserInfoDTO();
 		userInfoDTO=userInfoDAO.getUserInfo(String.valueOf(session.get("loginId")));

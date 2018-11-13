@@ -25,6 +25,11 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 	public String execute() {
 
+		if(session == null){
+			String result = "timeout";
+			return result;
+		}
+
 		String result = ERROR;
 
 /*		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト

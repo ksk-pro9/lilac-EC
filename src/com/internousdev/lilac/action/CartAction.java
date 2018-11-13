@@ -9,7 +9,6 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dto.CartInfoDTO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -21,6 +20,11 @@ public class CartAction extends ActionSupport implements SessionAware{
 		String userId = null;
 		CartInfoDAO cartInfoDao = new CartInfoDAO();
 		List<CartInfoDTO> cartInfoDtoList = new ArrayList<CartInfoDTO>();
+
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
 
 		//ログイン後、もしくはカート追加して再度CartAction実行した際cart.jspで
 		//最初からエラーが表示されるので消しておく

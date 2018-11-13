@@ -17,6 +17,11 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 
 		String result=ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 
 		String loginId=String.valueOf(session.get("loginId"));

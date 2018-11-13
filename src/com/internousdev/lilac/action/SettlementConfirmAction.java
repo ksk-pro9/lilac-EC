@@ -43,6 +43,11 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	public String execute(){
 		String result=ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		if(session.containsKey("loginId")){
 			DestinationInfoDAO destinationInfoDAO=new DestinationInfoDAO();
 			List<DestinationInfoDTO> destinationInfoDtoList=new ArrayList<>();

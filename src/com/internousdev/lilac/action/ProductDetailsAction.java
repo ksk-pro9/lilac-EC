@@ -29,6 +29,11 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		//商品一覧(productList.jsp)の商品画像をクリックするとproductIdが渡され、そのクリックされた商品情報をproductInfoDTOに格納
 		productInfoDTO = productInfoDAO.getProductInfo(productId);
 

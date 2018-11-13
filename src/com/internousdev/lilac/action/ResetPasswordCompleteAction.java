@@ -20,6 +20,10 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 	public String execute(){
 		String result=ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
 
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 		/*↓セッションからとってきたloginIdとnewpasswordをDBで上書きする*/

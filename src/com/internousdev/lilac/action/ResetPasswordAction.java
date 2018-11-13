@@ -16,6 +16,10 @@ public class ResetPasswordAction extends ActionSupport implements SessionAware{
 
 
 	public String execute(){
+		if(session == null){
+			String result = "timeout";
+			return result;
+		}
 
 		String result=ERROR;
 

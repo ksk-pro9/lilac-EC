@@ -31,6 +31,11 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		List<String> familyNameErrorMessageList = new ArrayList<String>();
 		List<String> firstNameErrorMessageList = new ArrayList<String>();
 		List<String> familyNameKanaErrorMessageList = new ArrayList<String>();

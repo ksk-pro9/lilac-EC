@@ -33,6 +33,11 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 		String result=ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		/*↓エラーメッセージの上書き時にエラーが起きないようリムーブ*/
 
 		session.remove("loginIdErrorMessageList");

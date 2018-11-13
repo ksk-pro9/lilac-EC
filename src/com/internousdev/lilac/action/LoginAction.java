@@ -34,6 +34,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		if(savedLoginId == true) {
 			session.put("savedLoginId", true);
 			session.put("loginId", loginId);
