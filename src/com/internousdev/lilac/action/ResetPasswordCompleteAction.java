@@ -10,8 +10,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ResetPasswordCompleteAction extends ActionSupport implements SessionAware{
 
-	/*↓いらない、たぶん*/
-	/*	private String categoryId;*/
 	private String loginId;
 	private String password;
 	private Map<String,Object>session;
@@ -36,14 +34,6 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 
 
 	}
-	/*いらない、たぶん*/
-	/*	public String getCategoryId(){
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId){
-		this.categoryId=categoryId;*/
-	/*}*/
 
 
 	public String getCartflag() {

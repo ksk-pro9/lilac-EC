@@ -10,6 +10,32 @@
 <link rel="stylesheet" href="./css/style.css">
 <title>パスワード再設定</title>
 </head>
+
+<style type="text/css">
+
+	.resetContent{
+	width:90%;
+	margin:auto;
+	}
+
+	.resetTitle{
+	height:50px;
+	}
+
+	.resetTitle h1{
+	text-align:center;
+	}
+
+	.resetMainForm{
+	height:400px;
+	margin:auto;
+	}
+
+
+</style>
+
+
+
 <body>
 
 	<s:include value="header.jsp" />
