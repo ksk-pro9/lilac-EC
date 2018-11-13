@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="./css/style.css">
 <title>マイページ</title>
 </head>
-<jsp:include page="header.jsp"/>
+<s:include value="header.jsp"/>
 <div id="contents">
 
 <h1>マイページ</h1>

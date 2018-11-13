@@ -12,11 +12,13 @@
 
 		#footer{
 		 	width: 100%;
+		 	height: 40px;
 			position: fixed;
 			bottom: 0px;
 			right: 0px;
 			background-color: yellow;
 			text-align: center;
+			line-height: 40px;
 		}
 
 	</style>

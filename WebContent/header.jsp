@@ -18,12 +18,11 @@
 			background-color:transparent;
 		}
 
-
 		*{
 			margin:0px;
 			padding:0px;
-
 		}
+
 		header{
 			background-color: yellow;
 			position : fixed;
@@ -90,7 +89,7 @@
 		}
 
 		#keywords-box{
-			height: 25px;
+			height: 27px;
 			background-color: red;
 		}
 
