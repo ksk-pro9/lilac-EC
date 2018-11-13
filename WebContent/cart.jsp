@@ -6,6 +6,18 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="./css/style.css">
+	<style type="text/css">
+	#contents {
+	padding-top : 70px;
+	margin-top : 50px;
+	margin : 0 auto;
+	width : 100%;
+	height : auto;
+	padding-bottom : 10px;
+	margin-bottom : 100px;
+	overflow : auto; /* コンテンツの表示を自動に設定（スクロール）*/
+}
+	</style>
 	<title>カート</title>
 	<script type="text/javascript">
 		function goDeleteCartAction(){
