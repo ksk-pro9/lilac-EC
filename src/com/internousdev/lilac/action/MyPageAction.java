@@ -12,8 +12,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MyPageAction extends ActionSupport implements SessionAware{
 	private String categoryId;
 
-
-
 	private Map<String,Object> session;
 
 	public String execute(){
@@ -51,8 +49,6 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	public void setCategoryId(String categoryId){
 		this.categoryId=categoryId;
 	}
-
-
 
 	public Map<String,Object> getSession(){
 		return session;

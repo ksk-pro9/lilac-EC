@@ -3,15 +3,20 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>エラー画面</title>
-	<meta http-equiv="refresh" content="3; URL='HomeAction'"/>
+	<title>エラー</title>
+	<meta http-equiv="refresh" content="3; URL='LogoutAction'"/>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
 
-	<div id="error">
-		タイムアウトしました。最初からやり直してください。
-		3秒後にHomeへ戻ります。
+	<div id="complete">
+		<h1>タイムアウトしました。</h1>
+		<div>
+			<a href="/lilac/LogoutAction.action">
+			<span class="first">最初から</span></a>やり直してください。
+			3秒後にHomeへ戻ります。
+		</div>
 	</div>
 
 </body>

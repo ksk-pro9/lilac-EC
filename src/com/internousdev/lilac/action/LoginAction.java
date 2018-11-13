@@ -22,8 +22,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String password;
 	private boolean savedLoginId;
 
-
-
 	private Map<String, Object> session;
 
 	public String execute() {
@@ -59,12 +57,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
 			session.put("mCategoryDtoList", 0);
 		}
-
-//		if(!session.containsKey("mCategoryList")) {
-//			MCategoryDAO mCategoryDao = new MCategoryDAO();
-//			mCategoryDtoList = mCategoryDao.getMCategoryList();
-//			session.put("mCategoryDtoList", mCategoryDtoList);
-//		}
 
 		UserInfoDAO userInfoDao = new UserInfoDAO();
 		if(userInfoDao.isExistsUserInfo(loginId, password)) {
