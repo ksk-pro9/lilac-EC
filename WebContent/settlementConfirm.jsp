@@ -10,9 +10,27 @@
 		<style type="text/css">
 		.info{
 			font:inherit;
+				width:80%;
+				margin-left:auto;
+				margin-right:auto;
+				text-align:center;
+				margin-bottom:30px;
 		}
 
+		#form{
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		.horizontal-list-table{
+			font:inherit;
+			border:solid #brack;
+		}
 
+		.tbody{
+		display
+		font:inherit;
+		}
 		</style>
 
 	</head>
@@ -30,16 +48,17 @@
 							<!--<h3>お届け先住所</h3>  -->
 								<table class="horizontal-list-table">
 								<thead>
-									<tr>
-										<th><s:label value="#"/></th>
-										<th><s:label value="名前"/></th>
-										<th><s:label value="ふりがな"/></th>
-										<th><s:label value="住所"/></th>
-										<th><s:label value="電話番号"/></th>
-										<th><s:label value="メールアドレス"/></th>
-									</tr>
+
+										<tr><th><s:label value="#"/></th></tr>
+										<tr><th><s:label value="名前"/></th></tr>
+										<tr><th><s:label value="ふりがな"/></th></tr>
+										<tr><th><s:label value="住所"/></th></tr>
+										<tr><th><s:label value="電話番号"/></th></tr>
+										<tr><th><s:label value="メールアドレス"/></th></tr>
+
 								</thead>
 									<tbody>
+									
 										<s:iterator value="#session.destinationInfoDtoList" status="st">
 											<tr>
 												<td>
@@ -49,21 +68,32 @@
 														<input type="radio" name="id" value="<s:property value='id' />"/>
 													</s:else>
 												</td>
+											</tr>
+											<tr>
 												<td>
 													<s:property value="familyName"/><span> </span><s:property value="firstName" /><br>
 												</td>
+											</tr>
+											<tr>
 												<td>
 													<s:property value="familyNameKana" /><span> </span><s:property value="firstNameKana" /><br>
 												</td>
+											</tr>
+											<tr>
 												<td>
 													<s:property value="userAddress" />
 												</td>
+											</tr>
+											<tr>
 												<td>
 													<s:property value="telNumber" />
 												</td>
+											</tr>
+											<tr>
 												<td>
 													<s:property value="email" />
 												</td>
+											</tr>
 										</s:iterator>
 									</tbody>
 								</table>
