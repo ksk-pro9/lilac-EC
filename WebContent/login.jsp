@@ -33,7 +33,7 @@
 		}
 		.saisettei{
 					position:relative;
-					height:100px;
+
 					float:right;
 		}
 
