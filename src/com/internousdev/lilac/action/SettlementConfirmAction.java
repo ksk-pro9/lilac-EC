@@ -19,7 +19,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class SettlementConfirmAction extends ActionSupport implements SessionAware{
 
-	private String categoryId;
 	private Collection<String> checkList;
 	private String productId;
 	private String productName;
@@ -105,14 +104,6 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		result=SUCCESS;
 	}
 	return result;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public Collection<String> getCheckList() {
