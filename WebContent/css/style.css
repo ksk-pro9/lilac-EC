@@ -6,9 +6,17 @@ body, html {
 }
 
 
-.error{}
+.error {
+	font-size : 0.8em;
+	margin-left : 3%;
+	width : 80%;
+	color: #D8000C;
+	background-color: #FFBABA;
+}
 
-.error-message{}
+.error-message {
+	color : red;
+}
 
 .vertical-list-table{}
 
@@ -63,7 +71,17 @@ body, html {
 
 #form{}
 
-#contents{}
+#contents {
+	padding-top : 70px;
+	margin-top : 50px;
+	margin : 0 auto;
+	width : 100%;
+	height : auto;
+	padding-bottom : 10px;
+	margin-bottom : 100px;
+	overflow : auto;
+}
+
 
 #footer{}
 
