@@ -25,6 +25,7 @@ height:400px;
 margin:0 auto;
 width:1000px;
 height:300px;
+margin-bottom:100px;
 }
 .2column-container{
 
