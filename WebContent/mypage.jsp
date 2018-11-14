@@ -74,7 +74,7 @@ table.vertical-list-table, th, td {
 
 
 </head>
-<s:include value="header.jsp"/>
+
 <div id="contents">
 
 <div class="mypageRg">
