@@ -97,15 +97,19 @@ text-align:center;
 			</s:url>'>
 			<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/>
 			<br>
+			</a>
 			<%------　画像の下に商品名、商品名かな、価額が表示される -------%>
 			<div class="items-text">
+			<a href='<s:url action="ProductDetailsAction">
+			<s:param name="productId" value="%{productId}"/>
+			</s:url>'>
 			<div class="items">
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>
 			</div>
-			</div>
 			</a>
+			</div>
 			</li>
 		</ul>
 	 	</div>
