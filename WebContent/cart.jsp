@@ -7,14 +7,42 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="./css/style.css">
 	<style type="text/css">
+	#form1 {
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 30px;
+	}
 
-
-	.gorigori {
+	.checkbox-image{
+	posision:relative;
 	float:left;
+	}
+
+	.checkbox{
+	position:absolute;
+	top:200px;
+	}
+	.gorigori {
+	margin-left:50px;
+
+	}
+
+	.gorigori img{
+	width:300px;
+	height:300px;
+	border-radius:20px;
 	}
 
 	.horizontal-list-table {
 	display:block;
+	}
+
+	.border{
+	border-top:1px solid black;
+	margin:15px 0px;
+	}
+	.floatclear{
+	clear: both;
 	}
 
 	.contents_btn_set {
@@ -67,12 +95,18 @@
 
 			<s:if test="#session.cartInfoDtoList.size()>0">
 				<p class="titleMessage">カートには以下の商品が入っています。</p>
-				<s:form id="form" action="SettlementConfirmAction">
+				<s:form id="form1" action="SettlementConfirmAction">
 					<table class="horizontal-list-table">
 						<s:iterator value="#session.cartInfoDtoList">
-						<ul class="gorigori">
-							<li><img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' /></li>
-						</ul>
+						<div class="checkbox-image">
+							<div class="checkbox">
+								<s:checkbox name="checkList" value="checked" fieldValue="%{id}" />
+								<s:hidden name="productId" value="%{productId}" />
+							</div>
+							<div class="gorigori">
+								<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
+							</div>
+						</div>
 						<thead>
 
 								<tr>
@@ -114,18 +148,7 @@
 						</thead>
 
 						<tbody>
-
-									<tr></tr>
-										<s:hidden name="productId" value="%{productId}" />
-									<tr></tr>
-									<tr></tr>
-									<tr><td></td></tr>
-									<tr></tr>
-									<tr></tr>
-									<tr></tr>
-									<tr></tr>
-									<tr></tr>
-
+								<s:hidden name="productId" value="%{productId}" />
 								<s:hidden name="productName" value="%{productName}" />
 								<s:hidden name="productNameKana" value="%{productNameKana}" />
 								<s:hidden name="imageFilePath" value="%{imageFilePath}" />
@@ -137,6 +160,7 @@
 								<s:hidden name="subtotal" value="%{subtotal}" />
 
 							</tbody>
+							<div class="border floatclear"></div>
 						</s:iterator>
 					</table>
 					<h2><s:label value="カート合計金額:"/><s:property value="#session.totalPrice" />円</h2><br>
