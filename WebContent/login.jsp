@@ -17,7 +17,7 @@
 
 		}
 		.login{
-				border:1px solid lightgray;
+				border:1.5px solid lightgray;
 				padding:20px;
 
 		}
@@ -29,7 +29,7 @@
 		h1{
 			padding-left:20px;
 			font-size:30px;
-			border-left:5px solid lightgray;
+			border-left:3px solid lightgray;
 		}
 
 	</style>
@@ -98,7 +98,7 @@
 
 			<s:submit value="パスワード再設定" class="submit_btn" />
 			</s:form>
-			</div>
+
 
 			<s:password name="password" class="txt" placeholder="パスワード" autocomplete="off"/>
 
