@@ -69,6 +69,10 @@
 	.contents_btn_set:hover span {
 	transform: rotateX(360deg);
 	}
+
+	.textbox{
+
+	}
 	</style>
 	<title>カート</title>
 	<script type="text/javascript">
@@ -101,19 +105,15 @@
 						<div class="checkbox-image">
 							<div class="checkbox">
 								<s:checkbox name="checkList" value="checked" fieldValue="%{id}" />
-
+								<s:hidden name="productId" value="%{productId}" />
 							</div>
 							<div class="gorigori">
 								<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
 							</div>
 						</div>
-						<thead>
+						<table class="textbox">
 
-								<tr>
-									<th><s:label value="#" /></th>
-									<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td>
 
-								</tr>
 								<tr>
 									<th><s:label value="商品名" /></th>
 									<td><s:property value="productName" /></td>
@@ -145,9 +145,9 @@
 									<th><s:label value="合計金額" /></th>
 									<td><s:property value="subtotal" />円</td>
 								</tr>
-						</thead>
+						</table>
 
-						<tbody>
+						<table>
 								<s:hidden name="productId" value="%{productId}" />
 								<s:hidden name="productName" value="%{productName}" />
 								<s:hidden name="productNameKana" value="%{productNameKana}" />
@@ -159,7 +159,7 @@
 								<s:hidden name="productCount" value="%{productCount}" />
 								<s:hidden name="subtotal" value="%{subtotal}" />
 
-							</tbody>
+						</table>
 							<div class="border floatclear"></div>
 						</s:iterator>
 					</table>
