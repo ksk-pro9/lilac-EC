@@ -23,7 +23,7 @@
 }
 
 .product-list-box ul li{
-	border:solid 1px #c7c4c4;
+	border:solid 1px #f9e6d7;
 	border-radius:20px;
 	padding:8px;
 	margin-bottom:20px;
@@ -31,7 +31,7 @@
 }
 
 .product-list-box ul li:hover{
-box-shadow:0px 0px 20px grey;
+box-shadow:0px 0px 50px #f2cdae;
 }
 
 .item-image-box-200{
