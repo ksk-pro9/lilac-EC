@@ -32,7 +32,7 @@
 }
 
 .product-list-box ul li:hover{
-box-shadow:0px 0px 30px #848484;
+box-shadow:0px 0px 10px #848484;
 opacity:0.7;
 }
 
