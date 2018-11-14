@@ -15,11 +15,27 @@
 		form.submit();
 	}
 </script>
+
+<style type="text/css">
+#contents{
+	max-width: 700px;
+	margin: auto;
+}
+.success{
+	background-color: #dcdcdc;
+	border-radius: 25px;
+	padding: 80px 20px;
+	text-align: center;
+	font-size: 25px;
+	fone-weight: bold;
+}
+
+</style>
+
 </head>
 <body>
 <s:include value="header.jsp"/>
 <div id="contents">
-<h1>宛先情報完了画面</h1>
 <div class="success">
 宛先情報の登録が完了しました。
 <s:form action="SettlementConfirmAction" name="back">

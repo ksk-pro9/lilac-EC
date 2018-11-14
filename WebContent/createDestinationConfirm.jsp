@@ -8,20 +8,68 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
 <title>宛先情報確認</title>
+
+<style type="text/css">
+
+#contents{
+	max-width: 700px;
+	margin: auto;
+}
+#contents h1{
+	font-size: 30px;
+	border-left: solid 8px #c0c0c0;
+	padding-left: 15px;
+}
+#contents p{
+	padding: 20px 0 0 0;
+	text-align: center;
+	text-weight: bold;
+	font-size: 20px;
+}
+.form-confirm{
+	background-color: #dcdcdc;
+	border-radius: 25px;
+	padding: 50px 20px;
+}
+table{
+	border-collapse: separate;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 15px;
+}
+table th,td{
+	padding: 0 50px;
+}
+table th{
+	border-right: dashed 3px black;
+}
+table td{
+	text-align: left;
+}
+table width{
+	width: 80%;
+}
+
+</style>
+
 </head>
 
 <body>
+
 <s:include value="header.jsp"/>
 
 <div id="contents">
 
 <h1>宛先情報確認画面</h1>
 
+<p>以下の内容で登録します</p>
+
 <!-- ======= ここから入力フォーム form ======= -->
 <div class="form-confirm">
 
 <s:form action="CreateDestinationCompleteAction">
-<table class="vertical-list-table">
+
+<table class="CreateDestinationCompleteAction">
 
 <tr>
 	<th scope="row"><s:label value="姓"/></th>
@@ -77,7 +125,8 @@
 <!-- ======= ここまで入力フォーム /form ======= -->
 
 </div>
-
-<s:include value="footer.jsp"/>
+<div id="footer">
+	<s:include value="footer.jsp"/>
+</div>
 </body>
 </html>

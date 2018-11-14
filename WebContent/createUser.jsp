@@ -14,7 +14,7 @@
 <style type="text/css">
 
 .input-form{
-	background-color: #d3d3d3;
+	background-color: #dcdcdc;
 	border-radius: 25px;
 	padding: 100px 20px;
 }

@@ -8,6 +8,59 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
 <title>宛先情報入力</title>
+
+<style type="text/css">
+
+.input-form{
+	background-color: #dcdcdc;
+	border-radius: 25px;
+	padding: 100px 20px;
+}
+.input-form-set{
+	padding: 10px 100px;
+}
+.input-form-title{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px 0 2px 30px;
+	margin-bottom: 3px;
+	margin-left: -25px;
+}
+.input-form-hissu{
+	font-size: 15px;
+	background-color: red;
+	margin-left: 20px;
+	margin-rigth: 8px;
+	padding: 1px 2px;
+	color: #fff;
+	border-radius: 10px;
+	margin-bottom: 3px;
+}
+
+#contents{
+	max-width: 700px;
+	margin: auto;
+}
+
+#contents h1{
+	font-size: 30px;
+	border-left: solid 8px #c0c0c0;
+	padding-left: 5px;
+}
+
+.txt{
+	font-size: 10px;
+	width: 98%;
+	height: 30px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px black;
+	padding: 0 0 0 3%;
+	margin-bottom: 20px;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -80,10 +133,61 @@
 <!-- ======= ここまでエラーメッセージ /error-message ======= -->
 
 
-
 <!-- ======= ここから入力フォーム form ======= -->
-<div class="form">
+<div class="input-form">
 
+<s:form action="CreateDestinationConfirmAction">
+
+<div class="input-form-set">
+<div class="input-form-title">姓<span class="input-form-hissu">必須</span></div>
+<s:textfield name="familyName" class="txt"/>
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">名<span class="input-form-hissu">必須</span></div>
+<s:textfield name="firstName" class="txt"/>
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">姓ふりがな<span class="input-form-hissu">必須</span></div>
+<s:textfield name="familyNameKana" class="txt"/>
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">名ひらがな<span class="input-form-hissu">必須</span></div>
+<s:textfield name="firstNameKana" class="txt"/>
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">性別<span class="input-form-hissu">必須</span></div>
+<s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" />
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">住所<span class="input-form-hissu">必須</span></div>
+<s:textfield name="userAddress" class="txt"/>
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">電話番号<span class="input-form-hissu">必須</span></div>
+<s:textfield name="telNumber" class="txt"/>
+</div>
+
+<div class="input-form-set">
+<div class="input-form-title">メールアドレス<span class="input-form-hissu">必須</span></div>
+<s:textfield name="email" class="txt"/>
+</div>
+
+
+
+
+
+
+
+
+
+<%--
+<table class="vertical-list-table">
 
 <s:form action="CreateDestinationConfirmAction">
 <table class="vertical-list-table">
@@ -128,7 +232,7 @@
 	<td><s:textfield name="email" class="txt"/></td>
 </tr>
 
-</table>
+</table> --%>
 
 <div class="submit_btn_box">
 <div id="contens-btn-set">
