@@ -20,17 +20,19 @@
 
 		#top{
 			width: 100%;
-			height: 35px;
+			height: 40px;
 		}
 
 		#top > #left{
 			float: left;
-			line-height: 35px;
+			line-height: 40px;
+			margin-left: 50px;
+			font-size: 30px;
 		}
 
 		#top > #right{
-			position: relative;
-			top: -8px;
+			position:relative;
+			top:-10px;
 			float: right;
 			margin-right: 50px;
 		}
@@ -42,17 +44,11 @@
 			align-items: center;
   			justify-content: center;
 			width: 100%;
-			height: 35px;
+			height: 40px;
 			line-height: 0px;
 		}
 
-		#head > #top > #left > #logo{
-			margin-left: 50px;
-			font-size: 30px;
-			float: left;
-		}
-
-		#head > #top > #left > #logo > a{
+		#head > #top a{
 			color: black;
 			text-decoration: none;
 		}
@@ -61,28 +57,30 @@
 			list-style-type: none;
 		}
 
-		#head > #top > #right > ul > li:nth-child(odd){
-			margin-left: 40px;
+		#head > #top > #right > ul > li #header-image{
+			position:relative;
+			top:3px;
 		}
 
-		#head #top #right ul li input[type="submit"]{
+		#head > #top > #right > ul > li{
 			border: none;
 			background-color: transparent;
 			transition: .3s;
 			-webkit-transform: scale(1);
 			transform: scale(1);
+			margin-left: 40px;
 		}
 
-		#head #top #right ul li input[type="submit"]:hover{
+		#head > #top > #right > ul > li:hover{
 			-webkit-transform: scale(1.1);
 			transform: scale(1.1);
 		}
 
-		#head #top #right ul li input[type="submit"]:active{
+		#head > #top > #right > ul > li:active{
 			outline: none;
 		}
 
-		#head #top #right ul li input[type="submit"]:focus{
+		#head > #top > #right > ul > li:focus{
 			outline: none;
 		}
 

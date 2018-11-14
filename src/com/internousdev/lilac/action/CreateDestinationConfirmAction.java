@@ -23,8 +23,6 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 	private String telNumber;
 	private String userAddress;
 	private String email;
-
-	private String categoryId;
 	private Map<String, Object> session;
 
 	public String execute(){
@@ -99,14 +97,6 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 
 	public void setSex(String sex) {
 		this.sex = sex;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public String getFamilyName() {

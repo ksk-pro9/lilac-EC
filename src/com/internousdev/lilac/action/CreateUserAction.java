@@ -21,7 +21,6 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 	private static final String MALE = "男性";
 	private static final String FEMALE = "女性";
 	private String defaultSexValue = MALE;
-	private String categoryId;
 	private Map<String, Object> session;
 
 	public String execute() {
@@ -35,7 +34,7 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 
 		session.remove("familyNameErrorMessageList");
 		session.remove("firstNameErrorMessageList");
-		session.remove("familyNameKanaErrorMessageList");
+		session.remove("faimlyNameKanaErrorMessageList");
 		session.remove("firstNameKanaErrorMessageList");
 		session.remove("emailErrorMessageList");
 		session.remove("loginIdErrorMessageList");
@@ -138,14 +137,6 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 
 	public void setDefaultSexValue(String defaultSexValue) {
 		this.defaultSexValue = defaultSexValue;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public Map<String, Object> getSession() {
