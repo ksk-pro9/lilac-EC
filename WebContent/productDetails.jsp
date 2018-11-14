@@ -54,7 +54,7 @@ float:left;
 
 }
 .recommend-box ul li{
-border:solid 1px #c7c4c4;
+border:solid 1px #e9e9e9;
 border-radius:10px;
 padding:5px;
 text-align:center;
