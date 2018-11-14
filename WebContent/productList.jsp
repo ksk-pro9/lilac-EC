@@ -21,23 +21,44 @@
 	float:left;
 	text-align:center;
 }
+
 .product-list-box ul li{
 	border:solid 1px #c7c4c4;
 	border-radius:20px;
 	padding:8px;
 	margin-bottom:20px;
+	transition:0.5s;
+}
+
+.product-list-box ul li:hover{
+box-shadow:0px 0px 20px grey;
 }
 
 .item-image-box-200{
 	width:95%;
+	border-radius:20px;
 }
-
+.items-text{
+text-align:left;
+}
 .items{
 text-align:left;
 margin:0px 0px 5px 10px;
+line-height:140%;
+display:inline-block;
 }
 ul{
 	list-style:none;
+}
+
+a{
+text-decoration: none;
+}
+a:link{
+color : #000000;
+}
+a:visited{
+color : #000000;
 }
 
 h1{
@@ -75,13 +96,16 @@ text-align:center;
 			<s:param name="productId" value="%{productId}"/>
 			</s:url>'>
 			<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/>
-			</a><br>
+			<br>
 			<%------　画像の下に商品名、商品名かな、価額が表示される -------%>
+			<div class="items-text">
 			<div class="items">
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>
 			</div>
+			</div>
+			</a>
 			</li>
 		</ul>
 	 	</div>
