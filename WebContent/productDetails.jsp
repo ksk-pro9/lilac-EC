@@ -60,7 +60,7 @@ border:solid 1px #c7c4c4;
 border-radius:10px;
 padding:5px;
 text-align:center;
-padding:20px;
+padding:10px;
 transition:0.5s;
 }
 
