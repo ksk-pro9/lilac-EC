@@ -6,17 +6,90 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
 <title>商品詳細</title>
 </head>
 
 <style type="text/css">
+#contents{
+	width:1000px;
+
+}
+
+.box1{
+margin:0 auto;
+width:1000px;
+height:400px;
+}
+.box2{
+margin:0 auto;
+width:1000px;
+height:300px;
+}
+.2column-container{
+
+}
+
+.colum1{
+float:left;
+width:50%;
+height:100%;
+text-align:center;
+}
+.colum2{
+float:left;
+width:50%;
+height:100%;
+}
+
+.product-details-recommend-box{
+width:800px;
+
+margin:0 auto;
+clear:left;
+}
+
+.recommend-box{
+width:33.3%;
+float:left;
 
 
+}
+.recommend-box ul li{
+border:solid 1px #c7c4c4;
+border-radius:10px;
+padding:5px;
+text-align:center;
+padding:20px;
+transition:0.5s;
+}
 
+.recommend-box ul li:hover{
+box-shadow:0px 0px 10px grey;
+}
 
+.item-image-box-320{
+width:70%;
+border-radius:10px;
+}
 
+.item-image-box-100{
+width:90%;
+border-radius:10px;
+}
 
+.item-text2{
+margin-top:10px;
+}
+h1{
+text-align:center;
+}
+h2{
+text-align:center;
+}
+ul{
+list-style:none;
+}
 </style>
 <body>
 <%--------- ヘッダー ----------%>
@@ -28,7 +101,7 @@
 
 	<%--　「カートに追加」ボタンを押下すると、カートに商品が追加されます（AddCartAction） --%>
 	<s:form action="AddCartAction">
-	<div class="box">
+	<div class="box1">
 	<div class="2column-container">
 
 	<%----------　カラム（商品画像） --------%>
@@ -70,8 +143,8 @@
 		</tr>
 	</table>
 
-	</div>
-	</div>
+
+
 
 	<%--　選択された商品の情報を送ります。 --%>
 	<s:hidden name="productId" value="%{#session.productId}"/>
@@ -84,33 +157,43 @@
 	<s:hidden name="releaseDate" value="%{#session.releaseDate}"/>
 	<s:hidden name="productDescription" value="%{#session.productDescription}"/>
 
-	</div>
+
 
 	<div class="submit_btn_box">
 		<s:submit value="カートに追加" class="submit_btn" />
 	</div>
+	</div>
+	</div>
+	</div>
 	</s:form>
 
 	<%--ページ下部に同じカテゴリーの別商品を３件表示（商品画像と商品名）します。 --%>
-	<div class="box">
+	<h2>関連商品</h2>
+	<div class="box2">
 	<div class="product-details-recommend-box">
 	<%-----画像押下で商品詳細画面に遷移します。----%>
 	<s:iterator value="#session.productInfoDtoList">
-	<div class="product-list">
-		<div class="product-list">
-		<div class="recommend-box">
+
+
+	<div class="recommend-box">
+	<ul>
+		<li>
 		<a href='<s:url action="ProductDetailsAction">
 		<s:param name="productId" value="%{productId}"/>
 		</s:url>'>
 		<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/>
 		</a>
+		<div class="item-text2">
 		<s:property value="productName"/><br>
+		<s:property value="price"/>円<br>
 		</div>
-		</div>
-		</div>
+		</li>
+	</ul>
+	</div>
+
 	</s:iterator>
 	</div>
-</div>
+	</div>
 </div>
 <s:include value="footer.jsp"/>
 </body>
