@@ -10,8 +10,56 @@
 <link rel="stylesheet" href="./css/style.css">
 
 <title>マイページ</title>
-</head>
+
 <s:include value="header.jsp"/>
+
+<style type="text/css">
+
+table.vertical-list-table{
+margin-top:100px;
+margin-left:auto;
+margin-right:auto;
+
+width:80%;
+font-size:1.4rem;
+line-height:1.5;
+font-family: font-family: "游ゴシック", "Yu Gothic";
+border-right: 1px #555555;
+border-bottom: 1px #555555;
+border-top: 1px #555555;
+border-left: 1px #555555;
+
+}
+
+
+table.vertical-list-table th{
+
+width:40%;
+padding:20px;
+font-weight:700;
+vertical-align:top;
+background: #555555;
+color:white;
+text-align: center;
+
+}
+
+
+
+table.vertical-list-table td{
+width:60%;
+padding:20px;
+background:#999999;
+color:white;
+text-align: left;
+}
+
+</style>
+
+
+</head>
+
+
 <div id="contents">
 
 <h1>会員登録情報</h1>
@@ -57,3 +105,12 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
