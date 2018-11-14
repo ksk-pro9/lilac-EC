@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- <link rel="stylesheet" href="./css/style.css"> -->
+<link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -16,6 +16,69 @@
 </head>
 
 <style type="text/css">
+
+/* .btn_secondary{ */
+/* font-size:500px;
+margin-top: 30px;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	color: white;
+	background-color: #2E64FE;
+	font-size: 20px;
+	border-radius: 30px;
+} */
+
+/* /* 以下ボタン（基本） */
+
+.btn_secondary {
+	display: inline-block;
+	width: 400px;
+	height: 40px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	outline: none;
+}
+
+.btn_secondary::before, .btn_secondary::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+
+.btn_secondary, .btn_secondary::before, .btn_secondary::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+/* 以下ボタン（応用） */
+
+.btn_secondary{
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  border: 2px solid #333;
+  color: #333;
+  line-height: 48px;
+}
+.btn_secondary::after {
+  top: 4px;
+  left: 4px;
+  width: 188px;
+  height: 42px;
+  border: 2px solid #333;
+  opacity: 0;
+}
+.btn_secondary:hover::after {
+  opacity: 1;
+}
+
+
 .resetContent {
 	margin: 30px auto;
 	border-radius: 20px;
@@ -115,16 +178,7 @@
 }
 
 /* 以下ボタンデフォルト設定 */
-.btn_secondary {
-	margin-top: 30px;
-	width: 100%;
-	height: 40px;
-	text-align: center;
-	color: white;
-	background-color: #2E64FE;
-	font-size: 20px;
-	border-radius: 30px;
-}
+
 
 /* /* 以下ボタン（基本） */
 
@@ -179,7 +233,7 @@
 
 <body>
 
-<%-- 	<s:include value="header.jsp" /> --%>
+	<s:include value="header.jsp" />
 
 	<div id="contents">
 
@@ -269,26 +323,24 @@
 
 									<tr>
 										<th scope="row"><s:label value="ログインID" /></th>
-										<td><s:textfield name="loginId" placeholder="ログインID"
-												class="txt" value='%{#session.loginId}' /></td>
+										<td><s:textfield name="loginId" placeholder="ログインID" class="txt" value='%{#session.loginId}' /></td>
 									</tr>
 
 									<tr>
 										<th scope="row"><s:label value="現在のパスワード" /></th>
-										<td><s:textfield name="password" placeholder="現在のパスワード"
-												class="txt" value="" /></td>
+										<td><s:textfield name="password" placeholder="現在のパスワード" type="password" class="txt" value="" /></td>
 									</tr>
 
 									<tr>
 										<th scope="row"><s:label value="新しいパスワード" /></th>
 										<td><s:textfield name="newPassword"
-												placeholder="新しいパスワード" class="txt" value="" /></td>
+												placeholder="新しいパスワード" type="password" class="txt" value="" /></td>
 									</tr>
 
 									<tr>
-										<th scope="row"><s:label value="（再確認用）" /></th>
+										<th scope="row"><s:label value="（再確認）" /></th>
 										<td><s:textfield name="reConfirmationPassword"
-												placeholder="新しいパスワード（再確認用）" class="txt" value="" /></td>
+												placeholder="新しいパスワード（再確認）" type="password" class="txt" value="" /></td>
 									</tr>
 								</table>
 
