@@ -24,12 +24,16 @@
 		}
 		.horizontal-list-table{
 			font:inherit;
-			border:solid #brack;
+			float:left;
 		}
 
-		.tbody{
-		display
-		font:inherit;
+
+
+		.horazontal-list-table{
+			clear:both;
+			background-color:#EEEEEE;
+			border:solid 1px #777777;
+			border-radius:10px;
 		}
 		</style>
 
@@ -47,62 +51,53 @@
 					<s:form id="form" action="SettlementCompleteAction" >
 							<!--<h3>お届け先住所</h3>  -->
 								<table class="horizontal-list-table">
-								<thead>
-
-										<tr><th><s:label value="#"/></th></tr>
-										<tr><th><s:label value="名前"/></th></tr>
-										<tr><th><s:label value="ふりがな"/></th></tr>
-										<tr><th><s:label value="住所"/></th></tr>
-										<tr><th><s:label value="電話番号"/></th></tr>
-										<tr><th><s:label value="メールアドレス"/></th></tr>
-
-								</thead>
-									<tbody>
-									
-										<s:iterator value="#session.destinationInfoDtoList" status="st">
-											<tr>
-												<td>
+								<s:iterator value="#session.destinationInfoDtoList" status="st">
+										<tr><th><td>
 													<s:if test="#st.index==0">
 														<input type="radio" name="id" checked="checked" value="<s:property value='id' />"/>
 													</s:if><s:else>
 														<input type="radio" name="id" value="<s:property value='id' />"/>
 													</s:else>
 												</td>
-											</tr>
-											<tr>
-												<td>
-													<s:property value="familyName"/><span> </span><s:property value="firstName" /><br>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<s:property value="familyNameKana" /><span> </span><s:property value="firstNameKana" /><br>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<s:property value="userAddress" />
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<s:property value="telNumber" />
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<s:property value="email" />
-												</td>
-											</tr>
-										</s:iterator>
-									</tbody>
+												<s:label value="お届け先情報"/>
+										</th></tr>
 								</table>
+									<table class="horazontal-list-table">
+										<tr><th><s:label value="名前"/>
+											<td>
+													<s:property value="familyName"/><span> </span><s:property value="firstName" /><br>
+											</th></td>
+										</tr>
+										<tr><th><s:label value="ふりがな"/>
+											<td>
+												<s:property value="familyNameKana" /><span> </span><s:property value="firstNameKana" /><br>
+											</td>
+											</th></tr>
+										<tr><th><s:label value="住所"/>
+											<td>
+												<s:property value="userAddress" />
+											</td>
+										</th></tr>
+										<tr><th><s:label value="電話番号"/>
+											<td>
+												<s:property value="telNumber" />
+											</td>
+										</th></tr>
+										<tr><th><s:label value="メールアドレス"/>
+											<td>
+												<s:property value="email" />
+											</td>
+										</th></tr>
+									</table>
+										</s:iterator>
+
 
 									<div class="submit_btn_box">
 										<div id=".contents-btn-set">
 									<s:submit value="決済" class="submit_btn" />
 										</div>
 									</div>
+
 				</s:form>
 			</s:if>
 			<s:else>
