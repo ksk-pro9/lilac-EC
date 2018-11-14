@@ -25,6 +25,25 @@
 	.horizontal-list-table {
 	display:block;
 	}
+
+	.contents_btn_set {
+	display: block;
+	text-decoration:none;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	color: #FFF;
+	border-radius: 4px;
+	background: #4DD0E1;
+	overflow: hidden;
+	}
+	.contents_btn_set span {
+	display:inline-block;
+	transition: .4s
+	}
+	.contents_btn_set:hover span {
+	transform: rotateX(360deg);
+	}
 	</style>
 	<title>カート</title>
 	<script type="text/javascript">
@@ -58,8 +77,14 @@
 						</ul>
 						<thead>
 
-								<tr><th><s:label value="#" /></th></tr>
-								<tr><th><s:label value="商品名" /></th></tr>
+								<tr>
+									<th><s:label value="#" /></th>
+
+								</tr>
+								<tr>
+									<th><s:label value="商品名" /></th>
+									<td><s:property value="productName" /></td>
+								</tr>
 								<tr><th><s:label value="ふりがな" /></th></tr>
 								<tr><th><s:label value="商品画像" /></th></tr>
 								<tr><th><s:label value="値段" /></th></tr>
@@ -73,7 +98,7 @@
 
 									<tr><td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td></tr>
 										<s:hidden name="productId" value="%{productId}" />
-									<tr><td><s:property value="productName" /></td></tr>
+									<tr></tr>
 									<tr><td><s:property value="productNameKana" /></td></tr>
 									<tr><td></td></tr>
 									<tr><td><s:property value="price" />円</td></tr>
@@ -99,13 +124,13 @@
 
 					<div class="submit_btn_box">
 						<div class="contents_btn_set">
-							<s:submit value="決済" class="submit_btn" />
+							<span><s:submit value="決済" class="submit_btn" /></span>
 						</div>
 					</div>
 
 					<div class="submit_btn_box">
-						<div id="contents-btn-set">
-							<s:submit value="削除" onclick="this.form.action='DeleteCartAction';"/>
+						<div class="contents-btn-set">
+							<span><s:submit value="削除" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
 					</div>
 
