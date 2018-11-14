@@ -37,12 +37,12 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
@@ -70,12 +70,12 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -110,12 +110,12 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return userInfoDTO;
 	}
@@ -150,12 +150,13 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return userInfoDTO;
 	}
@@ -177,12 +178,13 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -203,12 +205,13 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -228,12 +231,13 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -256,11 +260,12 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e){
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 		}
