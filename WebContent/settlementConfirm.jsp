@@ -34,6 +34,8 @@
 			background-color:#EEEEEE;
 			border:solid 1px #777777;
 			border-radius:10px;
+			padding:10px;
+			text-align:center;
 		}
 		</style>
 

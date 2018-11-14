@@ -71,7 +71,8 @@
 	}
 
 	.textbox{
-
+	padding-left:80px;
+	padding-top:30px;
 	}
 	</style>
 	<title>カート</title>
@@ -121,9 +122,6 @@
 								<tr>
 									<th><s:label value="ふりがな" /></th>
 									<td><s:property value="productNameKana" /></td>
-								</tr>
-								<tr>
-									<th><s:label value="商品画像" /></th>
 								</tr>
 								<tr>
 									<th><s:label value="値段" /></th>
