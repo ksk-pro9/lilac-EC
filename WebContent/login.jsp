@@ -14,14 +14,16 @@
 		#contents{
 					margin:0 auto;
 					width:80%;
+
 		}
 		.login{
 				border:1px solid lightgray;
+				padding:20px;
 
 		}
 
 		table{
-			margin:auto;
+
 		}
 
 		h1{
@@ -68,7 +70,7 @@
 			</div>
 		</div>
 	</s:if>
-	<s:if test="#session.loginIdErrorMessageList.isEmpty() && #session.passwordErrorMessageList.isEmpty() && !#session.errorPasswordErrorMessageList.isEmpty()">
+	<s:if test="!#session.errorPasswordErrorMessageList.isEmpty()">
 		<div class="error">
 			<div class="error-message">
 				<s:iterator value="#session.errorPasswordErrorMessageList"><s:property /><br></s:iterator>
@@ -79,22 +81,27 @@
 	SAVED:<s:property value="%{#session.savedLoginId}"/>
 	LOGINID:<s:property value="%{#session.loginId}"/>
 -->
-	<table>
-		<tr>
-			<th scope="row"><s:label value="ログインID:"/></th>
+
+			<s:label value="ログインID:"/>
 			<s:if test="#session.savedLoginId == true">
-			<td><s:textfield name="loginId" class="txt" placeholder="ログインID" value='%{#session.loginId}' autocomplete="off"/></td>
+			<s:textfield name="loginId" class="txt" placeholder="ログインID" value='%{#session.loginId}' autocomplete="off"/>
 			</s:if>
 			<s:else>
-			<td><s:textfield name="loginId" class="txt" placeholder="ログインID" autocomplete="off"/></td>
+			<s:textfield name="loginId" class="txt" placeholder="ログインID" autocomplete="off"/>
 			</s:else>
-		</tr>
 
-		<tr>
-			<th scope="row"><s:label value="パスワード:"/></th>
-			<td><s:password name="password" class="txt" placeholder="パスワード" autocomplete="off"/></td>
-		</tr>
-	</table><br>
+
+			<s:label value="パスワード:"/>
+
+			<s:form action="ResetPasswordAction">
+
+
+			<s:submit value="パスワード再設定" class="submit_btn" />
+			</s:form>
+			</div>
+
+			<s:password name="password" class="txt" placeholder="パスワード" autocomplete="off"/>
+
 	<div >
 		<s:if test="#session.savedLoginId == true">
 			<s:checkbox name="savedLoginId"  checked="checked"/>
@@ -114,11 +121,6 @@
 	<div >
 		<s:form action="CreateUserAction">
 			<s:submit value="新規ユーザー登録" class="submit_btn" />
-		<br>
-		<s:form action="ResetPasswordAction">
-			<s:submit value="パスワード再設定" class="submit_btn" />
-		</s:form>
-
 		</s:form>
 	</div>
 </div>
