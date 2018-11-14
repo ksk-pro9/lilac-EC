@@ -6,14 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- <link rel="stylesheet" href="./css/style.css"> -->
+<link rel="stylesheet" href="./css/style.css">
 <title>商品一覧</title>
 </head>
 
 <style type="text/css">
 #product-list{
 	width:1000px;
-	margin: 0 auto;
+	margin-right:auto;
+	margin-left:auto;
 }
 
 .product-list-box{

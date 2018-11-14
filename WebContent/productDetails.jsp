@@ -6,15 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- <link rel="stylesheet" href="./css/style.css"> -->
+<link rel="stylesheet" href="./css/style.css">
 <title>商品詳細</title>
 </head>
 
 <style type="text/css">
-#contents{
-	width:1000px;
 
-}
 
 .box1{
 margin:0 auto;
