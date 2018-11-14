@@ -14,8 +14,12 @@ public class PurchaseHistoryAction extends ActionSupport implements SessionAware
 	private String categoryId;
 	private Map<String, Object> session;
 
-
 	public String execute(){
+
+		if(session == null){
+			String result = "timeout";
+			return result;
+		}
 
 		PurchaseHistoryInfoDAO purchaseHistoryInfoDao=new PurchaseHistoryInfoDAO();
 		List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
@@ -27,14 +31,9 @@ public class PurchaseHistoryAction extends ActionSupport implements SessionAware
 		}
 		session.put("purchaseHistoryInfoDtoList",purchaseHistoryInfoDtoList);
 
-
-
-
-
 		return SUCCESS;
 
 	}
-
 
 	public String getCategoryId(){
 		return categoryId;

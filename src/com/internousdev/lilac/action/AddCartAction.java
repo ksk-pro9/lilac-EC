@@ -25,6 +25,11 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		String userId = null;
 		String tempUserId = null;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		//ログイン後、もしくはカート追加して再度CartAction実行した際cart.jspで
 		//最初からエラーが表示されるので消しておく
 		session.remove("checkListErrorMessageList");
@@ -107,6 +112,5 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
 
 }

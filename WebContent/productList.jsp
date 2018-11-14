@@ -6,9 +6,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
 <title>商品一覧</title>
 </head>
+
+<style type="text/css">
+#product-list{
+	width:1000px;
+	margin: 0 auto;
+}
+
+.product-list-box{
+	width:33%;
+	float:left;
+	text-align:center;
+}
+.product-list-box ul li{
+	border:solid 1px #c7c4c4;
+	border-radius:20px;
+	padding:8px;
+	margin-bottom:20px;
+}
+
+.item-image-box-200{
+	width:95%;
+}
+
+.items{
+text-align:left;
+margin:0px 0px 5px 10px;
+}
+ul{
+	list-style:none;
+}
+
+h1{
+text-align:center;
+}
+</style>
 <body>
 <s:include value="header.jsp" />
 <div id="contents">
@@ -33,7 +68,8 @@
 	<s:iterator value="productInfoDtoList">
 		<%-----１つの商品に対するdiv ------%>
 		<div class="product-list-box">
-
+		<ul>
+			<li>
 			<%------　画像をクリックするとProductDetailsActionが実行される ------%>
 			<a href='<s:url action="ProductDetailsAction">
 			<s:param name="productId" value="%{productId}"/>
@@ -41,10 +77,13 @@
 			<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/>
 			</a><br>
 			<%------　画像の下に商品名、商品名かな、価額が表示される -------%>
+			<div class="items">
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>
-
+			</div>
+			</li>
+		</ul>
 	 	</div>
 	</s:iterator>
 	</div>

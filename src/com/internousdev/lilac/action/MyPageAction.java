@@ -12,13 +12,16 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MyPageAction extends ActionSupport implements SessionAware{
 	private String categoryId;
 
-
-
 	private Map<String,Object> session;
 
 	public String execute(){
 		String result=ERROR;
 		System.out.println(categoryId);
+
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
 
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 		UserInfoDTO userInfoDTO=new UserInfoDTO();
@@ -46,8 +49,6 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	public void setCategoryId(String categoryId){
 		this.categoryId=categoryId;
 	}
-
-
 
 	public Map<String,Object> getSession(){
 		return session;

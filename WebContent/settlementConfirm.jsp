@@ -5,8 +5,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="./css/style.css">
+
 		<title>決済確認</title>
+		<style type="text/css">
+		.info{
+			font:inherit;
+		}
+
+
+		</style>
+
 	</head>
 
 		<body>

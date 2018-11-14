@@ -11,12 +11,15 @@
 	<style type="text/css">
 
 		#footer{
+		border-top: solid 1px grey;
 		 	width: 100%;
+		 	height: 40px;
 			position: fixed;
 			bottom: 0px;
 			right: 0px;
-			background-color: yellow;
+			background-color: white;
 			text-align: center;
+			line-height: 40px;
 		}
 
 	</style>

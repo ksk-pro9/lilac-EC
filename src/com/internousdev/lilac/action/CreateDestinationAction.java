@@ -23,6 +23,11 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 		sexList.add(MALE);
 		sexList.add(FEMALE);
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		session.remove("familyNameErrorMessageList");
 		session.remove("firstNameErrorMessageList");
 		session.remove("familyNameKanaErrorMessageList");

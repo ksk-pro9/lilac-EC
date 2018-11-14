@@ -14,6 +14,7 @@
 <action name="CreateUserAction" class="com.internousdev.lilac.action.CreateUserAction" method="execute">
 	<result name="success">createUser.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -21,6 +22,7 @@
 <action name="CreateUserConfirmAction" class="com.internousdev.lilac.action.CreateUserConfirmAction" method="execute">
 	<result name="success">createUserConfirm.jsp</result>
 	<result name="error">createUser.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -29,6 +31,7 @@
 	<result name="success">createUserComplete.jsp</result>
 	<result name="settlement">settlementConfirm.jsp</result>
 	<result name="error">createUser.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -36,6 +39,7 @@
 <action name="GoLoginAction" class="com.internousdev.lilac.action.GoLoginAction" method="execute">
 	<result name="success">login.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -44,6 +48,7 @@
 	<result name="success">home.jsp</result>
 	<result name="settlement">settlementConfirm.jsp</result>
 	<result name="error">login.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -51,6 +56,7 @@
 <action name="ResetPasswordAction" class="com.internousdev.lilac.action.ResetPasswordAction" method="execute">
 	<result name="success">resetPassword.jsp</result>
 	<result name="error">login.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -58,6 +64,7 @@
 <action name="ResetPasswordConfirmAction" class="com.internousdev.lilac.action.ResetPasswordConfirmAction" method="execute">
 	<result name="success">resetPasswordConfirm.jsp</result>
 	<result name="error">resetPassword.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -65,6 +72,7 @@
 <action name="ResetPasswordCompleteAction" class="com.internousdev.lilac.action.ResetPasswordCompleteAction" method="execute">
 	<result name="success">resetPasswordComplete.jsp</result>
 	<result name="error">resetPassword.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -72,6 +80,7 @@
 <action name="ProductListAction" class="com.internousdev.lilac.action.ProductListAction" method="execute">
 	<result name="success">productList.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -79,6 +88,7 @@
 <action name="ProductDetailsAction" class="com.internousdev.lilac.action.ProductDetailsAction" method="execute">
 	<result name="success">productDetails.jsp</result>
 	<result name="error">productList.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -86,12 +96,14 @@
 <action name="SearchItemAction" class="com.internousdev.lilac.action.SearchItemAction" method="execute">
 	<result name="success">productList.jsp</result>
 	<result name="error">productList.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
 <!--HomeAction-->
 <action name="HomeAction" class="com.internousdev.lilac.action.HomeAction" method="execute">
 	<result name="success">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -99,6 +111,7 @@
 <action name="AddCartAction" class="com.internousdev.lilac.action.AddCartAction" method="execute">
 	<result name="success">cart.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -106,6 +119,7 @@
 <action name="CartAction" class="com.internousdev.lilac.action.CartAction" method="execute">
 	<result name="success">cart.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -113,6 +127,7 @@
 <action name="DeleteCartAction" class="com.internousdev.lilac.action.DeleteCartAction" method="execute">
 	<result name="success">cart.jsp</result>
 	<result name="error">cart.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -120,6 +135,7 @@
 <action name="SettlementConfirmAction" class="com.internousdev.lilac.action.SettlementConfirmAction" method="execute">
 	<result name="success">settlementConfirm.jsp</result>
 	<result name="error">login.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -127,6 +143,7 @@
 <action name="CreateDestinationAction" class="com.internousdev.lilac.action.CreateDestinationAction" method="execute">
 	<result name="success">createDestination.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -134,6 +151,7 @@
 <action name="CreateDestinationConfirmAction" class="com.internousdev.lilac.action.CreateDestinationConfirmAction" method="execute">
 	<result name="success">createDestinationConfirm.jsp</result>
 	<result name="error">createDestination.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -141,6 +159,7 @@
 <action name="CreateDestinationCompleteAction" class="com.internousdev.lilac.action.CreateDestinationCompleteAction" method="execute">
 	<result name="success">createDestinationComplete.jsp</result>
 	<result name="error">createDestination.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -148,6 +167,7 @@
 <action name="SettlementCompleteAction" class="com.internousdev.lilac.action.SettlementCompleteAction" method="execute">
 	<result name="success">settlementComplete.jsp</result>
 	<result name="error">settlementConfirm.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -155,12 +175,14 @@
 <action name="MyPageAction" class="com.internousdev.lilac.action.MyPageAction" method="execute">
 	<result name="success">mypage.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
 <!--PurchaseHistoryAction-->
 <action name="PurchaseHistoryAction" class="com.internousdev.lilac.action.PurchaseHistoryAction" method="execute">
 	<result name="success">purchaseHistory.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -168,6 +190,7 @@
 <action name="DeletePurchaseHistoryAction" class="com.internousdev.lilac.action.DeletePurchaseHistoryAction" method="execute">
 	<result name="success">purchaseHistory.jsp</result>
 	<result name="error">home.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 
@@ -175,6 +198,7 @@
 <action name="LogoutAction" class="com.internousdev.lilac.action.LogoutAction" method="execute">
 	<result name="success">index.jsp</result>
 	<result name="error">index.jsp</result>
+	<result name="timeout">error.html</result>
 	</action>
 
 

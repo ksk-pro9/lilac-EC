@@ -22,8 +22,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String password;
 	private boolean savedLoginId;
 
-
-
 	private Map<String, Object> session;
 
 	public String execute() {
@@ -33,6 +31,14 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		List<String> passwordErrorMessageList = new ArrayList<String>();
 
 		String result = ERROR;
+
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
+		session.remove("loginIdErrorMessageList");
+		session.remove("passwordErrorMessageList");
 
 		if(savedLoginId == true) {
 			session.put("savedLoginId", true);
@@ -51,12 +57,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
 			session.put("mCategoryDtoList", 0);
 		}
-
-//		if(!session.containsKey("mCategoryList")) {
-//			MCategoryDAO mCategoryDao = new MCategoryDAO();
-//			mCategoryDtoList = mCategoryDao.getMCategoryList();
-//			session.put("mCategoryDtoList", mCategoryDtoList);
-//		}
 
 		UserInfoDAO userInfoDao = new UserInfoDAO();
 		if(userInfoDao.isExistsUserInfo(loginId, password)) {
@@ -93,6 +93,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				}
 			}
 			session.put("logined", 1);
+		}else {
+			session.put("passwordErrorMessageList", "パスワードが異なります。");
 		}
 		return result;
 	}

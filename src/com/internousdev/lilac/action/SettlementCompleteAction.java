@@ -18,10 +18,14 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	private String id;
 	private String categoryId;
 	private Map<String,Object> session;
-	private String cartflag;
 
 	public String execute(){
 		String result=ERROR;
+
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
 
 		//success="SettlementComplete.jsp"
 		//error="SettlementConfirm.jsp"
@@ -59,6 +63,8 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 					cartInfoDtoList=null;
 				}
 
+				String cartflag;
+
 				cartflag = "0";
 				session.put("cartflag",cartflag);
 				session.put("cartInfoDtoList",cartInfoDtoList);
@@ -70,8 +76,6 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 		}
 		return result;
 	}
-
-
 
 	public String getId() {
 		return id;
@@ -96,17 +100,4 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
-
-
-	public String getCartflag() {
-		return cartflag;
-	}
-
-
-
-	public void setCartflag(String cartflag) {
-		this.cartflag = cartflag;
-	}
-
 }

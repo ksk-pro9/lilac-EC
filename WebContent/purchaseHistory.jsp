@@ -48,6 +48,7 @@ color:white;
 </head>
 
 <body>
+<s:include value="header.jsp"/>
 <div id="contents">
 
 <h1>商品購入履歴画面</h1>
@@ -60,8 +61,8 @@ color:white;
 	<th><s:label value="ふりがな"/></th>
 	<th><s:label value="商品画像"/></th>
 	<th><s:label value="値段"/></th>
-	<th><s:label value="販売会社名"/></th>
-	<th><s:label value="販売年月日"/></th>
+	<th><s:label value="発売会社名"/></th>
+	<th><s:label value="発売年月日"/></th>
 </tr>
 </thead>
 <tbody>

@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.lilac.dao.UserInfoDAO;
 import com.internousdev.lilac.util.InputChecker;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -20,13 +21,25 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	private String loginId;
 	private String password;
 
-/*	private String categoryId;*/
 	private List<String> sexList = new ArrayList<String>();
 	private Map<String, Object> session;
+	private List<String> alreadyLoginIdErrorMessageList = new ArrayList<String>();
 
 	public String execute(){
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
+
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
+		UserInfoDAO UserInfoDao = new UserInfoDAO();
+		if(UserInfoDao.alreadyLoginId(loginId)){
+			alreadyLoginIdErrorMessageList.add("すでに登録されているユーザーIDです");
+			session.put("alreadyLoginIdErrorMessageList", alreadyLoginIdErrorMessageList);
+			return result;
+		}
 
 		session.put("familyName", familyName);
 		session.put("firstName", firstName);
@@ -43,7 +56,6 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		List<String> emailErrorMessageList = new ArrayList<String>();
 		List<String> loginIdErrorMessageList = new ArrayList<String>();
 		List<String> passwordErrorMessageList = new ArrayList<String>();
-
 
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, false, false, false);
 		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, false, false, false);
@@ -138,14 +150,6 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-/*	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
-	}*/
 
 	public List<String> getSexList() {
 		return sexList;

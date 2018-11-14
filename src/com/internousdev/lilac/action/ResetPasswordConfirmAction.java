@@ -16,8 +16,6 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	private String password;
 	private String newPassword;
 	private String reConfirmationPassword;
-	//	private String categoryId;
-	/*	いらない、たぶん*/
 
 
 	private Map<String,Object>session;
@@ -32,6 +30,11 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 		List<String> newPasswordIncorrectErrorMessageList = new ArrayList<String>();
 
 		String result=ERROR;
+
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
 
 		/*↓エラーメッセージの上書き時にエラーが起きないようリムーブ*/
 
@@ -60,22 +63,21 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				&& newPasswordIncorrectErrorMessageList.size()==0){
 
 
-			/*↓ログインIDとパスワードがBDにあれば、loginId,newPassword,concealedPasswordをセッションに入れる*/
+			/*↓ログインIDとパスワードがDBにあれば、loginId,newPassword,concealedPasswordをセッションに入れる*/
 			UserInfoDAO userInfoDAO=new UserInfoDAO();
 			if(userInfoDAO.isExistsUserInfo(loginId,password)){
-				String concealedPassword = userInfoDAO.concealPassword(newPassword);
-				session.put("loginId", loginId);
+				String concealedPassword = concealPassword(newPassword);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
 				result = SUCCESS;
 
-		/*↓ログインIDとパスワードがBDがなければ、エラーメッセージをセッションに入れる*/
+				/*↓ログインIDとパスワードがDBがなければ、エラーメッセージをセッションに入れる*/
 			}else{
 				passwordIncorrectErrorMessageList.add("入力されたパスワードが異なります。");
 				session.put("passwordIncorrectErrorMessageList", passwordIncorrectErrorMessageList);
 
 			}
-		/*↓セッションにエラーメッセージを追加*/
+			/*↓セッションにエラーメッセージを追加*/
 		}else{
 			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
@@ -84,9 +86,21 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			session.put("newPasswordErrorMessageList", newPasswordErrorMessageList);
 
 		}
+		session.put("loginId", loginId);
 		return result;
 
 
+	}
+
+	public String concealPassword(String password) {
+
+		int beginIndex = 0;
+		int endIndex = 1;
+
+		StringBuilder stringBuilder = new StringBuilder("***************");
+		String concealPassword = stringBuilder.replace(beginIndex, endIndex, password.substring(beginIndex,endIndex)).toString();
+
+		return concealPassword;
 	}
 
 	public String getLoginId() {
@@ -120,16 +134,6 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 	public void setReConfirmationPassword(String reConfirmationPassword) {
 		this.reConfirmationPassword = reConfirmationPassword;
 	}
-
-	/*いらない、たぶん*/
-	/*	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
-	}*/
-
 
 	public Map<String, Object> getSession() {
 		return session;

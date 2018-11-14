@@ -49,15 +49,15 @@ public class ProductInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try{
+				connection.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return productInfoDtoList;
 	}
-
 
 //商品一覧画面から任意の画像をクリックした場合。（ProductDetailsAction → productDetails.jsp)
 	public ProductInfoDTO getProductInfo(int productId) {
@@ -93,15 +93,15 @@ public class ProductInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try{
+				connection.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return productInfoDTO;
 	}
-
 
 //検索ワードを入力した場合（カテゴリー：全てのカテゴリー）
 	public List<ProductInfoDTO> getProductInfoListAll(String[] keywordsList) {
@@ -152,15 +152,15 @@ public class ProductInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try{
+				connection.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return productInfoDtoList;
 	}
-
 
 //カテゴリーを選択、且つ、検索ワードを入力した場合
 	public List<ProductInfoDTO> getProductInfoListByKeywords(String[] keywordsList, String categoryId) {
@@ -209,11 +209,12 @@ public class ProductInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try{
+				connection.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return productInfoDtoList;
 	}
@@ -258,11 +259,12 @@ public class ProductInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try{
+				connection.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return productInfoDtoList;
 	}

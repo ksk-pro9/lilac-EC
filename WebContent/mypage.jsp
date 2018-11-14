@@ -58,8 +58,7 @@ text-align: left;
 
 
 </head>
-
-
+<s:include value="header.jsp"/>
 <div id="contents">
 
 <h1>会員登録情報</h1>

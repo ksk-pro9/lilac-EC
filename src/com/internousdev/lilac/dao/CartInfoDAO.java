@@ -73,11 +73,12 @@ public class CartInfoDAO {
 					}
 				}catch(SQLException e){
 					e.printStackTrace();
-				}
-				try{
-					con.close();
-				}catch(SQLException e){
-					e.printStackTrace();
+				}finally{
+					try{
+						con.close();
+					}catch(SQLException e){
+						e.printStackTrace();
+					}
 				}
 				return cartInfoDtoList;
 
@@ -88,9 +89,7 @@ public class CartInfoDAO {
 		int totalPrice = 0;
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
-		String sql = "select sum(product_count * price) as total_price from cart_info where user_id=? "
-				+ "group by user_id";
-				//ここはuser_idで集めてるのにgroup by するのはなぜ？
+		String sql = "select sum(product_count * price) as total_price from cart_info where user_id=? ";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
@@ -102,16 +101,15 @@ public class CartInfoDAO {
 
 		}catch (SQLException e){
 			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
-
 		return totalPrice;
 	}
-
 
 	//カート情報を登録
 	public int regist(String userId, String tempUserId, int productId, String productCount, int price){
@@ -132,15 +130,16 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
+
 		return count;
 	}
-
 
 	//購入IDに紐づいているカート情報を削除
 	public int delete(String id){
@@ -156,11 +155,12 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch (SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
@@ -179,11 +179,12 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
@@ -202,11 +203,12 @@ public class CartInfoDAO {
 			count = ps.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
-		}
-		try{
-			con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}

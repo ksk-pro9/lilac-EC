@@ -28,6 +28,11 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 	public String execute() {
 		String result = ERROR;
 
+		if(session == null){
+			result = "timeout";
+			return result;
+		}
+
 		session.remove("faimlyNameErrorMessageList");
 		session.remove("firstNameErrorMessageList");
 		session.remove("faimlyNameKanaErrorMessageList");
@@ -35,6 +40,7 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 		session.remove("emailErrorMessageList");
 		session.remove("userIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
+		session.remove("alreadyLoginIdErrorMessageList");
 
 		session.put("familyName", familyName);
 		session.put("firstName", firstName);

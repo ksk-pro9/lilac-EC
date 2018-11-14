@@ -37,12 +37,12 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return count;
 	}
@@ -70,12 +70,12 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -110,12 +110,12 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return userInfoDTO;
 	}
@@ -150,12 +150,13 @@ public class UserInfoDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return userInfoDTO;
 	}
@@ -177,12 +178,13 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -203,12 +205,13 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
@@ -228,25 +231,43 @@ public class UserInfoDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
-			connection.close();
+		}finally{
+			try {
+				connection.close();
 
-		} catch (SQLException e) {
-			e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return result;
 	}
 
-	public String concealPassword(String password) {
+	public boolean alreadyLoginId(String loginId){
 
-		int beginIndex = 0;
-		int endIndex = 1;
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		boolean result = false;
 
-		StringBuilder stringBuilder = new StringBuilder("***************");
-		String concealPassword = stringBuilder.replace(beginIndex, endIndex, password.substring(beginIndex,endIndex)).toString();
+		String sql = "select * from user_info where user_id=?";
 
-		return concealPassword;
-	}
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, loginId);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()){
+				result = true;
+			}
+		} catch (SQLException e){
+			e.printStackTrace();
+		}finally{
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+		}
 
 }

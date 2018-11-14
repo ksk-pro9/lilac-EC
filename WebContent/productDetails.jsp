@@ -9,6 +9,15 @@
 <link rel="stylesheet" href="./css/style.css">
 <title>商品詳細</title>
 </head>
+
+<style type="text/css">
+
+
+
+
+
+
+</style>
 <body>
 <%--------- ヘッダー ----------%>
 <s:include value="header.jsp" />
@@ -36,7 +45,7 @@
 			<td><s:property value="%{#session.productName}"/></td>
 		</tr>
 		<tr>
-			<th scope="row"><s:label value="商品名かな"/></th>
+			<th scope="row"><s:label value="商品名ふりがな"/></th>
 			<td><s:property value="%{#session.productNameKana}"/></td>
 		</tr>
 		<tr>
