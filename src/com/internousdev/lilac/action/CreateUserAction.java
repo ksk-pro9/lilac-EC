@@ -32,12 +32,13 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 			return result;
 		}
 
-		session.remove("faimlyNameErrorMessageList");
+
+		session.remove("familyNameErrorMessageList");
 		session.remove("firstNameErrorMessageList");
 		session.remove("faimlyNameKanaErrorMessageList");
 		session.remove("firstNameKanaErrorMessageList");
 		session.remove("emailErrorMessageList");
-		session.remove("userIdErrorMessageList");
+		session.remove("loginIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
 		session.remove("alreadyLoginIdErrorMessageList");
 
