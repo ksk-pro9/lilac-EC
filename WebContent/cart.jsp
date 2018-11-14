@@ -71,7 +71,7 @@
 	}
 
 	.textbox{
-	padding-left:60px;
+	padding-left:80px;
 	padding-top:30px;
 	}
 	</style>
