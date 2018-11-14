@@ -64,6 +64,7 @@ transition:0.5s;
 
 .recommend-box ul li:hover{
 box-shadow:0px 0px 10px grey;
+opacity:0.7;
 }
 
 .item-image-box-320{
