@@ -67,7 +67,6 @@ bottom:50px;
 
 <body>
 
-<s:include value="header.jsp"/>
 
 <div id="contents">
 
