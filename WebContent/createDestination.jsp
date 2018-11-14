@@ -15,6 +15,7 @@
 	background-color: #dcdcdc;
 	border-radius: 25px;
 	padding: 100px 20px;
+	margin: 20px 0;
 }
 .input-form-set{
 	padding: 10px 100px;

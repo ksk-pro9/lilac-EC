@@ -30,6 +30,7 @@
 	background-color: #dcdcdc;
 	border-radius: 25px;
 	padding: 50px 20px;
+	margin: 20px 0;
 }
 table{
 	border-collapse: separate;
