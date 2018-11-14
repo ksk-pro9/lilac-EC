@@ -27,7 +27,7 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 	public String execute() {
 		String result = ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

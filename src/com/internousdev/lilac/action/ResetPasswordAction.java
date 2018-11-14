@@ -14,7 +14,8 @@ public class ResetPasswordAction extends ActionSupport implements SessionAware{
 
 
 	public String execute(){
-		if(session == null){
+
+		if(!(session.containsKey("mCategoryDtoList"))){
 			String result = "timeout";
 			return result;
 		}

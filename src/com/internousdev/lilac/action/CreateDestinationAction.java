@@ -23,7 +23,7 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 		sexList.add(MALE);
 		sexList.add(FEMALE);
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

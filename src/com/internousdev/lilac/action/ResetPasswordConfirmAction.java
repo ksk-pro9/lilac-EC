@@ -31,7 +31,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 		String result=ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

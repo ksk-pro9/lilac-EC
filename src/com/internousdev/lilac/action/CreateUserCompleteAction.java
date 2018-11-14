@@ -28,7 +28,7 @@ public class CreateUserCompleteAction extends ActionSupport implements SessionAw
 		int cartCount = 0;
 		UserInfoDAO UserInfoDao = new UserInfoDAO();
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

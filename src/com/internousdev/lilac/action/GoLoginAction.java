@@ -1,13 +1,9 @@
 package com.internousdev.lilac.action;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.lilac.dao.MCategoryDAO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class GoLoginAction extends ActionSupport implements SessionAware{
@@ -16,20 +12,15 @@ public class GoLoginAction extends ActionSupport implements SessionAware{
 	private  Map<String, Object> session;
 
 	public String execute() {
-		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			String result = "timeout";
 			return result;
 		}
 
-		if(!session.containsKey("mCatcategoryList")) {
-			MCategoryDAO mCategoryDao = new MCategoryDAO();
-			mCategoryDtoList = mCategoryDao.getMCategoryList();
-			session.put("mCategoryDtoList", mCategoryDtoList);
-		}
-		session.put("loginIdErrorMessageList", "");
-		session.put("passwordErrorMessageList", "");
+		session.remove("loginIdErrorMessageList");
+		session.remove("passwordErrorMessageList");
+		session.remove("errorPasswordErrorMessageList");
 		return SUCCESS;
 	}
 

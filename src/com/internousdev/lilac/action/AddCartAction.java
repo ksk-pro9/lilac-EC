@@ -25,7 +25,7 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 		String userId = null;
 		String tempUserId = null;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

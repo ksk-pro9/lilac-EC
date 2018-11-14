@@ -21,7 +21,7 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	public String execute(){
 		String result=ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

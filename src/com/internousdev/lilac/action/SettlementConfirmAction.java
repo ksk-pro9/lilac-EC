@@ -40,7 +40,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	public String execute(){
 		String result=ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

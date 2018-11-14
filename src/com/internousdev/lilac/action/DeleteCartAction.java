@@ -25,7 +25,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 		int count = 0;
 		List<String> checkListErrorMessageList = new ArrayList<String>();
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

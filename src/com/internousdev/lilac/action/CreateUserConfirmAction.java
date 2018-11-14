@@ -29,7 +29,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

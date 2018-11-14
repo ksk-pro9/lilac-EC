@@ -31,7 +31,7 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 		String result = ERROR;
 		InputChecker inputChecker = new InputChecker();
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}
