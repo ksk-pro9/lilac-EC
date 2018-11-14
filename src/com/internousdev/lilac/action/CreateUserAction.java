@@ -27,17 +27,18 @@ public class CreateUserAction extends ActionSupport implements SessionAware {
 	public String execute() {
 		String result = ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}
 
-		session.remove("faimlyNameErrorMessageList");
+
+		session.remove("familyNameErrorMessageList");
 		session.remove("firstNameErrorMessageList");
 		session.remove("faimlyNameKanaErrorMessageList");
 		session.remove("firstNameKanaErrorMessageList");
 		session.remove("emailErrorMessageList");
-		session.remove("userIdErrorMessageList");
+		session.remove("loginIdErrorMessageList");
 		session.remove("passwordErrorMessageList");
 		session.remove("alreadyLoginIdErrorMessageList");
 

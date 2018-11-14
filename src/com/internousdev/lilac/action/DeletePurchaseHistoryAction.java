@@ -17,7 +17,7 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 	public String execute(){
 		String result=ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

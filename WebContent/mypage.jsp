@@ -15,23 +15,34 @@
 
 <style type="text/css">
 
-table.vertical-list-table{
-margin-top:100px;
-margin-left:auto;
-margin-right:auto;
 
-width:80%;
-font-size:1.4rem;
-line-height:1.5;
-font-family: font-family: "游ゴシック", "Yu Gothic";
-border-right: 1px #555555;
-border-bottom: 1px #555555;
-border-top: 1px #555555;
-border-left: 1px #555555;
+.mypageRg{
+width:70%;
+
+}
+h1{
+width:70%;
+text-align:left;
 
 }
 
+.btn_mypage{
+text-align:center;
+position:relative;
+top:50px;
+}
 
+
+table.vertical-list-table{
+margin-left:auto;
+margin-right:auto;
+width:70%;
+font-size:1.2rem;
+line-height:1.3;
+border-spacing: 1;
+font-family: font-family: "游ゴシック", "Yu Gothic";
+
+}
 table.vertical-list-table th{
 
 width:40%;
@@ -53,6 +64,11 @@ background:#999999;
 color:white;
 text-align: left;
 }
+table.vertical-list-table, th, td {
+	border-collapse: collapse;
+	border: 3px solid white;
+}
+
 
 </style>
 
@@ -61,7 +77,10 @@ text-align: left;
 <s:include value="header.jsp"/>
 <div id="contents">
 
-<h1>会員登録情報</h1>
+<div class="mypageRg">
+
+
+<h2>会員登録情報</h2>
 	<s:form action="PurchaseHistoryAction">
 		<table class="vertical-list-table">
 
@@ -95,10 +114,15 @@ text-align: left;
 			</tr>
 		</table>
 
+
+		<div class="btn_mypage">
 		<div class="submit_btn_box">
 		<s:submit value="購入履歴" class="submit_btn"/>
 		</div>
+		</div>
 		</s:form>
+
+</div>
 </div>
 		<s:include value="footer.jsp"/>
 

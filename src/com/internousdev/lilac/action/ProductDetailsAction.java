@@ -29,7 +29,7 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

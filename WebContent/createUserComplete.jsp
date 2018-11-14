@@ -9,6 +9,20 @@
 <link rel="stylesheet" href="./css/style.css">
 <meta http-equiv="refresh" content="3;URL='HomeAction'"/>
 <title>登録完了</title>
+
+<style type="text/css">
+
+.success{
+	background-color: #d3d3d3;
+	border-radius: 25px;
+	padding: 80px 20px;
+	text-align: center;
+	font-size: 25px;
+	fone-weight: bold;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -16,7 +30,6 @@
 <s:include value="header.jsp"/>
 
 <div id="contents">
-<h1>登録完了画面</h1>
 <div class="success">
 ユーザー登録が完了しました。
 </div>

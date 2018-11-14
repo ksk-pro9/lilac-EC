@@ -26,7 +26,7 @@ public class CreateDestinationCompleteAction extends ActionSupport implements Se
 	public String execute(){
 		String result = ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

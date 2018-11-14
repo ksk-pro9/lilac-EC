@@ -15,7 +15,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 
 		String result=ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

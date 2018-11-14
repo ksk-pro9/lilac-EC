@@ -18,7 +18,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		String result=ERROR;
 		System.out.println(categoryId);
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}

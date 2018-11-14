@@ -32,7 +32,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
-		if(session == null){
+		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
 			return result;
 		}
@@ -56,6 +56,9 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		if(loginIdErrorMessageList.size()!=0 || passwordErrorMessageList.size()!=0) {
 			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
+			session.remove("errorPasswordErrorMessageList");
+
+			return ERROR;
 		}
 
 		UserInfoDAO userInfoDao = new UserInfoDAO();
