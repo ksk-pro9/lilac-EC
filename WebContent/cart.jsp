@@ -101,7 +101,7 @@
 						<div class="checkbox-image">
 							<div class="checkbox">
 								<s:checkbox name="checkList" value="checked" fieldValue="%{id}" />
-								<s:hidden name="productId" value="%{productId}" />
+
 							</div>
 							<div class="gorigori">
 								<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
@@ -112,7 +112,7 @@
 								<tr>
 									<th><s:label value="#" /></th>
 									<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}" /></td>
-									<s:hidden name="productId" value="%{productId}" />
+
 								</tr>
 								<tr>
 									<th><s:label value="商品名" /></th>
