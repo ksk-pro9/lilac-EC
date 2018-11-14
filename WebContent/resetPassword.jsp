@@ -41,14 +41,14 @@ margin-top: 30px;
 	outline: none;
 }
 
-.btn_secondary::before, .btn_secondary::after {
+.btn_secondary::before .btn_secondary::after {
 	position: absolute;
 	z-index: -1;
 	display: block;
 	content: '';
 }
 
-.btn_secondary, .btn_secondary::before, .btn_secondary::after {
+.btn_secondary .btn_secondary::before .btn_secondary::after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -74,7 +74,7 @@ margin-top: 30px;
   border: 2px solid #333;
   opacity: 0;
 }
-.btn_secondary:hover::after {
+.btn_secondary::after:hover{
   opacity: 1;
 }
 
@@ -252,7 +252,7 @@ margin-top: 30px;
 						<!-- ↓セッションのloginIdErrorMessageListというキーの値が空でなければ、
 			セッションのloginIdErrorMessageListの値を表示する。 -->
 
-						<s:if test="!#session.loginIdErrorMessageList.isEmpty()">
+						<s:if test='#session.containsKey("loginIdErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
 									<s:iterator value="#session.loginIdErrorMessageList">
@@ -262,7 +262,7 @@ margin-top: 30px;
 							</div>
 						</s:if>
 
-						<s:if test="!#session.passwordErrorMessageList.isEmpty()">
+						<s:if test='#session.containsKey("passwordErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
 									<s:iterator value="#session.passwordErrorMessageList">
@@ -272,7 +272,7 @@ margin-top: 30px;
 							</div>
 						</s:if>
 
-						<s:if test="!#session.passwordIncorrectErrorMessageList.isEmpty()">
+						<s:if test='#session.containsKey("passwordIncorrectErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
 									<s:iterator value="#session.passwordIncorrectErrorMessageList">
@@ -282,7 +282,7 @@ margin-top: 30px;
 							</div>
 						</s:if>
 
-						<s:if test="!#session.newPasswordErrorMessageList.isEmpty()">
+						<s:if test='#session.containsKey("newPasswordErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
 									<s:iterator value="#session.newPasswordErrorMessageList">
@@ -293,7 +293,7 @@ margin-top: 30px;
 						</s:if>
 
 						<s:if
-							test="!#session.reConfirmationNewPasswordErrorMessageList.isEmpty()">
+							test='#session.containsKey("reConfirmationNewPasswordErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
 									<s:iterator
@@ -305,7 +305,7 @@ margin-top: 30px;
 						</s:if>
 
 						<s:if
-							test="!#session.newPasswordIncorrectErrorMessageList.isEmpty()">
+							test='#session.containsKey("newPasswordIncorrectErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
 									<s:iterator
