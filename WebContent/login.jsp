@@ -14,7 +14,6 @@
 		#contents{
 					margin:0 auto;
 					width:80%;
-
 		}
 		.login{
 				border:1px solid lightgray;
@@ -69,7 +68,7 @@
 			</div>
 		</div>
 	</s:if>
-	<s:if test="#session.loginIdErrorMessageList.isEmpty() && #session.passwordErrorMessageList.isEmpty() && !#session.erroPasswordErrorMessageList.isEmpty()">
+	<s:if test="#session.loginIdErrorMessageList.isEmpty() && #session.passwordErrorMessageList.isEmpty() && !#session.errorPasswordErrorMessageList.isEmpty()">
 		<div class="error">
 			<div class="error-message">
 				<s:iterator value="#session.errorPasswordErrorMessageList"><s:property /><br></s:iterator>
