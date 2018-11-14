@@ -4,7 +4,7 @@
 			padding: 0;
 			width: 100%;
 			height: 100%;
-			min-width:700px;
+			min-width:800px;
 		}
 
 		header{
@@ -62,7 +62,12 @@
 		}
 
 		#right > ul > li:nth-child(odd){
-			margin-left: 50px;
+			margin-left: 40px;
+		}
+
+		ul li input[type="submit"]{
+			border:none;
+			background-color:transparent;
 		}
 
 		#head > #top > #right > ul > li{
@@ -109,12 +114,7 @@
 			height: 14px;
 			width: 14px;
 			padding: 7px;
-			background-color: white;
+			background-color:white;
 			border-top-right-radius: 5px;
 			border-bottom-right-radius: 5px;
-		}
-
-		input[type="submit"]{
-			border:none;
-			background-color:transparent;
 		}
