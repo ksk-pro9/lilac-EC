@@ -101,7 +101,7 @@
 								<s:textfield id="keywords-box" name="keywords" placeholder="検索ワード"/></div>
 
 							<div id = "search">
-								<input type="image" id="search-image" src="./images/search.png" width="15px" height="15px"/></div>
+								<input type="image" id="search-box" src="./images/search.png"/></div>
 					</s:form>
 				</div>
 
