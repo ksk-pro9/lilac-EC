@@ -4,7 +4,7 @@
 			padding: 0;
 			width: 100%;
 			height: 100%;
-			min-width:800px;
+			min-width: 800px;
 		}
 
 		header{
@@ -43,7 +43,7 @@
   			justify-content: center;
 			width: 100%;
 			height: 35px;
-			line-height: 10px;
+			line-height: 0px;
 		}
 
 		#head > #top > #left > #logo{
@@ -65,29 +65,36 @@
 			margin-left: 40px;
 		}
 
-		ul li input[type="submit"]{
+		#head #top #right ul li input[type="submit"]{
 			border: none;
 			background-color: transparent;
+			transition: .3s;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+
+		#head #top #right ul li input[type="submit"]:hover{
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+
+		#head #top #right ul li input[type="submit"]:active{
+			outline: none;
+		}
+
+		#head #top #right ul li input[type="submit"]:focus{
+			outline: none;
 		}
 
 		#head > #top > #right > ul > li{
 			float: left;
 		}
 
-		#category{
-			float: left;
+		#bottom div{
+			float:left;
 		}
 
-		#keywords{
-			float: left;
-		}
-
-		#search{
-			float: left;
-		}
-
-		#search::after{
-			content: '';
+		#bottom::after{
 			clear: both;
 		}
 

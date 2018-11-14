@@ -7,6 +7,14 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>ホーム</title>
+
+	<style type="text/css">
+
+		#contents > h1{
+			text-align: center;
+		}
+
+	</style>
 </head>
 
 <body>
