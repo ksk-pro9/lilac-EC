@@ -20,7 +20,6 @@ public class CreateDestinationCompleteAction extends ActionSupport implements Se
 	private String email;
 	private String telNumber;
 	private String userAddress;
-	private String categoryId;
 	private Map<String, Object> session;
 
 	public String execute(){
@@ -53,14 +52,6 @@ public class CreateDestinationCompleteAction extends ActionSupport implements Se
 
 	public void setSexList(List<String> sexList) {
 		this.sexList = sexList;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public String getFamilyName() {

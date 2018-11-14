@@ -10,7 +10,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class CreateDestinationAction extends ActionSupport implements SessionAware{
 
-	private String categoryId;
 	private static final String MALE = "男性";
 	private static final String FEMALE = "女性";
 	private String defaultSexValue = MALE;
@@ -45,14 +44,6 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 
 	public void setSex(String sex) {
 		this.sex = sex;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public String getDefaultSexValue() {

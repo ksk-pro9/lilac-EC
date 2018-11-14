@@ -16,7 +16,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ProductDetailsAction extends ActionSupport implements SessionAware{
 
 	private int productId;
-	private String categoryId;
 
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 	private List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
@@ -79,12 +78,6 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		this.mCategoryDtoList = mCategoryDtoList;
 	}
 
-	public String getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
-	}
 	public int getProductId() {
 		return productId;
 	}

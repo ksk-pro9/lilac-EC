@@ -14,7 +14,6 @@ import com.opensymphony.xwork2.ActionSupport;
 //success→home.jsp
 public class HomeAction extends ActionSupport implements SessionAware{
 
-	private String categoryId;
 	private Map<String, Object> session;
 
 	public String execute() {
@@ -40,12 +39,6 @@ public class HomeAction extends ActionSupport implements SessionAware{
 		return SUCCESS;
 	}
 
-	public String getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
-	}
 	public Map<String, Object> getSession() {
 		return session;
 	}

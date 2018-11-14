@@ -11,9 +11,12 @@
 <title>登録完了</title>
 
 <style type="text/css">
-
+#contents{
+	max-width: 700px;
+	margin: auto;
+}
 .success{
-	background-color: #d3d3d3;
+	background-color: #dcdcdc;
 	border-radius: 25px;
 	padding: 80px 20px;
 	text-align: center;

@@ -28,34 +28,19 @@
 					<div id = "right">
 						<ul>
 							<li id = "cart">
-								<img src='./images/cart.png' id="header-image" width="20px" height="20px" />
-							</li>
-							<li id = "cart">
-								<s:form action="CartAction">
-									<s:submit value="カート"/>
-								</s:form>
+								<a href="CartAction"><img src='./images/cart.png' width="20px" height="20px" id="header-image">カート</a>
 							</li>
 
 
 							<li id = "item">
-								<img src='./images/item.png' id="header-image" width="20px" height="20px" />
-							</li>
-							<li id = "item">
-								<s:form action="ProductListAction">
-									<s:submit value="商品一覧"/>
-								</s:form>
+								<a href="ProductListAction"><img src='./images/item.png' width="20px" height="20px" id="header-image">商品一覧</a>
 							</li>
 
 
 							<!-- ログイン状態のときに表示されるもの -->
 							<s:if test="#session.logined == 1">
 								<li id = "logout">
-									<img src='./images/logout.png' id="header-image" width="20px" height="20px" />
-								</li>
-								<li id = "logout">
-									<s:form action="LogoutAction">
-										<s:submit value="ログアウト"/>
-									</s:form>
+									<a href="LogoutAction"><img src='./images/logout.png' width="20px" height="20px" id="header-image">ログアウト</a>
 								</li>
 							</s:if>
 
@@ -63,12 +48,7 @@
 							<!-- 未ログイン状態のときに表示されるもの -->
 							<s:else>
 								<li id = "login">
-									<img src='./images/login.png' id="header-image" width="20px" height="20px" />
-								</li>
-								<li id = "login">
-									<s:form action="GoLoginAction">
-										<s:submit value="ログイン"/>
-									</s:form>
+									<a href="GoLoginAction"><img src='./images/login.png' width="20px" height="20px" id="header-image">ログイン</a>
 								</li>
 							</s:else>
 
@@ -76,12 +56,7 @@
 							<!-- ログイン状態のときに表示されるもの -->
 							<s:if test="#session.logined == 1">
 								<li id = "mypage">
-									<img src='./images/mypage.png' id="header-image" width="20px" height="20px" />
-								</li>
-								<li id = "mypage">
-									<s:form action="MyPageAction">
-										<s:submit value="マイページ"/>
-									</s:form>
+									<a href="MyPageAction"><img src='./images/mypage.png' width="20px" height="20px" id="header-image">マイページ</a>
 								</li>
 							</s:if>
 						</ul>

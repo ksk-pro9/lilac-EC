@@ -8,7 +8,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GoLoginAction extends ActionSupport implements SessionAware{
 
-	private String categoryId;
 	private  Map<String, Object> session;
 
 	public String execute() {
@@ -22,13 +21,6 @@ public class GoLoginAction extends ActionSupport implements SessionAware{
 		session.remove("passwordErrorMessageList");
 		session.remove("errorPasswordErrorMessageList");
 		return SUCCESS;
-	}
-
-	public String getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public Map<String, Object> getSession(){
