@@ -29,7 +29,7 @@
 	.contents_btn_set {
 	display: block;
 	text-decoration:none;
-	width: 160px;
+	width: 100px;
 	padding: 0.8em;
 	text-align: center;
 	color: #FFF;
@@ -37,10 +37,16 @@
 	background: #4DD0E1;
 	overflow: hidden;
 	}
+
+	.contents_btn_set label{
+	display:block;
+	}
+
 	.contents_btn_set span {
 	display:inline-block;
-	transition: .4s
+	transition: .6s
 	}
+
 	.contents_btn_set:hover span {
 	transform: rotateX(360deg);
 	}
@@ -130,7 +136,7 @@
 
 					<div class="submit_btn_box">
 						<div class="contents-btn-set">
-							<span><s:submit value="削除" onclick="this.form.action='DeleteCartAction';"/></span>
+							<label><span><s:submit value="削除" onclick="this.form.action='DeleteCartAction';"/></span></label>
 						</div>
 					</div>
 
