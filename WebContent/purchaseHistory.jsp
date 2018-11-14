@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
 
 
 <title>商品購入履歴</title>
@@ -16,16 +16,23 @@
 
 
 	.purchaseDetails{
-		border-top:20px solid black;
-		width:800px;
 
+		width:80%;
+		height:600px;
 		margin:auto;
 
 	}
 
+	#a{
+	border-top:20px solid black;
+	width:70%;
+	height:300px;
+	margin:auto;
 
+	}
 
 	#left{
+
 	position:relative;
 	top:30px;
 	float:left;
@@ -33,11 +40,13 @@
 	}
 
 	#right{
-	position:relative;
-	top:80px;
-	left:100px;
-	font-size:1.2rem;
+
+
 	float:left;
+	position:relative;
+	top:60px;
+	left:70px;
+	font-size:20px;
 
 	}
 
@@ -72,16 +81,23 @@ bottom:50px;
 			</s:form>
 		</div>
 	</div>
-</div>
+	</div>
+
 	<div class="purchaseDetails">
 		<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
-			<table class="horizontal-list-table">
-				<s:iterator value="#session.purchaseHistoryInfoDtoList">
-					<div id ="left">
-							<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' width="300px" height="250px"/>
-						</div>
 
-						<tbody id = "right">
+
+				<s:iterator value="#session.purchaseHistoryInfoDtoList">
+
+				<div id="a">
+					<div id ="left">
+						<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' width="300px" height="250px"/>
+					</div>
+
+
+					<div id="right">
+
+						<table class="horizontal-list-table">
 							<tr>
 								<th><s:label value="商品名"/></th>
 								<td><s:property value="productName"/></td>
@@ -103,9 +119,12 @@ bottom:50px;
 								<td><s:property value="releaseDate"/></td>
 
 							</tr>
-						</tbody>
+						</table>
+
+					</div>
+					</div>
 				</s:iterator>
-			</table>
+
 		</s:if>
 
 		<s:else>

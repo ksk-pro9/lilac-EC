@@ -16,13 +16,13 @@
 <style type="text/css">
 
 
-.mypageRg{
-width:70%;
 
 }
-h1{
-width:70%;
-text-align:left;
+h2{
+    padding-left: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    border-left: solid 10px #A4A4A4;
 
 }
 
@@ -36,7 +36,7 @@ top:50px;
 table.vertical-list-table{
 margin-left:auto;
 margin-right:auto;
-width:70%;
+width:60%;
 font-size:1.2rem;
 line-height:1.3;
 border-spacing: 1;
