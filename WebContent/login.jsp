@@ -31,6 +31,11 @@
 			font-size:30px;
 			border-left:3px solid lightgray;
 		}
+		.saisettei{
+					position:relative;
+					height:100px;
+					float:right;
+		}
 
 	</style>
 
@@ -93,13 +98,6 @@
 
 			<s:label value="パスワード:"/>
 
-			<s:form action="ResetPasswordAction">
-
-
-			<s:submit value="パスワード再設定" class="submit_btn" />
-			</s:form>
-
-
 			<s:password name="password" class="txt" placeholder="パスワード" autocomplete="off"/>
 
 	<div >
@@ -122,6 +120,11 @@
 		<s:form action="CreateUserAction">
 			<s:submit value="新規ユーザー登録" class="submit_btn" />
 		</s:form>
+		<div class="saisettei">
+			<s:form action="ResetPasswordAction">
+			<s:submit value="パスワード再設定" class="submit_btn" />
+			</s:form>
+		</div>
 	</div>
 </div>
 <div >
