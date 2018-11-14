@@ -72,7 +72,7 @@ text-align:center;
 <div id="contents">
 <h1>商品一覧画面</h1>
 <%-------エラーメッセージ --------%>
-<s:if test="!keywordsErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("keywordsErrorMessageList.isEmpty")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>

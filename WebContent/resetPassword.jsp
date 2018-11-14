@@ -252,10 +252,10 @@ margin-top: 30px;
 						<!-- ↓セッションのloginIdErrorMessageListというキーの値が空でなければ、
 			セッションのloginIdErrorMessageListの値を表示する。 -->
 
-						<s:if test='#session.containsKey("loginIdErrorMessageList")'>
+						<s:if test='#session.containsKey("resetPassLoginIdErrorMessageList")'>
 							<div class="error">
 								<div class="error-message">
-									<s:iterator value="#session.loginIdErrorMessageList">
+									<s:iterator value="#session.resetPassLoginIdErrorMessageList">
 										<s:property />
 									</s:iterator>
 								</div>

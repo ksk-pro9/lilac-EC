@@ -19,6 +19,7 @@ public class ResetPasswordAction extends ActionSupport implements SessionAware{
 			String result = "timeout";
 			return result;
 		}
+		session.remove("resetPassLoginId");
 
 		String result=ERROR;
 
@@ -30,6 +31,7 @@ public class ResetPasswordAction extends ActionSupport implements SessionAware{
 		session.remove("newPasswordErrorMessageList");
 		session.remove("reConfirmationNewPasswordErrorMessageList");
 		session.remove("newPasswordIncorrectErrorMessageList");
+		session.remove("resetPassLoginIdErrorMessageList");
 
 		result=SUCCESS;
 

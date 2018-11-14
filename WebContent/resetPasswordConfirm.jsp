@@ -22,7 +22,7 @@
 					<table class="vertical-list-table">
 						<tr>
 							<th scope="row"><s:label value="ログインID" /></th>
-							<td><s:property value="#session.loginId" /></td>
+							<td><s:property value="#session.resetPassLoginId" /></td>
 						</tr>
 						<tr>
 							<th scope="row"><s:label value="再設定パスワード" /></th>

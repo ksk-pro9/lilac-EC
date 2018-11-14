@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ResetPasswordCompleteAction extends ActionSupport implements SessionAware{
 
-	private String loginId;
+	private String resetPassLoginId;
 	private String password;
 	private Map<String,Object>session;
 	private String cartflag;
@@ -25,8 +25,9 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 
 		UserInfoDAO userInfoDAO=new UserInfoDAO();
 		/*↓セッションからとってきたloginIdとnewpasswordをDBで上書きする*/
-		int count=userInfoDAO.resetPassword(String.valueOf(session.get("loginId")),String.valueOf(session.get("newPassword")));
+		int count=userInfoDAO.resetPassword(String.valueOf(session.get("resetPassLoginId")),String.valueOf(session.get("newPassword")));
 
+		session.remove("resetPassLoginId");
 		if(count>0){
 			result=SUCCESS;
 		}
@@ -44,12 +45,12 @@ public class ResetPasswordCompleteAction extends ActionSupport implements Sessio
 		this.cartflag = cartflag;
 	}
 
-	public String getLoginId() {
-		return loginId;
+	public String getResetPassLoginId() {
+		return resetPassLoginId;
 	}
 
-	public void setLoginId(String loginId) {
-		this.loginId = loginId;
+	public void setLoginId(String resetPassLoginId) {
+		this.resetPassLoginId = resetPassLoginId;
 	}
 
 	public String getPassword() {

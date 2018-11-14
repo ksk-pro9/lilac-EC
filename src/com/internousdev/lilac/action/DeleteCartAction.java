@@ -30,6 +30,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 			return result;
 		}
 
+		session.remove("checkListErrorMessageList");
 		//cart.jspでチェックされた購入IDでcart_infoテーブルから削除
 		//その数が0ならエラーメッセージをセッションにput
 		for(String id:checkList) {

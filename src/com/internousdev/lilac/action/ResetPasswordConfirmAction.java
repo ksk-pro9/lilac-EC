@@ -22,7 +22,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 	public String execute(){
 
-		List<String> loginIdErrorMessageList = new ArrayList<String>();
+		List<String> resetPassLoginIdErrorMessageList = new ArrayList<String>();
 		List<String> passwordErrorMessageList = new ArrayList<String>();
 		List<String> passwordIncorrectErrorMessageList = new ArrayList<String>();
 		List<String> newPasswordErrorMessageList = new ArrayList<String>();
@@ -48,7 +48,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 		InputChecker inputChecker=new InputChecker();
 
 		/*↓インプットチェッカーで出力されたエラーメッセージをリストにいれる*/
-		loginIdErrorMessageList = inputChecker.doCheck("ログインID", loginId, 1, 8, true, false, false, true, false, false, false, false, false);
+		resetPassLoginIdErrorMessageList = inputChecker.doCheck("ログインID", loginId, 1, 8, true, false, false, true, false, false, false, false, false);
 		passwordErrorMessageList = inputChecker.doCheck("現在のパスワード", password, 1, 16, true, false, false, true, false, false, false, false, false);
 		newPasswordErrorMessageList = inputChecker.doCheck("新しいパスワード", newPassword, 1, 16, true, false, false, true, false, false, false, false, false);
 		reConfirmationNewPasswordErrorMessageList = inputChecker.doCheck("新しいパスワード（再確認）", reConfirmationPassword, 1, 16, true, false, false, true, false, false,false, false, false);
@@ -56,7 +56,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 
 
 		/*↓エラーメッセージがでなくて、かつ*/
-		if(loginIdErrorMessageList.size()==0
+		if(resetPassLoginIdErrorMessageList.size()==0
 				&& passwordErrorMessageList.size()==0
 				&& newPasswordErrorMessageList.size()==0
 				&& reConfirmationNewPasswordErrorMessageList.size()==0
@@ -79,14 +79,14 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 			}
 			/*↓セッションにエラーメッセージを追加*/
 		}else{
-			session.put("loginIdErrorMessageList", loginIdErrorMessageList);
+			session.put("resetPassLoginIdErrorMessageList", resetPassLoginIdErrorMessageList);
 			session.put("passwordErrorMessageList", passwordErrorMessageList);
 			session.put("reConfirmationNewPasswordErrorMessageList", reConfirmationNewPasswordErrorMessageList);
 			session.put("newPasswordIncorrectErrorMessageList", newPasswordIncorrectErrorMessageList);
 			session.put("newPasswordErrorMessageList", newPasswordErrorMessageList);
 
 		}
-		session.put("loginId", loginId);
+		session.put("resetPassLoginId", loginId);
 		return result;
 
 

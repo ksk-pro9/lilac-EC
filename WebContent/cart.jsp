@@ -76,11 +76,7 @@
 	}
 	</style>
 	<title>カート</title>
-	<script type="text/javascript">
-		function goDeleteCartAction(){
-			document.getElementById("form").action='DeleteCartAction';
-		}
-	</script>
+
 	</head>
 
 	<body>
