@@ -148,7 +148,6 @@
 						</table>
 
 						<table>
-								<s:hidden name="productId" value="%{productId}" />
 								<s:hidden name="productName" value="%{productName}" />
 								<s:hidden name="productNameKana" value="%{productNameKana}" />
 								<s:hidden name="imageFilePath" value="%{imageFilePath}" />
