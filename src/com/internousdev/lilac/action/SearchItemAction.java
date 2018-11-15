@@ -20,7 +20,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 	private String categoryId;///カテゴリーID
 	private String keywords;//検索キーワード
 	private List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();//商品のリスト
-	private List<String> keywordsErrorMessageList = new ArrayList<String>();//キーワードの文字エラーリスト
+	private List<String> keywordsErrorMessageList = null;//キーワードの文字エラーリスト
 	private Map<String, Object> session;
 
 	public String execute() {
@@ -52,9 +52,19 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		//keywordsの文字チェック
 		if(!(keywords.equals(""))){
 			InputChecker inputChecker = new InputChecker();
+			keywordsErrorMessageList = new ArrayList<String>();
 			keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, false, false, true, false);
+			Iterator<String>iterator = keywordsErrorMessageList.iterator();
+
+			if(!(iterator.hasNext())){
+				keywordsErrorMessageList = null;
+			} else {
+				return SUCCESS;
+			}
 
 		}
+
+
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 
@@ -95,12 +105,15 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 	public void setKeywords(String keywords) {
 		this.keywords = keywords;
 	}
+
 	public List<ProductInfoDTO> getProductInfoDtoList() {
 		return productInfoDtoList;
 	}
+
 	public void setProductInfoDtoList(List<ProductInfoDTO> productInfoDtoList) {
 		this.productInfoDtoList = productInfoDtoList;
 	}
+
 	public Map<String, Object> getSession() {
 		return session;
 	}
