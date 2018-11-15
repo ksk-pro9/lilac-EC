@@ -1,3 +1,35 @@
+body, html {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	height : 100%;
+}
+
+#contents {
+	height : 100%;
+	padding-bottom : 100px;
+	padding-top : 70px;
+	margin-top : 50px;
+	margin : 30px auto;
+}
+
+form{
+	display:block;
+	margin-top:0px;
+}
+
+.error {
+	font-size : 0.8em;
+	margin-left : 3%;
+	width : 80%;
+	color: #D8000C;
+}
+
+.error-message {
+	color : red;
+}
+
+
 #product-list {
 	width: 1000px;
 	margin-right: auto;
