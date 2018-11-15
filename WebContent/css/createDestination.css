@@ -10,7 +10,7 @@
 
 #contents h1{
 	font-size: 30px;
-	border-left: solid 15px #c0c0c0;
+	border-left: solid 15px #dcdcdc;
 	padding-left: 8px;
 }
 
@@ -22,7 +22,7 @@
 
 }
 .input-form{
-	background-color: #dcdcdc;
+	background-color: #f5f5f5;
 	border-radius: 25px;
 	padding: 100px 20px;
 	margin: 20px 0;
@@ -63,7 +63,7 @@
 /* =============== createDestinationConfirm =============== */
 
 .form-confirm{
-	background-color: #dcdcdc;
+	background-color: #f5f5f5;
 	border-radius: 25px;
 	padding: 50px 20px;
 	margin: 20px 0;
@@ -93,7 +93,7 @@ table td{
 /* =============== createDestinationComplete =============== */
 
 .success{
-	background-color: #dcdcdc;
+	background-color: #f5f5f5;
 	border-radius: 25px;
 	padding: 80px 20px;
 	text-align: center;
