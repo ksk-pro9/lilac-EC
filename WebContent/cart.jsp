@@ -5,9 +5,46 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/cart.css">
 
+.submit_btn{
+	font-size:20px;
+	width:400px;
+	border-radius:20px;
+	background-color:#2FCDB4;
+	color:#F8F8F8;
+	box-shadow:0 5px #124d44;
+	}
+
+	.btn_box{
+	text-align:center;
+	position:relative;
+	}
+
+	.btn:hover span {
+	transform: rotateX(360deg);
+	}
+
+	.btn {
+	display: inline-block;
+	text-decoration:none;
+	width: 100px;
+	padding: 0.8em;
+	text-align: center;
+	color: #FFF;
+	border-radius: 4px;
+	background: #4DD0E1;
+	overflow: hidden;
+	}
+
+	.btn label{
+	display:block;
+	}
+
+	.btn span {
+	display:inline-block;
+	transition: .6s
+	}
 	<title>カート</title>
 	<script type="text/javascript">
 		function goDeleteCartAction(){
@@ -38,7 +75,7 @@
 						<s:iterator value="#session.cartInfoDtoList">
 						<div class="checkbox-image">
 							<div class="checkbox">
-								<s:checkbox name="checkList" value="checked" fieldValue="%{id}"/>
+								<s:checkbox name="checkList" value="checked" fieldValue="%{productId}"/>
 								<s:hidden name="productId" value="%{productId}" />
 							</div>
 							<div class="gorigori">
@@ -106,6 +143,7 @@
 						<div class="btn-set">
 							<span><s:submit value="削除" class="btn" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
+						<a href="#" class="cp_btn"><span>button</span></a>
 					</div>
 
 				</s:form>

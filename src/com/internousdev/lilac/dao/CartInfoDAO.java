@@ -142,16 +142,16 @@ public class CartInfoDAO {
 	}
 
 	//購入IDに紐づいているカート情報を削除
-	public int delete(String id){
+	public int delete(String productId, String userId){
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
 		int count = 0;
-		String sql ="delete from cart_info where id=?";
+		String sql ="delete from cart_info where product_id=? and user_id=?";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, id);
-
+			ps.setString(1, productId);
+			ps.setString(2, userId);
 			count = ps.executeUpdate();
 		}catch (SQLException e){
 			e.printStackTrace();
