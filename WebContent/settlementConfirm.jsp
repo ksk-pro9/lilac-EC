@@ -5,39 +5,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./css/settlementConfirm.css">
 		<title>決済確認</title>
-		<style type="text/css">
-		.info{
-			font:inherit;
-				width:80%;
-				margin-left:auto;
-				margin-right:auto;
-				text-align:center;
-				margin-bottom:30px;
-		}
-
-		#form{
-		width:80%;
-		margin-left:auto;
-		margin-right:auto;
-		}
-		.horizontal-list-table{
-			font:inherit;
-			float:left;
-		}
-
-
-
-		.horazontal-list-table{
-			clear:both;
-			background-color:#EEEEEE;
-			border:solid 1px #777777;
-			border-radius:10px;
-			padding:10px;
-			text-align:center;
-		}
-		</style>
 
 	</head>
 
@@ -56,13 +26,12 @@
 								<s:iterator value="#session.destinationInfoDtoList" status="st">
 										<tr><th><td>
 													<s:if test="#st.index==0">
-														<input type="radio" name="id" checked="checked" value="<s:property value='id' />"/>
+														<label><input type="radio" name="id" checked="checked" value="<s:property value='id' />"/></input>お届け先情報</label>
 													</s:if><s:else>
-														<input type="radio" name="id" value="<s:property value='id' />"/>
+														<label><input type="radio" name="id" value="<s:property value='id' />"/></input>お届け先情報</label>
 													</s:else>
-												</td>
-												<s:label value="お届け先情報"/>
-										</th></tr>
+
+										</tr></th></td>
 								</table>
 									<table class="horazontal-list-table">
 										<tr><th><s:label value="名前"/>

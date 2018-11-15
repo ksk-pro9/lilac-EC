@@ -5,17 +5,20 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="./css/style.css">
-		<meta http-equiv="refresh" content="3;URL='HomeAction'" />
+
+		<!--  meta http-equiv="refresh" content="3;URL='HomeAction'"-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="./css/settlementComplete.css">
 		<title>決済完了</title>
+
 	</head>
 
 	<body>
 		<s:include value="header.jsp" />
-					<div id="contents">
+					<div id="ccontents">
 						<h1>決済完了画面</h1>
 							<div class="success">
-								決済完了しました。
+								決済完了しました!
 							</div>
 					</div>
 		<s:include value="footer.jsp"/>
