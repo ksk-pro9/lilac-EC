@@ -123,7 +123,7 @@
 </s:form>
 
 <div class="login">
-	<s:form>
+	<s:form action="LoginAction">
 			<s:label value="ログインID:"/>
 			<s:if test="#session.savedLoginId == true">
 			<s:textfield name="loginId" class="txt" placeholder="ログインID" value='%{#session.loginId}' autocomplete="off"/>
