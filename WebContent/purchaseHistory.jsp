@@ -5,63 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- <link rel="stylesheet" href="./css/style.css"> -->
+<link rel="stylesheet" href="./css/purchaseHistory.css">
 
 
 <title>商品購入履歴</title>
 
 <s:include value="header.jsp"/>
 
-<style type="text/css">
 
-
-	.purchaseDetails{
-
-		width:80%;
-		height:600px;
-		margin:auto;
-
-	}
-
-	#a{
-	border-top:20px solid black;
-	width:70%;
-	height:300px;
-	margin:auto;
-
-	}
-
-	#left{
-
-	position:relative;
-	top:30px;
-	float:left;
-
-	}
-
-	#right{
-
-
-	float:left;
-	position:relative;
-	top:60px;
-	left:70px;
-	font-size:20px;
-
-	}
-
-	.mypage2_btn{
-	text-align:center;
-	position:relative;
-	bottom:50px;
-	}
-
-h2{
-position:relative;
-bottom:50px;
-}
-
-</style>
 
 </head>
 
@@ -70,20 +21,24 @@ bottom:50px;
 
 <div id="contents">
 
-	<h2>購入履歴</h2>
+<div class="purchaseDetails">
+		<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
 
-	<div class="mypage2_btn">
-	<div class="submit_btn_box">
+
+<div class="purchaseHistoryA">
+
+	<div class="pageTitle2">購入履歴</div>
+
+	<div class="purchaseHistory_btn">
 		<div id="contents-btn-set">
 			<s:form action="DeletePurchaseHistoryAction">
-				<s:submit value="削除" class="submit_btn"/>
+				<s:submit value="履歴全削除" class="purchaseHistory2_btn"/>
 			</s:form>
 		</div>
-	</div>
-	</div>
 
-	<div class="purchaseDetails">
-		<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
+
+	</div>
+	</div>
 
 
 				<s:iterator value="#session.purchaseHistoryInfoDtoList">
@@ -125,15 +80,16 @@ bottom:50px;
 				</s:iterator>
 
 		</s:if>
-
-		<s:else>
+<s:else>
 			<div class="info">
 				商品購入履歴はありません。
 			</div>
 		</s:else>
-
-	</div>
+		</div>
 </div>
+</div>
+
+
 
 <s:include value="footer.jsp"/>
 </body>

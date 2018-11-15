@@ -7,70 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/mypage.css">
+
+
 
 <title>マイページ</title>
 
 <s:include value="header.jsp"/>
-
-<style type="text/css">
-
-
-
-}
-h2{
-    padding-left: 20px;
-    margin-bottom: 15px;
-    position: relative;
-    border-left: solid 10px #A4A4A4;
-
-}
-
-.btn_mypage{
-text-align:center;
-position:relative;
-top:50px;
-}
-
-
-table.vertical-list-table{
-margin-left:auto;
-margin-right:auto;
-width:60%;
-font-size:1.2rem;
-line-height:1.3;
-border-spacing: 1;
-font-family: font-family: "游ゴシック", "Yu Gothic";
-
-}
-table.vertical-list-table th{
-
-width:40%;
-padding:20px;
-font-weight:700;
-vertical-align:top;
-background: #555555;
-color:white;
-text-align: center;
-
-}
-
-
-
-table.vertical-list-table td{
-width:60%;
-padding:20px;
-background:#999999;
-color:white;
-text-align: left;
-}
-table.vertical-list-table, th, td {
-	border-collapse: collapse;
-	border: 3px solid white;
-}
-
-
-</style>
 
 
 </head>
@@ -80,7 +23,7 @@ table.vertical-list-table, th, td {
 <div class="mypageRg">
 
 
-<h2>会員登録情報</h2>
+<div class="pageTitle1"> 会員登録情報</div>
 	<s:form action="PurchaseHistoryAction">
 		<table class="vertical-list-table">
 
@@ -116,14 +59,14 @@ table.vertical-list-table, th, td {
 
 
 		<div class="btn_mypage">
-		<div class="submit_btn_box">
-		<s:submit value="購入履歴" class="submit_btn"/>
+
+		<s:submit value="購入履歴" class="btn_mypage2"/>
 		</div>
 		</div>
 		</s:form>
+</div>
+</div>
 
-</div>
-</div>
 		<s:include value="footer.jsp"/>
 
 </body>

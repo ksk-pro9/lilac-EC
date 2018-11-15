@@ -153,14 +153,3 @@ return purchaseHistoryInfoDTOList;
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
