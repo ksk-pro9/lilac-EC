@@ -22,9 +22,9 @@
 				</div>
 					<s:form id="form" action="SettlementCompleteAction" >
 							<!--<h3>お届け先住所</h3>  -->
-								<table class="horizontal-list-table">
 								<s:iterator value="#session.destinationInfoDtoList" status="st">
-										<tr><th><td>
+								<table class="horizontal-list-table">
+																		<tr><th><td>
 													<s:if test="#st.index==0">
 														<label><input type="radio" name="id" checked="checked" value="<s:property value='id' />"/></input>お届け先情報</label>
 													</s:if><s:else>
@@ -65,7 +65,7 @@
 
 									<div class="submit_btn_box">
 										<div id=".contents-btn-set">
-									<s:submit value="決済" class="submit_btn" />
+											<s:submit value="決済" class="submit_btn" />
 										</div>
 									</div>
 
