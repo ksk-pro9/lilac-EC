@@ -6,100 +6,8 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="./css/style.css">
-	<style type="text/css">
-	#form1 {
-	width: 700px;
-	margin: 0 auto;
-	margin-top: 30px;
-	margin-bottom: 100px;
-	}
+	<link rel="stylesheet" href="./css/cart.css">
 
-	#contents h1{
-	width: 700px;
-    margin: 0 auto;
-    padding-left:20px;
-	border-left:10px solid #A4A4A4;
-
-	}
-	#contents h2{
-	text-align:center;
-	}
-
-	#contents .titleMessage{
-	width: 700px;
-    margin: 0 auto;
-    text-align:center;
-	}
-
-	.checkbox-image{
-	posision:relative;
-	float:left;
-	}
-
-	.checkbox{
-	float:left;
-	padding-top:120px;
-	}
-
-	.gorigori {
-	margin-left:50px;
-
-	}
-
-	.gorigori img{
-	width:300px;
-	height:300px;
-	border-radius:20px;
-	}
-
-	.horizontal-list-table {
-	display:block;
-	}
-
-	.border{
-	border-top:1px solid black;
-	margin:15px 0px;
-	}
-	.floatclear{
-	clear: both;
-	}
-
-	.contents_btn_set {
-	display: block;
-	text-decoration:none;
-	width: 100px;
-	padding: 0.8em;
-	text-align: center;
-	color: #FFF;
-	border-radius: 4px;
-	background: #4DD0E1;
-	overflow: hidden;
-	}
-
-	.contents_btn_set label{
-	display:block;
-	}
-
-	.contents_btn_set span {
-	display:inline-block;
-	transition: .6s
-	}
-
-	.contents_btn_set:hover span {
-	transform: rotateX(360deg);
-	}
-
-	.textbox{
-	padding-left:80px;
-	padding-top:30px;
-	}
-
-	.totalprice{
-	color:red;
-	font-size: 180%;
-    margin: 50px 0 30px 0;
-	}
-	</style>
 	<title>カート</title>
 	<script type="text/javascript">
 		function goDeleteCartAction(){
@@ -188,15 +96,15 @@
 					<h2 class="totalprice"><s:label value="カート合計金額:\\"/><s:property value="#session.totalPrice" />円</h2>
 					<br>
 
-					<div class="submit_btn_box">
-						<div class="contents_btn_set">
-							<span><s:submit value="決済" class="submit_btn" /></span>
+					<div class="btn_box">
+						<div class="btn_set">
+							<span><s:submit value="決済" class="btn" /></span>
 						</div>
 					</div>
 
-					<div class="submit_btn_box">
-						<div class="contents-btn-set">
-							<label><span><s:submit value="削除" onclick="this.form.action='DeleteCartAction';"/></span></label>
+					<div class="btn_box">
+						<div class="btn-set">
+							<span><s:submit value="削除" class="btn" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
 					</div>
 
