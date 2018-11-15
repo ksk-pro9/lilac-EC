@@ -139,7 +139,7 @@
 					</div>
 					<div class="btn_box">
 
-							<s:submit value="パスワード設定" class="btn_secondary" />
+							<s:submit value="パスワード設定" class="submit_btn" />
 
 					</div>
 					</s:form>
