@@ -122,7 +122,7 @@ body, html {
 			border-bottom-right-radius: 5px;
 		}
 
-
+		/* ---------- footer ---------- */
 		#footer{
 			border-top: solid 1px grey;
 		 	width: 100%;
@@ -133,4 +133,9 @@ body, html {
 			background-color: #f7f7f7;
 			text-align: center;
 			line-height: 40px;
+		}
+
+		/* ---------- home ---------- */
+		#contents > h1{
+			text-align: center;
 		}
