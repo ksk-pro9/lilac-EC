@@ -33,7 +33,6 @@
 			<s:if test="#session.cartInfoDtoList.size()>0">
 				<p class="titleMessage">カートには以下の商品が入っています。</p>
 				<s:form id="form1" action="SettlementConfirmAction">
-					<table class="horizontal-list-table">
 						<s:iterator value="#session.cartInfoDtoList">
 						<div class="checkbox-image">
 							<div class="checkbox">
@@ -91,8 +90,7 @@
 						</table>
 							<div class="border floatclear"></div>
 						</s:iterator>
-					</table>
-					<h2 class="totalprice"><s:label value="カート合計金額:\\"/><s:property value="#session.totalPrice" />円</h2>
+					<h2 class="totalprice"><s:label value="カート合計金額:¥"/><s:property value="#session.totalPrice" />円</h2>
 					<br>
 
 					<div class="btn_box">
@@ -105,7 +103,6 @@
 						<div class="btn-set">
 							<span><s:submit value="削除" class="btn" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
-						<a href="#" class="cp_btn"><span>button</span></a>
 					</div>
 
 				</s:form>

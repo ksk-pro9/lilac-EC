@@ -25,18 +25,6 @@
 	margin : 30px auto;
 	}
 
-	#contents > #form1 > .btn_box > .btn_set > .btn{
-	display: inline-block;
-	text-decoration:none;
-	width: 100px;
-	padding: 0.8em;
-	text-align: center;
-	color: #FFF;
-	border-radius: 4px;
-	background: #4DD0E1;
-	overflow: hidden;
-	}
-
 	#contents h1{
 	width: 700px;
     margin: 0 auto;
@@ -67,28 +55,32 @@
     text-align:center;
 	}
 
-input[type="submit" i] btn{
-	border-radius: 4px;
-}
+	.btn_box {
+	position:relative;
+	}
 
-	a.cp_btn {
-	display: block;
-	text-decoration:none;
-	width: 160px;
-	padding: 0.8em;
-	text-align: center;
-	color: #FFF;
-	border-radius: 4px;
-	background: #4DD0E1;
-	overflow: hidden;
-}
-a.cp_btn span {
-	display:inline-block;
-	transition: .5s
-}
-a.cp_btn:hover span {
-	transform: rotateX(360deg);
-}
+	.btn-set {
+	text-align:center;
+	position:relative;
+	top:50px;
+	}
+
+	.btn {
+	display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    background:white;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    font-size:18px;
+	}
+
+	.btn:hover{
+	background: #67c5ff;
+	color: white;
+	}
 
 	.error {
 	font-size : 0.8em;
