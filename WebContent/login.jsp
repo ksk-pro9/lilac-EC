@@ -89,17 +89,7 @@
 
 	<title>ログイン</title>
 
-	<script>
-		/* function goLoginAction(){
-			document.getElementById("form").action="LoginAction";
-		}
-		function goCreateUserAction(){
-			document.getElementById("form").action="CreateUserAction";
-		}
-		function goResetPasswordAction(){
-			document.getElementById("form").action="ResetPasswordAction";
-		} */
-	</script>
+
 </head>
 
 
@@ -159,7 +149,8 @@
 	</div>
 
 	<div class="log">
-		<s:submit value="ログイン" class="submit_log_btn" action="LoginAction"/>
+
+		<s:submit value="ログイン" class="submit_log_btn"/>
 	</div>
 
 </s:form>
