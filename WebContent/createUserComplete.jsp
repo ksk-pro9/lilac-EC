@@ -6,27 +6,9 @@
 
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/createUser.css">
 <meta http-equiv="refresh" content="3;URL='HomeAction'"/>
 <title>登録完了</title>
-
-<style type="text/css">
-
-#contents{
-	max-width: 700px;
-	margin: auto;
-}
-
-.success{
-	background-color: #dcdcdc;
-	border-radius: 25px;
-	padding: 80px 20px;
-	text-align: center;
-	font-size: 25px;
-	fone-weight: bold;
-}
-
-</style>
 
 </head>
 
