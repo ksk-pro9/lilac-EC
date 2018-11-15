@@ -41,7 +41,14 @@ form{
 
 }
 
-.submit_btn{}
+.submit_btn{
+	font-size:20px;
+	width:400px;
+	border-radius:20px;
+	background-color:#2FCDB4;
+	color:#F8F8F8;
+	box-shadow:0 5px #124d44;
+}
 
 .success{}
 
