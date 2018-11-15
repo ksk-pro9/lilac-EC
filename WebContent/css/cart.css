@@ -25,6 +25,18 @@
 	margin : 30px auto;
 	}
 
+	#contents > #form1 > .btn_box > .btn_set > .btn{
+	display: inline-block;
+	text-decoration:none;
+	width: 100px;
+	padding: 0.8em;
+	text-align: center;
+	color: #FFF;
+	border-radius: 4px;
+	background: #4DD0E1;
+	overflow: hidden;
+	}
+
 	#contents h1{
 	width: 700px;
     margin: 0 auto;

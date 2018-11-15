@@ -7,44 +7,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="./css/cart.css">
 
-.submit_btn{
-	font-size:20px;
-	width:400px;
-	border-radius:20px;
-	background-color:#2FCDB4;
-	color:#F8F8F8;
-	box-shadow:0 5px #124d44;
-	}
-
-	.btn_box{
-	text-align:center;
-	position:relative;
-	}
-
-	.btn:hover span {
-	transform: rotateX(360deg);
-	}
-
-	.btn {
-	display: inline-block;
-	text-decoration:none;
-	width: 100px;
-	padding: 0.8em;
-	text-align: center;
-	color: #FFF;
-	border-radius: 4px;
-	background: #4DD0E1;
-	overflow: hidden;
-	}
-
-	.btn label{
-	display:block;
-	}
-
-	.btn span {
-	display:inline-block;
-	transition: .6s
-	}
 	<title>カート</title>
 	<script type="text/javascript">
 		function goDeleteCartAction(){
