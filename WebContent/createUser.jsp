@@ -95,7 +95,8 @@
 <div class="input-form">
 
 <s:form action="CreateUserConfirmAction">
-
+<input type="password" name="dummypass"
+					style="top: -100px; left: -100px; position: fixed;" />
 <div class="input-form-set">
 	<div class="input-form-title">姓<span class="input-form-hissu">必須</span></div>
 	<s:textfield name="familyName" value="%{#session.familyName}" placeholder="姓" class="txt" />
