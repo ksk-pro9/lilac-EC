@@ -72,7 +72,7 @@ text-align:center;
 <div id="contents">
 <h1>商品一覧画面</h1>
 <%-------エラーメッセージ --------%>
-<s:if test='#session.containsKey("keywordsErrorMessageList.isEmpty")'>
+<s:if test='#session.containsKey("keywordsErrorMessageList")'>
 	<div class="error">
 	<div class="error-message">
 		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
@@ -80,9 +80,7 @@ text-align:center;
 	</div>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
-
-検索結果がありません。
-
+	検索結果がありません。
 </s:elseif>
 
 <s:else>
@@ -99,19 +97,21 @@ text-align:center;
 			</s:url>'>
 			<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/>
 			<br>
-			</a>
+
 			<%------　画像の下に商品名、商品名かな、価額が表示される -------%>
 			<div class="items-text">
-			<a href='<s:url action="ProductDetailsAction">
-			<s:param name="productId" value="%{productId}"/>
-			</s:url>'>
+				<%--　文字リンク用 --%>
+<%-- 			<a href='<s:url action="ProductDetailsAction"> --%>
+<!-- 			<s:param name="productId" value="%{productId}"/> -->
+<%-- 			</s:url>'> --%>
 			<div class="items">
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>
 			</div>
-			</a>
+<!-- 			</a> -->
 			</div>
+			</a>
 			</li>
 		</ul>
 	 	</div>

@@ -12,20 +12,20 @@
 
 <style type="text/css">
 
-
 .box1{
 margin:0 auto;
 width:1000px;
 height:400px;
 }
+
 .box2{
 margin:0 auto;
 width:1000px;
 height:300px;
 margin-bottom:100px;
 }
-.2column-container{
 
+.2column-container{
 }
 
 .colum1{
@@ -34,6 +34,7 @@ width:50%;
 height:100%;
 text-align:center;
 }
+
 .colum2{
 float:left;
 width:50%;
@@ -42,7 +43,6 @@ height:100%;
 
 .product-details-recommend-box{
 width:800px;
-
 margin:0 auto;
 clear:left;
 }
@@ -50,7 +50,6 @@ clear:left;
 .recommend-box{
 width:33.3%;
 float:left;
-
 
 }
 .recommend-box ul li{
@@ -88,6 +87,15 @@ text-align:center;
 }
 ul{
 list-style:none;
+}
+a{
+text-decoration: none;
+}
+a:link{
+color : #000000;
+}
+a:visited{
+color : #000000;
 }
 </style>
 <body>
@@ -181,11 +189,11 @@ list-style:none;
 		<s:param name="productId" value="%{productId}"/>
 		</s:url>'>
 		<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/>
-		</a>
 		<div class="item-text2">
 		<s:property value="productName"/><br>
 		<s:property value="price"/>円<br>
 		</div>
+		</a>
 		</li>
 	</ul>
 	</div>
