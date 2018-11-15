@@ -1,4 +1,6 @@
-body, html {
+
+		/* ---------- all ---------- */
+		body, html {
 			margin: 0;
 			padding: 0;
 			width: 100%;
@@ -6,6 +8,7 @@ body, html {
 			min-width: 800px;
 		}
 
+		/* ---------- header ---------- */
 		header{
 			border-bottom: solid 1px grey;
 			background-color: #f7f7f7;
@@ -56,14 +59,15 @@ body, html {
 		}
 
 		#head > #top > #right > ul > li #header-image{
-			position:relative;
-			top:3px;
+			position: relative;
+			top: 3px;
+			right: 5px;
 		}
 
 		#head > #top > #right > ul > li{
 			border: none;
 			background-color: transparent;
-			transition: .3s;
+			transition: .2s;
 			-webkit-transform: scale(1);
 			transform: scale(1);
 			margin-left: 40px;
@@ -94,7 +98,7 @@ body, html {
 			clear: both;
 		}
 
-		#category-box{
+		#head > #bottom #category > #category-box{
 			outline: none;
 			border: solid 1px grey;
 			background-color: white;
@@ -103,7 +107,7 @@ body, html {
 			border-bottom-left-radius: 5px;
 		}
 
-		#keywords-box{
+		#head > #bottom #keywords > #keywords-box{
 			outline: none;
 			border: solid 1px grey;
 			width: 300px;
@@ -111,7 +115,7 @@ body, html {
 			background-color: white;
 		}
 
-		#search-box{
+		#head > #bottom #search > #search-box{
 			outline: none;
 			border: solid 1px grey;
 			height: 14px;

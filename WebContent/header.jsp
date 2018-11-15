@@ -11,7 +11,6 @@
 <body>
 	<header>
 			<div id="head">
-
 				<div id = "top">
 
 					<div id = "left">
@@ -69,7 +68,6 @@
 								<input type="image" id="search-box" src="./images/search.png"/></div>
 					</s:form>
 				</div>
-
 			</div>
 	</header>
 </body>
