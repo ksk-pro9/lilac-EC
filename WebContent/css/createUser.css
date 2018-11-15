@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-/* ======= createUser ======= */
+/* =============== createUser =============== */
 
 #contents{
 	max-width: 700px;
@@ -55,18 +55,19 @@
 }
 
 /* =============== createUserConfirm =============== */
-
+/*
 #contents{
 	max-width: 700px;
 	margin: auto;
 }
-
+ */
+ /*
 #contents h1{
 	font-size: 30px;
 	border-left: solid 8px #c0c0c0;
 	padding-left: 15px;
 }
-
+ */
 #contents p{
 	padding: 20px 0 0 0;
 	text-align: center;
@@ -105,12 +106,12 @@ table td{
 }
 
 /* =============== createUserComplete =============== */
-
+/*
 #contents{
 	max-width: 700px;
 	margin: auto;
 }
-
+ */
 .success{
 	background-color: #dcdcdc;
 	border-radius: 25px;
