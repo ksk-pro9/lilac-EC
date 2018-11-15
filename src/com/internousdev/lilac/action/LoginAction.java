@@ -82,10 +82,9 @@ public class LoginAction extends ActionSupport implements SessionAware{
 						Iterator<DestinationInfoDTO> iterator = destinationInfoDtoList.iterator();
 						if(!(iterator.hasNext())) {
 							destinationInfoDtoList = null;
-
+						}
 						session.put("destinationInfoDtoList", destinationInfoDtoList);
 						result = "settlement";
-						}
 
 				}else {
 					result = SUCCESS;
