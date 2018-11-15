@@ -11,10 +11,12 @@
 <title>登録完了</title>
 
 <style type="text/css">
+
 #contents{
 	max-width: 700px;
 	margin: auto;
 }
+
 .success{
 	background-color: #dcdcdc;
 	border-radius: 25px;
@@ -33,9 +35,9 @@
 <s:include value="header.jsp"/>
 
 <div id="contents">
-<div class="success">
-ユーザー登録が完了しました。
-</div>
+	<div class="success">
+	ユーザー登録が完了しました。
+	</div>
 </div>
 
 <div id="footer">

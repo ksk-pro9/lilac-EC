@@ -13,34 +13,6 @@
 
 <style type="text/css">
 
-.input-form{
-	background-color: #dcdcdc;
-	border-radius: 25px;
-	padding: 100px 20px;
-	margin: 20px 0;
-}
-.input-form-set{
-	padding: 10px 100px;
-}
-.input-form-title{
-	font-size: 20px;
-	font-weight: bold;
-	text-align: left;
-	padding: 2px 0 2px 30px;
-	margin-bottom: 5px;
-	margin-left: -25px;
-}
-.input-form-hissu{
-	font-size: 15px;
-	background-color: red;
-	margin-left: 20px;
-	margin-rigth: 8px;
-	padding: 1px 2px;
-	color: #fff;
-	border-radius: 10px;
-	margin-bottom: 3px;
-}
-
 #contents{
 	max-width: 700px;
 	margin: auto;
@@ -50,6 +22,37 @@
 	font-size: 30px;
 	border-left: solid 15px #c0c0c0;
 	padding-left: 15px;
+}
+
+.input-form{
+	background-color: #dcdcdc;
+	border-radius: 25px;
+	padding: 100px 20px;
+	margin: 20px 0;
+}
+
+.input-form-set{
+	padding: 10px 100px;
+}
+
+.input-form-title{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px 0 2px 30px;
+	margin-bottom: 5px;
+	margin-left: -25px;
+}
+
+.input-form-hissu{
+	font-size: 15px;
+	background-color: red;
+	margin-left: 20px;
+	margin-rigth: 8px;
+	padding: 1px 2px;
+	color: #fff;
+	border-radius: 10px;
+	margin-bottom: 3px;
 }
 
 .txt{
@@ -64,7 +67,6 @@
 
 </style>
 
-
 </head>
 
 <body>
@@ -75,6 +77,8 @@
 
 <div id="contents">
 <h1>アカウント新規登録</h1>
+
+<!-- ======= ここからエラーメッセージ error-message ======= -->
 
  <s:if test='#session.containsKey("familyNameErrorMessageList")'>
 	<div class="error">
@@ -143,48 +147,49 @@
 <!-- ======= ここまでエラーメッセージ /error-message ======= -->
 
 <!-- ======= ここから入力フォーム input-form ======= -->
+
 <div class="input-form">
 
 <s:form action="CreateUserConfirmAction">
 
 <div class="input-form-set">
-<div class="input-form-title">姓<span class="input-form-hissu">必須</span></div>
-<s:textfield name="familyName" value="%{#session.familyName}" placeholder="姓" class="txt" />
+	<div class="input-form-title">姓<span class="input-form-hissu">必須</span></div>
+	<s:textfield name="familyName" value="%{#session.familyName}" placeholder="姓" class="txt" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">名<span class="input-form-hissu">必須</span></div>
-<s:textfield name="firstName" value="%{#session.firstName}" placeholder="名" class="txt" />
+	<div class="input-form-title">名<span class="input-form-hissu">必須</span></div>
+	<s:textfield name="firstName" value="%{#session.firstName}" placeholder="名" class="txt" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">姓ふりがな<span class="input-form-hissu">必須</span></div>
-<s:textfield name="familyNameKana" value="%{#session.familyNameKana}"  placeholder="姓ふりがな" class="txt" />
+	<div class="input-form-title">姓ふりがな<span class="input-form-hissu">必須</span></div>
+	<s:textfield name="familyNameKana" value="%{#session.familyNameKana}"  placeholder="姓ふりがな" class="txt" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">名ひらがな<span class="input-form-hissu">必須</span></div>
-<s:textfield name="firstNameKana" value="%{#session.firstNameKana}" placeholder="名ふりがな" class="txt" />
+	<div class="input-form-title">名ひらがな<span class="input-form-hissu">必須</span></div>
+	<s:textfield name="firstNameKana" value="%{#session.firstNameKana}" placeholder="名ふりがな" class="txt" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">性別<span class="input-form-hissu">必須</span></div>
-<s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" />
+	<div class="input-form-title">性別<span class="input-form-hissu">必須</span></div>
+	<s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">メールアドレス<span class="input-form-hissu">必須</span></div>
-<s:textfield name="email" value="%{#session.email}"  placeholder="メールアドレス" class="txt" />
+	<div class="input-form-title">メールアドレス<span class="input-form-hissu">必須</span></div>
+	<s:textfield name="email" value="%{#session.email}"  placeholder="メールアドレス" class="txt" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">ログインID<span class="input-form-hissu">必須</span></div>
-<s:textfield name="loginId" value="%{#session.loginId}" placeholder="ログインID" class="txt" />
+	<div class="input-form-title">ログインID<span class="input-form-hissu">必須</span></div>
+	<s:textfield name="loginId" value="%{#session.loginId}" placeholder="ログインID" class="txt" />
 </div>
 
 <div class="input-form-set">
-<div class="input-form-title">パスワード<span class="input-form-hissu">必須</span></div>
-<s:password name="password" value=""  placeholder="パスワード" class="txt" />
+	<div class="input-form-title">パスワード<span class="input-form-hissu">必須</span></div>
+	<s:password name="password" value=""  placeholder="パスワード" class="txt" />
 </div>
 
 <div class="submit_btn_box">
