@@ -6,6 +6,7 @@
 
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/createDestination.css">
 <title>宛先情報完了</title>
 <script type="text/javascript">
 	window.onload = function(){
@@ -15,24 +16,6 @@
 		form.submit();
 	}
 </script>
-
-<style type="text/css">
-
-#contents{
-	max-width: 700px;
-	margin: auto;
-}
-
-.success{
-	background-color: #dcdcdc;
-	border-radius: 25px;
-	padding: 80px 20px;
-	text-align: center;
-	font-size: 25px;
-	fone-weight: bold;
-}
-
-</style>
 
 </head>
 

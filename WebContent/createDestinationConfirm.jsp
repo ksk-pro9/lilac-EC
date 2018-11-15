@@ -7,60 +7,8 @@
 <head>
 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/createDestination.css">
 <title>宛先情報確認</title>
-
-<style type="text/css">
-
-#contents{
-	max-width: 700px;
-	margin: auto;
-}
-
-#contents h1{
-	font-size: 30px;
-	border-left: solid 8px #c0c0c0;
-	padding-left: 15px;
-}
-
-#contents p{
-	padding: 20px 0 0 0;
-	text-align: center;
-	text-weight: bold;
-	font-size: 20px;
-}
-
-.form-confirm{
-	background-color: #dcdcdc;
-	border-radius: 25px;
-	padding: 50px 20px;
-	margin: 20px 0;
-}
-
-table{
-	border-collapse: separate;
-	margin-left: auto;
-	margin-right: auto;
-	border-spacing: 15px;
-}
-
-table width{
-	width: 80%;
-}
-
-table th,td{
-	padding: 0 50px;
-}
-
-table th{
-	border-right: dashed 3px black;
-}
-
-table td{
-	text-align: left;
-}
-
-</style>
 
 </head>
 

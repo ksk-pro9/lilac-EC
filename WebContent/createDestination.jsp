@@ -7,64 +7,8 @@
 <head>
 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/createDestination.css">
 <title>宛先情報入力</title>
-
-<style type="text/css">
-
-#contents{
-	max-width: 700px;
-	margin: auto;
-}
-
-#contents h1{
-	font-size: 30px;
-	border-left: solid 8px #c0c0c0;
-	padding-left: 5px;
-}
-
-.input-form{
-	background-color: #dcdcdc;
-	border-radius: 25px;
-	padding: 100px 20px;
-	margin: 20px 0;
-}
-
-.input-form-set{
-	padding: 10px 100px;
-}
-
-.input-form-title{
-	font-size: 20px;
-	font-weight: bold;
-	text-align: left;
-	padding: 2px 0 2px 30px;
-	margin-bottom: 3px;
-	margin-left: -25px;
-}
-
-.input-form-hissu{
-	font-size: 15px;
-	background-color: red;
-	margin-left: 20px;
-	margin-rigth: 8px;
-	padding: 1px 2px;
-	color: #fff;
-	border-radius: 10px;
-	margin-bottom: 3px;
-}
-
-.txt{
-	font-size: 10px;
-	width: 98%;
-	height: 30px;
-	border-radius: 20px;
-	box-shadow: 0 0 10px black;
-	padding: 0 0 0 3%;
-	margin-bottom: 20px;
-}
-
-</style>
 
 </head>
 
