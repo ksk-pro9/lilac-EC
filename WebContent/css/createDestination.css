@@ -11,7 +11,7 @@
 #contents h1{
 	font-size: 30px;
 	border-left: solid 15px #c0c0c0;
-	padding-left: 15px;
+	padding-left: 8px;
 }
 
 #contents p{
@@ -61,27 +61,7 @@
 }
 
 /* =============== createDestinationConfirm =============== */
-/*
-#contents{
-	max-width: 700px;
-	margin: auto;
-	padding: 50px 10px;
-}
- */
-/*
-#contents h1{
-	font-size: 30px;
-	border-left: solid 15px #c0c0c0;
-	padding-left: 15px;
- */
-/*
-#contents p{
-	padding: 20px 0 0 0;
-	text-align: center;
-	text-weight: bold;
-	font-size: 20px;
-}
- */
+
 .form-confirm{
 	background-color: #dcdcdc;
 	border-radius: 25px;
@@ -111,13 +91,7 @@ table td{
 }
 
 /* =============== createDestinationComplete =============== */
-/*
-#contents{
-	max-width: 700px;
-	margin: auto;
-	padding: 50px 10px;
-}
- */
+
 .success{
 	background-color: #dcdcdc;
 	border-radius: 25px;
