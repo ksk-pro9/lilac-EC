@@ -14,8 +14,10 @@
 
 	<s:include value="header.jsp" />
 
-	<div id="contents">
-		<h1>ホーム画面</h1>
+	<div id="home">
+		<div id="contents">
+			<h1>ホーム画面</h1>
+		</div>
 	</div>
 
 	<s:include value="footer.jsp"/>

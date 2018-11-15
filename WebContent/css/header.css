@@ -136,6 +136,6 @@ body, html {
 		}
 
 		/* ---------- home ---------- */
-		#contents > h1{
+		#home > #contents > h1{
 			text-align: center;
 		}
