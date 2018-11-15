@@ -10,13 +10,13 @@ import com.opensymphony.xwork2.ActionSupport;
 
 
 public class MyPageAction extends ActionSupport implements SessionAware{
-	private String categoryId;
+
 
 	private Map<String,Object> session;
 
 	public String execute(){
 		String result=ERROR;
-		System.out.println(categoryId);
+
 
 		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
@@ -42,13 +42,8 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	}
 
 
-	public String getCategoryId(){
-		return categoryId;
-	}
 
-	public void setCategoryId(String categoryId){
-		this.categoryId=categoryId;
-	}
+
 
 	public Map<String,Object> getSession(){
 		return session;

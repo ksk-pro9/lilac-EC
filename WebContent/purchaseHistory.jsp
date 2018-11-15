@@ -81,7 +81,7 @@
 
 		</s:if>
 <s:else>
-			<div class="info">
+			<div class="info2">
 				商品購入履歴はありません。
 			</div>
 		</s:else>

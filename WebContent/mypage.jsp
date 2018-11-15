@@ -13,11 +13,12 @@
 
 <title>マイページ</title>
 
-<s:include value="header.jsp"/>
+
 
 
 </head>
-
+<body>
+<s:include value="header.jsp"/>
 <div id="contents">
 
 <div class="mypageRg">
