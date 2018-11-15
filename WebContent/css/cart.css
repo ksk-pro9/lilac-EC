@@ -55,8 +55,13 @@
     text-align:center;
 	}
 
+	.info{
+	width: 700px;
+    margin: 0 auto;
+    text-align:center;
+	}
+
 	.btn_box {
-	position:relative;
 	}
 
 	.btn-set {
