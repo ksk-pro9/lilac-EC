@@ -19,9 +19,10 @@
 	}
 
 	.checkbox{
-	position:absolute;
-	top:200px;
+	float:left;
+	padding-top:120px;
 	}
+
 	.gorigori {
 	margin-left:50px;
 
@@ -76,7 +77,11 @@
 	}
 	</style>
 	<title>カート</title>
-
+	<script type="text/javascript">
+		function goDeleteCartAction(){
+			document.getElementById("form").action='DeleteCartAction';
+		}
+	</script>
 	</head>
 
 	<body>
@@ -101,7 +106,7 @@
 						<s:iterator value="#session.cartInfoDtoList">
 						<div class="checkbox-image">
 							<div class="checkbox">
-								<s:checkbox name="checkList" value="checked" fieldValue="%{id}" />
+								<s:checkbox name="checkList" value="checked" fieldValue="%{id}"/>
 								<s:hidden name="productId" value="%{productId}" />
 							</div>
 							<div class="gorigori">
