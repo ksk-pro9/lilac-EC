@@ -8,88 +8,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="./css/style.css">
-
-	<style type="text/css">
-		#contents{
-			margin:0 auto;
-			width:80%;
-		}
-
-		.login{
-			padding-top:20px;
-			padding-left:30px;
-			padding-right:30px;
-			border-radius: 10px;
-			border-bottom:-5px;
-			border:1.5px solid lightgray;
-
-		}
-
-		h1{
-			padding-left:20px;
-			font-size:30px;
-			border-left:3px solid lightgray;
-		}
-
-		.txt{
-			border-radius: 10px;
-    		box-shadow: 0 0 6px gray;
-    		margin-top: 10px;
-    		margin-left: 10px;
-    		margin-right: 10px;
-    		margin-bottom: 20px;
-    		font-size:10px;
-		}
-
-		::placeholder {
-  			color: gray;
- 			font-size:15px;
- 			line-height:20px;
- 			padding-left:2px;
-		}
-
-		.log{
-			text-align:center;
-			padding:0px 50px;
-			margin:10px;
-
-		}
-
-		.submit_log_btn{
-			width:500px;
-			height:50px;
-		}
-
-		.sinki{
-			text-align:center;
-			margin:10px;
-		}
-
-		.submit_btn{
-			width:400px;
-			height:30px;
-
-		}
-
-		.henkou{
-			float:right;
-			color:black;
-			text-decoration:none;
-		}
-
-		#form{
-			margin:10px;
-			background-color:white;
-		}
-
-
-
-	</style>
-
+	<link rel="stylesheet" href="./css/login.css">
 	<title>ログイン</title>
-
-
 </head>
 
 
