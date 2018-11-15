@@ -37,7 +37,10 @@ form{
 }
 
 
-.submit_btn_box{}
+.submit_btn_box{
+
+
+}
 
 .submit_btn{}
 
@@ -76,12 +79,12 @@ form{
 #form{}
 
 #contents {
+	height : 100%;
+	padding-bottom : 100px;
 	padding-top : 70px;
 	margin-top : 50px;
 	margin : 30px auto;
-	height : 100%;
-	padding-bottom : 100px;
-	margin-bottom : 100px;
+	width: 700px;
 
 }
 

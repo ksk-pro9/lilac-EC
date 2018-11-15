@@ -11,6 +11,12 @@
 	width: 700px;
 	margin: 0 auto;
 	margin-top: 30px;
+	margin-bottom: 100px;
+	}
+
+	#contents h1{
+	width: 700px;
+    margin: 0 auto;
 	}
 
 	.checkbox-image{
