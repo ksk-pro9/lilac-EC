@@ -5,22 +5,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/header.css">
 	<title>フッター</title>
 
-	<style type="text/css">
-		#footer{
-			border-top: solid 1px grey;
-		 	width: 100%;
-		 	height: 40px;
-			position: fixed;
-			bottom: 0px;
-			right: 0px;
-			background-color: #f7f7f7;
-			text-align: center;
-			line-height: 40px;
-		}
-	</style>
 </head>
 
 <body>
