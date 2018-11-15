@@ -7,72 +7,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/resetPassword.css">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 <title>パスワード再設定</title>
 
 </head>
-<style type="text/css">
-.resetContent{
-margin:0px auto;
-padding:30px 0;
-border-radius: 20px;
-width: 800px;
-border:3px dashed #A4A4A4;
-text-align:center;
-}
 
-.vertical-list-table{
-display:inline;
-line-height:40px;
-}
-
-.resetTable{
-margin:30px 0;
-;
-
-}
-.resetTitle {
-	font-size: 1.5em;
-	margin: 0px auto 40px auto;
-	position: relative;
-	padding-left: 25px;
-	width: 50%;
-}
-.resetTitle::before {
-	position: absolute;
-	content: '';
-	bottom: -3px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border: none;
-	border-left: solid 15px transparent;
-	border-bottom: solid 15px #A4A4A4;
-}
-.resetTitle::after {
-	position: absolute;
-	content: '';
-	bottom: -3px;
-	left: 10px;
-	width: 100%;
-	border-bottom: solid 3px #A4A4A4;
-}
-
-.resetContent .errorMessage{
-text-align:center;
-}
-.error-message{
-width:100%;
-}
-
-.error{
-margin-left: 0 !important;
-width:100% !important;
-color: red;
-}
-</style>
 <body>
 
 	<s:include value="header.jsp" />
