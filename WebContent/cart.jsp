@@ -17,6 +17,18 @@
 	#contents h1{
 	width: 700px;
     margin: 0 auto;
+    padding-left:20px;
+	border-left:10px solid #A4A4A4;
+
+	}
+	#contents h2{
+	text-align:center;
+	}
+
+	#contents .titleMessage{
+	width: 700px;
+    margin: 0 auto;
+    text-align:center;
 	}
 
 	.checkbox-image{
@@ -80,6 +92,12 @@
 	.textbox{
 	padding-left:80px;
 	padding-top:30px;
+	}
+
+	.totalprice{
+	color:red;
+	font-size: 180%;
+    margin: 50px 0 30px 0;
 	}
 	</style>
 	<title>カート</title>
@@ -167,7 +185,8 @@
 							<div class="border floatclear"></div>
 						</s:iterator>
 					</table>
-					<h2><s:label value="カート合計金額:"/><s:property value="#session.totalPrice" />円</h2><br>
+					<h2 class="totalprice"><s:label value="カート合計金額:\\"/><s:property value="#session.totalPrice" />円</h2>
+					<br>
 
 					<div class="submit_btn_box">
 						<div class="contents_btn_set">
