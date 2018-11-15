@@ -7,8 +7,8 @@
 <head>
 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/createDestination.css">
 <title>宛先情報入力</title>
+<link rel="stylesheet" type="text/css" href="./css/createDestination.css"/>
 
 </head>
 
