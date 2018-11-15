@@ -5,25 +5,21 @@
 
 <head>
 	<meta charset="UTF-8">
-
 	<link rel="stylesheet" href="./css/header.css">
-
 	<title>ヘッダー</title>
-
 </head>
 
 <body>
 	<header>
-
 			<div id="head">
 
 				<div id = "top">
 
 					<div id = "left">
 						<div id = "logo">
-						<a href='<s:url action="HomeAction"/>'>B.read</a></div>
+							<a href='<s:url action="HomeAction"/>'>B.read</a>
+						</div>
 					</div>
-
 
 					<div id = "right">
 						<ul>
@@ -31,11 +27,9 @@
 								<a href="CartAction"><img src='./images/cart.png' width="20px" height="20px" id="header-image">カート</a>
 							</li>
 
-
 							<li id = "item">
 								<a href="ProductListAction"><img src='./images/item.png' width="20px" height="20px" id="header-image">商品一覧</a>
 							</li>
-
 
 							<!-- ログイン状態のときに表示されるもの -->
 							<s:if test="#session.logined == 1">
@@ -44,14 +38,12 @@
 								</li>
 							</s:if>
 
-
 							<!-- 未ログイン状態のときに表示されるもの -->
 							<s:else>
 								<li id = "login">
 									<a href="GoLoginAction"><img src='./images/login.png' width="20px" height="20px" id="header-image">ログイン</a>
 								</li>
 							</s:else>
-
 
 							<!-- ログイン状態のときに表示されるもの -->
 							<s:if test="#session.logined == 1">
@@ -62,7 +54,6 @@
 						</ul>
 					</div>
 				</div>
-
 
 				<div id = "bottom">
 					<s:form action="SearchItemAction">

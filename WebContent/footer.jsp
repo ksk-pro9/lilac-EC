@@ -9,7 +9,6 @@
 	<title>フッター</title>
 
 	<style type="text/css">
-
 		#footer{
 			border-top: solid 1px grey;
 		 	width: 100%;
@@ -21,7 +20,6 @@
 			text-align: center;
 			line-height: 40px;
 		}
-
 	</style>
 </head>
 

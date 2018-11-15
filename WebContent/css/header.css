@@ -1,5 +1,4 @@
-
-		body, html {
+body, html {
 			margin: 0;
 			padding: 0;
 			width: 100%;
@@ -18,26 +17,26 @@
 			padding: 10px;
 		}
 
-		#top{
+		#head > #top{
 			width: 100%;
 			height: 40px;
 		}
 
-		#top > #left{
+		#head > #top > #left{
 			float: left;
 			line-height: 40px;
 			margin-left: 50px;
 			font-size: 30px;
 		}
 
-		#top > #right{
+		#head > #top > #right{
 			position: relative;
 			top: -10px;
 			float: right;
 			margin-right: 50px;
 		}
 
-		#bottom{
+		#head > #bottom{
 			display: -webkit-flex;
 			display: flex;
 			align-items: center;
@@ -87,11 +86,11 @@
 			float: left;
 		}
 
-		#bottom div{
+		#head > #bottom div{
 			float:left;
 		}
 
-		#bottom::after{
+		#head > #bottom::after{
 			clear: both;
 		}
 
