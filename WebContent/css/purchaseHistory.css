@@ -17,14 +17,14 @@
 	margin-right:auto;
 }
 
-#left{
+#a > #left{
 	position:relative;
 	top:20px;
 
 	float:left;
 }
 
-#right{
+#a > #right{
 	float:left;
 	position:relative;
 	top:50px;
