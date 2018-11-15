@@ -75,7 +75,7 @@
 
 <!-- ======= ここからエラーメッセージ error-message ======= -->
 
-<s:if test="!#session.familyNameErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("familyNameErrorMessageList")'>
 		<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
@@ -83,7 +83,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.firstNameErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("firstNameErrorMessageList")'>
  	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.firstNameErrorMessageList"><s:property /><br></s:iterator>
@@ -91,7 +91,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.familyNameKanaErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("familyNameKanaErrorMessageList")'>
 	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
@@ -99,7 +99,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.firstNameKanaErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("firstNameKanaErrorMessageList")'>
  	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
@@ -107,7 +107,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.userAddressErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("userAddressErrorMessageList")'>
  	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
@@ -115,7 +115,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.telNumberErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("telNumberErrorMessageList")'>
  	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.telNumberErrorMessageList"><s:property /><br></s:iterator>
@@ -123,7 +123,7 @@
 	</div>
 </s:if>
 
-<s:if test="!#session.emailErrorMessageList.isEmpty()">
+<s:if test='#session.containsKey("emailErrorMessageList")'>
  	<div class="error">
 		<div class="error-message">
 			<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
@@ -179,62 +179,6 @@
 <s:textfield name="email" class="txt"/>
 </div>
 
-
-
-
-
-
-
-
-
-<%--
-<table class="vertical-list-table">
-
-<s:form action="CreateDestinationConfirmAction">
-<table class="vertical-list-table">
-
-<tr>
-	<th scope="row"><s:label value="姓"/></th>
-	<td><s:textfield name="familyName" class="txt"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="名"/></th>
-	<td><s:textfield name="firstName" class="txt"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="姓ふりがな"/></th>
-	<td><s:textfield name="familyNameKana" class="txt"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="名ふりがな"/></th>
-	<td><s:textfield name="firstNameKana" class="txt"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="性別"/></th>
-	<td><s:radio name="sex" list="sexList" value="defaultSexValue" label="性別" placeholder="性別"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="住所"/></th>
-	<td><s:textfield name="userAddress" class="txt"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="電話番号"/></th>
-	<td><s:textfield name="telNumber" class="txt"/></td>
-</tr>
-
-<tr>
-	<th scope="row"><s:label value="メールアドレス"/></th>
-	<td><s:textfield name="email" class="txt"/></td>
-</tr>
-
-</table> --%>
-
 <div class="submit_btn_box">
 <div id="contens-btn-set">
 	<s:submit value="宛先情報確認" class="submit_btn"/>
@@ -243,12 +187,11 @@
 
 </s:form>
 
+</div>
+<!-- ======= ここまで入力フォーム /input-form ======= -->
 
 </div>
-<!-- ======= ここまで入力フォーム /form ======= -->
-
-</div>
-<!-- ======= ここまで /contents ======= -->
+<!-- ======= ここまで id contents(エラー文と入力フォーム含めた画面) ======= -->
 
 <s:include value="footer.jsp"/>
 

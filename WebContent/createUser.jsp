@@ -199,7 +199,7 @@
 <!-- ======= ここまで入力フォーム /input-form ======= -->
 
 </div>
-<!-- ======= ここまで id /contents ======= -->
+<!-- ======= ここまで id /contents =======(エラー文と入力フォーム含めた画面) -->
 
 <div id="footer">
 	<s:include value="footer.jsp"/>
