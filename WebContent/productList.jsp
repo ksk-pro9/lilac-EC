@@ -66,6 +66,11 @@ color : #000000;
 h1{
 text-align:center;
 }
+
+.info{
+text-align:center;
+}
+
 </style>
 <body>
 <s:include value="header.jsp" />
@@ -80,7 +85,9 @@ text-align:center;
 	</div>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
+<div class="info">
 	検索結果がありません。
+</div>
 </s:elseif>
 
 <s:else>
