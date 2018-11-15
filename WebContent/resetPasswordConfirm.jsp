@@ -5,20 +5,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/resetPassword.css">
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 <title>パスワード再設定確認</title>
 </head>
 <body>
+
 
 	<s:include value="header.jsp" />
 	<div id="contents">
 		<div class="resetContent">
 			<div class="resetTitle">
 
-				<h1>パスワード再設定確認画面</h1>
+				<span class="fas fa-key"></span> パスワード再設定確認画面 <span
+					class="fas fa-key"></span>
 			</div>
-			<div class="resetMainForm">
-				<s:form action="ResetPasswordCompleteAction">
+
+			<s:form action="ResetPasswordCompleteAction">
+				<div class="resetTable">
 					<table class="vertical-list-table">
 						<tr>
 							<th scope="row"><s:label value="ログインID" /></th>
@@ -29,13 +35,14 @@
 							<td><s:property value="#session.concealedPassword" /></td>
 						</tr>
 					</table>
-					<div class="btn_box">
-						<s:submit value="再設定" class="submit_btn" />
-					</div>
-				</s:form>
-			</div>
+				</div>
+				<div class="btn_box">
+					<s:submit value="再設定" class="submit_btn" />
+				</div>
+			</s:form>
 		</div>
 	</div>
+
 	<s:include value="footer.jsp" />
 
 </body>

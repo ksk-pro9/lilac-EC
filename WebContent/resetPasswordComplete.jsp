@@ -6,8 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3;URL='HomeAction'" />
+<link rel="stylesheet" href="./css/resetPassword.css">
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<meta http-equiv="refresh" content="3;URL='HomeAction'" />
+
 <title>パスワード再設定完了</title>
 </head>
 <body>
@@ -15,9 +19,14 @@
 	<s:include value="header.jsp" />
 
 	<div id="contents">
-		<h1>パスワード再設定確認画面</h1>
+		<div class="resetContent">
+			<div class="resetTitle">
+				<span class="fas fa-key"></span> パスワード再設定確認画面 <span
+					class="fas fa-key"></span>
+					</div>
+					パスワード再設定完了しました。
 
-		パスワード再設定完了しました。
+		</div>
 	</div>
 
 	<s:include value="footer.jsp" />
