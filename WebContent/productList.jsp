@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/product.css">
+<link rel="stylesheet" href="./css/productList.css">
 <title>商品一覧</title>
 </head>
 
