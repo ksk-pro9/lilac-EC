@@ -163,6 +163,7 @@ color : #000000;
 	<s:hidden name="releaseCompany" value="%{#session.releaseCompany}"/>
 	<s:hidden name="releaseDate" value="%{#session.releaseDate}"/>
 	<s:hidden name="productDescription" value="%{#session.productDescription}"/>
+	<s:token/>
 
 
 

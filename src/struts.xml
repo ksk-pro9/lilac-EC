@@ -109,6 +109,9 @@
 
 <!--AddCartAction-->
 <action name="AddCartAction" class="com.internousdev.lilac.action.AddCartAction" method="execute">
+	<interceptor-ref name="defaultStack"/>
+	<interceptor-ref name="token"/>
+	<result name="invalid.token">cart.jsp</result>
 	<result name="success">cart.jsp</result>
 	<result name="error">home.jsp</result>
 	<result name="timeout">error.html</result>
