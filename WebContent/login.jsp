@@ -90,7 +90,7 @@
 	<title>ログイン</title>
 
 	<script>
-		function goLoginAction(){
+		/* function goLoginAction(){
 			document.getElementById("form").action="LoginAction";
 		}
 		function goCreateUserAction(){
@@ -98,7 +98,7 @@
 		}
 		function goResetPasswordAction(){
 			document.getElementById("form").action="ResetPasswordAction";
-		}
+		} */
 	</script>
 </head>
 
@@ -131,10 +131,7 @@
 		</div>
 	</s:if>
 </s:form>
-<!--
-	SAVED:<s:property value="%{#session.savedLoginId}"/>
-	LOGINID:<s:property value="%{#session.loginId}"/>
--->
+
 <div class="login">
 	<s:form>
 			<s:label value="ログインID:"/>
@@ -162,7 +159,7 @@
 	</div>
 
 	<div class="log">
-		<s:submit value="ログイン" class="submit_log_btn" onclick="LoginAction();"/>
+		<s:submit value="ログイン" class="submit_log_btn" action="LoginAction"/>
 	</div>
 
 </s:form>
