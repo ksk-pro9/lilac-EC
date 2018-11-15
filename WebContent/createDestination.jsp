@@ -21,6 +21,8 @@
 
 <h1>宛先情報入力画面</h1>
 
+<p>下記に必要事項を入力してください</p>
+
 <!-- ======= ここからエラーメッセージ error-message ======= -->
 
 <s:if test='#session.containsKey("familyNameErrorMessageList")'>
