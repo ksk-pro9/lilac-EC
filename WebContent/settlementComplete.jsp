@@ -19,6 +19,7 @@
 						<h1>決済完了画面</h1>
 							<div class="success">
 								決済完了しました!
+								ご注文いただきありがとうございます!
 							</div>
 					</div>
 		<s:include value="footer.jsp"/>
