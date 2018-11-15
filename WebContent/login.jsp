@@ -162,7 +162,7 @@
 	</div>
 
 	<div class="log">
-		<s:submit value="ログイン" class="submit_log_btn" onclick="goLoginAction();"/>
+		<s:submit value="ログイン" class="submit_log_btn" onclick="LoginAction();"/>
 	</div>
 
 </s:form>
