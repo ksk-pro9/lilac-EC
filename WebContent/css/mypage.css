@@ -1,32 +1,30 @@
 @charset "UTF-8";
 
 .pageTitle1{
-text-align:left;
-margin-left:110px;
-border-left: solid 10px #A4A4A4;
-font-size:25px;
-position:relative;
-bottom:15px;
+	text-align:left;
+	margin-left:110px;
+	border-left: solid 10px #A4A4A4;
+	font-size:25px;
+	position:relative;
+	bottom:15px;
 }
+
 .mypageRg{
-width:1000px;
-margin-left:auto;
-margin-right:auto;
-margin-top:100px;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
 }
-
-
 
 .btn_mypage{
-text-align:center;
-position:relative;
-top:50px;
-
+	text-align:center;
+	position:relative;
+	top:50px;
 }
-.btn_mypage2{
 
-display:inline-block;
- display: inline-block;
+.btn_mypage2{
+	display:inline-block;
+	display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
     color: #67c5ff;
@@ -36,62 +34,49 @@ display:inline-block;
     transition: .4s;
     font-size:18px;
 }
+
 .btn_mypage2:hover{
-
-background: #67c5ff;
+	background: #67c5ff;
     color: white;
-
 }
-
-
-
 
 table.vertical-list-table{
-margin-left:auto;
-margin-right:auto;
-width:800px;
-font-size:0.9rem;
-line-height:0.8;
-border-spacing: 1;
-font-family: font-family: "游ゴシック", "Yu Gothic";
-
+	margin-left:auto;
+	margin-right:auto;
+	width:800px;
+	font-size:0.9rem;
+	line-height:0.8;
+	border-spacing: 1;
+	font-family: font-family: "游ゴシック", "Yu Gothic";
 }
+
 table.vertical-list-table th{
-
-width:40%;
-padding:20px;
-font-weight:700;
-vertical-align:top;
-background: #555555;
-color:white;
-text-align: center;
-
+	width:40%;
+	padding:20px;
+	font-weight:700;
+	vertical-align:top;
+	background: #555555;
+	color:white;
+	text-align: center;
 }
 
 table.vertical-list-table th:after{
-
-content: "";
-position: absolute;
-top: 50%;
-left: 100%;
- margin-top: -15px;
-border: 15px solid transparent;
-
-
-
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+ 	margin-top: -15px;
+	border: 15px solid transparent;
 }
-
-
 
 table.vertical-list-table td{
-width:60%;
-padding-left:30px;
-background:#999999;
-color:white;
-text-align: left;
-
-
+	width:60%;
+	padding-left:30px;
+	background:#999999;
+	color:white;
+	text-align: left;
 }
+
 table.vertical-list-table, th, td {
 	border-collapse: collapse;
 	border-top: 15px solid white;
