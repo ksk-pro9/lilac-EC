@@ -9,7 +9,7 @@
 	margin-top:100px;
 }
 
-#a{
+#purchaseImage{
 	border-top:20px solid black;
 	width:800px;
 	height:280px;
@@ -17,18 +17,18 @@
 	margin-right:auto;
 }
 
-#a > #left{
+#purchaseImage > #left{
 	position:relative;
 	top:20px;
-
 	float:left;
+	left:80px
 }
 
-#a > #right{
+#purchaseImage > #right{
 	float:left;
 	position:relative;
 	top:50px;
-	left:100px;
+	left:160px;
 	font-size:16px;
 	bottom:10px;
 }
@@ -83,7 +83,7 @@
 	font-size:20px;
 	}
 
-.purchase_image{
+.purchase_img{
 	border-radius: 35px;
 	width:240px;
 	height:210px;

@@ -41,9 +41,9 @@
 
 				<s:iterator value="#session.purchaseHistoryInfoDtoList">
 
-				<div id="a">
+				<div id="purchaseImage">
 					<div id ="left">
-						<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'class="purchase_image"/>
+						<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'class="purchase_img"/>
 					</div>
 
 
