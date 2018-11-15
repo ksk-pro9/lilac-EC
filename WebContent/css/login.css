@@ -24,7 +24,7 @@
 		}
 
 		.txt{
-			border-radius: 20px;
+			border-radius: 10px;
     		box-shadow: 0 0 6px gray;
     		margin-top: 10px;
     		margin-left: 10px;
@@ -34,12 +34,26 @@
     		width:100%;
 		}
 
+		.txt:focus{
+			 outline:0;
+			 color:gray;
 
-	::placeholder {
-  			color: gray;
- 			font-size:20px;
- 			line-height:20px;
- 			padding-left:2px;
+		}
+
+		.txt:active{
+			outline:0;
+			color:gray;
+
+		}
+
+
+		.login ::placeholder {
+  				color: gray;
+ 				font-size:20px;
+ 				line-height:20px;
+ 				padding-left:5px;
+
+
 		}
 
 
