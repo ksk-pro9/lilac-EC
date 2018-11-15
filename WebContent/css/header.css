@@ -31,14 +31,13 @@
 		}
 
 		#top > #right{
-			position:relative;
-			top:-10px;
+			position: relative;
+			top: -10px;
 			float: right;
 			margin-right: 50px;
 		}
 
 		#bottom{
-			overflow: hidden;
 			display: -webkit-flex;
 			display: flex;
 			align-items: center;
