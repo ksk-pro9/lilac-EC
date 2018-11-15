@@ -10,8 +10,8 @@
 
 #contents h1{
 	font-size: 30px;
-	border-left: solid 8px #c0c0c0;
-	padding-left: 5px;
+	border-left: solid 15px #c0c0c0;
+	padding-left: 15px;
 }
 
 #contents p{
@@ -71,9 +71,8 @@
 /*
 #contents h1{
 	font-size: 30px;
-	border-left: solid 8px #c0c0c0;
+	border-left: solid 15px #c0c0c0;
 	padding-left: 15px;
-}
  */
 /*
 #contents p{
