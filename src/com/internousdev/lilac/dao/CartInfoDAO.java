@@ -116,8 +116,8 @@ public class CartInfoDAO {
 		DBConnector dbConnector = new DBConnector();
 		Connection con = dbConnector.getConnection();
 		int count = 0;
-		String sql = "insert into cart_info(user_id, temp_user_id, product_id, product_count, price, regist_date)"
-				+ " values(?, ?, ?, ?, ?, now())";
+		String sql = "insert into cart_info(user_id, temp_user_id, product_id, product_count, price, regist_date, update_date)"
+				+ " values(?, ?, ?, ?, ?, now(), now())";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

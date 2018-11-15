@@ -103,7 +103,7 @@ return purchaseHistoryInfoDTOList;
 	public int regist(String loginId,int productId,int productCount,int destinationId,int price){
 		DBConnector dbConnector =new DBConnector();
 		Connection connection=dbConnector.getConnection();
-		String sql="Insert into purchase_history_info(user_id,product_id,product_count,price,destination_id,regist_date,update_date) values(?,?,?,?,?, now(),'0000-01-01')";
+		String sql="Insert into purchase_history_info(user_id,product_id,product_count,price,destination_id,regist_date,update_date) values(?,?,?,?,?, now(),now())";
 		int count=0;
 
 		try{
