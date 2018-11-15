@@ -30,7 +30,7 @@
 
 	<%----------　カラム（商品情報）---------%>
 	<div class="colum2">
-	<table class="vertical-list-table-mini">
+	<table class="vertical-list-table">
 		<tr>
 			<%--　scope="row"：見出しに対応するデータは行方向（右方向）です。 --%>
 			<th scope="row"><s:label value="商品名"/></th>
