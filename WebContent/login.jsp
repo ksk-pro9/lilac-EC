@@ -44,19 +44,19 @@
 
 <div class="login">
 	<s:form action="LoginAction">
-			<s:label value="ログインID:"/>
+			<s:label value="ログインID:"/><br>
 			<s:if test="#session.savedLoginId == true">
 			<s:textfield name="loginId" class="txt" placeholder="ログインID" value='%{#session.loginId}' autocomplete="off"/>
 			</s:if>
 			<s:else>
-			<s:textfield name="loginId" class="txt" placeholder="ログインID" autocomplete="none"/>
+			<s:textfield name="loginId" class="txt" placeholder="ログインID" autocomplete="off"/>
 			</s:else>
 
-			<s:label value="パスワード:"/>
+			<br><s:label value="パスワード:"/>
 
 			<a href="ResetPasswordAction" class="henkou">パスワード変更</a>
 
-			<s:password name="password" class="txt" placeholder="パスワード" autocomplete="none"/>
+			<br><s:password name="password" class="txt" placeholder="パスワード" autocomplete="off"/>
 
 	<div >
 		<s:if test="#session.savedLoginId == true">
