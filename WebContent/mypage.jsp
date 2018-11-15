@@ -19,7 +19,6 @@
 </head>
 <body>
 <s:include value="header.jsp"/>
-<div id="contents">
 
 <div class="mypageRg">
 
@@ -65,8 +64,6 @@
 		</div>
 		</div>
 		</s:form>
-</div>
-</div>
 
 		<s:include value="footer.jsp"/>
 

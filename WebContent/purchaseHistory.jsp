@@ -19,8 +19,6 @@
 <body>
 
 
-<div id="contents">
-
 <div class="purchaseDetails">
 		<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
 
@@ -45,7 +43,7 @@
 
 				<div id="a">
 					<div id ="left">
-						<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' width="300px" height="250px"/>
+						<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'class="purchase_image"/>
 					</div>
 
 
@@ -86,8 +84,8 @@
 			</div>
 		</s:else>
 		</div>
-</div>
-</div>
+
+
 
 
 
