@@ -1,6 +1,5 @@
 package com.internousdev.lilac.action;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -77,18 +76,16 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				session.remove("cartflag");
 				if(cartflag.equals("1")&& count > 0) {
 					DestinationInfoDAO destinationInfoDao = new DestinationInfoDAO();
-					try {
+
 						List<DestinationInfoDTO> destinationInfoDtoList = new ArrayList<DestinationInfoDTO>();
 						destinationInfoDtoList = destinationInfoDao.getDestinationInfo(loginId);
 						Iterator<DestinationInfoDTO> iterator = destinationInfoDtoList.iterator();
 						if(!(iterator.hasNext())) {
 							destinationInfoDtoList = null;
-						}
+
 						session.put("destinationInfoDtoList", destinationInfoDtoList);
 						result = "settlement";
-					}catch(SQLException e) {
-						e.printStackTrace();
-					}
+						}
 
 				}else {
 					result = SUCCESS;

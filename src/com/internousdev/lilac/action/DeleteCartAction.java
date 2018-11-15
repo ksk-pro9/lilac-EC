@@ -19,6 +19,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 
 	private Map<String, Object> session;
+
 	public String execute() {
 		String result = ERROR;
 		CartInfoDAO cartInfoDAO = new CartInfoDAO();

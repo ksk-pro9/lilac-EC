@@ -1,6 +1,5 @@
 package com.internousdev.lilac.action;
 
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -47,16 +46,14 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		if(session.containsKey("loginId")){
 			DestinationInfoDAO destinationInfoDAO=new DestinationInfoDAO();
 			List<DestinationInfoDTO> destinationInfoDtoList=new ArrayList<>();
-			try{
+
 				destinationInfoDtoList=destinationInfoDAO.getDestinationInfo(String.valueOf(session.get("loginId")));
 			Iterator<DestinationInfoDTO> iterator=destinationInfoDtoList.iterator();
 			if(!(iterator.hasNext())){
 				destinationInfoDtoList=null;
 			}
 			session.put("destinationInfoDtoList",destinationInfoDtoList);
-			}catch(SQLException e){
-				e.printStackTrace();
-			}
+
 		}
 //CommonUtilityで間違えチェックして配列に？
 	List<PurchaseHistoryInfoDTO> purchaseHistoryInfoDtoList=new ArrayList<PurchaseHistoryInfoDTO>();
