@@ -38,7 +38,18 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 		if(UserInfoDao.alreadyLoginId(loginId)){
 			alreadyLoginIdErrorMessageList.add("すでに登録されているユーザーIDです");
 			session.put("alreadyLoginIdErrorMessageList", alreadyLoginIdErrorMessageList);
+
+			session.put("familyName", familyName);
+			session.put("firstName", firstName);
+			session.put("familyNameKana", familyNameKana);
+			session.put("firstNameKana", firstNameKana);
+			session.put("sex", sex);
+			session.put("email", email);
+			session.put("loginId", loginId);
+
 			return result;
+
+
 		}
 
 		session.put("familyName", familyName);

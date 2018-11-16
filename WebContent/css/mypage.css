@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-.pageTitle1{
-	text-align:left;
-	margin-left:110px;
-	border-left: solid 10px #A4A4A4;
-	font-size:25px;
-	position:relative;
-	bottom:15px;
-}
 
 .mypageRg{
 	width:1000px;

@@ -8,24 +8,9 @@
 	border:1px solid #EEEEEE;
 	background-color:#EEEEEE;
 	font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN';
-
 }
 
 #complete > h1{
 	font-size:30px;
 
-}
-
-#complete a{
-	text-decoration:none;
-}
-
-#complete a:hover{
-	padding-bottom: 5px;
-    border-bottom: 0.5px solid black;
-}
-
-.first{
-	font-size:25px;
-	color:black;
 }

@@ -10,20 +10,20 @@
 	#contents{
 		width: 80%;
 		margin: auto;
-		padding-bottom: 70px;
+		padding: 20px 0px 80px 0;
 	}
 
 	#contents > #title-center{
 		text-align: center;
 		font-size: 25px;
-		margin:20px 0px;
+		margin:0px 0px 20px 0px;
 	}
 
 	#contents > #title-left{
 		padding-left:20px;
 		font-size: 25px;
 		border-left:10px solid lightgray;
-		margin:20px 0px;
+		margin:0px 0px 20px 0px;
 	}
 
 	/* ---------- ボタン(グレーから白に反転するやつ) ---------- */
@@ -52,12 +52,12 @@
 		outline:0;
 	}
 
-	/* ---------- エラーメッセージ(左寄せ) ---------- */
+	/* ---------- エラーメッセージ ---------- */
 	.error{
+		text-align: center;
 		font-size : 0.8em;
-		width : 80%;
 		color: #D8000C;
-		margin:5px 0px 10px 10px;
+		margin:5px 0px 10px 0px;
 	}
 
 	/* ---------- 入力フォーム ---------- */

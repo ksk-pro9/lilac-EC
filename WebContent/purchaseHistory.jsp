@@ -21,11 +21,10 @@
 <body>
 
 <div id="contents">
+
+<h1 id="title-left"> 購入履歴</h1>
 <s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
 
-<div id="title-left">
-<h3> 購入履歴</h3>
-</div>
 	<div class="purchaseBtn">
 			<s:form action="DeletePurchaseHistoryAction">
 				<s:submit value="履歴全削除" class="purchaseHistory2_btn"/>
