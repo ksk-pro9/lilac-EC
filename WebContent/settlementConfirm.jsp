@@ -26,9 +26,9 @@
 								<table class="horizontal-list-table">
 																		<tr><th><td>
 													<s:if test="#st.index==0">
-														<label><input type="radio" name="id" checked="checked" value="<s:property value='id' />"/></input>お届け先情報</label>
+														<input type="radio" name="id" checked="checked" value="<s:property value='id' />"/><s:label value="お届け先情報"/>
 													</s:if><s:else>
-														<label><input type="radio" name="id" value="<s:property value='id' />"/></input>お届け先情報</label>
+														<input type="radio" name="id" value="<s:property value='id' />"/><s:label value="お届け先情報"/>
 													</s:else>
 
 										</tr></th></td>
