@@ -15,10 +15,12 @@
 
 	#contents > #title-center{
 		text-align: center;
+		font-size: 25px;
 	}
 
 	#contents > #title-left{
 		padding-left:20px;
+		font-size: 25px;
 		border-left:10px solid lightgray;
 	}
 
@@ -44,4 +46,5 @@
 		margin-left : 3%;
 		width : 80%;
 		color: #D8000C;
+		margin:10px;
 	}
