@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/productDetails.css">
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<title>商品詳細</title>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
 		</tr>
 		<tr>
 			<th scope="row"><s:label value="購入個数"/></th>
-			<td><s:select name="productCount" list="%{#session.productCountList}"/>個</td>
+			<td><s:select name="productCount" list="%{#session.productCountList}" class="select"/>個</td>
 		</tr>
 		<tr>
 			<th scope="row"><s:label value="発売会社名"/></th>

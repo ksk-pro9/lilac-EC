@@ -131,7 +131,7 @@ table.vertical-list-table, th, td {
 
 h2 {
 	text-align: center;
-	font-size:1.4em;
+	font-size:1.2em;
 }
 
 ul {
@@ -150,4 +150,8 @@ a:link {
 
 a:visited {
 	color: #000000;
+}
+
+.select{
+	border:1px solid #FFC776;
 }
