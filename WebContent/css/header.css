@@ -101,10 +101,11 @@
 	}
 
 	#head > #bottom #keywords > #keywords-box{
+		padding: 0px 0px 0px 5px;
 		outline: none;
 		border: solid 1px grey;
 		width: 300px;
-		height: 26px;
+		height: 28px;
 		background-color: white;
 	}
 

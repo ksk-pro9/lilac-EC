@@ -1,4 +1,4 @@
-
+	/* ---------- 全体 ---------- */
 	body, html {
 		margin: 0;
 		padding: 0;
@@ -10,7 +10,7 @@
 	#contents{
 		width: 80%;
 		margin: auto;
-		padding-bottom: 100px;
+		padding-bottom: 70px;
 	}
 
 	#contents > #title-center{
@@ -26,6 +26,7 @@
 		margin:20px 0px;
 	}
 
+	/* ---------- ボタン ---------- */
 	.submit_btn{
 		text-align:center;
 		padding: 0.3em 1em;
@@ -51,9 +52,51 @@
 		outline:0;
 	}
 
+	/* ---------- エラーメッセージ ---------- */
 	.error{
 		font-size : 0.8em;
 		width : 80%;
 		color: #D8000C;
 		margin:5px 0px 10px 10px;
+	}
+
+	/* ---------- 入力フォーム ---------- */
+	.input-form{
+		background-color: #f5f5f5;
+		border-radius: 25px;
+		padding: 50px 50px;
+		margin: 20px 0px;
+	}
+
+	.input-form-title{
+		font-size: 20px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.input-form-hissu{
+		font-size: 15px;
+		background-color: red;
+		margin-left: 20px;
+		padding: 2px 3px;
+		color: #fff;
+		border-radius: 10px;
+	}
+
+	.txt{
+		font-size: 16px;
+		width: 98%;
+		height: 30px;
+		border-radius: 20px;
+		box-shadow: 0 0 5px black;
+		padding: 0 0 0 1%;
+		margin: 5px 0px 20px 0px;
+	}
+
+	.txt:focus{
+		 outline:0;
+	}
+
+	.txt:active{
+		outline:0;
 	}

@@ -52,12 +52,12 @@
 
 
 
-		<div class="login">
+		<div class="input-form">
 
 			<s:form action="LoginAction">
 				<input type="password" name="dummypass"
 					style="top: -100px; left: -100px; position: fixed;" />
-				<s:label value="ログインID:" />
+				<s:label value="ログインID:" class="input-form-title"/>
 				<br>
 				<s:if test="#session.savedLoginId == true">
 
@@ -70,7 +70,7 @@
 				</s:else>
 
 				<br>
-				<s:label value="パスワード:" />
+				<s:label value="パスワード:" class="input-form-title"/>
 
 				<a href="ResetPasswordAction" class="henkou">パスワード変更</a>
 
