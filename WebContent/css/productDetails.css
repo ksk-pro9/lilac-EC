@@ -44,7 +44,7 @@ table.vertical-list-table, th, td {
 .submit_btn2{
 	font-size:18px;
 	width:270px;
-	border-radius:7px;
+	border-radius:5px;
 	background-color:#B30000;
 	background: -webkit-repeating-linear-gradient(-45deg, #A6341F, #A6341F 3px,#EB2142 3px, #EB2142 7px);
     background: repeating-linear-gradient(-45deg, #A6341F, #A6341F 3px,#EB2142 3px, #EB2142 7px);
@@ -53,12 +53,7 @@ table.vertical-list-table, th, td {
 	border-style:none;
 }
 
-.submit_btn:active{
-
-
-}
-
-.submit_btn:hover{
+.submit_btn2:hover{
 	cursor:pointer;
 	opacity:0.7;
 	box-shadow: none;
