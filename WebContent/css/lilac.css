@@ -85,7 +85,7 @@
 		border-radius: 10px;
 	}
 
-	.txt{
+	.input-form .txt{
 		font-size: 18px;
 		width: 98%;
 		height: 30px;
@@ -95,11 +95,11 @@
 		margin: 5px 0px 20px 0px;
 	}
 
-	.txt:focus{
+	.input-form .txt:focus{
 		 outline:0;
 	}
 
-	.txt:active{
+	.input-form .txt:active{
 		outline:0;
 	}
 
