@@ -27,59 +27,45 @@
 <!-- ======= ここからエラーメッセージ error-message ======= -->
 
 <s:if test='#session.containsKey("familyNameErrorMessageList")'>
-		<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
-	</div>
+	<div class="error">
+		<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
+ 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("firstNameErrorMessageList")'>
- 	<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.firstNameErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
-	</div>
+	<div class="error">
+		<s:iterator value="#session.firstNameErrorMessageList"><s:property /><br></s:iterator>
+ 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("familyNameKanaErrorMessageList")'>
 	<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
+		<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("firstNameKanaErrorMessageList")'>
- 	<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
-	</div>
+	<div class="error">
+		<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
+ 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("userAddressErrorMessageList")'>
- 	<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
+	<div class="error">
+		<s:iterator value="#session.userAddressErrorMessageList"><s:property /><br></s:iterator>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("telNumberErrorMessageList")'>
- 	<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.telNumberErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
+	<div class="error">
+		<s:iterator value="#session.telNumberErrorMessageList"><s:property /><br></s:iterator>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("emailErrorMessageList")'>
- 	<div class="error">
-		<div class="error-message">
-			<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
- 		</div>
-	</div>
+	<div class="error">
+		<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
+ 	</div>
 </s:if>
 
 <!-- ======= ここまでエラーメッセージ /error-message ======= -->

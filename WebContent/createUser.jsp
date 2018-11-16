@@ -26,65 +26,49 @@
 
  <s:if test='#session.containsKey("familyNameErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("firstNameErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.firstNameErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("familyNameKanaErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.familyNameKanaErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("firstNameKanaErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.firstNameKanaErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("emailErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("loginIdErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.loginIdErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("passwordErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.passwordErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
 <s:if test='#session.containsKey("alreadyLoginIdErrorMessageList")'>
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="#session.alreadyLoginIdErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 
