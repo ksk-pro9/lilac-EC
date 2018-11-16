@@ -7,7 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/productDetails.css">
-<title>商品詳細</title>
 </head>
 
 <body>

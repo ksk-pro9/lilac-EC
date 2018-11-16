@@ -4,29 +4,34 @@ body, html {
 	width : 100%;
 	height : 100%;
 }
+#contents{
+	margin:0px auto;
+	width:1000px;
+	margin-top:70px;
+}
 
 table.vertical-list-table{
 	margin-left:auto;
 	margin-right:auto;
 	width:500px;
-	font-family: font-family: "ŸàƒSƒVƒbƒN", "Yu Gothic";
+	font-family: "ï¿½ï¿½ï¿½Sï¿½Vï¿½bï¿½N", "Yu Gothic";
 }
 
 table.vertical-list-table th{
 	width:40%;
 	padding:5px;
-	font-weight:700;
+	font-weight:200;
 	vertical-align:top;
-	background: #555555;
-	color:white;
+	background: #935900;
+	color:#fef9d9;
 	text-align: center;
 }
 
 table.vertical-list-table td{
 	width:60%;
 	padding-left:30px;
-	background:#999999;
-	color:white;
+	background:#ce7d00;
+	color:#fef9d9;
 	text-align: left;
 }
 
@@ -38,29 +43,32 @@ table.vertical-list-table, th, td {
 
 .submit_btn{
 	font-size:18px;
-	width:300px;
-	border-radius:5px;
-	background-color:#FF6666;
-	color:#FFFFFF;
+	width:270px;
+	border-radius:7px;
+	background-color:#B30000;
+	color:#fffaf0;
 	box-shadow:0 3px #993D3D;
 	border-style:none;
 }
 
 .submit_btn:active{
-	box-shadow: none;
-  	position: relative;
-  	top: 3px;
+
+
 }
 
 .submit_btn:hover{
 	cursor:pointer;
 	opacity:0.7;
+	box-shadow: none;
+	position: relative;
+  	top: 3px;
 }
 
 .submit_btn_box{
 	text-align:center;
 	margin-top:20px;
 }
+
 .box1 {
 	margin: 0 auto;
 	width: 1000px;
@@ -119,6 +127,7 @@ table.vertical-list-table, th, td {
 .item-image-box-320 {
 	width: 70%;
 	border-radius: 10px;
+	box-shadow: 0px 0px 30px #848484;
 }
 
 .item-image-box-100 {

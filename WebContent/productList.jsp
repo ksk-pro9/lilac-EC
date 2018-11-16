@@ -64,7 +64,8 @@
 	</div>
 </s:else>
 </div>
-
+<div class="footer-space"></div>
 <s:include value="footer.jsp"/>
 </body>
+
 </html>
