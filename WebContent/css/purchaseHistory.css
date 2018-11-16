@@ -68,8 +68,13 @@
 
 
 .info2{
-	padding-left:100px;
-	font-size:20px;
+
+
+	margin:auto;
+	text-align:center;
+	font-size:30px;
+	position:relative;
+	top:50px;
 	}
 
 .purchase_img{
