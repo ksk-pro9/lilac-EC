@@ -35,6 +35,7 @@
 				<s:form id="form" action="SettlementConfirmAction">
 					<div class="form2">
 						<s:iterator value="#session.cartInfoDtoList">
+						<div class="a">
 						<div class="checkbox-image">
 							<div class="checkbox">
 								<s:checkbox name="checkList" value="checked" fieldValue="%{productId}"/>
@@ -76,7 +77,7 @@
 									<th class="subtotal"><s:property value="subtotal" />円</th>
 								</tr>
 						</table>
-
+						</div>
 						<table>
 								<s:hidden name="productName" value="%{productName}" />
 								<s:hidden name="productNameKana" value="%{productNameKana}" />
