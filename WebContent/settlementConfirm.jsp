@@ -6,7 +6,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./css/lilac.css">
 		<link rel="stylesheet" type="text/css" href="./css/settlementConfirm.css">
+
 		<title>決済確認</title>
 
 	</head>
@@ -14,7 +16,7 @@
 		<body>
 			<s:include value="header.jsp" />
 				<div id="contents">
-				<h1>決済確認画面</h1>
+				<h1 id="title-center">決済確認画面</h1>
 			<s:if test="#session.destinationInfoDtoList.size()>0">
 
 				<div class="info">
