@@ -43,7 +43,7 @@
 
 				<div id="purchaseImage">
 					<div id ="left">
-						<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'class="purchase_img"/>
+						<img class="purchase_img" src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'/>
 					</div>
 
 
