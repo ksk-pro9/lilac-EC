@@ -8,6 +8,7 @@
 
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/login.css">
 <title>ログイン</title>
 </head>
@@ -15,8 +16,9 @@
 
 <body>
 	<s:include value="header.jsp" />
+
 	<div id="contents">
-		<h1>ログイン</h1>
+		<h1 id="title-left">ログイン</h1>
 
 
 

@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/lilac.css">
 	<title>ホーム</title>
 
 </head>
@@ -14,10 +14,8 @@
 
 	<s:include value="header.jsp" />
 
-	<div id="home">
-		<div id="contents">
-			<h1>ホーム画面</h1>
-		</div>
+	<div id="contents">
+		<h1 id="title-center">ホーム画面</h1>
 	</div>
 
 	<s:include value="footer.jsp"/>

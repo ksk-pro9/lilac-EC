@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-		#contents{
-			margin:0 auto;
-			width:80%;
-		}
+
 
 		.login{
 			padding-top:20px;
@@ -12,12 +9,6 @@
 			padding-bottom:20px;
 			border-radius: 10px;
 			border:1.5px solid lightgray;
-		}
-
-		h1{
-			padding-left:20px;
-			font-size:30px;
-			border-left:10px solid lightgray;
 		}
 
 		.txt{
@@ -33,11 +24,11 @@
 			width:100%;
 		}
 
-		.txt:focus{
+		.txt:focus , .henkou:focus{
 			 outline:0;
 		}
 
-		.txt:active{
+		.txt:active , .henkou:active{
 			outline:0;
 		}
 
