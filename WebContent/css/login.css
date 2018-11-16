@@ -44,27 +44,12 @@
 			margin-top:10px;
 		}
 
-		.submit_btn{
-			text-align:center;
-			padding: 0.3em 1em;
-			text-decoration: none;
-			color: #67c5ff;
-			background:white;
-			border: solid 2px #67c5ff;
-			border-radius: 3px;
-			transition: .4s;
-			font-size:18px;
-		}
-
 		.sinki{
 			margin-top:20px;
 			text-align:center;
 		}
 
-		.submit_btn:hover{
-			background: #67c5ff;
-			color: white;
-		}
+
 
 
 		.henkou{
