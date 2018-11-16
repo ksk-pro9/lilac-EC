@@ -44,19 +44,15 @@
 							</div>
 						</div>
 						<table class="textbox">
-
-							<div class="product_name">
 								<tr class="furigana">
 									<td></td>
 									<td><s:property  value="productNameKana" /></td>
 								</tr>
-								<tr>
+								<tr class="name">
 									<th><s:label class="product_name_font" value="商品名" /></th>
 									<td><s:property value="productName" /></td>
 								</tr>
-							</div>
-							<div class="price_count">
-								<tr>
+								<tr class="price">
 									<th><s:label value="値段" /></th>
 									<th class="price-align"><s:property value="price" />円</th>
 								</tr>
@@ -64,7 +60,7 @@
 									<th><s:label value="(購入個数" /></th>
 									<th class="countcount"><s:property value="productCount" />点)</th>
 								</tr>
-							</div>
+
 								<tr>
 									<th><s:label value="発売会社名" /></th>
 									<td><s:property value="releaseCompany" /></td>
