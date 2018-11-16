@@ -36,9 +36,12 @@
 	left:20px;
 }
 
-.purchaseHistory_btn{
-padding-left:570px;
-
+.purchaseBtn{
+	width:700px;
+	height:70px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
 }
 
 .purchaseHistory2_btn{

@@ -26,7 +26,7 @@
 <div id="title-left">
 <h3> 購入履歴</h3>
 </div>
-	<div class="purchaseHistory_btn">
+	<div class="purchaseBtn">
 			<s:form action="DeletePurchaseHistoryAction">
 				<s:submit value="履歴全削除" class="purchaseHistory2_btn"/>
 			</s:form>
