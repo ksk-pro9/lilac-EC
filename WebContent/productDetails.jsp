@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/productDetails.css">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -79,7 +80,10 @@
 
 
 	<div class="submit_btn_box">
-		<s:submit value="カートに追加" class="submit_btn" />
+	<button type="submit" class="submit_btn">
+		<i class="fas fa-shopping-cart"></i> カートに追加
+	</button>
+<%-- 		<s:submit value="カートに追加" class="submit_btn" /> --%>
 	</div>
 	</div>
 	</div>
