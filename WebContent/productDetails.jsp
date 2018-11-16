@@ -80,7 +80,7 @@
 
 
 	<div class="submit_btn_box">
-	<button type="submit" class="submit_btn">
+	<button type="submit" class="submit_btn2">
 		<i class="fas fa-shopping-cart"></i> カートに追加
 	</button>
 <%-- 		<s:submit value="カートに追加" class="submit_btn" /> --%>

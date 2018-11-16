@@ -41,13 +41,13 @@ table.vertical-list-table, th, td {
 }
 
 
-.submit_btn{
+.submit_btn2{
 	font-size:18px;
 	width:270px;
 	border-radius:7px;
 	background-color:#B30000;
-	background: -webkit-repeating-linear-gradient(-45deg, #DE4830, #DE4830 3px,#A6341F 3px, #A6341F 7px);
-    background: repeating-linear-gradient(-45deg, #DE4830, #DE4830 3px,#A6341F 3px, #A6341F 7px);
+	background: -webkit-repeating-linear-gradient(-45deg, #A6341F, #A6341F 3px,#EB2142 3px, #EB2142 7px);
+    background: repeating-linear-gradient(-45deg, #A6341F, #A6341F 3px,#EB2142 3px, #EB2142 7px);
 	color:white;
 	box-shadow:0 3px #993D3D;
 	border-style:none;
