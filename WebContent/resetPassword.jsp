@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/resetPassword.css">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -40,72 +41,62 @@
 				<s:if
 					test='#session.containsKey("resetPassLoginIdErrorMessageList")'>
 					<div class="error">
-						<div class="error-message">
-							<s:iterator value="#session.resetPassLoginIdErrorMessageList">
-								<s:property />
-								<br>
-							</s:iterator>
-						</div>
+						<s:iterator value="#session.resetPassLoginIdErrorMessageList">
+							<s:property />
+							<br>
+						</s:iterator>
 					</div>
 				</s:if>
 
 				<s:if test='#session.containsKey("passwordErrorMessageList")'>
 					<div class="error">
-						<div class="error-message">
-							<s:iterator value="#session.passwordErrorMessageList">
-								<s:property />
-								<br>
-							</s:iterator>
-						</div>
+						<s:iterator value="#session.passwordErrorMessageList">
+							<s:property />
+							<br>
+						</s:iterator>
 					</div>
 				</s:if>
 
 				<s:if
 					test='#session.containsKey("passwordIncorrectErrorMessageList")'>
 					<div class="error">
-						<div class="error-message">
-							<s:iterator value="#session.passwordIncorrectErrorMessageList">
-								<s:property />
-								<br>
-							</s:iterator>
-						</div>
+						<s:iterator value="#session.passwordIncorrectErrorMessageList">
+							<s:property />
+							<br>
+						</s:iterator>
 					</div>
 				</s:if>
 
 				<s:if test='#session.containsKey("newPasswordErrorMessageList")'>
 					<div class="error">
-						<div class="error-message">
-							<s:iterator value="#session.newPasswordErrorMessageList">
-								<s:property />
-								<br>
-							</s:iterator>
-						</div>
+						<s:iterator value="#session.newPasswordErrorMessageList">
+							<s:property />
+							<br>
+						</s:iterator>
 					</div>
 				</s:if>
 
 				<s:if
 					test='#session.containsKey("reConfirmationNewPasswordErrorMessageList")'>
 					<div class="error">
-						<div class="error-message">
-							<s:iterator
-								value="#session.reConfirmationNewPasswordErrorMessageList">
-								<s:property />
-								<br>
-							</s:iterator>
-						</div>
+						<s:iterator
+							value="#session.reConfirmationNewPasswordErrorMessageList">
+							<s:property />
+							<br>
+						</s:iterator>
 					</div>
 				</s:if>
 
 				<s:if
 					test='#session.containsKey("newPasswordIncorrectErrorMessageList")'>
 					<div class="error">
-						<div class="error-message">
-							<s:iterator value="#session.newPasswordIncorrectErrorMessageList">
-								<s:property />
-								<br>
-							</s:iterator>
-						</div>
+
+						<s:iterator value="#session.newPasswordIncorrectErrorMessageList">
+							<s:property />
+							<br>
+						</s:iterator>
 					</div>
+
 				</s:if>
 
 			</div>
@@ -145,7 +136,7 @@
 				</div>
 				<div class="btn_box">
 
-					<s:submit value="パスワード設定" class="submit_btn" />
+					<s:submit value="パスワード設定" class="submit_btn2" />
 
 
 

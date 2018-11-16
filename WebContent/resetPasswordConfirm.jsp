@@ -36,7 +36,7 @@
 					</table>
 				</div>
 				<div class="btn_box">
-					<s:submit value="再設定" class="submit_btn" />
+					<s:submit value="再設定" class="submit_btn2" />
 				</div>
 			</s:form>
 		</div>
