@@ -102,26 +102,26 @@ table td{
 
 /* =============== btn =============== */
 
-			.submit_btn_box{
-			margin-top:10px;
-			margin-bottom:10px;
-			text-align:center;
-			padding-bottom:60px;
-			}
-			.submit_btn {
-		    position: relative;
-		    display: inline-block;
-		    padding: 0.25em 0.5em;
-		    text-decoration: none;
-		    color: #FFF;
-		    background: #4682b4;/*背景色*/
-		    border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
-		    border-radius: 4px;/*角の丸み*/
-		    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-		    font-weight: bold;
-			}
+.submit_btn_box{
+	text-align:center;
+	position:relative;
+	top:50px;
+}
 
-			.submit_btn:active {
-		    border-bottom: solid 2px #fd9535;
-		    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
-			}
+.submit_btn{
+	display:inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    background:white;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+    font-size:18px;
+    margin-bottom:100px;
+}
+
+.submit_btn:hover{
+	background: #67c5ff;
+    color: white;
+}
