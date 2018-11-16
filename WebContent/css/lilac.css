@@ -8,7 +8,7 @@
 	}
 
 	#contents{
-		width: 90%;
+		width: 80%;
 		margin: auto;
 		padding-bottom: 100px;
 	}
@@ -37,4 +37,11 @@
 	.submit_btn:hover{
 		background: grey;
 		color: white;
+	}
+
+	.error{
+		font-size : 0.8em;
+		margin-left : 3%;
+		width : 80%;
+		color: #D8000C;
 	}

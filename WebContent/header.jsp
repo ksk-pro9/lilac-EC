@@ -24,31 +24,31 @@
 					<div id = "right">
 						<ul>
 							<li id = "cart">
-								<a href="CartAction"><img src='./images/cart.png' width="20px" height="20px" id="header-image">カート</a>
+								<a href="CartAction"><img src='./images/cart.png' width="20px" height="20px" class="header-image">カート</a>
 							</li>
 
 							<li id = "item">
-								<a href="ProductListAction"><img src='./images/item.png' width="20px" height="20px" id="header-image">商品一覧</a>
+								<a href="ProductListAction"><img src='./images/item.png' width="20px" height="20px" class="header-image">商品一覧</a>
 							</li>
 
 							<!-- ログイン状態のときに表示されるもの -->
 							<s:if test="#session.logined == 1">
 								<li id = "logout">
-									<a href="LogoutAction"><img src='./images/logout.png' width="20px" height="20px" id="header-image">ログアウト</a>
+									<a href="LogoutAction"><img src='./images/logout.png' width="20px" height="20px" class="header-image">ログアウト</a>
 								</li>
 							</s:if>
 
 							<!-- 未ログイン状態のときに表示されるもの -->
 							<s:else>
 								<li id = "login">
-									<a href="GoLoginAction"><img src='./images/login.png' width="20px" height="20px" id="header-image">ログイン</a>
+									<a href="GoLoginAction"><img src='./images/login.png' width="20px" height="20px" class="header-image">ログイン</a>
 								</li>
 							</s:else>
 
 							<!-- ログイン状態のときに表示されるもの -->
 							<s:if test="#session.logined == 1">
 								<li id = "mypage">
-									<a href="MyPageAction"><img src='./images/mypage.png' width="20px" height="20px" id="header-image">マイページ</a>
+									<a href="MyPageAction"><img src='./images/mypage.png' width="20px" height="20px" class="header-image">マイページ</a>
 								</li>
 							</s:if>
 						</ul>

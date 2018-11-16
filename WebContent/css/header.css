@@ -51,7 +51,7 @@
 		list-style-type: none;
 	}
 
-	#head > #top > #right > ul > li #header-image{
+	#head > #top > #right > ul > li .header-image{
 		position: relative;
 		top: 4px;
 		right: 5px;

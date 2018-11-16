@@ -25,32 +25,26 @@
 		<s:form id="form" action="LoginAction">
 			<s:if test='#session.containsKey("loginIdErrorMessageList")'>
 				<div class="error">
-					<div class="error-message">
-						<s:iterator value="#session.loginIdErrorMessageList">
-							<s:property />
-							<br>
-						</s:iterator>
-					</div>
+					<s:iterator value="#session.loginIdErrorMessageList">
+						<s:property />
+						<br>
+					</s:iterator>
 				</div>
 			</s:if>
 			<s:if test='#session.containsKey("passwordErrorMessageList")'>
 				<div class="error">
-					<div class="error-message">
-						<s:iterator value="#session.passwordErrorMessageList">
-							<s:property />
-							<br>
-						</s:iterator>
-					</div>
+					<s:iterator value="#session.passwordErrorMessageList">
+						<s:property />
+						<br>
+					</s:iterator>
 				</div>
 			</s:if>
 			<s:if test='#session.containsKey("errorPasswordErrorMessageList")'>
 				<div class="error">
-					<div class="error-message">
-						<s:iterator value="#session.errorPasswordErrorMessageList">
-							<s:property />
-							<br>
-						</s:iterator>
-					</div>
+					<s:iterator value="#session.errorPasswordErrorMessageList">
+						<s:property />
+						<br>
+					</s:iterator>
 				</div>
 			</s:if>
 		</s:form>
