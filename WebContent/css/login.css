@@ -19,14 +19,6 @@
 			width:95%;
 		}
 
-		.txt:focus , .henkou:focus{
-			 outline:0;
-		}
-
-		.txt:active , .henkou:active{
-			outline:0;
-		}
-
 		.login ::placeholder {
   			color: gray;
  			font-size:20px;

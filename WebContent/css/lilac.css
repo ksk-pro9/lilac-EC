@@ -16,12 +16,14 @@
 	#contents > #title-center{
 		text-align: center;
 		font-size: 25px;
+		margin:20px 0px;
 	}
 
 	#contents > #title-left{
 		padding-left:20px;
 		font-size: 25px;
 		border-left:10px solid lightgray;
+		margin:20px 0px;
 	}
 
 	.submit_btn{
@@ -41,10 +43,17 @@
 		color: white;
 	}
 
+	.submit_btn:focus{
+		 outline:0;
+	}
+
+	.submit_btn:active{
+		outline:0;
+	}
+
 	.error{
 		font-size : 0.8em;
-		margin-left : 3%;
 		width : 80%;
 		color: #D8000C;
-		margin:10px;
+		margin:5px 0px 10px 10px;
 	}
