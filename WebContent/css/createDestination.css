@@ -5,7 +5,6 @@
 #contents{
 	max-width: 700px;
 	margin: auto;
-	padding: 50px 10px;
 }
 
 #contents h1{
@@ -100,28 +99,15 @@ table td{
 	font-size: 25px;
 }
 
-/* =============== btn =============== */
+/* =============== error =============== */
 
-.submit_btn_box{
-	text-align:center;
-	position:relative;
-	top:50px;
-}
+.error {
+	font-size : 0.8em;
+	margin-left : 3%;
+	width : 80%;
+	color: #D8000C;
+	}
 
-.submit_btn{
-	display:inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #67c5ff;
-    background:white;
-    border: solid 2px #67c5ff;
-    border-radius: 3px;
-    transition: .4s;
-    font-size:18px;
-    margin-bottom:100px;
-}
-
-.submit_btn:hover{
-	background: #67c5ff;
-    color: white;
-}
+.error-message {
+	color : red;
+	}

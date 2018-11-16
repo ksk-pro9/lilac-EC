@@ -7,7 +7,8 @@
 <head>
 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/createDestination.css">
+<link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
+<link rel="stylesheet" type="text/css" href="./css/createDestination.css">
 <title>宛先情報確認</title>
 
 </head>
@@ -18,7 +19,7 @@
 
 <div id="contents">
 
-<h1>宛先情報確認画面</h1>
+<h1 id="title-left">宛先情報確認画面</h1>
 
 <p>以下の内容で登録します</p>
 

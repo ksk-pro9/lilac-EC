@@ -8,6 +8,7 @@
 
 <meta charset="UTF-8">
 <title>宛先情報入力</title>
+<link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
 <link rel="stylesheet" type="text/css" href="./css/createDestination.css"/>
 
 </head>
@@ -19,7 +20,7 @@
 <!-- ======= ここからcontents ======= -->
 <div id="contents">
 
-<h1>宛先情報入力画面</h1>
+<h1 id="title-left">宛先情報入力画面</h1>
 
 <p>下記に必要事項を入力してください</p>
 

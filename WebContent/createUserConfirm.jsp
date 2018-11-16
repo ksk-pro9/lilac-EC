@@ -7,7 +7,8 @@
 <head>
 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/createUser.css">
+<link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
+<link rel="stylesheet" type="text/css" href="./css/createUser.css">
 <title>登録内容確認</title>
 
 </head>
@@ -18,7 +19,7 @@
 
 <div id="contents">
 
-<h1>登録内容確認画面</h1>
+<h1 id="title-left">登録内容確認画面</h1>
 
 <p>以下の内容で登録します</p>
 

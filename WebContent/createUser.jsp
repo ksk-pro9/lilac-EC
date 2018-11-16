@@ -8,6 +8,7 @@
 
 <meta charset="UTF-8">
 <title>ユーザ情報入力</title>
+<link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
 <link rel="stylesheet" type="text/css" href="./css/createUser.css"/>
 
 </head>
@@ -19,7 +20,7 @@
 <!-- ======= ここからcontents ======= -->
 
 <div id="contents">
-<h1>アカウント新規登録</h1>
+<h1 id="title-left">アカウント新規登録</h1>
 
 <!-- ======= ここからエラーメッセージ error-message ======= -->
 

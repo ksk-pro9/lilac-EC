@@ -5,8 +5,10 @@
 <html>
 
 <head>
+
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/createUser.css">
+<link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
+<link rel="stylesheet" type="text/css" href="./css/createUser.css">
 <meta http-equiv="refresh" content="3;URL='HomeAction'"/>
 <title>登録完了</title>
 
