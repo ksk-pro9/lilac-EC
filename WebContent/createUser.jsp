@@ -121,10 +121,12 @@
 	<s:password name="password" value=""  placeholder="パスワード" class="txt" />
 </div>
 
-<div class="submit_btn_box">
-<div id="contents-btn-set">
-	<s:submit value="登録" class="submit_btn"/>
-</div>
+<div class="btn-area">
+	<div class="submit_btn_box">
+		<div id="contents-btn-set">
+			<s:submit value="登録" class="submit_btn"/>
+		</div>
+	</div>
 </div>
 
 </s:form>
