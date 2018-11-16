@@ -32,12 +32,6 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
-/*		List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();//カテゴリーのリスト
-
-		MCategoryDAO mCategoryDao = new MCategoryDAO();
-		mCategoryDtoList = mCategoryDao.getMCategoryList();
-		session.put("mCategoryDtoList", mCategoryDtoList);*/
-
 		//対象の文字列.replace(置換される文字列, 置換する文字列)
 		//→全角スペースを半角スペースに置き換える
 		//→2つ以上の空白を1つの空白に置き換える
@@ -58,13 +52,11 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 
 			if(!(iterator.hasNext())){
 				keywordsErrorMessageList = null;
+
 			} else {
 				return SUCCESS;
 			}
-
 		}
-
-
 
 		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
 
@@ -105,15 +97,12 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 	public void setKeywords(String keywords) {
 		this.keywords = keywords;
 	}
-
 	public List<ProductInfoDTO> getProductInfoDtoList() {
 		return productInfoDtoList;
 	}
-
 	public void setProductInfoDtoList(List<ProductInfoDTO> productInfoDtoList) {
 		this.productInfoDtoList = productInfoDtoList;
 	}
-
 	public Map<String, Object> getSession() {
 		return session;
 	}
