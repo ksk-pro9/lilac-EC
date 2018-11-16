@@ -46,18 +46,26 @@
 						<table class="textbox">
 
 
+							<div class="product_name">
+								<tr class="furigana">
+									<td></td>
+									<td><s:property  value="productNameKana" /></td>
+								</tr>
 								<tr>
-									<th><s:label value="商品名" /></th>
+									<th><s:label class="product_name_font" value="商品名" /></th>
 									<td><s:property value="productName" /></td>
 								</tr>
-								<tr>
-									<th><s:label value="ふりがな" /></th>
-									<td><s:property value="productNameKana" /></td>
-								</tr>
+							</div>
+							<div class="price_count">
 								<tr>
 									<th><s:label value="値段" /></th>
 									<td><s:property value="price" />円</td>
 								</tr>
+								<tr>
+									<th><s:label value="(購入個数" /></th>
+									<td><s:property value="productCount" />点)</td>
+								</tr>
+							</div>
 								<tr>
 									<th><s:label value="発売会社名" /></th>
 									<td><s:property value="releaseCompany" /></td>
@@ -66,10 +74,7 @@
 									<th><s:label value="発売年月日" /></th>
 									<td><s:property value="releaseDate" /></td>
 								</tr>
-								<tr>
-									<th><s:label value="購入個数" /></th>
-									<td><s:property value="productCount" /></td>
-								</tr>
+
 								<tr>
 									<th><s:label value="合計金額" /></th>
 									<td><s:property value="subtotal" />円</td>
@@ -95,13 +100,13 @@
 
 
 						<div class="btn_set">
-							<span><s:submit value="決済" class="btn" /></span>
+							<span><s:submit value="決済" class="btn1" /></span>
 						</div>
 
 
 
-						<div class="btn-set">
-							<span><s:submit value="削除" class="btn" onclick="this.form.action='DeleteCartAction';"/></span>
+						<div class="btn_set">
+							<span><s:submit value="削除" class="btn2" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
 
 
