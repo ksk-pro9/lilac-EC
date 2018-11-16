@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 		#contents{
 			margin:0 auto;
 			width:80%;
@@ -11,85 +9,80 @@
 			padding-top:20px;
 			padding-left:150px;
 			padding-right:150px;
+			padding-bottom:20px;
 			border-radius: 10px;
-			border-bottom:-5px;
 			border:1.5px solid lightgray;
-
 		}
 
 		h1{
 			padding-left:20px;
 			font-size:30px;
-			border-left:3px solid lightgray;
+			border-left:10px solid lightgray;
 		}
 
 		.txt{
-			border-radius: 10px;
-    		box-shadow: 0 0 6px gray;
-    		margin-top: 10px;
-    		margin-left: 10px;
-    		margin-right: 10px;
-    		margin-bottom: 20px;
-    		font-size:20px;
-    		width:100%;
+			height:30px;
+			border-radius: 15px;
+			box-shadow: 0 0 6px gray;
+			padding: 0 0 0 3%;
+			margin-top: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-bottom: 20px;
+			font-size:20px;
+			width:100%;
 		}
 
 		.txt:focus{
 			 outline:0;
-			 color:gray;
-
 		}
 
 		.txt:active{
 			outline:0;
-			color:gray;
-
 		}
-
 
 		.login ::placeholder {
-  				color: gray;
- 				font-size:20px;
- 				line-height:20px;
- 				padding-left:5px;
-
-
+  			color: gray;
+ 			font-size:20px;
+ 			line-height:20px;
+ 			padding-left:5px;
 		}
-
 
 		.log{
 			text-align:center;
-			padding:0px 50px;
-			margin:10px;
-
-		}
-
-		.submit_log_btn{
-			width:300px;
-			height:50px;
-		}
-
-		.sinki{
-			text-align:center;
-			margin:10px;
+			margin-top:10px;
 		}
 
 		.submit_btn{
-			width:400px;
-			height:30px;
-
+			text-align:center;
+			padding: 0.3em 1em;
+			text-decoration: none;
+			color: #67c5ff;
+			background:white;
+			border: solid 2px #67c5ff;
+			border-radius: 3px;
+			transition: .4s;
+			font-size:18px;
 		}
+
+		.sinki{
+			margin-top:20px;
+			text-align:center;
+		}
+
+		.submit_btn:hover{
+			background: #67c5ff;
+			color: white;
+		}
+
 
 		.henkou{
 			float:right;
 			color:black;
 			text-decoration:none;
-
 		}
 
 		#form{
 			margin:10px;
 			background-color:white;
 		}
-
-

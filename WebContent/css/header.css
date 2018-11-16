@@ -1,144 +1,144 @@
 
-		/* ---------- all ---------- */
-		body, html {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			height: 100%;
-			min-width: 800px;
-		}
+	/* ---------- all ---------- */
+	body, html {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		min-width: 800px;
+	}
 
-		/* ---------- header ---------- */
-		header{
-			border-bottom: solid 1px grey;
-			background-color: #f7f7f7;
-			width: 100%;
-			height: 100px;
-		}
+	/* ---------- header ---------- */
+	header{
+		border-bottom: solid 1px grey;
+		background-color: #f7f7f7;
+		width: 100%;
+		height: 100px;
+	}
 
-		#head{
-			padding: 10px;
-		}
+	#head{
+		padding: 10px;
+	}
 
-		#head > #top{
-			width: 100%;
-			height: 40px;
-		}
+	#head > #top{
+		width: 100%;
+		height: 40px;
+	}
 
-		#head > #top > #left{
-			float: left;
-			line-height: 40px;
-			margin-left: 50px;
-			font-size: 30px;
-		}
+	#head > #top > #left{
+		float: left;
+		line-height: 40px;
+		margin-left: 50px;
+		font-size: 30px;
+	}
 
-		#head > #top > #right{
-			position: relative;
-			top: -10px;
-			float: right;
-			margin-right: 50px;
-		}
+	#head > #top > #right{
+		position: relative;
+		top: -10px;
+		float: right;
+		margin-right: 50px;
+	}
 
-		#head > #bottom{
-			display: -webkit-flex;
-			display: flex;
-			align-items: center;
-  			justify-content: center;
-			width: 100%;
-			height: 40px;
-			line-height: 0px;
-		}
+	#head > #bottom{
+		display: -webkit-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 40px;
+		line-height: 0px;
+	}
 
-		#head > #top a{
-			color: black;
-			text-decoration: none;
-		}
+	#head > #top a{
+		color: black;
+		text-decoration: none;
+	}
 
-		#head > #top > #right > ul{
-			list-style-type: none;
-		}
+	#head > #top > #right > ul{
+		list-style-type: none;
+	}
 
-		#head > #top > #right > ul > li #header-image{
-			position: relative;
-			top: 3px;
-			right: 5px;
-		}
+	#head > #top > #right > ul > li #header-image{
+		position: relative;
+		top: 4px;
+		right: 5px;
+	}
 
-		#head > #top > #right > ul > li{
-			border: none;
-			background-color: transparent;
-			transition: .2s;
-			-webkit-transform: scale(1);
-			transform: scale(1);
-			margin-left: 40px;
-		}
+	#head > #top > #right > ul > li{
+		border: none;
+		background-color: transparent;
+		transition: .2s;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		margin-left: 40px;
+	}
 
-		#head > #top > #right > ul > li:hover{
-			-webkit-transform: scale(1.1);
-			transform: scale(1.1);
-		}
+	#head > #top > #right > ul > li:hover{
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 
-		#head > #top > #right > ul > li:active{
-			outline: none;
-		}
+	#head > #top > #right > ul > li:active{
+		outline: none;
+	}
 
-		#head > #top > #right > ul > li:focus{
-			outline: none;
-		}
+	#head > #top > #right > ul > li:focus{
+		outline: none;
+	}
 
-		#head > #top > #right > ul > li{
-			float: left;
-		}
+	#head > #top > #right > ul > li{
+		float: left;
+	}
 
-		#head > #bottom div{
-			float:left;
-		}
+	#head > #bottom div{
+		float:left;
+	}
 
-		#head > #bottom::after{
-			clear: both;
-		}
+	#head > #bottom::after{
+		clear: both;
+	}
 
-		#head > #bottom #category > #category-box{
-			outline: none;
-			border: solid 1px grey;
-			background-color: white;
-			height: 30px;
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
+	#head > #bottom #category > #category-box{
+		outline: none;
+		border: solid 1px grey;
+		background-color: white;
+		height: 30px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
 
-		#head > #bottom #keywords > #keywords-box{
-			outline: none;
-			border: solid 1px grey;
-			width: 300px;
-			height: 26px;
-			background-color: white;
-		}
+	#head > #bottom #keywords > #keywords-box{
+		outline: none;
+		border: solid 1px grey;
+		width: 300px;
+		height: 26px;
+		background-color: white;
+	}
 
-		#head > #bottom #search > #search-box{
-			outline: none;
-			border: solid 1px grey;
-			height: 14px;
-			width: 14px;
-			padding: 7px;
-			background-color: white;
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
+	#head > #bottom #search > #search-box{
+		outline: none;
+		border: solid 1px grey;
+		height: 14px;
+		width: 14px;
+		padding: 7px;
+		background-color: white;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
 
-		/* ---------- footer ---------- */
-		#footer{
-			border-top: solid 1px grey;
-		 	width: 100%;
-		 	height: 40px;
-			position: fixed;
-			bottom: 0px;
-			background-color: #f7f7f7;
-			text-align: center;
-			line-height: 40px;
-		}
+	/* ---------- footer ---------- */
+	#footer{
+		border-top: solid 1px grey;
+		width: 100%;
+		height: 40px;
+		position: fixed;
+		bottom: 0px;
+		background-color: #f7f7f7;
+		text-align: center;
+		line-height: 40px;
+	}
 
-		/* ---------- home ---------- */
-		#home > #contents > h1{
-			text-align: center;
-		}
+	/* ---------- home ---------- */
+	#home > #contents > h1{
+		text-align: center;
+	}

@@ -56,7 +56,6 @@
 
 
 
-
 		<div class="login">
 
 			<s:form action="LoginAction">
@@ -67,7 +66,7 @@
 				<s:if test="#session.savedLoginId == true">
 
 					<s:textfield name="loginId" class="txt" placeholder="ログインID"
-						value='%{#session.loginId}' autocomplete="none" />
+						value='%{#session.loginId}' autocomplete="off" />
 				</s:if>
 				<s:else>
 					<s:textfield name="loginId" class="txt" placeholder="ログインID"
@@ -81,7 +80,7 @@
 
 				<br>
 				<s:password name="password" class="txt" placeholder="パスワード"
-					autocomplete="none" />
+					autocomplete="off" />
 
 				<div>
 					<s:if test="#session.savedLoginId == true">
@@ -96,16 +95,11 @@
 
 				<div class="log">
 
-					<s:submit value="ログイン" class="submit_log_btn" />
+					<s:submit value="ログイン" class="submit_btn" />
 				</div>
 
 			</s:form>
 
-
-
-
-			<br>
-			<br>
 		</div>
 		<div>
 			<div class="sinki">
@@ -114,7 +108,6 @@
 				</s:form>
 			</div>
 		</div>
-
 
 	</div>
 
