@@ -19,21 +19,21 @@
 	<body>
 		<s:include value="header.jsp" />
 		<div id="contents">
+
 			<h1 id="title-left">カート</h1>
 
 			<s:if test="#session.checkListErrorMessageList!=null">
-				<div class="error">
-					<div class="error-message">
+					<div class="error">
 						<s:iterator value="#session.checkListErrorMessageList">
 							<s:property />
 						</s:iterator>
 					</div>
-				</div>
 			</s:if>
 
 			<s:if test="#session.cartInfoDtoList.size()>0">
 				<p class="titleMessage">カートには以下の商品が入っています。</p>
 				<s:form id="form" action="SettlementConfirmAction">
+					<div class="form2">
 						<s:iterator value="#session.cartInfoDtoList">
 						<div class="checkbox-image">
 							<div class="checkbox">
@@ -94,18 +94,14 @@
 					<h2 class="totalprice"><s:label value="カート合計金額:¥"/><s:property value="#session.totalPrice" />円</h2>
 					<br>
 
-
 						<div class="btn_set">
 							<span><s:submit value="決済" class="submit_btn" /></span>
 						</div>
 
-
-
 						<div class="btn_set">
 							<span><s:submit value="削除" class="submit_btn" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
-
-
+					</div>
 				</s:form>
 			</s:if>
 			<s:else>
@@ -113,7 +109,8 @@
 				カート情報はありません。
 				</div>
 			</s:else>
-		</div>
+			</div>
+
 			<s:include value="footer.jsp" />
 	</body>
 </html>
