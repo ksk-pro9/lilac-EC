@@ -36,47 +36,47 @@
 					<div class="form2">
 						<s:iterator value="#session.cartInfoDtoList">
 						<div class="a">
-						<div class="checkbox-image">
-							<div class="checkbox">
-								<s:checkbox name="checkList" value="checked" fieldValue="%{productId}"/>
-								<s:hidden name="productId" value="%{productId}" />
+							<div class="checkbox-image">
+								<div class="checkbox">
+									<s:checkbox name="checkList" value="checked" fieldValue="%{productId}"/>
+									<s:hidden name="productId" value="%{productId}" />
+								</div>
+								<div class="gorigori">
+									<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
+								</div>
 							</div>
-							<div class="gorigori">
-								<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
-							</div>
-						</div>
-						<table class="textbox">
-								<tr class="furigana">
-									<td></td>
-									<td><s:property  value="productNameKana" /></td>
-								</tr>
-								<tr class="name">
-									<th><s:label class="product_name_font" value="商品名" /></th>
-									<td><s:property value="productName" /></td>
-								</tr>
-								<tr class="priceprice">
-									<th><s:label value="値段" /></th>
-									<th class="price-align"><s:property value="price" />円</th>
-								</tr>
-								<tr class="countcount">
-									<th class="countName"><s:label value="(購入個数" /></th>
-									<th class="counting"><s:property value="productCount" />点)</th>
-								</tr>
+							<table class="textbox">
+									<tr class="furigana">
+										<td></td>
+										<td><s:property value="productNameKana" /></td>
+									</tr>
+									<tr class="name">
+										<th><s:label class="product_name_font" value="商品名" /></th>
+										<th><s:property value="productName" /></th>
+									</tr>
+									<tr class="priceprice">
+										<th><s:label value="値段" /></th>
+										<th class="price-align"><s:property value="price" />円</th>
+									</tr>
+									<tr class="countcount">
+										<th class="countName"><s:label value="(購入個数:" /></th>
+										<th class="counting"><s:property value="productCount" />点)</th>
+									</tr>
 
-								<tr>
-									<th><s:label value="発売会社名" /></th>
-									<td><s:property value="releaseCompany" /></td>
-								</tr>
-								<tr>
-									<th><s:label value="発売年月日" /></th>
-									<td><s:property value="releaseDate" /></td>
-								</tr>
+									<tr>
+										<th><s:label value="発売会社名" /></th>
+										<td><s:property value="releaseCompany" /></td>
+									</tr>
+									<tr>
+										<th><s:label value="発売年月日" /></th>
+										<td><s:property value="releaseDate" /></td>
+									</tr>
 
-								<tr>
-									<th><s:label value="合計金額" /></th>
-									<th class="subtotal"><s:property value="subtotal" />円</th>
-								</tr>
-						</table>
+									<tr>
+										<th class="subtotal"><s:label value="合計金額" /></th>
+										<th class="subtotal"><s:property value="subtotal" />円</th>
+									</tr>
+							</table>
 						</div>
 						<table>
 								<s:hidden name="productName" value="%{productName}" />
@@ -90,7 +90,6 @@
 								<s:hidden name="subtotal" value="%{subtotal}" />
 
 						</table>
-							<div class="border floatclear"></div>
 						</s:iterator>
 					<h2 class="totalprice"><s:label value="カート合計金額:¥"/><s:property value="#session.totalPrice" />円</h2>
 					<br>
@@ -106,7 +105,7 @@
 				</s:form>
 			</s:if>
 			<s:else>
-				<div class="info">
+				<div class="error">
 				カート情報はありません。
 				</div>
 			</s:else>
