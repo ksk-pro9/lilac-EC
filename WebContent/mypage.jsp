@@ -21,9 +21,7 @@
 <body>
 <s:include value="header.jsp"/>
 <div id="contents">
-<div id="title-left">
-<h3> 会員登録情報</h3>
-</div>
+<h1 id="title-left"> 会員登録情報</h1>
 	<s:form action="PurchaseHistoryAction">
 		<table class="vertical-list-table">
 
