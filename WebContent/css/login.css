@@ -17,3 +17,11 @@
 			color:black;
 			text-decoration:none;
 		}
+
+		.henkou:focus{
+		 outline:0;
+		}
+
+		.henkou:active{
+		 outline:0;
+		}
