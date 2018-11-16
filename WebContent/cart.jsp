@@ -5,6 +5,7 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="./css/lilac.css">
 	<link rel="stylesheet" href="./css/cart.css">
 
 	<title>カート</title>
@@ -18,7 +19,7 @@
 	<body>
 		<s:include value="header.jsp" />
 		<div id="contents">
-			<h1>カート</h1>
+			<h1 id="title-left">カート</h1>
 
 			<s:if test="#session.checkListErrorMessageList!=null">
 				<div class="error">
@@ -32,7 +33,7 @@
 
 			<s:if test="#session.cartInfoDtoList.size()>0">
 				<p class="titleMessage">カートには以下の商品が入っています。</p>
-				<s:form id="form1" action="SettlementConfirmAction">
+				<s:form id="form" action="SettlementConfirmAction">
 						<s:iterator value="#session.cartInfoDtoList">
 						<div class="checkbox-image">
 							<div class="checkbox">
@@ -52,13 +53,13 @@
 									<th><s:label class="product_name_font" value="商品名" /></th>
 									<td><s:property value="productName" /></td>
 								</tr>
-								<tr class="price">
+								<tr class="priceprice">
 									<th><s:label value="値段" /></th>
 									<th class="price-align"><s:property value="price" />円</th>
 								</tr>
-								<tr>
-									<th><s:label value="(購入個数" /></th>
-									<th class="countcount"><s:property value="productCount" />点)</th>
+								<tr class="countcount">
+									<th class="countName"><s:label value="(購入個数" /></th>
+									<th class="counting"><s:property value="productCount" />点)</th>
 								</tr>
 
 								<tr>
@@ -95,13 +96,13 @@
 
 
 						<div class="btn_set">
-							<span><s:submit value="決済" class="btn1" /></span>
+							<span><s:submit value="決済" class="submit_btn" /></span>
 						</div>
 
 
 
 						<div class="btn_set">
-							<span><s:submit value="削除" class="btn2" onclick="this.form.action='DeleteCartAction';"/></span>
+							<span><s:submit value="削除" class="submit_btn" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
 
 
@@ -113,8 +114,6 @@
 				</div>
 			</s:else>
 		</div>
-		<div id="footer">
 			<s:include value="footer.jsp" />
-		</div>
 	</body>
 </html>

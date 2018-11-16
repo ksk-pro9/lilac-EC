@@ -1,35 +1,10 @@
-	body, html {
-	margin : 0;
-	padding : 0;
-	width : 100%;
-	height : 100%;
-	}
 
-	form{
-	display:block;
-	margin-top:0px;
-	}
 
 	#form1 {
 	width: 700px;
 	margin: 0 auto;
 	margin-top: 30px;
 	margin-bottom: 100px;
-	}
-
-	#contents {
-	height : 100%;
-
-	padding-top : 20px;
-	margin-top : 50px;
-	margin : 30px auto;
-	}
-
-	#contents h1{
-	width: 700px;
-    margin: 0 auto;
-    padding-left:20px;
-	border-left:10px solid #A4A4A4;
 	}
 
 	#contents h2{
@@ -55,66 +30,15 @@
     text-align:center;
 	}
 
+	.btn_set{
+	text-align:center;
+	margin-top:20px;
+	}
+
 	.info{
 	width: 700px;
     margin: 0 auto;
     text-align:center;
-	}
-
-	.btn_box {
-	}
-
-	.btn_set {
-	text-align:center;
-	top:50px;
-	margin:30px auto;
-	}
-
-	.btn1 {
-	display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    width:300px;
-    color: #67c5ff;
-    background:white;
-    border: solid 2px #67c5ff;
-    border-radius: 3px;
-    transition: .4s;
-    font-size:18px;
-	}
-
-	.btn2 {
-	display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    width:300px;
-    color: black;
-    background:white;
-    border: solid 2px black;
-    border-radius: 3px;
-    transition: .4s;
-    font-size:18px;
-	}
-
-	.btn1:hover{
-	background: #67c5ff;
-	color: white;
-	}
-
-	.btn2:hover{
-	background: black;
-	color: white;
-	}
-
-	.error {
-	font-size : 0.8em;
-	margin-left : 3%;
-	width : 80%;
-	color: #D8000C;
-	}
-
-	.error-message {
-	color : red;
 	}
 
 	.checkbox-image{
@@ -133,8 +57,8 @@
 	}
 
 	.gorigori img{
-	width:250px;
-	height:250px;
+	width:200px;
+	height:200px;
 	border-radius:20px;
 	box-shadow: 0px 0px 30px #848484;
 	}
@@ -173,27 +97,30 @@
 	.furigana td{
 	font-size:10px;
 	margin-bottom:-20px;
-	background-color:red;
-	color:white;
 	}
 
-	.price th{
-	font-size:10px;
+	.priceprice th{
+	font-size:20px;
 	margin-bottom:-20px;
-	background-color:red;
-	}
-	.price_count {
-	font-size:15px;
-	font-color:red;
+	color:red;
 	}
 
-	.countcount{
+	.countcount th{
+	font-size:15px;
+	color:red;
+	}
+
+	.counting{
 	text-align:left;
 	}
+
+	.countName{
+	text-align:right;}
 
 	.subtotal{
 	text-align:left;
 	}
 
 	.price-align{
-	text-align:left;}
+	text-align:left;
+	}
