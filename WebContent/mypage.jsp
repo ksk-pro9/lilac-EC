@@ -59,11 +59,10 @@
 
 
 		<div class="btn_mypage">
-
-		<s:submit value="購入履歴" class="btn_mypage2"/>
+			<s:submit value="購入履歴" class="btn_mypage2"/>
 		</div>
-		</div>
-		</s:form>
+	</s:form>
+</div>
 
 		<s:include value="footer.jsp"/>
 
