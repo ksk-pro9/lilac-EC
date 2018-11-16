@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/purchaseHistory.css">
 
 
@@ -18,17 +20,13 @@
 
 <body>
 
-
-<div class="purchaseDetails">
-		<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
+<div id="contents">
 
 
-<div class="purchaseHistoryA">
-
-	<div class="pageTitle2">購入履歴</div>
-
+<div id="title-left">
+<h3> 購入履歴</h3>
+</div>
 	<div class="purchaseHistory_btn">
-		<div id="contents-btn-set">
 			<s:form action="DeletePurchaseHistoryAction">
 				<s:submit value="履歴全削除" class="purchaseHistory2_btn"/>
 			</s:form>
@@ -36,7 +34,7 @@
 
 
 	</div>
-	</div>
+				<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
 
 
 				<s:iterator value="#session.purchaseHistoryInfoDtoList">

@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/mypage.css">
 
 
@@ -19,11 +20,10 @@
 </head>
 <body>
 <s:include value="header.jsp"/>
-
-<div class="mypageRg">
-
-
-<div class="pageTitle1"> 会員登録情報</div>
+<div id="contents">
+<div id="title-left">
+<h3> 会員登録情報</h3>
+</div>
 	<s:form action="PurchaseHistoryAction">
 		<table class="vertical-list-table">
 

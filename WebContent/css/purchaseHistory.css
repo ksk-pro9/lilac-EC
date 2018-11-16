@@ -1,13 +1,7 @@
 
 @charset "UTF-8";
 
-.purchaseDetails{
-	width:800px;
-	height:600px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:100px;
-}
+
 
 #purchaseImage{
 	border-top:20px solid black;
@@ -15,6 +9,8 @@
 	height:280px;
 	margin-left:auto;
 	margin-right:auto;
+	position:relative;
+	bottom:50px;
 }
 
 #purchaseImage > #left{
@@ -39,13 +35,12 @@
 }
 
 .purchaseHistory_btn{
-	position:relative;
-	bottom:20px;
-	left:350px;
+padding-left:570px;
 }
 
 .purchaseHistory2_btn{
 	display:inline-block;
+ 	display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
     color: #FF99FF;
@@ -63,23 +58,12 @@
 }
 
 
-.purchaseHistoryA{
-	width:1000px;
-	margin:auto;
-	}
 
-.pageTitle2{
 
-	margin-left:0px;
-	border-left: solid 10px #A4A4A4;
-	font-size:25px;
-	position:relative;
-	bottom:30px;
-	}
 
 .info2{
-	margin:auto;
-	font-size:30px;
+	padding-left:100px;
+	font-size:20px;
 	}
 
 .purchase_img{
