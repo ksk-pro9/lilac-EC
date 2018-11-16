@@ -45,7 +45,6 @@
 						</div>
 						<table class="textbox">
 
-
 							<div class="product_name">
 								<tr class="furigana">
 									<td></td>
@@ -59,11 +58,11 @@
 							<div class="price_count">
 								<tr>
 									<th><s:label value="値段" /></th>
-									<td><s:property value="price" />円</td>
+									<th class="price-align"><s:property value="price" />円</th>
 								</tr>
 								<tr>
 									<th><s:label value="(購入個数" /></th>
-									<td><s:property value="productCount" />点)</td>
+									<th class="countcount"><s:property value="productCount" />点)</th>
 								</tr>
 							</div>
 								<tr>
@@ -77,7 +76,7 @@
 
 								<tr>
 									<th><s:label value="合計金額" /></th>
-									<td><s:property value="subtotal" />円</td>
+									<th class="subtotal"><s:property value="subtotal" />円</th>
 								</tr>
 						</table>
 

@@ -41,10 +41,16 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 		//cart.jspでチェックされた購入IDでcart_infoテーブルから削除
 		//その数が0ならエラーメッセージをセッションにput
 		session.remove("checkListErrorMessageList");
-		for(String productId:checkList) {
-			System.out.println(productId);
-			System.out.println(userId);
-			count += cartInfoDAO.delete(productId, userId);
+		if(checkList == null){
+			checkListErrorMessageList.add("チェックされていません。");
+			session.put("checkListErrorMessageList", checkListErrorMessageList);
+			return ERROR;
+		}else{
+			for(String productId:checkList) {
+				System.out.println(productId);
+				System.out.println(userId);
+				count += cartInfoDAO.delete(productId, userId);
+			}
 		}
 		if(count <= 0) {
 			checkListErrorMessageList.add("チェックされていません。");
