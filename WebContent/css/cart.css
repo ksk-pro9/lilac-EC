@@ -38,7 +38,7 @@
 	border-radius:20px;
 	box-shadow: 0px 0px 30px #848484;
 	margin-left:10%;
-	margin-top:50px;
+	margin-top:20px;
 	}
 
 	.horizontal-list-table {
@@ -55,8 +55,8 @@
 
 	.textbox{
 	width400px;
-	padding-left:80px;
-	padding-top:30px;
+	left:80px;
+	position:relative;
 	}
 
 	.totalprice{
@@ -76,6 +76,11 @@
 	.furigana td{
 	font-size:10px;
 	margin-bottom:-20px;
+	text-align:left;
+	}
+
+	.product_name_align{
+	text-align:left;
 	}
 
 	.priceprice th{
@@ -107,7 +112,10 @@
 	.a{
 	text-align:center;
 	margin-left:10%;
+	margin-right:10%;
 	border-bottom:8px solid black;
+	margin-top:20px;
+	margin-bottom:10px;
 	}
 
 	.subtotal{

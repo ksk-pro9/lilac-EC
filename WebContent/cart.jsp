@@ -51,8 +51,8 @@
 										<td><s:property value="productNameKana" /></td>
 									</tr>
 									<tr class="name">
-										<th><s:label class="product_name_font" value="商品名" /></th>
-										<th><s:property value="productName" /></th>
+										<th class="product_name_font"><s:label value="商品名" /></th>
+										<th class="product_name_align"><s:property value="productName" /></th>
 									</tr>
 									<tr class="priceprice">
 										<th><s:label value="値段" /></th>
