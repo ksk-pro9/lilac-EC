@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
 <link rel="stylesheet" type="text/css" href="./css/createDestination.css">
 <title>宛先情報完了</title>
-<script type="text/javascript">
+<%-- <script type="text/javascript">
 	window.onload = function(){
 		setInterval('backSettlementConfirmAction(back)',3000);
 	}
@@ -18,7 +18,7 @@
 		form.submit();
 	}
 </script>
-
+ --%>
 </head>
 
 <body>
