@@ -25,7 +25,6 @@
 
 .btn_mypage2{
 	display:inline-block;
-	display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
     color: #67c5ff;
@@ -34,6 +33,7 @@
     border-radius: 3px;
     transition: .4s;
     font-size:18px;
+    margin-bottom:100px;
 }
 
 .btn_mypage2:hover{
