@@ -7,7 +7,7 @@ body, html {
 #contents{
 	margin:0px auto;
 	width:1000px;
-	margin-top:70px;
+	margin-top:100px;
 }
 
 table.vertical-list-table{
@@ -23,7 +23,7 @@ table.vertical-list-table th{
 	font-weight:200;
 	vertical-align:top;
 	background: #B56A00;
-	color:white;
+	color:#FFC776;
 	text-align: center;
 }
 
@@ -31,7 +31,7 @@ table.vertical-list-table td{
 	width:60%;
 	padding-left:30px;
 	background:#FFC776;
-	color:black;
+	color:#B56A00;
 	text-align: left;
 }
 
@@ -138,6 +138,7 @@ table.vertical-list-table, th, td {
 
 h1 {
 	text-align: center;
+	margin:50px 0;
 }
 
 h2 {
