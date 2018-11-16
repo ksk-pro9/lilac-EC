@@ -26,7 +26,7 @@
 		margin:20px 0px;
 	}
 
-	/* ---------- ボタン ---------- */
+	/* ---------- ボタン(グレーから白に反転するやつ) ---------- */
 	.submit_btn{
 		text-align:center;
 		padding: 0.3em 1em;
@@ -52,7 +52,7 @@
 		outline:0;
 	}
 
-	/* ---------- エラーメッセージ ---------- */
+	/* ---------- エラーメッセージ(左寄せ) ---------- */
 	.error{
 		font-size : 0.8em;
 		width : 80%;
@@ -75,6 +75,8 @@
 	}
 
 	.input-form-hissu{
+		position:relative;
+		top:-2px;
 		font-size: 15px;
 		background-color: red;
 		margin-left: 20px;
@@ -84,7 +86,7 @@
 	}
 
 	.txt{
-		font-size: 16px;
+		font-size: 18px;
 		width: 98%;
 		height: 30px;
 		border-radius: 20px;
@@ -100,3 +102,8 @@
 	.txt:active{
 		outline:0;
 	}
+
+	/* ----------  ---------- */
+
+
+
