@@ -21,7 +21,7 @@
 <body>
 
 <div id="contents">
-
+<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
 
 <div id="title-left">
 <h3> 購入履歴</h3>
@@ -33,13 +33,10 @@
 		</div>
 
 
-	</div>
-				<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
-
 
 				<s:iterator value="#session.purchaseHistoryInfoDtoList">
 
-				<div id="purchaseImage">
+				<div id="purchaseTable">
 					<div id ="left">
 						<img class="purchase_img" src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'/>
 					</div>
