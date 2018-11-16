@@ -2,18 +2,6 @@
 
 /* =============== createDestination =============== */
 
-/*コメントアウト中
-#contents{
-	max-width: 700px;
-	margin: auto;
-}
-
-#contents h1{
-	font-size: 30px;
-	border-left: solid 15px #dcdcdc;
-	padding-left: 8px;
-}
- */
 #contents p{
 	padding: 20px 0 0 0;
 	text-align: center;
@@ -98,4 +86,9 @@ table td{
 	padding: 80px 20px;
 	text-align: center;
 	font-size: 25px;
+}
+
+.btn-area{
+	margin:20px 0;
+	text-align:center;
 }

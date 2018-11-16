@@ -72,9 +72,11 @@
 
 </table>
 
-<div class="submit_btn_box">
-	<div id="contents-btn-set">
-		<s:submit value="宛先情報登録" class="submit_btn"/>
+<div class="btn-area">
+	<div class="submit_btn_box">
+		<div id="contents-btn-set">
+			<s:submit value="宛先情報登録" class="submit_btn"/>
+		</div>
 	</div>
 </div>
 

@@ -1,9 +1,3 @@
-body, html {
-	margin : 0;
-	padding : 0;
-	width : 100%;
-	height : 100%;
-}
 #contents{
 	margin:0px auto;
 	width:1000px;
@@ -14,7 +8,6 @@ table.vertical-list-table{
 	margin-left:auto;
 	margin-right:auto;
 	width:500px;
-	font-family: "���S�V�b�N", "Yu Gothic";
 }
 
 table.vertical-list-table th{
@@ -117,14 +110,14 @@ table.vertical-list-table, th, td {
 }
 
 .recommend-box ul li:hover {
-	box-shadow: 0px 0px 10px grey;
+	box-shadow: 0px 0px 10px #A30A0A;
 	opacity: 0.7;
 }
 
 .item-image-box-320 {
 	width: 70%;
 	border-radius: 10px;
-	box-shadow: 0px 0px 30px #848484;
+	box-shadow: 0px 0px 8px #B56A00;
 }
 
 .item-image-box-100 {
@@ -136,17 +129,15 @@ table.vertical-list-table, th, td {
 	margin-top: 10px;
 }
 
-h1 {
-	text-align: center;
-	margin:50px 0;
-}
-
 h2 {
 	text-align: center;
+	font-size:1.4em;
 }
 
 ul {
 	list-style: none;
+	padding-inline-start:0;
+	padding:0 20px;
 }
 
 a {

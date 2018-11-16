@@ -1,26 +1,8 @@
-body, html {
-	margin : 0;
-	padding : 0;
-	width : 100%;
-	height : 100%;
-}
 #contents{
 	margin:0px auto;
 	width:1000px;
 	margin-top:70px;
 }
-
-.error {
-	font-size : 0.8em;
-	margin-left : 3%;
-	width : 80%;
-	color: #D8000C;
-}
-
-.error-message {
-	color : red;
-}
-
 
 #product-list {
 	width: 1000px;
@@ -28,7 +10,7 @@ body, html {
 }
 
 .product-list-box {
-	width: 33.3%;
+	width: 33%;
 	float: left;
 	text-align: center;
 }
@@ -49,7 +31,7 @@ padding: 0 20px;
 
 
 .product-list-box ul li:hover {
-	box-shadow: 0px 0px 10px #848484;
+	box-shadow: 0px 0px 10px #A30A0A;
 	opacity: 0.7;
 }
 
