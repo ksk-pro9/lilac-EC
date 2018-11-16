@@ -170,11 +170,18 @@
 	font-size:30px;
 	}
 
-	.furigana {
+	.furigana td{
 	font-size:10px;
 	margin-bottom:-20px;
+	background-color:red;
+	color:white;
 	}
 
+	.price th{
+	font-size:10px;
+	margin-bottom:-20px;
+	background-color:red;
+	}
 	.price_count {
 	font-size:15px;
 	font-color:red;
