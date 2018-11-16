@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/productDetails.css">
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
@@ -16,7 +17,7 @@
 
 <%---------- メイン -----------%>
 <div id="contents">
-<h1>商品詳細画面</h1>
+<h1 id="title-center">商品詳細画面</h1>
 
 	<%--　「カートに追加」ボタンを押下すると、カートに商品が追加されます（AddCartAction） --%>
 	<s:form action="AddCartAction">

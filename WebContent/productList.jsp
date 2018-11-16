@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/productList.css">
 <title>商品一覧</title>
 </head>
@@ -13,19 +14,17 @@
 <body>
 <s:include value="header.jsp" />
 <div id="contents">
-<h1>商品一覧画面</h1>
+<h1 id="title-center">商品一覧画面</h1>
 <%-------エラーメッセージ --------%>
 <s:if test="keywordsErrorMessageList != null">
 	<div class="error">
-	<div class="error-message">
 		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
-	</div>
 	</div>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
-<div class="info">
+	<div class="info">
 	検索結果がありません。
-</div>
+	</div>
 </s:elseif>
 
 <s:else>
