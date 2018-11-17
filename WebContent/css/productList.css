@@ -1,11 +1,5 @@
-#contents{
-	margin:0px auto;
-	width:1000px;
-	margin-top:70px;
-}
-
 #product-list {
-	width: 1000px;
+	width:780px;
 	margin:0 auto;
 }
 
@@ -36,7 +30,7 @@ padding: 0 20px;
 }
 
 .item-image-box-200 {
-	width: 95%;
+	width: 100%;
 	border-radius: 20px;
 }
 
@@ -49,6 +43,7 @@ padding: 0 20px;
 	margin: 0px 0px 5px 10px;
 	line-height: 140%;
 	display: inline-block;
+	font-size:1em;
 }
 
 ul {
