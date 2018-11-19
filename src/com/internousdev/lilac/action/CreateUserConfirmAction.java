@@ -35,6 +35,15 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 			return result;
 		}
 
+		session.remove("familyNameErrorMessageList");
+		session.remove("firstNameErrorMessageList");
+		session.remove("familyNameKanaErrorMessageList");
+		session.remove("firstNameKanaErrorMessageList");
+		session.remove("emailErrorMessageList");
+		session.remove("loginIdErrorMessageList");
+		session.remove("passwordErrorMessageList");
+		session.remove("alreadyLoginIdErrorMessageList");
+
 		UserInfoDAO UserInfoDao = new UserInfoDAO();
 		if(UserInfoDao.alreadyLoginId(loginId)){
 			alreadyLoginIdErrorMessageList.add("すでに登録されているユーザーIDです");
