@@ -124,7 +124,7 @@
 <div class="btn-area">
 	<div class="submit_btn_box">
 		<div id="contents-btn-set">
-			<s:submit value="登録" class="submit_btn"/>
+			<s:submit value="登録" class="submit_btn2"/>
 		</div>
 	</div>
 </div>
