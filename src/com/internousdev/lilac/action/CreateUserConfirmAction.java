@@ -20,6 +20,7 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 	private String email;
 	private String loginId;
 	private String password;
+	private String dummypass;
 
 	private List<String> sexList = new ArrayList<String>();
 	private Map<String, Object> session;
@@ -159,6 +160,14 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getDummypass() {
+		return dummypass;
+	}
+
+	public void setDummypass(String dummypass) {
+		this.dummypass = dummypass;
 	}
 
 	public List<String> getSexList() {
