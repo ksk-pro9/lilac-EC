@@ -14,14 +14,10 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 	private static final String FEMALE = "女性";
 	private String defaultSexValue = MALE;
 	private String sex;
-	private List<String> sexList = new ArrayList<String>();
 	private Map<String, Object> session;
 
 	public String execute(){
 		String result = ERROR;
-		sexList.add(MALE);
-		sexList.add(FEMALE);
-		session.put("sexList", sexList);
 
 		if(!(session.containsKey("mCategoryDtoList"))){
 			result = "timeout";
@@ -35,6 +31,19 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 		session.remove("emailErrorMessageList");
 		session.remove("telNumberErrorMessageList");
 		session.remove("userAddressErrorMessageList");
+
+		if(sex==null){
+			session.put("sex", MALE);
+		}else{
+			session.put("sex", String.valueOf(session.get("sex")));
+		}
+
+		List<String> sexList = new ArrayList<String>();
+
+		sexList.add(MALE);
+		sexList.add(FEMALE);
+		session.put("sexList", sexList);
+
 		result=SUCCESS;
 		return result;
 	}
@@ -53,14 +62,6 @@ public class CreateDestinationAction extends ActionSupport implements SessionAwa
 
 	public void setDefaultSexValue(String defaultSexValue) {
 		this.defaultSexValue = defaultSexValue;
-	}
-
-	public List<String> getSexList() {
-		return sexList;
-	}
-
-	public void setSexList(List<String> sexList) {
-		this.sexList = sexList;
 	}
 
 	public Map<String, Object> getSession() {
