@@ -30,7 +30,7 @@
 					</div>
 			</s:if>
 
-			<s:if test="#session.cartInfoDtoList.size()>0">
+			<s:if test='#session.containskey("cartInfoDtoList")'>
 				<p class="titleMessage">カートには以下の商品が入っています。</p>
 				<s:form id="form" action="SettlementConfirmAction">
 					<div class="form2">
