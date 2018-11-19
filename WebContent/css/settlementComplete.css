@@ -1,10 +1,5 @@
-#ccontents {
-		text-align:center;
-		background-color:#EEEEEE;
-		font-family:inherit;
-		border-radius:10px;
-		width:60%;;
-		margin-top:10px;
-		margin-left:auto;
-		margin-right:auto;
-		}
+#success{
+	text-align:center;
+	background-color:#EEEEEE;
+	border-radius:10px;
+}

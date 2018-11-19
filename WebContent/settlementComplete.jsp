@@ -6,8 +6,9 @@
 	<head>
 		<meta charset="UTF-8">
 
-		<meta http-equiv="refresh" content="3;URL='HomeAction'">
+		<!--  meta http-equiv="refresh" content="3;URL='HomeAction'"-->
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="./css/lilac.css">
 		<link rel="stylesheet" href="./css/settlementComplete.css">
 		<title>決済完了</title>
 
@@ -15,12 +16,12 @@
 
 	<body>
 		<s:include value="header.jsp" />
-					<div id="ccontents">
-						<h1>決済完了画面</h1>
-							<div class="success">
+					<div id="contents">
+						<div id="success">
+							<h1>決済完了画面</h1>
 								決済完了しました!
 								ご注文いただきありがとうございます!
-							</div>
+						</div>
 					</div>
 		<s:include value="footer.jsp"/>
 	</body>
