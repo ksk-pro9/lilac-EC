@@ -67,7 +67,7 @@
 								<s:textfield id="keywords-box" name="keywords" placeholder="検索ワード"/></div>
 
 							<div id = "search">
-								<input type="image" id="search-box" src="./images/search.png"/></div>
+								<button type="submit"  id="search-box"><img src="./images/search.png" width="14px" height="14px"></button></div>
 					</s:form>
 				</div>
 			</div>
