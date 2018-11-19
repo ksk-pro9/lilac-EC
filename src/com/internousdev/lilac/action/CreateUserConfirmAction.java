@@ -49,7 +49,6 @@ public class CreateUserConfirmAction extends ActionSupport implements SessionAwa
 
 			return result;
 
-
 		}
 
 		session.put("familyName", familyName);
