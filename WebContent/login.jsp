@@ -91,7 +91,7 @@
 
 				<div class="log">
 
-					<s:submit value="ログイン" class="submit_btn2" />
+					<s:submit value="ログイン" class="submit_btn" />
 				</div>
 
 			</s:form>
