@@ -15,23 +15,7 @@
 
 }
 
-.btn_mypage2{
-	display:inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #67c5ff;
-    background:white;
-    border: solid 2px #67c5ff;
-    border-radius: 3px;
-    transition: .4s;
-    font-size:18px;
-    margin-bottom:100px;
-}
 
-.btn_mypage2:hover{
-	background: #67c5ff;
-    color: white;
-}
 
 table.vertical-list-table{
 	margin-left:auto;

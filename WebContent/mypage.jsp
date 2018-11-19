@@ -57,7 +57,7 @@
 
 
 		<div class="btn_mypage">
-			<s:submit value="購入履歴" class="btn_mypage2"/>
+			<s:submit value="購入履歴"  class="submit_btn"/>
 		</div>
 	</s:form>
 </div>

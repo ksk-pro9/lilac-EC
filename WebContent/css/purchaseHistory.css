@@ -44,28 +44,6 @@
 	text-align:center;
 }
 
-.purchaseHistory2_btn{
-	display:inline-block;
-
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #FF99FF;
-    background:white;
-    border: solid 2px #FF99FF;
-    border-radius: 3px;
-    transition: .4s;
-    font-size:18px;
-
-	}
-
-.purchaseHistory2_btn:hover{
-	background: #FF99FF;
-    color: white;
-}
-
-
-
-
 
 .info2{
 
