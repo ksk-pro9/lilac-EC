@@ -74,7 +74,7 @@
 
 
 	<div class="submit_btn_box">
-	<s:submit value="カートに追加" class="submit_btn" />
+	<s:submit value="カートに追加" class="submit_btn2" />
 	</div>
 	</div>
 	</div>
