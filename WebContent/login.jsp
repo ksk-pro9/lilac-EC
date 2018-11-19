@@ -91,7 +91,7 @@
 
 				<div class="log">
 
-					<s:submit value="ログイン" class="submit_btn" />
+					<s:submit value="ログイン" class="submit_btn2" />
 				</div>
 
 			</s:form>
@@ -100,7 +100,7 @@
 		<div>
 			<div class="sinki">
 				<s:form action="CreateUserAction">
-					<s:submit value="新規ユーザー登録" class="submit_btn" />
+					<s:submit value="新規ユーザー登録" class="submit_btn2" />
 				</s:form>
 			</div>
 		</div>
