@@ -69,15 +69,12 @@ public class ProductDetailsAction extends ActionSupport implements SessionAware{
 		return result;
 	}
 
-
 	public List<MCategoryDTO> getmCategoryDtoList() {
 		return mCategoryDtoList;
 	}
-
 	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
 		this.mCategoryDtoList = mCategoryDtoList;
 	}
-
 	public int getProductId() {
 		return productId;
 	}

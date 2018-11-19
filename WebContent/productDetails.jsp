@@ -63,15 +63,10 @@
 		</tr>
 	</table>
 
-
-
-
 	<%--　選択された商品の情報を送ります。 --%>
 	<s:hidden name="productId" value="%{#session.productId}"/>
 	<s:hidden name="price" value="%{#session.price}"/>
 	<s:token/>
-
-
 
 	<div class="submit_btn_box">
 	<s:submit value="カートに追加" class="submit_btn2" />
@@ -87,7 +82,6 @@
 	<div class="product-details-recommend-box">
 	<%-----画像押下で商品詳細画面に遷移します。----%>
 	<s:iterator value="#session.productInfoDtoList">
-
 
 	<div class="recommend-box">
 	<ul>

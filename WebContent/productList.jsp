@@ -46,7 +46,7 @@
 
 				<%--　文字リンク用 --%>
 <%-- 			<a href='<s:url action="ProductDetailsAction"> --%>
-<!-- 			<s:param name="productId" value="%{productId}"/> -->
+<%-- 			<s:param name="productId" value="%{productId}"/> -->
 <%-- 			</s:url>'> --%>
 
 			<s:property value="productName"/><br>
