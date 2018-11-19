@@ -109,7 +109,7 @@
 				カート情報はありません。
 				</div>
 			</s:else>
-			</div>
+		</div>
 
 			<s:include value="footer.jsp" />
 	</body>
