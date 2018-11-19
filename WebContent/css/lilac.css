@@ -57,16 +57,16 @@
 		text-align:center;
 		padding: 0.3em 1em;
 		text-decoration: none;
-		color: grey;
+		color: lightpink;
 		background:white;
-		border: solid 2px grey;
+		border: solid 2px lightpink;
 		border-radius: 10px;
 		transition: .3s;
 		font-size:18px;
 	}
 
 	.submit_btn3:hover{
-		background: grey;
+		background: lightpink;
 		color: white;
 	}
 
