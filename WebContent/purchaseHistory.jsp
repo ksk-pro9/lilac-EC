@@ -27,7 +27,7 @@
 
 	<div class="purchaseBtn">
 			<s:form action="DeletePurchaseHistoryAction">
-				<s:submit value="履歴全削除" class="submit_btn"/>
+				<s:submit value="履歴全削除" class="submit_btn3"/>
 			</s:form>
 		</div>
 
