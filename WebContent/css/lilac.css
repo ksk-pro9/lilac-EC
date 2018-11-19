@@ -26,8 +26,34 @@
 		margin:0px 0px 20px 0px;
 	}
 
-	/* ---------- ボタン(水色から白に反転するやつ) ---------- */
+	/* ---------- ボタン(グレーから白に反転するやつ) ---------- */
 	.submit_btn{
+		text-align:center;
+		padding: 0.3em 1em;
+		text-decoration: none;
+		color: grey;
+		background:white;
+		border: solid 2px grey;
+		border-radius: 10px;
+		transition: .3s;
+		font-size:18px;
+	}
+
+	.submit_btn:hover{
+		background: grey;
+		color: white;
+	}
+
+	.submit_btn:focus{
+		 outline:0;
+	}
+
+	.submit_btn:active{
+		outline:0;
+	}
+
+	/* ---------- ボタン(水色から白に反転するやつ) ---------- */
+	.submit_btn2{
 		text-align:center;
 		padding: 0.3em 1em;
 		text-decoration: none;
@@ -39,16 +65,16 @@
 		font-size:18px;
 	}
 
-	.submit_btn:hover{
+	.submit_btn2:hover{
 		background: lightskyblue;
 		color: white;
 	}
 
-	.submit_btn:focus{
+	.submit_btn2:focus{
 		 outline:0;
 	}
 
-	.submit_btn:active{
+	.submit_btn2:active{
 		outline:0;
 	}
 
