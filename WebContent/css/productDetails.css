@@ -4,7 +4,7 @@
 table.vertical-list-table{
 	margin-left:auto;
 	margin-right:auto;
-	width:400px;
+	width:480px;
 }
 
 table.vertical-list-table th{
@@ -40,7 +40,7 @@ table.vertical-list-table, th, td {
 
 .box2 {
 	margin: 0 auto;
-	width: 809px;
+	width: 800px;
 	height: 400px;
 	margin-bottom: 100px;
 }

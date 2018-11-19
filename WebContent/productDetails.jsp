@@ -68,23 +68,13 @@
 
 	<%--　選択された商品の情報を送ります。 --%>
 	<s:hidden name="productId" value="%{#session.productId}"/>
-	<s:hidden name="productName" value="%{#session.productName}"/>
-	<s:hidden name="productNameKana" value="%{#session.productNameKana}"/>
-	<s:hidden name="imageFilePath" value="%{#session.imageFilePath}"/>
-	<s:hidden name="imageFileName" value="%{#session.imageFileName}"/>
 	<s:hidden name="price" value="%{#session.price}"/>
-	<s:hidden name="releaseCompany" value="%{#session.releaseCompany}"/>
-	<s:hidden name="releaseDate" value="%{#session.releaseDate}"/>
-	<s:hidden name="productDescription" value="%{#session.productDescription}"/>
 	<s:token/>
 
 
 
 	<div class="submit_btn_box">
-	<button type="submit" class="submit_btn">
-	カートに追加
-	</button>
-<%-- 		<s:submit value="カートに追加" class="submit_btn" /> --%>
+	<s:submit value="カートに追加" class="submit_btn" />
 	</div>
 	</div>
 	</div>
