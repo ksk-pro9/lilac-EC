@@ -49,9 +49,9 @@
 			list-style-type: none;
 		}
 
-		#head > #top > #right > ul > li #header-image{
+		#head > #top > #right > ul > li .header-image{
 			position: relative;
-			top: 3px;
+			top: 4px;
 			right: 5px;
 		}
 
@@ -99,6 +99,7 @@
 		}
 
 		#head > #bottom #keywords > #keywords-box{
+			padding-left: 2px;
 			outline: none;
 			border: solid 1px grey;
 			width: 300px;
