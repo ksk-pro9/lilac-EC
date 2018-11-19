@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/productDetails.css">
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <title>商品詳細</title>
 </head>
 
@@ -82,8 +81,8 @@
 
 
 	<div class="submit_btn_box">
-	<button type="submit" class="submit_btn2">
-		<i class="fas fa-shopping-cart"></i> カートに追加
+	<button type="submit" class="submit_btn">
+	カートに追加
 	</button>
 <%-- 		<s:submit value="カートに追加" class="submit_btn" /> --%>
 	</div>

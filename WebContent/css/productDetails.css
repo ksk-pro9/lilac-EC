@@ -1,3 +1,6 @@
+.submit_btn_box{
+	text-align:center;
+}
 table.vertical-list-table{
 	margin-left:auto;
 	margin-right:auto;
@@ -28,30 +31,6 @@ table.vertical-list-table, th, td {
 }
 
 
-.submit_btn2{
-	font-size:18px;
-	width:270px;
-	border-radius:5px;
-	background-color:#B30000;
-	background: -webkit-repeating-linear-gradient(-45deg, #A6341F, #A6341F 3px,#EB2142 3px, #EB2142 7px);
-    background: repeating-linear-gradient(-45deg, #A6341F, #A6341F 3px,#EB2142 3px, #EB2142 7px);
-	color:white;
-	box-shadow:0 3px #993D3D;
-	border-style:none;
-}
-
-.submit_btn2:hover{
-	cursor:pointer;
-	opacity:0.7;
-	box-shadow: none;
-	position: relative;
-  	top: 3px;
-}
-
-.submit_btn_box{
-	text-align:center;
-	margin-top:20px;
-}
 
 .box1 {
 	margin: 0 auto;
