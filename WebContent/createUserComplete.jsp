@@ -5,28 +5,26 @@
 <html>
 
 <head>
-
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="./css/lilac.css"/>
 <link rel="stylesheet" type="text/css" href="./css/createUser.css">
 <meta http-equiv="refresh" content="3;URL='HomeAction'"/>
 <title>登録完了</title>
-
 </head>
 
 <body>
 
-<s:include value="header.jsp"/>
+	<s:include value="header.jsp"/>
 
-<div id="contents">
-	<div class="success">
-	ユーザー登録が完了しました。
+	<div id="contents">
+		<div class="success">
+		ユーザー登録が完了しました。
+		</div>
 	</div>
-</div>
 
-<div id="footer">
-	<s:include value="footer.jsp"/>
-</div>
+	<div id="footer">
+		<s:include value="footer.jsp"/>
+	</div>
 
 </body>
 </html>
