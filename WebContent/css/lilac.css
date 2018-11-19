@@ -1,4 +1,4 @@
-	/* ---------- ‘S‘Ì ---------- */
+	/* ---------- ï¿½Sï¿½ï¿½ ---------- */
 	body, html {
 		margin: 0;
 		padding: 0;
@@ -26,7 +26,7 @@
 		margin:0px 0px 20px 0px;
 	}
 
-	/* ---------- ƒ{ƒ^ƒ“(ƒOƒŒ[‚©‚ç”’‚É”½“]‚·‚é‚â‚Â) ---------- */
+	/* ---------- ï¿½{ï¿½^ï¿½ï¿½(ï¿½Oï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ç”’ï¿½É”ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ---------- */
 	.submit_btn{
 		text-align:center;
 		padding: 0.3em 1em;
@@ -42,6 +42,7 @@
 	.submit_btn:hover{
 		background: grey;
 		color: white;
+		cursor:pointer;
 	}
 
 	.submit_btn:focus{
@@ -52,7 +53,7 @@
 		outline:0;
 	}
 
-	/* ---------- ƒ{ƒ^ƒ“(…F‚©‚ç”’‚É”½“]‚·‚é‚â‚Â) ---------- */
+	/* ---------- ï¿½{ï¿½^ï¿½ï¿½(ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½ç”’ï¿½É”ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ---------- */
 	.submit_btn2{
 		text-align:center;
 		padding: 0.3em 1em;
@@ -68,6 +69,7 @@
 	.submit_btn2:hover{
 		background: lightskyblue;
 		color: white;
+		cursor:pointer;
 	}
 
 	.submit_btn2:focus{
@@ -78,7 +80,7 @@
 		outline:0;
 	}
 
-	/* ---------- ƒ{ƒ^ƒ“(ƒsƒ“ƒN‚©‚ç”’‚É”½“]‚·‚é‚â‚Â) ---------- */
+	/* ---------- ï¿½{ï¿½^ï¿½ï¿½(ï¿½sï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ç”’ï¿½É”ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ---------- */
 	.submit_btn3{
 		text-align:center;
 		padding: 0.3em 1em;
@@ -94,6 +96,7 @@
 	.submit_btn3:hover{
 		background: lightpink;
 		color: white;
+		cursor:pointer;
 	}
 
 	.submit_btn3:focus{
@@ -104,7 +107,7 @@
 		outline:0;
 	}
 
-	/* ---------- ƒGƒ‰[ƒƒbƒZ[ƒW ---------- */
+	/* ---------- ï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½bï¿½Zï¿½[ï¿½W ---------- */
 	.error{
 		text-align: center;
 		font-size : 0.8em;
@@ -112,7 +115,7 @@
 		margin:5px 0px 10px 0px;
 	}
 
-	/* ---------- “ü—ÍƒtƒH[ƒ€ ---------- */
+	/* ---------- ï¿½ï¿½ï¿½Íƒtï¿½Hï¿½[ï¿½ï¿½ ---------- */
 	.input-form{
 		background-color: #f5f5f5;
 		border-radius: 25px;
