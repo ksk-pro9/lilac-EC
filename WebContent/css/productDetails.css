@@ -1,5 +1,6 @@
 .submit_btn_box{
 	text-align:center;
+	width:500px;
 }
 table.vertical-list-table{
 	margin-left:auto;
@@ -95,7 +96,7 @@ table.vertical-list-table, th, td {
 }
 
 .item-image-box-100 {
-	width: 90%;
+	width: 200px;
 	border-radius: 10px;
 }
 

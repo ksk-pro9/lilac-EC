@@ -96,10 +96,10 @@
 		<s:param name="productId" value="%{productId}"/>
 		</s:url>'>
 		<img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/>
-		<div class="item-text2">
+
 		<s:property value="productName"/><br>
 		<s:property value="price"/>円<br>
-		</div>
+
 		</a>
 		</li>
 	</ul>
