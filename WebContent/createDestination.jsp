@@ -98,7 +98,7 @@
 
 <div class="input-form-set">
 	<div class="input-form-title">性別<span class="input-form-hissu">必須</span></div>
-	<s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" />
+	<s:radio name="sex" list="%{#session.sexList}" value="%{#session.sex}" placeholder="性別" checked="checked" />
 </div>
 
 <div class="input-form-set">
