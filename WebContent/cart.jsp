@@ -95,11 +95,11 @@
 					<br>
 
 						<div class="btn_set">
-							<span><s:submit value="決済" class="submit_btn" /></span>
+							<span><s:submit value="決済" class="submit_btn2" /></span>
 						</div>
 
 						<div class="btn_set">
-							<span><s:submit value="削除" class="submit_btn" onclick="this.form.action='DeleteCartAction';"/></span>
+							<span><s:submit value="削除" class="submit_btn3" onclick="this.form.action='DeleteCartAction';"/></span>
 						</div>
 					</div>
 				</s:form>
