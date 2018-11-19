@@ -23,7 +23,7 @@
 <div id="contents">
 
 <h1 id="title-left"> 購入履歴</h1>
-<s:if test="#session.purchaseHistoryInfoDtoList.size()>0">
+<s:if test='#session.containsKey("purchaseHistoryInfoDtoList")'>
 
 	<div class="purchaseBtn">
 			<s:form action="DeletePurchaseHistoryAction">
