@@ -100,7 +100,7 @@
 		<div>
 			<div class="sinki">
 				<s:form action="CreateUserAction">
-					<s:submit value="新規ユーザー登録" class="submit_btn2" />
+					<s:submit value="新規ユーザー登録" class="submit_btn" />
 				</s:form>
 			</div>
 		</div>
