@@ -18,6 +18,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginId;
 	private String password;
+	private String dummypass;
 	private boolean savedLoginId;
 
 	private Map<String, Object> session;
@@ -113,6 +114,14 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		this.password = password;
 	}
 
+	public String getDummypass(){
+		return dummypass;
+	}
+
+	public void setDummypass(String dummypass){
+		this.dummypass = dummypass;
+	}
+
 	public boolean isSavedLoginId() {
 		return savedLoginId;
 	}
@@ -128,4 +137,5 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
 }
