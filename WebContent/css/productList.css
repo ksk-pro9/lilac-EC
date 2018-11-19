@@ -1,6 +1,6 @@
 #product-list {
-	width:780px;
-	margin:0 auto;
+	width: 780px;
+	margin: 0 auto;
 }
 
 .product-list-box {
@@ -9,10 +9,10 @@
 	text-align: center;
 }
 
-.product-list-box ul{
-padding-inline-start:0px;
-padding: 0 20px;
-text-align:left;
+.product-list-box ul {
+	padding-inline-start: 0px;
+	padding: 0 20px;
+	text-align: left;
 }
 
 .product-list-box ul li {
@@ -22,8 +22,6 @@ text-align:left;
 	margin-bottom: 30px;
 	transition: 0.3s;
 }
-
-
 
 .product-list-box ul li:hover {
 	box-shadow: 0px 0px 10px #A30A0A;
@@ -44,7 +42,7 @@ text-align:left;
 	margin: 0px 0px 5px 10px;
 	line-height: 140%;
 	display: inline-block;
-	font-size:1em;
+	font-size: 1em;
 }
 
 ul {
@@ -65,15 +63,15 @@ a:visited {
 
 h1 {
 	text-align: center;
-	margin:50px 0;
+	margin: 50px 0;
 }
 
 .info {
 	text-align: center;
 }
 
-.footer-space{
-	width:1000px;
-	clear:left;
-	height:60px;
+.footer-space {
+	width: 1000px;
+	clear: left;
+	height: 60px;
 }
