@@ -43,7 +43,7 @@
 
 					<div id="right">
 
-						<table class="horizontal-list-table">
+							<table>
 							<tr>
 								<th><s:label value="商品名"/></th>
 								<td><s:property value="productName"/></td>

@@ -1,12 +1,6 @@
 @charset "UTF-8";
 
 
-.mypageRg{
-	width:1000px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:100px;
-}
 
 .btn_mypage{
 	text-align:center;
@@ -15,16 +9,14 @@
 
 }
 
-
-
 table.vertical-list-table{
 	margin-left:auto;
 	margin-right:auto;
 	width:800px;
-	font-size:0.9rem;
+	font-size:0.9;
 	line-height:0.8;
-	border-spacing: 1;
-	font-family: font-family: "游ゴシック", "Yu Gothic";
+	border-spacing:1;
+
 }
 
 table.vertical-list-table th{
@@ -35,15 +27,6 @@ table.vertical-list-table th{
 	background: #555555;
 	color:white;
 	text-align: center;
-}
-
-table.vertical-list-table th:after{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 100%;
- 	margin-top: -15px;
-	border: 15px solid transparent;
 }
 
 table.vertical-list-table td{
