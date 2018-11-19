@@ -1,7 +1,5 @@
 package com.internousdev.lilac.action;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -15,8 +13,6 @@ public class CreateDestinationCompleteAction extends ActionSupport implements Se
 	private String firstName;
 	private String familyNameKana;
 	private String firstNameKana;
-	private String sex;
-	private List<String> sexList = new ArrayList<String>();
 	private String email;
 	private String telNumber;
 	private String userAddress;
@@ -36,22 +32,6 @@ public class CreateDestinationCompleteAction extends ActionSupport implements Se
 			result = SUCCESS;
 		}
 		return result;
-	}
-
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
-	public List<String> getSexList() {
-		return sexList;
-	}
-
-	public void setSexList(List<String> sexList) {
-		this.sexList = sexList;
 	}
 
 	public String getFamilyName() {

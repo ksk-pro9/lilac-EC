@@ -11,7 +11,6 @@ import com.internousdev.lilac.dto.PurchaseHistoryInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class DeletePurchaseHistoryAction extends ActionSupport implements SessionAware{
-	private String sex;
 	private Map<String,Object>session;
 	public String execute(){
 		String result=ERROR;
@@ -43,12 +42,5 @@ public class DeletePurchaseHistoryAction extends ActionSupport implements Sessio
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-	public String getSex(){
-		return sex;
-	}
 
-	public void setSex(String sex){
-		this.sex=sex;
-
-	}
 }

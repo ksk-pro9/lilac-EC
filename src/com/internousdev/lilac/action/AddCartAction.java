@@ -16,7 +16,6 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 
 	private int productId;
 	private int price;
-	private String token;
 	private String productCount;
 
 	private Map<String, Object> session;
@@ -96,14 +95,6 @@ public class AddCartAction extends ActionSupport implements SessionAware{
 
 	public void setPrice(int price) {
 		this.price = price;
-	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
 	}
 
 	public String getProductCount() {

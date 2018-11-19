@@ -10,13 +10,10 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.dao.CartInfoDAO;
 import com.internousdev.lilac.dto.CartInfoDTO;
-import com.internousdev.lilac.dto.MCategoryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class DeleteCartAction extends ActionSupport implements SessionAware{
 	private Collection<String> checkList;
-
-	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
 
 	private Map<String, Object> session;
 
@@ -84,12 +81,6 @@ public class DeleteCartAction extends ActionSupport implements SessionAware{
 	}
 	public void setCheckList(Collection<String> checkList) {
 		this.checkList = checkList;
-	}
-	public List<MCategoryDTO> getmCategoryDtoList() {
-		return mCategoryDtoList;
-	}
-	public void setmCategoryDtoList(List<MCategoryDTO> mCategoryDtoList) {
-		this.mCategoryDtoList = mCategoryDtoList;
 	}
 	public Map<String, Object> getSession() {
 		return session;
