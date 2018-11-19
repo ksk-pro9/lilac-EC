@@ -34,7 +34,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 			session.clear();
 			session.put("logined",0);
 			/*↓「ログアウトしてもテンプIDによってログアウトしていないかのようにカート情報が見れる問題」解決策
-			→チェックボックスにチェックがなければカート情報は見れないようにはできた。*/
+			→チェックボックスにチェックがなければカート情報は見れないよう修正。*/
 			if(savedLoginId==true){
 				session.put("savedLoginId",savedLoginId);
 				session.put("loginId",loginId);
@@ -43,7 +43,6 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 			result=SUCCESS;
 		}
 		return result;
-
 	}
 
 	public Map<String, Object> getSession() {

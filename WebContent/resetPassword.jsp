@@ -33,8 +33,6 @@
 
 			<div class="errorMessage">
 
-
-
 				<!-- ↓セッションのloginIdErrorMessageListというキーの値が空でなければ、
 			セッションのloginIdErrorMessageListの値を表示する。 -->
 
@@ -138,11 +136,8 @@
 
 					<s:submit value="パスワード設定" class="submit_btn2" />
 
-
-
 				</div>
 			</s:form>
-
 
 		</div>
 	</div>

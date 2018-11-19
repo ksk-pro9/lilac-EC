@@ -23,9 +23,8 @@
 			<div class="resetTitle">
 				<span class="fas fa-key"></span> パスワード再設定確認画面 <span
 					class="fas fa-key"></span>
-					</div>
-					パスワード再設定完了しました。
-
+			</div>
+			パスワード再設定完了しました。
 		</div>
 	</div>
 
