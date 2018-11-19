@@ -12,12 +12,13 @@
 .product-list-box ul{
 padding-inline-start:0px;
 padding: 0 20px;
+text-align:left;
 }
 
 .product-list-box ul li {
 	border: solid 1px #e9e9e9;
 	border-radius: 20px;
-	padding: 8px;
+	padding: 10px;
 	margin-bottom: 30px;
 	transition: 0.5s;
 }

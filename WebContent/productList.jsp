@@ -43,18 +43,17 @@
 			<br>
 
 			<%------　画像の下に商品名、商品名かな、価額が表示される -------%>
-			<div class="items-text">
+
 				<%--　文字リンク用 --%>
 <%-- 			<a href='<s:url action="ProductDetailsAction"> --%>
 <!-- 			<s:param name="productId" value="%{productId}"/> -->
 <%-- 			</s:url>'> --%>
-			<div class="items">
+
 			<s:property value="productName"/><br>
 			<s:property value="productNameKana"/><br>
 			<s:property value="price"/>円<br>
-			</div>
+
 <!-- 			</a> -->
-			</div>
 			</a>
 			</li>
 		</ul>
