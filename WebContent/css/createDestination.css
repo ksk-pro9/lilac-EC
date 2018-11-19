@@ -13,16 +13,6 @@
 	padding: 10px 100px;
 }
 
-.txt{
-	font-size: 20px;
-	width: 98%;
-	height: 30px;
-	border-radius: 20px;
-	box-shadow: 0 0 10px black;
-	padding: 0 0 0 3%;
-	margin-bottom: 20px;
-}
-
 /* =============== createDestinationConfirm =============== */
 
 .form-confirm{
