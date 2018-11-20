@@ -53,7 +53,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 		newPasswordErrorMessageList = inputChecker.doCheck("新しいパスワード", newPassword, 1, 16, true, false, false, true, false, false, false, false, false);
 		reConfirmationNewPasswordErrorMessageList = inputChecker.doCheck("新しいパスワード（再確認）", reConfirmationPassword, 1, 16, true, false, false, true, false, false,false, false, false);
 		newPasswordIncorrectErrorMessageList = inputChecker.doPasswordCheck(newPassword, reConfirmationPassword);
-
+		session.put("loginId", loginId);
 
 		/*↓エラーメッセージがでなくて、かつ*/
 		if(resetPassLoginIdErrorMessageList.size()==0
@@ -69,6 +69,7 @@ public class ResetPasswordConfirmAction extends ActionSupport implements Session
 				String concealedPassword = concealPassword(newPassword);
 				session.put("newPassword", newPassword);
 				session.put("concealedPassword", concealedPassword);
+				session.remove("loginId", loginId);
 				result = SUCCESS;
 
 				/*↓ログインIDとパスワードがDBがなければ、エラーメッセージをセッションに入れる*/
