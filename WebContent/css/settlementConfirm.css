@@ -33,7 +33,7 @@
 			text-align:center;
 			margin-top:25px;
 			margin-bottom:50px;
-			width:100%;
+			min-width:700px;
 			}
 
 			.submit_btn_box{
