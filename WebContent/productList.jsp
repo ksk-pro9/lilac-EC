@@ -16,16 +16,16 @@
 <div id="contents">
 <h1 id="title-center">商品一覧画面</h1>
 <%-------エラーメッセージ --------%>
+<div class="error">
 <s:if test="keywordsErrorMessageList != null">
-	<div class="error">
-		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
-	</div>
+	<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
 	<div class="info">
 	検索結果がありません。
 	</div>
 </s:elseif>
+</div>
 
 <s:else>
 	<%-----商品一覧全体div-- ------%>

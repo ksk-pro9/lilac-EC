@@ -64,7 +64,7 @@
 		</s:form>
 		</s:if>
 		<s:else>
-			<div class="info">
+			<div class="error">
 				宛先情報はありません
 			</div>
 		</s:else>
