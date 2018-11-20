@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,12 +9,7 @@
 <link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/mypage.css">
 
-
-
 <title>マイページ</title>
-
-
-
 
 </head>
 <body>
@@ -66,12 +60,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-

@@ -9,12 +9,9 @@
 <link rel="stylesheet" href="./css/lilac.css">
 <link rel="stylesheet" href="./css/purchaseHistory.css">
 
-
 <title>商品購入履歴</title>
 
 <s:include value="header.jsp"/>
-
-
 
 </head>
 
@@ -31,15 +28,12 @@
 			</s:form>
 		</div>
 
-
-
 				<s:iterator value="#session.purchaseHistoryInfoDtoList">
 
 				<div id="purchaseTable">
 					<div id ="left">
 						<img class="purchase_img" src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>'/>
 					</div>
-
 
 					<div id="right">
 
@@ -79,14 +73,6 @@
 		</s:else>
 		</div>
 
-
-
-
-
 <s:include value="footer.jsp"/>
 </body>
 </html>
-
-
-
-
