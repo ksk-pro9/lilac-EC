@@ -21,9 +21,7 @@
 	<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
 </s:if>
 <s:elseif test="productInfoDtoList==null">
-	<div class="info">
 	検索結果がありません。
-	</div>
 </s:elseif>
 </div>
 

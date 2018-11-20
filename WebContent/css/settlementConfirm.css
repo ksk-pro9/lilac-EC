@@ -52,3 +52,10 @@
 			}
 
 
+/*settlementComplete.jsp*/
+
+	#success{
+	text-align:center;
+	background-color:#EEEEEE;
+	border-radius:10px;
+	}
