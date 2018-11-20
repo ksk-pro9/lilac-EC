@@ -92,7 +92,7 @@
 				</div>
 
 				<div class="input-form-set">
-					<div class="input-form-title">名ひらがな<span class="input-form-hissu">必須</span></div>
+					<div class="input-form-title">名ふりがな<span class="input-form-hissu">必須</span></div>
 					<s:textfield name="firstNameKana" value="%{#session.firstNameKana}" placeholder="名ふりがな" class="txt" />
 				</div>
 
