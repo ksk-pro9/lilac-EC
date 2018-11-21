@@ -76,22 +76,22 @@
 
 				<div class="input-form-set">
 					<div class="input-form-title">姓<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="familyName" class="txt"/>
+					<s:textfield name="familyName" placeholder="姓" class="txt"/>
 				</div>
 
 				<div class="input-form-set">
 					<div class="input-form-title">名<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="firstName" class="txt"/>
+					<s:textfield name="firstName" placeholder="名" class="txt"/>
 				</div>
 
 				<div class="input-form-set">
 					<div class="input-form-title">姓ふりがな<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="familyNameKana" class="txt"/>
+					<s:textfield name="familyNameKana" placeholder="姓ふりがな" class="txt"/>
 				</div>
 
 				<div class="input-form-set">
 					<div class="input-form-title">名ふりがな<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="firstNameKana" class="txt"/>
+					<s:textfield name="firstNameKana" placeholder="名ふりがな" class="txt"/>
 				</div>
 
 				<div class="input-form-set">
@@ -101,17 +101,17 @@
 
 				<div class="input-form-set">
 					<div class="input-form-title">住所<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="userAddress" class="txt"/>
+					<s:textfield name="userAddress" placeholder="住所" class="txt"/>
 				</div>
 
 				<div class="input-form-set">
 					<div class="input-form-title">電話番号<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="telNumber" class="txt"/>
+					<s:textfield name="telNumber" placeholder="電話番号" class="txt"/>
 				</div>
 
 				<div class="input-form-set">
 					<div class="input-form-title">メールアドレス<span class="input-form-hissu">必須</span></div>
-					<s:textfield name="email" class="txt"/>
+					<s:textfield name="email" placeholder="メールアドレス" class="txt"/>
 				</div>
 
 				<div class="btn-area">
