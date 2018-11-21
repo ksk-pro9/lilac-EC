@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.lilac.util.InputChecker;
@@ -42,8 +43,15 @@ public class CreateDestinationConfirmAction extends ActionSupport implements Ses
 		List<String> telNumberErrorMessageList = new ArrayList<String>();
 		List<String> emailErrorMessageList = new ArrayList<String>();
 
+		if (StringUtils.isBlank(userAddress)){
+			userAddress = "";
+
+		}else{
+			userAddress = userAddress.replaceAll("　", " ").replaceAll("\\s{2,}", " ").trim();
+		}
+
 		familyNameErrorMessageList = inputChecker.doCheck("姓", familyName, 1, 16, true, true, true, false, false, false, false, false, false);
-		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, true, false, false);
+		firstNameErrorMessageList = inputChecker.doCheck("名", firstName, 1, 16, true, true, true, false, false, false, false, false, false);
 		familyNameKanaErrorMessageList = inputChecker.doCheck("姓ふりがな", familyNameKana, 1, 16, false, false, true, false, false, false, false, false, false);
 		firstNameKanaErrorMessageList = inputChecker.doCheck("名ふりがな", firstNameKana, 1, 16, false, false, true, false, false, false, false, false, false);
 		userAddressErrorMessageList = inputChecker.doCheck("住所", userAddress, 15, 50, true, true, true, true, true, true, false, false, false);
