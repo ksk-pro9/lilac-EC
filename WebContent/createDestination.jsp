@@ -22,8 +22,6 @@
 
 		<p>下記に必要事項を入力してください</p>
 
-		<!-- ======= ここからエラーメッセージ error-message ======= -->
-
 		<s:if test='#session.containsKey("familyNameErrorMessageList")'>
 			<div class="error">
 				<s:iterator value="#session.familyNameErrorMessageList"><s:property /><br></s:iterator>
@@ -65,10 +63,6 @@
 				<s:iterator value="#session.emailErrorMessageList"><s:property /><br></s:iterator>
 		 	</div>
 		</s:if>
-
-		<!-- ======= ここまでエラーメッセージ /error-message ======= -->
-
-		<!-- ======= ここから入力フォーム form ======= -->
 
 		<div class="input-form">
 
@@ -125,10 +119,8 @@
 			</s:form>
 
 		</div>
-	<!-- ======= ここまで入力フォーム /input-form ======= -->
 
 	</div>
-	<!-- ======= ここまで id contents(エラー文と入力フォーム含めた画面) ======= -->
 
 	<s:include value="footer.jsp"/>
 

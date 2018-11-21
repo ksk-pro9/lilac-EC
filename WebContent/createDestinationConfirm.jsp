@@ -21,7 +21,6 @@
 
 		<p>以下の内容で登録します</p>
 
-		<!-- ======= ここから入力フォーム form ======= -->
 		<div class="form-confirm">
 
 			<s:form action="CreateDestinationCompleteAction">
@@ -81,7 +80,6 @@
 			</s:form>
 
 		</div>
-		<!-- ======= ここまで入力フォーム /form ======= -->
 
 	</div>
 

@@ -17,8 +17,6 @@
 
 	<s:include value="header.jsp"/>
 
-	<!-- ======= ここからcontents ======= -->
-
 	<div id="contents">
 		<h1 id="title-left">アカウント新規登録</h1>
 
@@ -127,10 +125,8 @@
 			</s:form>
 
 		</div>
-		<!-- ======= ここまで入力フォーム /input-form ======= -->
 
 	</div>
-	<!-- ======= ここまで id /contents =======(エラー文と入力フォーム含めた画面) -->
 
 	<div id="footer">
 		<s:include value="footer.jsp"/>
