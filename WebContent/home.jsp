@@ -6,7 +6,6 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./css/lilac.css">
-	<link rel="stylesheet" href="./css/header.css">
 	<title>ホーム</title>
 
 </head>

@@ -47,7 +47,7 @@ public class SearchItemAction extends ActionSupport implements SessionAware{
 		if(!(keywords.equals(""))){
 			InputChecker inputChecker = new InputChecker();
 			keywordsErrorMessageList = new ArrayList<String>();
-			keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, false, false, true, false);
+			keywordsErrorMessageList = inputChecker.doCheck("検索ワード", keywords, 0, 16, true, true, true, true, false, true, false, true, false);
 			Iterator<String>iterator = keywordsErrorMessageList.iterator();
 
 			if(!(iterator.hasNext())){
