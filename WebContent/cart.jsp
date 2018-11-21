@@ -36,7 +36,7 @@
 									<s:checkbox name="checkList" value="checked" fieldValue="%{productId}"/>
 									<s:hidden name="productId" value="%{productId}" />
 								</div>
-								<div class="gorigori">
+								<div class="product_image">
 									<img src='<s:property value="imageFilePath" />/<s:property value="imageFileName" />' />
 								</div>
 							</div>
