@@ -65,7 +65,7 @@ public class InputChecker {
 		}
 
 		if(availableHalfWidthSymbols){
-			regularExpression +="@.,;:!#$%&'*+-/=?^_`{|}~ ";
+			regularExpression +="@.,;:!#$%&'*+-/=?^_`{|}~";
 			characterTypeList.add("半角記号");
 		}
 
@@ -75,7 +75,7 @@ public class InputChecker {
 		}
 
 		if(availableFullWidthSymbols){
-			regularExpression +="、。＠．，；：！＃＄％＆’＊＋／＝？＾＿｀｛｜｝～　";
+			regularExpression +="、。＠．，；：！＃＄％＆’＊＋／＝？＾＿｀｛｜｝～";
 			characterTypeList.add("全角記号");
 		}
 
